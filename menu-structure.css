@@ -3,7 +3,7 @@
 .v2-depth-nav a{font-size:12px;font-weight:600;line-height:1.5;color:#748779;padding:9px 12px;border:1px solid transparent}
 .v2-depth-nav a:hover,.v2-depth-nav a.is-active{color:#304c3b;border-color:#a8bfad;background:#e5eee4;opacity:1}
 .v2-people-placeholder{padding:40px 0 100px;min-height:400px}
-.v2-people-placeholder h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(44px,6vw,83px);font-weight:400;color:#273b31;margin:20px 0;line-height:1.05}
+.v2-people-placeholder h2{font-family:"IBM Plex Sans","Pretendard",sans-serif;font-size:clamp(44px,6vw,83px);font-weight:400;color:#273b31;margin:20px 0;line-height:1.05}
 .v2-people-placeholder p{font-size:15px;color:#63796a;line-height:1.95}
 .v2-shell-eyebrow{color:#788f7f;font-size:11px;font-weight:700;letter-spacing:1.8px}
 .v2-outline-note{padding:21px 24px;border:1px dashed #aabbad;background:#e8eee6;color:#637b6a;font-size:12px;line-height:1.8;margin-top:34px}

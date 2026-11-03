@@ -10,7 +10,7 @@
 .pp-page .pp-v2-category-head{border-bottom:1px solid #b9cabe;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:0 0 20px;margin:56px 0 22px}
 .pp-page .pp-v2-category-head:first-child{margin-top:0}
 .pp-page .pp-v2-category-head>span{font-size:10px;letter-spacing:1.7px;font-weight:700;color:#819786}
-.pp-page .pp-v2-category-head h3{font-family:"DM Sans","Noto Sans KR",sans-serif;font-size:clamp(22px,3vw,36px);font-weight:500;letter-spacing:-1.2px;color:#2b3f33;margin:0}
+.pp-page .pp-v2-category-head h3{font-family:"IBM Plex Sans","Pretendard",sans-serif;font-size:clamp(22px,3vw,36px);font-weight:500;letter-spacing:-1.2px;color:#2b3f33;margin:0}
 .pp-page .pp-v2-category-head p{font-size:12px;line-height:1.7;color:#718777;margin:0}
 .pp-page .pp-v2-collection{margin:0 0 64px}
 .pp-page .pp-v2-timeline{border-bottom:1px solid #d2dcd1}
@@ -44,7 +44,7 @@
 .pp-page .pp-v2-researcher-card .pp-person-email{margin-top:auto;overflow-wrap:anywhere}
 .pp-page .pp-v2-search-label{font-size:10px;font-weight:700;letter-spacing:1.3px;color:#6c8572}
 .pp-page .pp-v2-search-box{display:flex;flex-direction:column;gap:10px;max-width:560px}
-.pp-page .pp-v2-search-box input{width:100%;padding:15px 6px;border:0;border-bottom:1px solid #9fb6a4;border-radius:0;outline:none;background:transparent;font-size:13px;color:#263b2c;font-family:inherit}
+.pp-page .pp-v2-search-box input{width:100%;padding:15px 6px;border:0;border-bottom:1px solid #9fb6a4;border-radius:0;outline:none;background:transparent;font-size:13px;color:#263b2c;font-family:"IBM Plex Sans","Pretendard",sans-serif}
 .pp-page .pp-v2-search-box input:focus{border-bottom:2px solid #536d5e}
 .pp-page .pp-v2-search-box input::placeholder{color:#8da18f}
 .pp-page .pp-v2-list-heading{display:flex;justify-content:space-between;gap:18px;margin-top:32px;padding:17px 0;border-bottom:2px solid #536d5e;font-size:10px;letter-spacing:.8px;font-weight:700;color:#68816c}

@@ -33,7 +33,7 @@
 .lf-v2-map-sidebar-head span{font-size:10px;font-weight:700;letter-spacing:1.2px;color:#67806e}
 .lf-v2-map-sidebar-head strong{font-size:10px;color:#8aa18d;white-space:nowrap}
 .lf-v2-map-switch{display:flex;flex-wrap:wrap;gap:5px;margin:22px 0 13px}
-.lf-v2-map-switch button,.lf-v2-activity-filters button{font-family:inherit;font-size:11px;font-weight:600;color:#637d68;border:1px solid #bbcbbb;padding:10px 13px;background:transparent;cursor:pointer;line-height:1.4}
+.lf-v2-map-switch button,.lf-v2-activity-filters button{font-family:"IBM Plex Sans","Pretendard",sans-serif;font-size:11px;font-weight:600;color:#637d68;border:1px solid #bbcbbb;padding:10px 13px;background:transparent;cursor:pointer;line-height:1.4}
 .lf-v2-map-switch button.is-selected,.lf-v2-activity-filters button.is-selected{background:#536d5e;border-color:#536d5e;color:white}
 .lf-v2-map-switch button:hover,.lf-v2-activity-filters button:hover{border-color:#536d5e}
 .lf-v2-place-list{overflow-y:auto;max-height:350px;min-height:210px}
@@ -47,7 +47,7 @@
 .lf-v2-map-placeholder,.lf-v2-map-unavailable{position:absolute;inset:0;display:grid;place-items:center;color:#67816d;text-align:center;padding:28px;font-size:13px;line-height:2}
 .lf-v2-map-legend{position:absolute;bottom:13px;left:15px;right:15px;display:flex;justify-content:space-between;gap:12px;z-index:500;pointer-events:none}
 .lf-v2-map-legend span{font-size:10px;font-weight:700;letter-spacing:.7px;color:#476b57;background:rgba(249,252,247,.94);padding:9px 12px}
-.lf-v2-map-popup{font:12px/1.65 "DM Sans","Noto Sans KR",sans-serif}
+.lf-v2-map-popup{font:12px/1.65 "IBM Plex Sans","Pretendard",sans-serif}
 .lf-v2-map-popup strong{font-size:15px;display:block;color:#304b3a;margin-bottom:7px}
 .lf-v2-map-popup p{font-size:11px;color:#7a8d80;margin:0 0 10px}
 .lf-v2-map-popup a{font-size:12px;color:#436d50;display:block;padding:7px 0;border-top:1px solid #dbe7dd}

@@ -22,7 +22,7 @@ html{scroll-padding-top:100px}
 .st-page .st-head h1,
 .lf-page .lf-header-flex h1,
 .ct-page .ct-intro h1{
-  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
   font-size:clamp(58px,7.5vw,115px);
   font-weight:500;
   line-height:1.04;
@@ -41,7 +41,7 @@ html{scroll-padding-top:100px}
 .st-page .st-lead h2,
 .lf-page .lf-intro h2,
 .ct-page .ct-section-heading h2{
-  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
   font-size:clamp(38px,5.2vw,73px);
   font-weight:500;
   line-height:1.12;
@@ -100,7 +100,7 @@ html{scroll-padding-top:100px}
 .pp-page .pp-prof-visual.pp-v2-photo-slot:before,
 .pp-page .pp-prof-visual.pp-v2-photo-slot:after{display:none}
 .pp-page .pp-v2-photo-caption{
-  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
   font-size:11px;
   letter-spacing:1.4px;
   line-height:1.5;

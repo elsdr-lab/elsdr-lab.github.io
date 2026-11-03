@@ -14,7 +14,7 @@
 .st-v2-learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .st-v2-learning-card{border:1px solid rgba(83,109,94,.20);background:#fdfcf9;padding:35px 33px 38px;min-height:320px;display:flex;flex-direction:column;gap:0}
 .st-v2-learning-card .st-v2-no{font-size:11px;color:#729181;letter-spacing:1.5px;font-weight:700}
-.st-v2-learning-card h3{font-family:"DM Sans","Noto Sans KR",sans-serif;font-size:clamp(24px,2.5vw,34px);line-height:1.2;letter-spacing:-1.1px;font-weight:500;color:#2c3f33;margin:23px 0 18px}
+.st-v2-learning-card h3{font-family:"IBM Plex Sans","Pretendard",sans-serif;font-size:clamp(24px,2.5vw,34px);line-height:1.2;letter-spacing:-1.1px;font-weight:500;color:#2c3f33;margin:23px 0 18px}
 .st-v2-learning-card>p{font-size:13px;color:#536d5e;line-height:1.85;margin:0 0 25px;word-break:keep-all}
 .st-v2-learning-card .st-v2-activity{margin-top:auto;padding-top:19px;border-top:1px solid rgba(83,109,94,.23)}
 .st-v2-learning-card .st-v2-activity>span{display:block;font-size:10px;letter-spacing:1.4px;font-weight:700;color:#7b9382;margin-bottom:10px}
@@ -22,7 +22,7 @@
 .st-v2-notice{margin-top:29px;padding:16px 19px;border-left:2px solid #a5bbab;color:#7a8e7e;background:#eaf0e9;font-size:11px;line-height:1.9}
 .st-v2-resource-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:23px 0 16px;border-top:1px solid #bdcebf}
 .st-v2-resource-filter{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.st-v2-resource-filter button{cursor:pointer;padding:11px 14px;background:transparent;color:#61796a;border:1px solid transparent;font:600 12px/1.35 "DM Sans","Noto Sans KR",Arial,sans-serif}
+.st-v2-resource-filter button{cursor:pointer;padding:11px 14px;background:transparent;color:#61796a;border:1px solid transparent;font:600 12px/1.35 "IBM Plex Sans","Pretendard",Arial,sans-serif}
 .st-v2-resource-filter button:hover{background:#e8ece6}
 .st-v2-resource-filter button.is-selected{background:#536d5e;border-color:#536d5e;color:#fff}
 .st-v2-year-label{display:flex;align-items:center;gap:11px;font-size:10px;color:#738c7b;letter-spacing:1.1px;font-weight:700}
@@ -30,7 +30,7 @@
 .st-v2-search-row{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:7px 0 0;padding-bottom:22px}
 .st-v2-search-row label{display:block;min-width:250px;max-width:490px;flex:1}
 .st-v2-search-row label span{display:block;font-size:10px;color:#6b8473;font-weight:700;letter-spacing:1.4px;margin-bottom:8px}
-.st-v2-search-row input{width:100%;border:0;border-bottom:1px solid #abc1ac;padding:13px 2px;background:transparent;color:#253f2d;font:400 13px/1.5 "DM Sans","Noto Sans KR",Arial,sans-serif;border-radius:0;outline:0}
+.st-v2-search-row input{width:100%;border:0;border-bottom:1px solid #abc1ac;padding:13px 2px;background:transparent;color:#253f2d;font:400 13px/1.5 "IBM Plex Sans","Pretendard",Arial,sans-serif;border-radius:0;outline:0}
 .st-v2-search-row input:focus{border-bottom:2px solid #536d5e}
 .st-v2-search-row strong{font-size:10px;color:#839689;letter-spacing:1px;white-space:nowrap;margin-bottom:12px}
 .st-v2-resource-list{border-top:2px solid #536d5e}

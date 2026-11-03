@@ -15,7 +15,7 @@
 #research-archive-v2 .ra-filter-year{background:#fff;border:1px solid #cdd8cc;color:#344b3b;font:500 12px/1.3 inherit;padding:10px 30px 10px 12px;min-width:125px;min-height:41px;cursor:pointer}
 #research-archive-v2 .ra-search-line{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px}
 #research-archive-v2 .ra-search-box{position:relative;display:flex;align-items:center;max-width:480px;flex:1}
-#research-archive-v2 .ra-search-input{width:100%;border:0;border-bottom:1px solid #a6b9aa;border-radius:0;outline:none;box-shadow:none;background:transparent;color:#263a2c;font-size:14px;line-height:1.6;padding:12px 42px 12px 1px;font-family:inherit}
+#research-archive-v2 .ra-search-input{width:100%;border:0;border-bottom:1px solid #a6b9aa;border-radius:0;outline:none;box-shadow:none;background:transparent;color:#263a2c;font-size:14px;line-height:1.6;padding:12px 42px 12px 1px;font-family:"IBM Plex Sans","Pretendard",sans-serif}
 #research-archive-v2 .ra-search-input:focus{border-color:#335c45;border-bottom-width:2px}
 #research-archive-v2 .ra-search-input::placeholder{color:#899b8d;opacity:1}
 #research-archive-v2 .ra-search-icon{position:absolute;right:11px;width:19px;height:19px;pointer-events:none;color:#647e6c}
