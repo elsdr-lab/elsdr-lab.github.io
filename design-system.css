@@ -91,3 +91,4 @@ body .page :is(.ab-theme-card,.st-v2-learning-card,.lf-v2-card-copy,.ct-v2-conta
 
 @media(max-width:920px){body.home-view{overflow:auto}}
 body,body .page,body .page :is(h1,h2,h3,p,.serif),body .home-headline,body .home-headline em,body .brand-original-caption {font-family:var(--ds-font)!important}
+.home-lead{white-space:pre-line}
