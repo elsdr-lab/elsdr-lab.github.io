@@ -1338,6 +1338,18 @@ body.home-view .footer{display:none}
   const columns=[...panel.querySelectorAll('.mega-column')];
   const breakpoint=window.matchMedia('(min-width: 1221px)');
   let active=null;
+  // Match the six submenu columns to the actual primary navigation bounds.
+  const inner=panel.querySelector('.mega-inner');
+  const nav=document.getElementById('main-nav');
+  const alignColumns=()=>{
+    if(!breakpoint.matches||panel.hidden)return;
+    const menuBounds=inner.getBoundingClientRect();
+    const navBounds=nav.getBoundingClientRect();
+    inner.style.paddingLeft=(navBounds.left-menuBounds.left)+'px';
+    inner.style.paddingRight=(menuBounds.right-navBounds.right)+'px';
+  };
+  new ResizeObserver(alignColumns).observe(header);
+  new ResizeObserver(alignColumns).observe(nav);
   const close=()=>{
     active=null;
     panel.hidden=true;
@@ -1349,6 +1361,7 @@ body.home-view .footer{display:none}
     active=key;
     panel.hidden=false;
     header.classList.add('mega-open');
+    alignColumns();
     columns.forEach(x=>x.classList.toggle('mega-current',x.dataset.mega===key));
     links.forEach(x=>x.setAttribute('aria-expanded',String(x.dataset.nav===key)));
   };
