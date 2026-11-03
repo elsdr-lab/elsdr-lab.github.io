@@ -1,0 +1,69 @@
+/* V2 Study: Learning & Training + Research Resources, one continuous page. */
+.st-page.st-v2-page{background:#f4f3ee;color:#252d2a}
+.st-v2-page .st-inner{padding-bottom:110px}
+.st-v2-page .st-head-row p{max-width:420px}
+.st-v2-page .st-nav{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:0}
+.st-v2-page .st-nav>a{min-width:0}
+.st-v2-page .st-nav>a[aria-current=page]{background:#536d5e;color:#f4f3ee}
+.st-v2-page .st-nav>a[aria-current=page] small,.st-v2-page .st-nav>a[aria-current=page] b{color:#ebf0e8}
+.st-v2-section{padding:100px 0 92px;scroll-margin-top:96px}
+.st-v2-section+.st-v2-section{border-top:1px solid rgba(83,109,94,.28)}
+.st-v2-section .st-lead{margin-bottom:41px}
+.st-v2-section .st-lead>p{max-width:445px}
+.st-v2-intro{font-size:14px;color:#647b6c;line-height:1.9;max-width:820px;margin:0 0 40px;word-break:keep-all}
+.st-v2-learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.st-v2-learning-card{border:1px solid rgba(83,109,94,.20);background:#fdfcf9;padding:35px 33px 38px;min-height:320px;display:flex;flex-direction:column;gap:0}
+.st-v2-learning-card .st-v2-no{font-size:11px;color:#729181;letter-spacing:1.5px;font-weight:700}
+.st-v2-learning-card h3{font-family:"DM Sans","Noto Sans KR",sans-serif;font-size:clamp(24px,2.5vw,34px);line-height:1.2;letter-spacing:-1.1px;font-weight:500;color:#2c3f33;margin:23px 0 18px}
+.st-v2-learning-card>p{font-size:13px;color:#536d5e;line-height:1.85;margin:0 0 25px;word-break:keep-all}
+.st-v2-learning-card .st-v2-activity{margin-top:auto;padding-top:19px;border-top:1px solid rgba(83,109,94,.23)}
+.st-v2-learning-card .st-v2-activity>span{display:block;font-size:10px;letter-spacing:1.4px;font-weight:700;color:#7b9382;margin-bottom:10px}
+.st-v2-learning-card .st-v2-activity p{font-size:12px;color:#6d8173;line-height:1.7;margin:0}
+.st-v2-notice{margin-top:29px;padding:16px 19px;border-left:2px solid #a5bbab;color:#7a8e7e;background:#eaf0e9;font-size:11px;line-height:1.9}
+.st-v2-resource-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:23px 0 16px;border-top:1px solid #bdcebf}
+.st-v2-resource-filter{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.st-v2-resource-filter button{cursor:pointer;padding:11px 14px;background:transparent;color:#61796a;border:1px solid transparent;font:600 12px/1.35 "DM Sans","Noto Sans KR",Arial,sans-serif}
+.st-v2-resource-filter button:hover{background:#e8ece6}
+.st-v2-resource-filter button.is-selected{background:#536d5e;border-color:#536d5e;color:#fff}
+.st-v2-year-label{display:flex;align-items:center;gap:11px;font-size:10px;color:#738c7b;letter-spacing:1.1px;font-weight:700}
+.st-v2-year-label select{padding:11px 15px;border:1px solid #becdbf;color:#314f3d;background:#fdfcf9;font-size:12px;min-width:120px;cursor:pointer}
+.st-v2-search-row{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:7px 0 0;padding-bottom:22px}
+.st-v2-search-row label{display:block;min-width:250px;max-width:490px;flex:1}
+.st-v2-search-row label span{display:block;font-size:10px;color:#6b8473;font-weight:700;letter-spacing:1.4px;margin-bottom:8px}
+.st-v2-search-row input{width:100%;border:0;border-bottom:1px solid #abc1ac;padding:13px 2px;background:transparent;color:#253f2d;font:400 13px/1.5 "DM Sans","Noto Sans KR",Arial,sans-serif;border-radius:0;outline:0}
+.st-v2-search-row input:focus{border-bottom:2px solid #536d5e}
+.st-v2-search-row strong{font-size:10px;color:#839689;letter-spacing:1px;white-space:nowrap;margin-bottom:12px}
+.st-v2-resource-list{border-top:2px solid #536d5e}
+.st-v2-resource-row{display:grid;grid-template-columns:86px minmax(0,1fr) 180px;gap:24px;padding:29px 12px 33px;border-bottom:1px solid #c7d5c8;align-items:start}
+.st-v2-resource-year{font-size:14px;color:#536d5e;font-weight:700}
+.st-v2-resource-kind{display:block;font-size:10px;color:#7e9785;font-weight:700;letter-spacing:1.2px;margin-bottom:12px;text-transform:uppercase}
+.st-v2-resource-copy h3{margin:0 0 12px;color:#263f2d;font-size:clamp(17px,1.7vw,22px);font-weight:500;line-height:1.42;letter-spacing:-.4px;word-break:keep-all}
+.st-v2-resource-topic{margin:0 0 8px;font-size:12px;font-weight:600;color:#617a69}
+.st-v2-resource-description{margin:0;color:#728677;font-size:13px;line-height:1.85;word-break:keep-all}
+.st-v2-resource-actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.st-v2-resource-link{font-size:11px;color:#4c7257;border-bottom:1px solid #96af9c;padding:6px 0;font-weight:700;line-height:1.5}
+.st-v2-resource-link:hover{color:#244a32}
+.st-v2-resource-note{font-size:11px;color:#90a291}
+.st-v2-resource-empty{padding:50px 24px;text-align:center;background:#ecf1eb;color:#698071;border-bottom:1px solid #c7d5c8;font-size:13px}
+.st-v2-page [hidden]{display:none!important}
+.st-v2-official{margin-top:40px;padding-top:20px;border-top:1px solid #cdd9cd;color:#6f8576;font-size:12px;line-height:1.8}
+.st-v2-official a{color:#41654d;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:950px){.st-v2-resource-row{grid-template-columns:60px 1fr 145px;gap:17px}.st-v2-resource-top{flex-wrap:wrap}}
+@media(max-width:640px){
+ .st-v2-page .st-inner{padding-bottom:72px}
+ .st-v2-page .st-nav{grid-template-columns:1fr}
+ .st-v2-section{padding:62px 0;scroll-margin-top:75px}
+ .st-v2-learning-grid{grid-template-columns:1fr;gap:14px}
+ .st-v2-learning-card{padding:27px 25px;min-height:0}
+ .st-v2-learning-card h3{font-size:25px;margin:20px 0 16px}
+ .st-v2-learning-card>p{font-size:12px;margin-bottom:22px}
+ .st-v2-resource-filter button{padding:8px 9px;font-size:11px}
+ .st-v2-resource-top{gap:13px}
+ .st-v2-search-row{gap:12px}
+ .st-v2-search-row label{min-width:0}
+ .st-v2-search-row input{font-size:12px}
+ .st-v2-resource-row{grid-template-columns:50px minmax(0,1fr);gap:12px;padding:23px 3px}
+ .st-v2-resource-actions{grid-column:2;flex-direction:row;flex-wrap:wrap}
+ .st-v2-resource-description{font-size:12px}
+ .st-v2-resource-copy h3{font-size:17px}
+}

@@ -1,0 +1,97 @@
+/* V2 People — preserve established pp-* palette/typography while splitting content routes. */
+.pp-page .pp-v2-depth-nav{display:flex;align-items:center;flex-wrap:wrap;gap:7px;padding:14px 0 22px;margin:0 0 53px;border-bottom:1px solid rgba(83,109,94,.3)}
+.pp-page .pp-v2-depth-nav a{font-size:12px;font-weight:600;color:#708575;padding:11px 16px;border:1px solid transparent;transition:all .2s}
+.pp-page .pp-v2-depth-nav a.is-active,.pp-page .pp-v2-depth-nav a:hover{background:#e4ede4;border-color:#a8bfaa;color:#345440}
+.pp-page .pp-v2-section{min-height:50vh;padding-bottom:90px}
+.pp-page [data-people-panel][hidden],.pp-page .pp-v2-depth-nav[hidden]{display:none!important}
+.pp-page .pp-v2-related-links{display:flex;gap:18px;flex-wrap:wrap;margin:43px 0 0;border-top:1px solid rgba(83,109,94,.25);padding:25px 0}
+.pp-page .pp-v2-related-links a{font-size:13px;color:#536d5e;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid #b7c9b8;font-weight:600}
+.pp-page .pp-v2-related-links a:hover{background:#536d5e;color:#fff}
+.pp-page .pp-v2-category-head{border-bottom:1px solid #b9cabe;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:0 0 20px;margin:56px 0 22px}
+.pp-page .pp-v2-category-head:first-child{margin-top:0}
+.pp-page .pp-v2-category-head>span{font-size:10px;letter-spacing:1.7px;font-weight:700;color:#819786}
+.pp-page .pp-v2-category-head h3{font-family:"DM Sans","Noto Sans KR",sans-serif;font-size:clamp(22px,3vw,36px);font-weight:500;letter-spacing:-1.2px;color:#2b3f33;margin:0}
+.pp-page .pp-v2-category-head p{font-size:12px;line-height:1.7;color:#718777;margin:0}
+.pp-page .pp-v2-collection{margin:0 0 64px}
+.pp-page .pp-v2-timeline{border-bottom:1px solid #d2dcd1}
+.pp-page .pp-v2-career-row{display:grid;grid-template-columns:135px minmax(0,1fr);gap:30px;padding:25px 10px;border-top:1px solid #d2dcd1}
+.pp-page .pp-v2-career-row time{color:#688271;font-size:13px;font-weight:700}
+.pp-page .pp-v2-career-row strong{font-size:18px;color:#293e30;font-weight:500}
+.pp-page .pp-v2-career-row p{margin:9px 0 0;color:#748776;font-size:13px;line-height:1.8}
+.pp-page .pp-v2-empty{padding:34px 27px;background:#ecf1ea;border:1px dashed #b4c7b7;color:#607668}
+.pp-page .pp-v2-empty strong{display:block;font-size:17px;color:#3e5845;font-weight:500}
+.pp-page .pp-v2-empty p{font-size:12px;line-height:1.85;margin:9px 0 0}
+.pp-page .pp-v2-data-note{margin:35px 0 0;padding:12px 15px;border-left:2px solid #a9bba9;background:#edf1ea;color:#728475;font-size:11px;line-height:1.9}
+.pp-page .pp-v2-books-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.pp-page .pp-v2-book{background:#eff2ed;border:1px solid #d5dfd3;padding:20px}
+.pp-page .pp-v2-book-cover{aspect-ratio:3/4;display:grid;place-items:center;background:#d9e5d9;color:#819886;letter-spacing:2px;font-size:11px;font-weight:600}
+.pp-page .pp-v2-book-cover img{width:100%;height:100%;object-fit:cover}
+.pp-page .pp-v2-book h4{margin:20px 0 8px;font-size:17px;font-weight:600;color:#304638}
+.pp-page .pp-v2-book p{font-size:12px;line-height:1.85;color:#6c8372}
+.pp-page .pp-v2-writings-list{border-bottom:1px solid #cbd7ca}
+.pp-page .pp-v2-writing-row{display:grid;grid-template-columns:125px minmax(0,1fr) 135px;align-items:center;gap:24px;padding:21px 10px;border-top:1px solid #cbd7ca}
+.pp-page .pp-v2-writing-row time{font-size:12px;color:#667e6d}
+.pp-page .pp-v2-writing-row h4{font-size:16px;margin:0 0 7px}
+.pp-page .pp-v2-writing-row p{font-size:12px;color:#6c8271;margin:0}
+.pp-page .pp-v2-link{font-size:12px;font-weight:600;color:#456e51;text-decoration:underline;text-underline-offset:5px}
+.pp-page .pp-v2-group{margin:0 0 63px}
+.pp-page .pp-v2-group .pp-group-heading{margin-top:0}
+.pp-page .pp-v2-researcher-card{display:flex;flex-direction:column}
+.pp-page .pp-v2-researcher-card .pp-person-photo{aspect-ratio:4/5;height:auto;min-height:0;overflow:hidden}
+.pp-page .pp-v2-researcher-card .pp-person-photo img{width:100%;height:100%;object-fit:cover}
+.pp-page .pp-v2-researcher-card .pp-person-info{flex:1;display:flex;flex-direction:column}
+.pp-page .pp-v2-researcher-card .pp-person-interests{min-height:68px}
+.pp-page .pp-v2-researcher-card .pp-person-email{margin-top:auto;overflow-wrap:anywhere}
+.pp-page .pp-v2-search-label{font-size:10px;font-weight:700;letter-spacing:1.3px;color:#6c8572}
+.pp-page .pp-v2-search-box{display:flex;flex-direction:column;gap:10px;max-width:560px}
+.pp-page .pp-v2-search-box input{width:100%;padding:15px 6px;border:0;border-bottom:1px solid #9fb6a4;border-radius:0;outline:none;background:transparent;font-size:13px;color:#263b2c;font-family:inherit}
+.pp-page .pp-v2-search-box input:focus{border-bottom:2px solid #536d5e}
+.pp-page .pp-v2-search-box input::placeholder{color:#8da18f}
+.pp-page .pp-v2-list-heading{display:flex;justify-content:space-between;gap:18px;margin-top:32px;padding:17px 0;border-bottom:2px solid #536d5e;font-size:10px;letter-spacing:.8px;font-weight:700;color:#68816c}
+.pp-page .pp-v2-alumni-row{display:grid;grid-template-columns:80px minmax(0,1.1fr) minmax(0,1.3fr) 138px;gap:22px;align-items:center;padding:27px 10px;border-bottom:1px solid #cbd6cc}
+.pp-page .pp-v2-alumni-year{font-size:15px;color:#779080}
+.pp-page .pp-v2-alumni-primary h3{font-size:clamp(18px,2.2vw,25px);line-height:1.2;color:#283e2f;font-weight:500;letter-spacing:-.5px;margin:0}
+.pp-page .pp-v2-alumni-primary>span{display:block;font-size:13px;color:#728474;margin-top:9px}
+.pp-page .pp-v2-alumni-meta{display:flex;flex-direction:column;gap:8px;font-size:12px;color:#607566}
+.pp-page .pp-v2-alumni-meta strong{font-weight:600;color:#4b6652}
+.pp-page .pp-v2-alumni-meta small{font-size:11px}
+.pp-page .pp-v2-thesis-crosslink{font-size:11px;font-weight:600;color:#4d7057;text-decoration:underline;text-underline-offset:5px;line-height:1.6}
+.pp-page .pp-v2-thesis-toolbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px 45px;align-items:end}
+.pp-page .pp-v2-degree-tabs{display:flex;gap:7px;flex-wrap:wrap}
+.pp-page .pp-v2-degree-tabs button{font:600 12px/1.2 inherit;background:transparent;border:1px solid #bfd0bf;color:#536d5e;padding:12px 17px;cursor:pointer}
+.pp-page .pp-v2-degree-tabs button:hover{background:#e4eae3}
+.pp-page .pp-v2-degree-tabs button.is-selected{background:#536d5e;color:#fff;border-color:#536d5e}
+.pp-page .pp-v2-thesis-toolbar .pp-v2-search-box{flex:1;min-width:250px}
+.pp-page .pp-v2-thesis-row{display:grid;grid-template-columns:76px minmax(0,1fr) 105px;gap:25px;align-items:start;padding:27px 10px;border-bottom:1px solid #c6d4c7}
+.pp-page .pp-v2-thesis-year{font-size:14px;color:#688271;font-weight:700;padding-top:3px}
+.pp-page .pp-v2-thesis-copy small{display:block;font-size:10px;letter-spacing:1px;color:#7d9581;margin-bottom:12px;font-weight:700}
+.pp-page .pp-v2-thesis-copy h3{font-size:clamp(15px,1.6vw,19px);font-weight:500;color:#283e2f;line-height:1.5;margin:0 0 11px;overflow-wrap:anywhere}
+.pp-page .pp-v2-thesis-copy p{font-size:12px;line-height:1.8;color:#6d826f;margin:0}
+.pp-page .pp-v2-thesis-copy p span{color:#849b86}
+.pp-page .pp-v2-thesis-outlink{align-self:center;text-align:right}
+@media(max-width:980px){
+ .pp-page .pp-v2-alumni-row{grid-template-columns:55px minmax(0,1fr) minmax(0,1fr);gap:14px}
+ .pp-page .pp-v2-alumni-row>a{grid-column:2/-1}
+ .pp-page .pp-v2-books-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ .pp-page .pp-v2-depth-nav{gap:4px;margin-bottom:28px}
+ .pp-page .pp-v2-depth-nav a{padding:9px 10px;font-size:11px}
+ .pp-page .pp-v2-related-links{gap:9px}
+ .pp-page .pp-v2-related-links a{font-size:11px}
+ .pp-page .pp-v2-category-head{margin:43px 0 18px}
+ .pp-page .pp-v2-books-grid{grid-template-columns:1fr}
+ .pp-page .pp-v2-career-row{grid-template-columns:83px minmax(0,1fr);gap:14px;padding:21px 5px}
+ .pp-page .pp-v2-career-row time{font-size:11px}
+ .pp-page .pp-v2-career-row strong{font-size:15px}
+ .pp-page .pp-v2-writing-row{grid-template-columns:1fr;gap:10px}
+ .pp-page .pp-v2-alumni-row{grid-template-columns:55px 1fr;gap:12px;padding:22px 5px}
+ .pp-page .pp-v2-alumni-row .pp-v2-alumni-meta{grid-column:2}
+ .pp-page .pp-v2-alumni-row>a{grid-column:2}
+ .pp-page .pp-v2-thesis-toolbar{display:block}
+ .pp-page .pp-v2-thesis-toolbar .pp-v2-search-box{margin-top:22px}
+ .pp-page .pp-v2-thesis-row{grid-template-columns:48px 1fr;gap:12px;padding:21px 5px}
+ .pp-page .pp-v2-thesis-copy h3{font-size:15px}
+ .pp-page .pp-v2-thesis-outlink{grid-column:2;text-align:left;margin-top:6px}
+ .pp-page .pp-v2-list-heading{font-size:9px;letter-spacing:0}
+}

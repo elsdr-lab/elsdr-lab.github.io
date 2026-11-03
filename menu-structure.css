@@ -1,0 +1,49 @@
+/* ELSDR V2 menu hierarchy only; original visual language preserved. */
+.v2-depth-nav{display:flex;align-items:center;flex-wrap:wrap;gap:4px 18px;border-bottom:1px solid #becbbb;padding:18px 0 22px;margin:0 0 40px}
+.v2-depth-nav a{font-size:12px;font-weight:600;line-height:1.5;color:#748779;padding:9px 12px;border:1px solid transparent}
+.v2-depth-nav a:hover,.v2-depth-nav a.is-active{color:#304c3b;border-color:#a8bfad;background:#e5eee4;opacity:1}
+.v2-people-placeholder{padding:40px 0 100px;min-height:400px}
+.v2-people-placeholder h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(44px,6vw,83px);font-weight:400;color:#273b31;margin:20px 0;line-height:1.05}
+.v2-people-placeholder p{font-size:15px;color:#63796a;line-height:1.95}
+.v2-shell-eyebrow{color:#788f7f;font-size:11px;font-weight:700;letter-spacing:1.8px}
+.v2-outline-note{padding:21px 24px;border:1px dashed #aabbad;background:#e8eee6;color:#637b6a;font-size:12px;line-height:1.8;margin-top:34px}
+.v2-study-shell{padding:30px 0 100px;min-height:410px}
+.v2-study-shell h2{font-size:clamp(40px,5vw,64px);font-weight:400;color:#253e30;letter-spacing:-1.5px;margin:21px 0}
+.v2-study-shell p{font-size:14px;max-width:780px;color:#647e6d;line-height:2}
+.v2-contact-information{margin-top:80px;border-top:1px solid #c6d4c5;padding-top:55px}
+.v2-contact-information .ct-section-heading h2{font-size:clamp(36px,5vw,62px)}
+/* Treat Fieldwork + Gallery as one flowing Activities destination. */
+[data-life-view="fieldwork"]:not([hidden]) + [data-life-view="gallery"]:not([hidden]){margin-top:65px;border-top:1px solid #bdcbbf;padding-top:65px}
+@media(max-width:640px){
+ .v2-depth-nav{gap:2px 5px;margin-bottom:22px;padding:12px 0}
+ .v2-depth-nav a{font-size:11px;padding:8px 10px}
+ .v2-people-placeholder{padding-top:25px;min-height:300px}
+ .v2-study-shell{padding:20px 0 70px}
+ .v2-contact-information{margin-top:45px}
+}
+
+
+/* ABOUT 01–04: October 25 approved source copy, V2 only.
+   Retain the existing typographic palette and card/diagram treatments. */
+#about-page .ab-themes{padding-bottom:0}
+#about-page .ab-themes .ab-landscapes{margin-top:90px}
+#about-page .ab-orb strong{letter-spacing:.2px}
+#about-page .ab-vision-statement strong{font-weight:600}
+#about-page .ab-content-heading{display:flex;gap:24px;justify-content:space-between;align-items:end;border-bottom:1px solid rgba(83,109,94,.23);padding-bottom:18px;margin:38px 0 27px}
+#about-page .ab-content-heading span{font-size:10px;letter-spacing:1.8px;color:#688375;font-weight:700}
+#about-page .ab-content-heading h3{font-size:clamp(23px,2.4vw,34px);line-height:1.2;letter-spacing:-.7px;font-weight:500;color:#31473b;margin:0}
+#about-page .ab-process{margin-bottom:72px}
+#about-page .ab-methods-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:4px 0 76px}
+#about-page .ab-methods-grid span{display:flex;align-items:center;padding:20px 17px;min-height:92px;background:#f7f7f2;border-top:2px solid #8caab1;color:#486152;font-size:13px;font-weight:500;line-height:1.55;word-break:keep-all}
+#about-page .ab-approach .ab-practice-line{margin-bottom:105px}
+@media(max-width:1050px){
+ #about-page .ab-methods-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ #about-page .ab-themes .ab-landscapes{margin-top:60px}
+ #about-page .ab-content-heading{display:block;margin-top:34px;margin-bottom:20px}
+ #about-page .ab-content-heading h3{margin-top:10px;font-size:25px}
+ #about-page .ab-methods-grid{gap:8px;margin-bottom:54px}
+ #about-page .ab-methods-grid span{padding:15px 13px;min-height:85px;font-size:11px}
+ #about-page .ab-approach .ab-practice-line{margin-bottom:70px}
+}

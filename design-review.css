@@ -1,0 +1,217 @@
+/* ELSDR V2 — Design direction review (2026-10-28)
+   A consistent type, rhythm, information density and asset policy.
+   Scope to V2, without touching the preserved V1. */
+:root{
+  --v2-paper:#f4f3ee;
+  --v2-surface:#fdfcf9;
+  --v2-ink:#252d2a;
+  --v2-forest:#536d5e;
+  --v2-muted:#667d6d;
+  --v2-border:#c8d6c9;
+}
+html{scroll-padding-top:100px}
+.page:not([data-page="about"]):not([data-page="home"]){background:var(--v2-paper)}
+.page[data-page="research"] .rs-main,
+.page[data-page="people"] .pp-main,
+.page[data-page="study"] .st-inner,
+.page[data-page="life"] .lf-inner,
+.page[data-page="contact"] .ct-content{max-width:var(--max)}
+/* 01. Top-level title system: same hierarchy across Research/People/Study/Life/Contact. */
+#research-archive-v2 .ra-header h1,
+.pp-page .pp-intro h1,
+.st-page .st-head h1,
+.lf-page .lf-header-flex h1,
+.ct-page .ct-intro h1{
+  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-size:clamp(58px,7.5vw,115px);
+  font-weight:500;
+  line-height:1.04;
+  letter-spacing:-.053em;
+}
+#research-archive-v2 .ra-header{align-items:end;margin:0 0 48px}
+#research-archive-v2 .ra-header h1{margin:11px 0 0}
+#research-archive-v2 .ra-header p{font-size:14px}
+.pp-page .pp-intro-row>p,
+.st-page .st-head-row>p,
+.lf-page .lf-header-flex>p,
+.ct-page .ct-intro-row>p{font-size:14px;line-height:1.85;color:var(--v2-muted)}
+/* 02. Shared section heading and secondary copy. */
+.ab-section-intro h2,
+.pp-page .pp-section-heading h2,
+.st-page .st-lead h2,
+.lf-page .lf-intro h2,
+.ct-page .ct-section-heading h2{
+  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-size:clamp(38px,5.2vw,73px);
+  font-weight:500;
+  line-height:1.12;
+  letter-spacing:-.042em;
+}
+.ab-section-intro>p,
+.pp-page .pp-section-lead,
+.st-page .st-v2-intro,
+.lf-page .lf-intro>p,
+.ct-page .ct-section-heading p{line-height:1.9;word-break:keep-all}
+#research-archive-v2 .ra-header h1 span,
+.pp-page .pp-intro h1 span,
+.st-page .st-head h1 span,
+.ct-page .ct-intro h1 span{color:#8caab1}
+/* 03. Research Archive + Events list: more useful records at a glance. */
+#research-archive-v2 .ra-summary{padding-top:19px;padding-bottom:19px;min-height:74px}
+#research-archive-v2 .ra-records{margin-top:23px}
+#research-archive-v2 .ra-expanded{padding-top:23px;padding-bottom:29px}
+#research-archive-v2 .ra-title{line-height:1.42}
+.lf-v2-page .lf-seminar-list .lf-seminar{padding-top:14px;padding-bottom:14px}
+.lf-v2-page .lf-seminar-list .lf-seminar h3{line-height:1.38}
+/* Active homepage uses the existing project's image, never a generic stock background. */
+.home-background{background-image:url("hero-bg.webp");background-position:center 53%;}
+/* 04. ABOUT theme cards: text-led, no stock landscape photography or ornamental arrows. */
+#about-page .ab-theme-grid{gap:16px}
+#about-page .ab-theme-card{
+  background:var(--v2-surface);
+  box-shadow:none;
+  transform:none;
+}
+#about-page .ab-theme-card:hover{transform:none;box-shadow:0 4px 15px rgba(37,45,42,.06)}
+#about-page .ab-theme-card .ab-theme-content{padding:35px 35px 34px;border-top-width:4px}
+#about-page .ab-theme-card h3{font-size:clamp(27px,2.9vw,41px);line-height:1.17;letter-spacing:-.04em}
+#about-page .ab-theme-top{margin-bottom:26px}
+#about-page .ab-theme-symbol{display:none}
+#about-page .ab-theme-keywords span{border-radius:2px}
+/* 05. People profile image system. 4:5 portrait on professor and researcher cards. */
+.pp-page .pp-prof-profile{
+  display:grid;
+  grid-template-columns:minmax(210px,.75fr) minmax(0,1.35fr);
+  min-height:0;
+  background:#e8eee7;
+}
+.pp-page .pp-prof-visual.pp-v2-photo-slot{
+  min-height:0;
+  width:100%;
+  aspect-ratio:4/5;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#dce7de;
+  border:1px solid var(--v2-border);
+  color:#607b68;
+}
+.pp-page .pp-prof-visual.pp-v2-photo-slot:before,
+.pp-page .pp-prof-visual.pp-v2-photo-slot:after{display:none}
+.pp-page .pp-v2-photo-caption{
+  font-family:"DM Sans","Noto Sans KR",Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1.4px;
+  line-height:1.5;
+  font-weight:600;
+  text-align:center;
+}
+.pp-page .pp-v2-researcher-card .pp-person-photo{
+  aspect-ratio:4/5;
+  min-height:0;
+  background:#dce7de;
+}
+.pp-page .pp-v2-researcher-card .pp-person-photo:before,
+.pp-page .pp-v2-researcher-card .pp-person-photo:after{display:none}
+.pp-page .pp-v2-researcher-card .pp-photo-caption{color:#6d8574}
+.pp-page .pp-v2-researcher-card .pp-person-info{padding:23px 21px 26px}
+.pp-page .pp-v2-researcher-card .pp-person-info h3{line-height:1.3}
+.pp-page .pp-v2-researcher-card .pp-person-interests{line-height:1.7;min-height:0}
+/* 06. Unverified News: show a clear archive empty state instead of invented photo cards. */
+.lf-v2-page .lf-v2-news-empty{
+  background:#e8eee7;
+  border-top:1px solid var(--v2-border);
+  border-bottom:1px solid var(--v2-border);
+  padding:45px 42px 50px;
+}
+.lf-v2-page .lf-v2-news-eyebrow{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:#738c7a;
+}
+.lf-v2-page .lf-v2-news-empty h3{
+  font-size:clamp(23px,3vw,34px);
+  font-weight:500;
+  letter-spacing:-.8px;
+  line-height:1.3;
+  margin:22px 0 14px;
+  color:#2b4636;
+}
+.lf-v2-page .lf-v2-news-empty>p{
+  font-size:13px;
+  line-height:1.9;
+  color:#607869;
+  max-width:680px;
+  margin-bottom:26px;
+  word-break:keep-all;
+}
+.lf-v2-page .lf-v2-news-categories{display:flex;gap:9px;flex-wrap:wrap}
+.lf-v2-page .lf-v2-news-categories span{
+  border:1px solid #bacfbd;
+  color:#547460;
+  font-size:11px;
+  padding:10px 13px;
+}
+/* 07. One clear card treatment for publicly confirmed materials. */
+.pp-page .pp-v2-book,
+.st-page .st-v2-learning-card,
+.lf-v2-page .lf-v2-activity-card,
+.ct-page .ct-v2-contact-card{
+  border:1px solid var(--v2-border);
+  box-shadow:none;
+}
+.pp-page .pp-v2-book-cover{aspect-ratio:3/4}
+.st-page .st-v2-resource-row,
+.pp-page .pp-v2-thesis-row,
+.pp-page .pp-v2-alumni-row{padding-top:22px;padding-bottom:22px}
+/* 08. Mobile: eliminate truncation and preserve legible layouts. */
+@media(max-width:900px){
+  .pp-page .pp-prof-profile{grid-template-columns:minmax(190px,.8fr) minmax(0,1.3fr)}
+  .pp-page .pp-prof-visual.pp-v2-photo-slot{min-height:0}
+}
+@media(max-width:640px){
+  html{scroll-padding-top:76px}
+  #research-archive-v2 .ra-header h1,
+  .pp-page .pp-intro h1,
+  .st-page .st-head h1,
+  .lf-page .lf-header-flex h1,
+  .ct-page .ct-intro h1{
+    font-size:clamp(42px,10vw,60px);
+    letter-spacing:-.044em;
+    line-height:1.1;
+  }
+  #research-archive-v2 .ra-header{margin-bottom:28px}
+  #research-archive-v2 .ra-header p{font-size:12px}
+  #research-archive-v2 .ra-summary{padding-top:17px;padding-bottom:17px;min-height:66px}
+  .ab-section-intro h2,
+  .pp-page .pp-section-heading h2,
+  .st-page .st-lead h2,
+  .lf-page .lf-intro h2,
+  .ct-page .ct-section-heading h2{font-size:clamp(32px,8vw,48px);letter-spacing:-.035em}
+  #about-page .ab-theme-card .ab-theme-content{padding:27px 24px}
+  #about-page .ab-theme-card h3{font-size:28px}
+  .pp-page .pp-prof-profile{display:block}
+  .pp-page .pp-prof-visual.pp-v2-photo-slot{
+    min-height:0;
+    max-width:320px;
+    margin-inline:auto;
+    aspect-ratio:4/5;
+  }
+  .pp-page .pp-v2-researcher-card .pp-person-photo{min-height:0;aspect-ratio:4/5}
+  .pp-page .pp-v2-researcher-card .pp-person-info{padding:22px}
+  .lf-v2-page .lf-v2-news-empty{padding:30px 22px}
+  .lf-v2-page .lf-v2-news-empty h3{font-size:24px}
+  .lf-v2-page .lf-v2-news-empty>p{font-size:12px}
+  .lf-v2-page .lf-v2-news-categories span{font-size:10px;padding:8px}
+  .ct-v2-page .ct-v2-contact-card{min-width:0}
+  .ct-v2-page .ct-v2-contact-card>div a{overflow-wrap:anywhere}
+  .st-v2-page .st-v2-resource-row h3,
+  #research-archive-v2 .ra-title,
+  .pp-page .pp-v2-thesis-copy h3{overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){
+  #about-page .ab-theme-card,
+  .lf-v2-page .lf-v2-activity-card{transition:none}
+}

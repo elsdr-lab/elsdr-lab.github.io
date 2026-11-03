@@ -1,0 +1,118 @@
+/* V2 Life — preserve existing site palette and News / Events typography.
+   Fieldwork + Gallery become a single data-linked Activities experience. */
+.lf-v2-page .lf-inner{padding-bottom:110px}
+.lf-v2-page [hidden]{display:none!important}
+.lf-v2-page .lf-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lf-v2-news-grid{align-items:stretch}
+.lf-v2-news-pending{cursor:default!important}
+.lf-v2-news-pending .lf-news-cover{filter:saturate(.5)}
+.lf-v2-pending-label{display:inline-flex;align-items:center;color:#76907d;font-size:11px;letter-spacing:.3px;font-weight:600;padding:10px 0;border-top:1px solid rgba(83,109,94,.22);margin-top:auto}
+.lf-v2-news-note{color:#687d6e;font-size:12px;line-height:1.95;margin-top:35px;padding-top:25px;border-top:1px solid rgba(83,109,94,.2)}
+.lf-v2-news-note a{color:#436b51;text-decoration:underline;text-underline-offset:4px}
+.lf-v2-year-label{display:flex;flex-direction:column;gap:10px;color:#647d6d;font-size:10px;font-weight:700;letter-spacing:1.1px;min-width:120px}
+.lf-v2-year-label select{font-size:12px;min-height:41px;padding:9px 12px;color:#405b47;background:#f8f9f5;border:1px solid #bbccbb;cursor:pointer}
+.lf-v2-page .lf-seminar-list .lf-seminar{min-height:0;padding-top:18px;padding-bottom:18px}
+.lf-v2-page .lf-seminar-list .lf-seminar h3{font-size:clamp(15px,1.55vw,19px);line-height:1.4}
+.lf-v2-page .lf-seminar-list .lf-seminar p{font-size:12px;margin-top:7px}
+.lf-v2-event-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.lf-v2-event-materials>div{background:#eef2ec;border:1px solid #d3dcd2;padding:17px 20px}
+.lf-v2-event-materials strong,.lf-v2-event-related strong{font-size:10px;letter-spacing:1.3px;color:#69816d;font-weight:700}
+.lf-v2-event-materials p{font-size:12px;line-height:1.8;color:#7d9080;margin:9px 0 0}
+.lf-v2-event-related{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:23px;border-top:1px solid #c4d4c4;padding-top:23px}
+.lf-v2-event-related a{font-size:12px;font-weight:700;color:#4d7458;text-decoration:underline;text-underline-offset:3px}
+.lf-v2-activities{padding-top:40px}
+.lf-v2-section-head{display:flex;justify-content:space-between;gap:35px;align-items:end;margin:0 0 26px}
+.lf-v2-section-head>div>span{font-size:10px;font-weight:700;letter-spacing:1.7px;color:#7b9784}
+.lf-v2-section-head h3{font-size:clamp(31px,3.7vw,55px);font-weight:500;line-height:1.13;color:#2d4336;letter-spacing:-1.7px;margin:12px 0 0}
+.lf-v2-section-head h3 span{color:#88a9b0}
+.lf-v2-section-head>p{margin:0;color:#6f8476;font-size:12px;line-height:1.9;text-align:right}
+.lf-v2-places{padding:30px 0 85px}
+.lf-v2-map-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:0;min-height:470px;border:1px solid #c7d6c7;background:#e8efea}
+.lf-v2-map-sidebar{display:flex;flex-direction:column;min-width:0;padding:24px 22px;background:#ecf2ea;border-right:1px solid #c6d5c8}
+.lf-v2-map-sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.lf-v2-map-sidebar-head span{font-size:10px;font-weight:700;letter-spacing:1.2px;color:#67806e}
+.lf-v2-map-sidebar-head strong{font-size:10px;color:#8aa18d;white-space:nowrap}
+.lf-v2-map-switch{display:flex;flex-wrap:wrap;gap:5px;margin:22px 0 13px}
+.lf-v2-map-switch button,.lf-v2-activity-filters button{font-family:inherit;font-size:11px;font-weight:600;color:#637d68;border:1px solid #bbcbbb;padding:10px 13px;background:transparent;cursor:pointer;line-height:1.4}
+.lf-v2-map-switch button.is-selected,.lf-v2-activity-filters button.is-selected{background:#536d5e;border-color:#536d5e;color:white}
+.lf-v2-map-switch button:hover,.lf-v2-activity-filters button:hover{border-color:#536d5e}
+.lf-v2-place-list{overflow-y:auto;max-height:350px;min-height:210px}
+.lf-v2-place-button{width:100%;text-align:left;border:0;border-bottom:1px solid #d0dccf;background:transparent;padding:17px 8px;color:#35513f;cursor:pointer}
+.lf-v2-place-button:hover,.lf-v2-place-button.is-active{background:#d9e6da}
+.lf-v2-place-button strong{font-size:15px;font-weight:600;display:block}
+.lf-v2-place-button small{display:block;color:#798f7b;font-size:11px;line-height:1.6;margin-top:7px}
+.lf-v2-showall-places{margin-top:auto;text-align:left;border:0;border-top:1px solid #bdcdbd;padding:20px 0 0;color:#466e53;background:transparent;font:700 12px/1.5 inherit;cursor:pointer}
+.lf-v2-map-wrap{position:relative;min-height:470px;min-width:0}
+.lf-v2-map{width:100%;height:470px;background:#d9e4da;position:relative;z-index:0}
+.lf-v2-map-placeholder,.lf-v2-map-unavailable{position:absolute;inset:0;display:grid;place-items:center;color:#67816d;text-align:center;padding:28px;font-size:13px;line-height:2}
+.lf-v2-map-legend{position:absolute;bottom:13px;left:15px;right:15px;display:flex;justify-content:space-between;gap:12px;z-index:500;pointer-events:none}
+.lf-v2-map-legend span{font-size:10px;font-weight:700;letter-spacing:.7px;color:#476b57;background:rgba(249,252,247,.94);padding:9px 12px}
+.lf-v2-map-popup{font:12px/1.65 "DM Sans","Noto Sans KR",sans-serif}
+.lf-v2-map-popup strong{font-size:15px;display:block;color:#304b3a;margin-bottom:7px}
+.lf-v2-map-popup p{font-size:11px;color:#7a8d80;margin:0 0 10px}
+.lf-v2-map-popup a{font-size:12px;color:#436d50;display:block;padding:7px 0;border-top:1px solid #dbe7dd}
+.lf-v2-map-caution{font-size:11px;line-height:1.95;color:#758a7a;margin:21px 0 0}
+.lf-v2-activity-section{scroll-margin-top:93px;padding:75px 0 75px;border-top:1px solid #bbcebf}
+.lf-v2-activity-controls{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:15px 25px;border-top:1px solid #c4d2c5;border-bottom:1px solid #c4d2c5;padding:18px 0}
+.lf-v2-activity-filters{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.lf-v2-activity-search{display:flex;flex-direction:column;min-width:180px;flex:1;max-width:380px;gap:8px}
+.lf-v2-activity-search span{font-size:10px;font-weight:700;color:#759079;letter-spacing:1px}
+.lf-v2-activity-search input{background:transparent;border:0;border-bottom:1px solid #a7bba9;padding:11px 0;color:#355240;font-size:12px;outline:0;min-width:0}
+.lf-v2-activity-search input:focus{border-bottom-width:2px;border-color:#536d5e}
+.lf-v2-activity-status{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:68px;font-size:11px;color:#758c7a}
+.lf-v2-activity-status button{background:transparent;border:1px solid #aabcaa;padding:9px 12px;color:#456a51;font-size:11px;cursor:pointer}
+.lf-v2-activity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}
+.lf-v2-activity-card{background:#fdfcf9;border:1px solid #d5dfd3;display:flex;flex-direction:column;color:#2b4035;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.lf-v2-activity-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(40,70,51,.08)}
+.lf-v2-activity-photo{height:225px;background:#d5e1d6;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.lf-v2-activity-photo img{width:100%;height:100%;object-fit:cover}
+.lf-v2-no-photo{background:linear-gradient(145deg,#e5ebe4,#d6e4df);flex-direction:column;gap:24px;color:#88a196}
+.lf-v2-no-photo span{font-size:10px;font-weight:700;letter-spacing:1.2px}
+.lf-v2-no-photo b{font-size:45px;letter-spacing:-4px;font-weight:400;color:rgba(94,131,108,.26)}
+.lf-v2-card-copy{padding:23px 23px 25px;display:flex;flex-direction:column;flex:1}
+.lf-v2-card-meta{font-size:10px;color:#7c9783;letter-spacing:1px;font-weight:700}
+.lf-v2-card-copy h4{font-size:18px;font-weight:600;line-height:1.42;letter-spacing:-.5px;margin:14px 0 12px;word-break:keep-all}
+.lf-v2-card-copy p{font-size:12px;color:#77907c;line-height:1.7;margin:0 0 20px}
+.lf-v2-card-link{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:14px;border-top:1px solid #c7d7c6;font-size:11px;font-weight:700;color:#52725c}
+.lf-v2-empty{padding:47px 20px;text-align:center;background:#e8f0e8;color:#6d8774;font-size:12px;line-height:1.8}
+.lf-v2-activity-detail{max-width:1050px;margin:auto;padding:50px 0 115px}
+.lf-v2-activity-back{color:#4e7356;font-size:12px;font-weight:700}
+.lf-v2-activity-detail-head{padding:50px 0 30px;border-bottom:1px solid #c0d3c2}
+.lf-v2-activity-detail-head>span{font-size:11px;letter-spacing:1.3px;font-weight:700;color:#789581}
+.lf-v2-activity-detail-head h2{font-size:clamp(34px,5vw,62px);font-weight:500;letter-spacing:-1.8px;line-height:1.2;color:#2d4134;margin:21px 0}
+.lf-v2-activity-detail-head p{font-size:14px;color:#738a78;line-height:1.9}
+.lf-v2-activity-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:30px 0;margin:0}
+.lf-v2-activity-facts div{border-top:1px solid #cbd9cb;padding-top:15px}
+.lf-v2-activity-facts dt{font-size:10px;color:#7c9782;letter-spacing:1.2px;font-weight:700;margin-bottom:12px}
+.lf-v2-activity-facts dd{margin:0;color:#415b49;font-size:13px;line-height:1.8}
+.lf-v2-activity-gallery{border-top:1px solid #cbd9cb;padding:30px 0}
+.lf-v2-activity-gallery h3{font-size:25px;font-weight:500;margin:0 0 20px}
+.lf-v2-activity-gallery .lf-v2-activity-photo{height:320px;max-width:540px}
+.lf-v2-activity-gallery p{font-size:12px;color:#738b76;line-height:1.8}
+.lf-v2-activity-links{border-top:1px solid #cbd9cb;padding:25px 0;display:flex;gap:25px;flex-wrap:wrap}
+.lf-v2-activity-links a{font-size:12px;color:#52775b;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1050px){
+ .lf-v2-map-layout{grid-template-columns:275px minmax(0,1fr)}
+ .lf-v2-map-sidebar{padding:20px 16px}
+ .lf-v2-activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .lf-v2-event-materials{grid-template-columns:1fr}
+}
+@media(max-width:690px){
+ .lf-v2-page .lf-tabs{grid-template-columns:1fr}
+ .lf-v2-section-head{display:block}
+ .lf-v2-section-head>p{text-align:left;margin-top:16px;font-size:11px}
+ .lf-v2-places{padding:20px 0 50px}
+ .lf-v2-map-layout{grid-template-columns:1fr}
+ .lf-v2-map-sidebar{border-right:0;border-bottom:1px solid #c6d5c8}
+ .lf-v2-place-list{max-height:180px;min-height:0}
+ .lf-v2-map,.lf-v2-map-wrap{height:340px;min-height:340px}
+ .lf-v2-map-legend span{font-size:8px;padding:7px 8px}
+ .lf-v2-activity-section{padding:45px 0;scroll-margin-top:76px}
+ .lf-v2-activity-filters button{font-size:10px;padding:8px 10px}
+ .lf-v2-activity-search{min-width:100%;max-width:none}
+ .lf-v2-activity-grid{grid-template-columns:1fr}
+ .lf-v2-activity-photo{height:210px}
+ .lf-v2-activity-facts{grid-template-columns:1fr;gap:10px}
+ .lf-v2-activity-detail{padding:30px 0 75px}
+ .lf-v2-activity-gallery .lf-v2-activity-photo{height:250px}
+}

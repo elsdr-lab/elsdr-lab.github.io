@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172b29">
+<meta name="description" content="ELSDR Ecological Landscape System Design & Research Lab — Website Renewal Concept Preview">
+<title>ELSDR — Website Renewal Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#172b29;--ink:#1d2c29;--muted:#71807a;--paper:#f5f5ef;--warm:#e8eae0;--line:#d6dbd1;--mint:#c2d6c8;--lime:#d5e2a9;--white:#fff;--max:1450px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}button,input{font:inherit}button{cursor:pointer}a,button{transition:opacity .22s ease,background .22s ease,color .22s ease,transform .22s ease}a:hover{opacity:.72}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #879d76;outline-offset:3px}img{width:100%;height:100%;object-fit:cover;display:block}h1,h2,h3,p{margin-top:0}.serif{font-family:"Cormorant Garamond",Georgia,serif}.wrap{width:min(calc(100% - 88px),var(--max));margin-inline:auto}.topline{height:5px;background:linear-gradient(90deg,#142c29 0%,#56786d 42%,#d5d7ad 80%,#91bcb6 100%)}
+.site-head{position:sticky;top:0;z-index:50;background:rgba(247,248,242,.96);backdrop-filter:blur(20px);border-bottom:1px solid #e0e3da}.header-inner{height:81px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:12px;min-width:213px}.brand-symbol{width:40px;height:40px;display:grid;place-items:center;background:var(--pine);color:#eaf3e4}.brand-name{font-size:23px;font-weight:700;letter-spacing:-1.6px;line-height:1}.brand-sub{font-size:8px;letter-spacing:1px;line-height:1.3;color:#71847c;margin-top:4px;max-width:155px}.primary-nav{display:flex;gap:26px;align-items:center}.nav-a{font-size:12px;font-weight:600;letter-spacing:.015em;position:relative;padding:31px 0}.nav-a.active:after{content:"";width:100%;height:2px;background:var(--pine);position:absolute;bottom:20px;left:0}.header-actions{display:flex;gap:16px;align-items:center}.lang-toggle{border:1px solid #cbd3ca;border-radius:28px;background:transparent;padding:8px 12px;font-size:11px;font-weight:700}.mobile-btn{display:none;border:0;background:transparent;font-size:24px}.demo-mark{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#82918a}.page{display:none}.page.active{display:block}.small-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px}.section-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:40px}.section-num{color:#80908a;font-size:11px;letter-spacing:1.5px}.section-title{font-size:clamp(42px,5.3vw,78px);line-height:.97;letter-spacing:-1.7px;font-weight:500}.section-subtitle{color:#556660;line-height:1.85;font-size:14px;max-width:470px}.arrow-circle{width:42px;height:42px;border:1px solid #b5c1b8;border-radius:100%;display:grid;place-items:center;flex-shrink:0}.outline-link{display:inline-flex;align-items:center;gap:13px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #7e8c85;padding:12px 0}.tag{font-size:9px;letter-spacing:1.4px;border:1px solid #a7b4aa;padding:7px 10px;border-radius:30px;text-transform:uppercase}
+.hero{position:relative;min-height:calc(100svh - 86px);height:760px;overflow:hidden;background:#29473d;color:#fff}.hero-photo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=2100&q=88') center 46%/cover;animation:zoomHero 24s ease-in-out infinite alternate}.hero:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(15,37,32,.87),rgba(15,37,32,.29) 75%),linear-gradient(0deg,rgba(6,22,20,.62),transparent 44%)}@keyframes zoomHero{from{transform:scale(1)}to{transform:scale(1.1)}}.hero-content{position:relative;z-index:2;height:100%;padding-top:clamp(90px,12vh,150px);padding-bottom:100px;display:flex;flex-direction:column;justify-content:space-between}.hero-overline{color:#d7e6d6;font-size:11px;letter-spacing:3.2px;text-transform:uppercase;display:flex;align-items:center;gap:15px}.hero-overline:before{content:"";width:38px;height:1px;background:#d7e6d6}.hero-title{font-size:clamp(64px,8.1vw,141px);font-weight:400;line-height:.87;letter-spacing:-2px;margin:34px 0 35px;max-width:1100px}.hero-title em{font-weight:400;color:#d2dfce}.hero-intro{max-width:530px;color:#ebeee6;font-size:14px;line-height:2;margin-left:4px}.hero-bottom{display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(255,255,255,.4);padding-top:23px}.hero-cta{display:flex;align-items:center;gap:25px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:1.3px}.hero-bottom-right{font-size:10px;letter-spacing:1.6px;text-align:right;line-height:2;color:#d8e4da}.hero-side{position:absolute;z-index:2;right:38px;top:38%;writing-mode:vertical-rl;font-size:10px;letter-spacing:2.5px;color:#e5eee2}.masthead-stamp{position:absolute;right:6%;bottom:19%;z-index:2;width:98px;height:98px;border:1px solid #ffffff8c;border-radius:50%;display:grid;place-items:center;font-size:9px;line-height:1.7;text-align:center;letter-spacing:1px;transform:rotate(12deg);color:#fff}
+.intro{padding:150px 0 145px}.intro-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:90px;align-items:start}.intro h2{font-size:clamp(54px,7vw,106px);line-height:.88;letter-spacing:-2px;font-weight:400}.intro h2 em{color:#6e8a78;font-weight:400}.intro-body{padding-top:65px}.intro-body p{max-width:600px;line-height:2.1;font-size:16px;color:#53635c}.identity{padding:112px 0;background:#e9ede5}.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #a9b7aa;margin-top:70px}.pillar{padding:32px 38px 60px 0;min-height:290px;border-right:1px solid #b9c6b8;margin-right:38px}.pillar:last-child{border:0;margin-right:0}.pillar-n{color:#70877a;font-size:12px}.pillar h3{font-size:clamp(31px,3.2vw,47px);font-weight:400;line-height:1.05;margin:65px 0 12px}.pillar p{color:#60736a;line-height:1.8;font-size:13px}
+.themes{padding:145px 0}.theme-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:360px 360px;gap:14px}.theme-card{position:relative;overflow:hidden;background:#284137;display:flex;align-items:end;color:#fff;min-height:290px}.theme-card img{position:absolute;inset:0;transition:transform .8s ease}.theme-card:hover img{transform:scale(1.07)}.theme-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,24,18,.75),transparent 75%)}.theme-info{position:relative;z-index:2;padding:30px 35px;width:100%}.theme-info h3{font-family:"Cormorant Garamond",serif;font-size:clamp(30px,3.2vw,46px);font-weight:500;line-height:.95;margin:16px 0 10px;max-width:440px}.theme-info p{font-size:12px;opacity:.84;margin:0}.theme-number{font-size:10px;letter-spacing:2px}.theme-index{color:#9caea1;font-size:10px;letter-spacing:2px}.theme-grid .theme-card:nth-child(2){transform:translateY(45px)}.theme-grid .theme-card:nth-child(4){transform:translateY(45px)}
+.feature{background:#192e2b;color:#eff5e9;padding:145px 0}.feature .section-subtitle{color:#bdcdc2}.project-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin-top:55px}.project-card{position:relative;overflow:hidden}.project-img{height:360px;overflow:hidden;background:#31564a}.project-card:first-child .project-img{height:520px}.project-img img{transition:transform .8s}.project-card:hover .project-img img{transform:scale(1.05)}.project-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:19px 0 8px;color:#b6ccbf;font-size:10px;letter-spacing:1px;text-transform:uppercase}.project-title{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:37px;line-height:1.05;margin:0}.sample-indicator{display:inline-block;font-size:9px;font-weight:600;letter-spacing:1px;border:1px solid #a4baa9;padding:5px 7px;color:#cde0d2}
+.landscapes{padding:140px 0 120px}.land-head{display:grid;grid-template-columns:1fr 1fr;gap:30px}.land-head h2{font-size:clamp(50px,6.1vw,92px);font-weight:400;line-height:.95;margin:0}.land-head h2 em{color:#668875}.land-list{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:65px}.land-item{border-top:1px solid #b7c4ba;padding-top:20px}.land-item i{font-style:normal;color:#80928a;font-size:11px}.land-item h3{font-weight:500;font-size:18px;letter-spacing:-.7px;margin-top:18px}.land-item p{font-size:11px;color:#73867b;margin-bottom:0}
+.news-block{background:#e5e9dd;padding:115px 0}.news-row{display:grid;grid-template-columns:100px 1fr 30px;gap:25px;padding:24px 0;border-bottom:1px solid #bec8bc;align-items:center}.news-row strong{font-weight:500;font-size:18px}.news-row small{font-size:10px;color:#71857a;letter-spacing:1px;text-transform:uppercase}
+.footer{background:#122623;color:#f0f3e9;padding:80px 0 25px}.footer-upper{display:flex;justify-content:space-between;gap:35px;padding-bottom:105px}.footer-logo{font-size:clamp(88px,13.5vw,210px);letter-spacing:-10px;font-weight:700;line-height:.8}.footer-right{font-size:12px;line-height:2.2;color:#bccfc0;max-width:340px}.footer-bottom{border-top:1px solid #466058;display:flex;justify-content:space-between;padding-top:25px;color:#a0b4a7;font-size:10px;line-height:1.7;gap:20px}
+.subhero{padding:105px 0 105px;background:#e8eee7;position:relative;overflow:hidden}.subhero:before{content:"";position:absolute;width:370px;height:370px;border:1px solid #bed1c1;border-radius:50%;right:-90px;top:-80px;box-shadow:0 0 0 65px rgba(112,151,124,.06),0 0 0 135px rgba(112,151,124,.06)}.subhero .wrap{position:relative}.subhero h1{font-size:clamp(60px,9.3vw,140px);font-weight:400;line-height:.84;letter-spacing:-2px;max-width:1160px;margin:35px 0}.subhero h1 em{color:#70947e;font-weight:400}.subhero p{font-size:15px;line-height:2;color:#5c7065;max-width:600px}.sub-content{padding:110px 0 140px}.two-columns{display:grid;grid-template-columns:1fr 1.1fr;gap:80px}.head-small{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#648174}.body-big{font-size:clamp(28px,3.4vw,45px);line-height:1.45;letter-spacing:-1px;font-weight:400}.body-copy{font-size:15px;line-height:2.1;color:#63766c}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #b2beb2;margin-top:45px}.step{border-right:1px solid #d1d9d0;padding:20px 18px 40px}.step:last-child{border:0}.step b{display:block;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:32px;margin-top:60px}.statement{background:#1d3631;color:white;padding:110px 0;text-align:center}.statement h2{font-size:clamp(50px,7vw,105px);font-weight:400;line-height:.9;margin:18px auto;max-width:1000px}.statement p{color:#c4d3c8;font-size:14px}
+.theme-detail{display:grid;grid-template-columns:42% 1fr;gap:65px;border-top:1px solid #c5d0c4;padding:56px 0;align-items:center}.theme-detail:nth-child(even){grid-template-columns:1fr 42%}.theme-detail:nth-child(even) .td-image{order:2}.td-image{height:390px;overflow:hidden}.td-title{font-size:clamp(39px,4.7vw,71px);font-weight:400;line-height:.95;margin:28px 0}.td-desc{font-size:15px;color:#6a7a6f;line-height:2;max-width:520px}.keyword-list{display:flex;gap:7px;flex-wrap:wrap;margin-top:25px}.keyword{padding:8px 12px;border:1px solid #bac9bb;border-radius:30px;font-size:11px}
+.archive-top{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:20px 0 24px}.archive-top h2{font-size:clamp(37px,5vw,70px);font-weight:400;margin:0;line-height:1}.archive-note{font-size:11px;color:#7d8b83}.filter-bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;border-top:1px solid #c4cdc3;border-bottom:1px solid #c4cdc3;padding:17px 0 20px}.filter-btn{border:1px solid #ccd4ca;background:transparent;border-radius:30px;font-size:11px;padding:10px 15px;color:#516358}.filter-btn.selected{background:var(--pine);color:white;border-color:var(--pine)}.search-box{margin-left:auto;display:flex;align-items:center;border-bottom:1px solid #82968a;padding:0 3px;gap:10px}.search-box input{border:0;background:transparent;padding:10px 5px;color:#1b3028;min-width:185px;outline:none;font-size:12px}.archive-item{display:grid;grid-template-columns:80px 1fr 150px 24px;gap:22px;align-items:start;padding:27px 0;border-bottom:1px solid #d3dcd1}.archive-item[data-hidden="yes"]{display:none}.archive-year{font-size:13px;font-weight:700;color:#70847a}.archive-item h3{font-size:18px;font-weight:500;line-height:1.55;letter-spacing:-.2px;margin:0 0 11px}.archive-item p{font-size:12px;color:#7d9082;line-height:1.65;margin:0}.archive-category{font-size:11px;color:#668578}.item-arrow{font-size:20px}.archive-results{font-size:11px;margin:22px 0;color:#73877c}.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.person-card{background:#e7ede6;padding:25px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}.person-icon{height:150px;display:grid;place-items:center;color:#8fa997;font-family:"Cormorant Garamond",serif;font-size:90px;border-bottom:1px solid #c2d0c4}.person-name{font-size:18px;margin-top:18px}.person-sub{font-size:12px;color:#748b7c}.lightnote{background:#e5eae0;padding:17px 20px;font-size:12px;color:#677c6b;border-left:2px solid #8ea795;line-height:1.8}.mini-section-title{font-size:clamp(38px,5vw,70px);font-family:"Cormorant Garamond",serif;font-weight:400;line-height:1}.site-caption{margin-top:22px;color:#73857a;font-size:11px;line-height:1.8}
+body.ko .lang-en{display:none}body:not(.ko) .lang-ko{display:none}
+@media(max-width:1180px){.primary-nav{gap:14px}.nav-a{font-size:11px}.brand{min-width:195px}.header-inner{gap:14px}}
+@media(max-width:920px){.wrap{width:min(calc(100% - 48px),var(--max))}.header-inner{height:70px}.mobile-btn{display:block}.primary-nav{display:none;position:absolute;top:75px;left:0;right:0;background:#f6f8f2;flex-direction:column;align-items:stretch;padding:15px 24px 25px;gap:0;box-shadow:0 18px 35px #172c241c}.primary-nav.open{display:flex}.nav-a{padding:14px 0;font-size:15px;border-bottom:1px solid #e0e6de}.nav-a.active:after{bottom:0}.demo-mark{display:none}.hero{height:690px;min-height:610px}.hero-title{font-size:clamp(63px,10vw,110px)}.intro-grid{grid-template-columns:1fr;gap:0}.intro-body{padding-top:0}.pillar-grid{gap:8px}.pillar{margin-right:13px;padding-right:15px}.pillar h3{font-size:34px}.land-list{grid-template-columns:repeat(3,1fr)}.footer-logo{font-size:125px}.theme-detail,.theme-detail:nth-child(even){grid-template-columns:1fr;gap:25px}.theme-detail:nth-child(even) .td-image{order:0}}
+@media(max-width:640px){.wrap{width:calc(100% - 36px)}.brand-symbol{width:35px;height:35px}.brand-name{font-size:20px}.brand-sub{font-size:7px;max-width:140px}.header-actions{gap:8px}.lang-toggle{font-size:10px;padding:7px 10px}.hero{height:690px;min-height:610px}.hero-content{padding-top:95px;padding-bottom:53px}.hero-title{font-size:clamp(64px,14vw,85px);letter-spacing:-1px;margin:25px 0}.hero-intro{font-size:12px;line-height:1.9;max-width:370px}.hero-side,.masthead-stamp{display:none}.hero-bottom-right{display:none}.hero-cta{font-size:10px}.section-top,.land-head{display:block}.section-top .section-subtitle{margin-top:24px}.intro,.themes,.landscapes,.sub-content{padding:80px 0}.intro h2{font-size:67px}.identity,.feature,.news-block{padding:75px 0}.pillar-grid{display:block;margin-top:40px}.pillar{margin:0;border-right:0;border-bottom:1px solid #bdcbbd;min-height:0;padding:18px 0 35px}.pillar:last-child{border:0}.pillar h3{font-size:40px;margin:30px 0 10px}.theme-grid{grid-template-columns:1fr;grid-template-rows:none;gap:15px}.theme-grid .theme-card:nth-child(2),.theme-grid .theme-card:nth-child(4){transform:none}.theme-card{height:320px}.theme-info{padding:22px}.project-grid{grid-template-columns:1fr}.project-card:first-child .project-img,.project-img{height:300px}.land-head h2{font-size:61px}.land-list{grid-template-columns:1fr 1fr;row-gap:20px}.news-row{grid-template-columns:68px 1fr 16px;gap:8px}.news-row strong{font-size:14px}.footer{padding-top:58px}.footer-upper{display:block;padding-bottom:65px}.footer-logo{font-size:25vw;letter-spacing:-4px}.footer-right{margin-top:35px}.footer-bottom{display:block}.subhero{padding:75px 0 65px}.subhero h1{font-size:clamp(60px,12vw,82px)}.two-columns{grid-template-columns:1fr;gap:30px}.steps{grid-template-columns:repeat(2,1fr)}.steps .step{min-height:150px}.steps .step b{margin-top:32px}.td-image{height:260px}.theme-detail{padding:36px 0}.archive-top{display:block}.archive-note{margin-top:15px}.search-box{margin-left:0;width:100%}.search-box input{width:100%}.archive-item{grid-template-columns:55px 1fr 20px;gap:9px}.archive-category{display:none}.archive-item h3{font-size:14px}.people-grid{grid-template-columns:1fr 1fr;gap:10px}.person-card{padding:15px;min-height:200px}.person-icon{height:100px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Full-screen photographic landing page. Central palette variables for future approved swatches. */
+body.home-view{overflow:hidden}
+body.home-view .footer{display:none}
+.home-scene{position:relative;width:100%;height:calc(100dvh - 87px);overflow:hidden;color:#f5f5ef;background:var(--pine);isolation:isolate}
+.home-background{position:absolute;inset:0;background:url('hero-bg.webp') center 53%/cover;animation:homePhotoIn 1.75s ease-out both}
+.home-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(15,35,29,.07),rgba(15,35,29,.25) 35%,rgba(15,35,29,.66) 70%,rgba(15,35,29,.78)),linear-gradient(0deg,rgba(15,35,29,.4),transparent 25%)}
+.home-layout{position:relative;z-index:2;height:100%;display:flex;justify-content:flex-end;align-items:center}
+.home-message{width:min(700px,70%);text-align:right;margin-left:auto;padding-bottom:12px;animation:homeCopyIn .8s ease-out both}
+.home-kicker{font-size:10px;letter-spacing:2.2px;font-weight:700;line-height:1.7;color:#e9ede6;margin:0}
+.home-headline{font-size:clamp(54px,6vw,93px);line-height:.94;font-weight:500;letter-spacing:-1.5px;margin:34px 0 34px;color:#f8f8f1}
+.home-headline em{color:#d2e1d4;font-weight:400}
+.home-lead{font-size:clamp(16px,1.5vw,21px);font-weight:500;line-height:1.85;word-break:keep-all;max-width:520px;margin:0 0 13px auto}
+.home-desc{font-size:clamp(11px,.96vw,13px);line-height:2;word-break:keep-all;max-width:520px;margin:0 0 25px auto;color:#d7e5d9}
+.home-link{display:inline-flex;align-items:center;gap:16px;border-top:1px solid #dfebdd;padding-top:14px;padding-left:24px;font-size:11px;font-weight:600}
+.home-arrow{width:30px;height:30px;border:1px solid #e5ede2;border-radius:50%;display:grid;place-items:center;font-size:16px}
+.home-footnote{position:absolute;z-index:3;left:50%;bottom:28px;transform:translateX(-50%);display:flex;align-items:center;justify-content:space-between;font-size:9px;letter-spacing:1.3px;font-weight:600;color:#ebf0e7}
+.home-watermark{position:absolute;z-index:2;top:35px;left:44px;font-size:9px;letter-spacing:1.7px;color:#edf3e8}
+@keyframes homePhotoIn{from{opacity:.4;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}@keyframes homeCopyIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:920px){.home-message{width:78%}.home-headline{font-size:clamp(54px,7.7vw,77px)}.home-footnote span:last-child{max-width:300px;text-align:right;line-height:1.5}}
+@media(max-width:640px){.home-scene{height:calc(100dvh - 76px)}.home-background{background-position:42% center}.home-shade{background:linear-gradient(90deg,rgba(14,34,29,.13),rgba(14,34,29,.55) 40%,rgba(14,34,29,.85)),linear-gradient(0deg,rgba(14,34,29,.4),transparent 30%)}.home-message{width:100%;padding-bottom:10px}.home-kicker{font-size:8px;letter-spacing:1.25px}.home-headline{font-size:clamp(45px,11.5vw,73px);margin:24px 0 27px}.home-lead{font-size:14px;line-height:1.75}.home-desc{font-size:11px;line-height:1.8;margin-bottom:18px}.home-link{font-size:10px;padding-top:10px}.home-footnote{bottom:18px;font-size:8px}.home-footnote span:last-child{display:none}.home-watermark{top:15px;left:18px;font-size:8px}}
+@media(max-width:390px),(max-height:700px){.home-headline{font-size:clamp(38px,7vh,60px);margin:14px 0 15px}.home-kicker{font-size:7px}.home-lead{font-size:12px;line-height:1.6;margin-bottom:7px}.home-desc{font-size:10px;line-height:1.6;margin-bottom:12px}.home-footnote{bottom:10px}}
+@media(prefers-reduced-motion:reduce){.home-background,.home-message{animation:none}}
+
+</style>
+<link rel="stylesheet" href="palette.css">
+<link rel="stylesheet" href="menu-structure.css">
+<link rel="stylesheet" href="contact-page.css">
+<link rel="stylesheet" href="life-page.css">
+<link rel="stylesheet" href="study-page.css">
+<link rel="stylesheet" href="people-page.css">
+<link rel="stylesheet" href="research-archive.css">
+<link rel="stylesheet" href="design-review.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body class="ko">
+<header class="site-head"><div class="wrap header-inner">
+<a href="#/home" class="brand brand-with-logo" aria-label="ELSDR Home"><img class="brand-original-mark" alt="ELSDR" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAABUCAMAAACfk9S5AAAAYFBMVEWbqm+jqZxqc16TmYp6gnDZ29W6yYyssKbH0qSGjnrL0bp7g3G7wri8w7Oxwn5/f3+EjHuwwnpze2eKkYGNk33Az5Z/h3D/AP///wDHy8MAAABbZE6Qpkr+/v1ia1VweGRzFOPtAAAAIHRSTlPbZfWf3x6VKVukMLAyTrkIX8imxSCJQgEBQAD+/gn+82wcakwAAAfhSURBVHjaxZrnYts4DIDBZQ3baUZzQyrF93/LcoAUByjLTe+q/qkVWfwMYoOwEBcTEoRa/s8LKAyzrusG8x/mUHJ11yb+MAfbPMcqdfdbg7bXf80hIkdfQyyEHn4rCiUP/lAe/i/6m/59YunrBxdH4kj/G+y//Q+fF3VAz1j3r0A9LbdtM0Kd4Aif0mcN9rrMncU0GAOCqVMcWlgCJtLjWrWv3W8MjF0l5+/TgCv9sBdcRnIt7QS9GUmh1BxK8JWz/AbY71Uo8dMgOA9KzQd/O3BYkpdRdzg8CjQkFYf6cO81Q+HUtg0YsS3DZNCy1u19yeQRZDJ3OdwXZLXtJYeCrXZh3nqMaq2FJQr7hb9qDkvyqfscjoTpHkfEyFy6Fu4O6JpDTYnCKjW/tRw/frzNFMcWv8jhTnNogdJQlRGXLt5ti7qGt22cT5NV6iXngEgDpZYEPRVCRhKziwQaDC50HfN4rR6IsZlpKDxC4PicX6K+XnTNYd+lhERXua8FGQZvMUKwqdRD67ApfBoaD+FWvyx6pEAihxUnQ5lscTUof/n+h0I9VCmOEAkNIzxV4LD/uyDJiyY4nH8wa64EiWOWjW54zW3Y9DKY5DK6HLtIdpCcw9qbzNUAkv/aml/ufESrHoO+rpWPoTjsK98CSNqagiMtGcQKRZCVMxV7za3NTzhbHnEs+qXUkYojGobPL5DjZugd90+WCYBy4tgm9ZjDKgmaL81hH09eEzJ1rHTUc7j7k25FNCwnOBLITHNgiuEEApmtgKIjZJmIONexTcspDqvnmYq0HPsewy4fwg5Vq6bqQBwtxzLDvjMEB7prHTi8qO2nv8kUsVz0u7v1rs9yLMF8fYAiOIKq2o2AXRxDJ2Uut+vVbcvrcpojGI0XCMGRfimkuqlV0iX471JN3a2NneeIO6NpjrsJcQOisRhFvbb1pteOK+1yBJtxAqE4/t05bqY1Cj24zG3wWlR60yM1JTlQINZkKI5x5whRy6aMytcjWtk02WbWDL26aTmekofdXdyYY/3wocw9YMBmNEJMYHzya7eDyAl/QR7BZOzGUBy7vcwmSxq3lLW5xVjr1X+FQ+HGUHbrheD9Rywj68vWcx72o0xIntbTqKlvFMcQdROCJ9nFsO41BppLa8pP2a29gsXMlF/nqIGAkhFOKxyNy75dyTVoMrqEvbo+xxEUhOAIi7udBx8vXPKqmK0mXfItnOV0ogv+An57imMOitpysOQygBW2WVTQI8XhuXsb0+FQHQ41pYAChG0eZxre13P1DEe43XIEE/H+GthGZh5JFehUcZv01zlCFmR8VQfBkZBvFSRiSJPP5KcPONBSMV/vc2giOd2ladgXObBuQ3k/5GjTAazmDNNf4gi5aPx4xDF10pJBUp2D5+xFV+XjAYeCXjd3wJDE+bVs7Jzm0FhWJu17yEHqI4uxceOFUA79acahgm5kxhjslmzZ3vocdmv2NkxW9Xc47qVf1yz0e1a5vxz96UCu1bVP5wr5HhLZmTj3ppAjlvqrzFYFIuc6w2F/1N6mM+w47r9k+cf2EVsfkAcpULIn/cEccbgc9vUa+zrsiGOO3Zm8T1c5SCBy8pzD3I+64lYofM2KnxN5YY8DS3rV4xiP+/PoB/AFRxyq4ih1EvNC6mefkEfKWHFnT+TrXjN4s+MQsh3KXZ3kiG0q1eNQ8Sb2TyUjmqFAdmozDvZ4dsJSakRy3CHWc6l+bZeMdRSx3rHdNpnAVR3WlQo5nB8jCiNYuhtzmmMv8iiOWL3k9W3rEg7q7PnAr1fXFZ+kOKLVFn1cWKuU4qDvoM5zxGKC6n9QfRjdOAtIdGam84/l9Mbofj/oUvWlWG25RV+qzsdWMh97igPbQXPFEVLk7N15n+52Lj+lLAb1v+UI4nip+4XNxkBdSDR1w5nzBrH6bjiy7ljZD6o3BrI6kywhuz2GhsPKs+HIxVHOG6qNgTzRq377bM46kMDR7ouCbl9blIMdIGqao25yJzvr6OkFu8mtPLISu5i/BDnVTda1W+tRKVPjP7CHO5PzFyheDlWVNjwYitHXK/bcS46iud70cUUR1qAahhRZEjurILFJVHDEYQM9jwphbW3nc0o2s482DBypRxXncEIH40Jz6EIgUBdH+XELfPR2LrxUcR+VY9QdjjKsFfPbppC/9zrvSzu8qPKgsVKOlgPj/K03z85AuoOZhVbnnQMxyolrldBgWKPm+yH3Hqtex4d+aLRlnhyHpuXZr2ZOmIW18rzDTVblbyDjRzsTuhChtYscCofIMC5HHKiRoT9WiVhWR6WYebAzoeKOXY3AQWP05pX+5SWHjh0Feat0picRrF6wbYfJVzztsOhjjjif1MT5oAhyL3WGC6INtaiimqvOoYzk9LPsJ2NYo85LxVfH5+9YhbmjTjeVHbPQgzDZ6aCKw9WRDzmwBsP5XJ2GYekcW05MpkaHlPK7vzVN05Ujxbb3MRIHXKgxW8PxT4om8Kh09o2hbBrxzaeB2Zym7Qc1B2H68sBt3wR0a3i+H8FQIrVc+DcMr2lMk0/64/mxmc6WqMLMryUZLJ0+XHU8J6mC5dDvGQWrixV4G3tTZrlujQuwO+MOnUDHVcvKUPVNgDScO47vHIdoddvSneu7jF2fp934T9T57iyEXnocy9zqmVYDY2xwx+gmq7CTYE0Krcfx+fOX/hs/ARYqDFNL3k+lAAAAAElFTkSuQmCC" width="74" height="47"><span class="brand-original-caption">Ecological Landscape<br>System Design & Research Lab.</span></a>
+<nav class="primary-nav" id="main-nav" aria-label="Primary navigation">
+<div class="nav-group" data-group="about"><div class="nav-group-head"><a class="nav-a" href="#/about" data-nav="about">About</a><button type="button" class="nav-expand" aria-label="About 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-about"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-about"><a href="#/about/vision" data-subnav="about/vision">Vision</a><a href="#/about/identity" data-subnav="about/identity">Identity</a><a href="#/about/themes" data-subnav="about/themes">Research Themes</a><a href="#/about/approach" data-subnav="about/approach">Research Approach</a></div></div>
+<div class="nav-group" data-group="research"><div class="nav-group-head"><a class="nav-a" href="#/research" data-nav="research">Research</a><button type="button" class="nav-expand" aria-label="Research 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-research"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-research"><a href="#/research/projects" data-subnav="research/projects">Projects</a><a href="#/research/publications" data-subnav="research/publications">Publications</a></div></div>
+<div class="nav-group" data-group="people"><div class="nav-group-head"><a class="nav-a" href="#/people" data-nav="people">People</a><button type="button" class="nav-expand" aria-label="People 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-people"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-people"><a href="#/people/professor" data-subnav="people/professor">Professor</a><a href="#/people/staff" data-subnav="people/staff">Staff</a><a href="#/people/alumni" data-subnav="people/alumni">Alumni</a></div></div>
+<div class="nav-group" data-group="study"><div class="nav-group-head"><a class="nav-a" href="#/study" data-nav="study">Study</a><button type="button" class="nav-expand" aria-label="Study 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-study"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-study"><a href="#/study/research-notes" data-subnav="study/research-notes">Research Notes</a><a href="#/study/course-guide" data-subnav="study/course-guide">Course Guide</a></div></div>
+<div class="nav-group" data-group="life"><div class="nav-group-head"><a class="nav-a" href="#/life" data-nav="life">Life at ELSDR</a><button type="button" class="nav-expand" aria-label="Life at ELSDR 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-life"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-life"><a href="#/life/news" data-subnav="life/news">News</a><a href="#/life/events" data-subnav="life/events">Events</a><a href="#/life/fieldwork" data-subnav="life/fieldwork">Fieldwork</a><a href="#/life/gallery" data-subnav="life/gallery">Gallery</a></div></div>
+<div class="nav-group" data-group="contact"><div class="nav-group-head"><a class="nav-a" href="#/contact" data-nav="contact">Contact</a><button type="button" class="nav-expand" aria-label="Contact 하위 메뉴 펼치기" aria-expanded="false" aria-controls="submenu-contact"><span aria-hidden="true">⌄</span></button></div><div class="nav-submenu" id="submenu-contact"><a href="#/contact/location" data-subnav="contact/location">Location</a><a href="#/contact/join" data-subnav="contact/join">Join Us</a><a href="#/contact/email" data-subnav="contact/email">Email</a></div></div>
+</nav>
+<div class="header-actions"><span class="demo-mark">Concept Preview / 2026</span><button class="lang-toggle" id="lang-toggle" aria-label="Toggle Korean English language">KR / EN</button><button class="mobile-btn" id="mobile-btn" aria-label="Open navigation" aria-expanded="false">☰</button></div></div>
+<div class="mega-panel" id="mega-menu" aria-label="전체 하위 메뉴" hidden>
+  <div class="wrap mega-inner">
+    <div class="mega-column" data-mega="about">
+      <a href="#/about/vision">Vision</a>
+      <a href="#/about/identity">Identity</a>
+      <a href="#/about/themes">Research Themes</a>
+      <a href="#/about/approach">Research Approach</a>
+    </div>
+    <div class="mega-column" data-mega="research">
+      <a href="#/research/projects">Projects</a>
+      <a href="#/research/publications">Publications</a>
+    </div>
+    <div class="mega-column" data-mega="people">
+      <a href="#/people/professor">Professor</a>
+      <a href="#/people/staff">Staff</a>
+      <a href="#/people/alumni">Alumni</a>
+    </div>
+    <div class="mega-column" data-mega="study"><a href="#/study/research-notes">Research Notes</a><a href="#/study/course-guide">Course Guide</a></div>
+    <div class="mega-column" data-mega="life">
+      <a href="#/life/news">News</a>
+      <a href="#/life/events">Events</a>
+      <a href="#/life/fieldwork">Fieldwork</a>
+      <a href="#/life/gallery">Gallery</a>
+    </div>
+    <div class="mega-column" data-mega="contact">
+      <a href="#/contact/location">Location</a>
+      <a href="#/contact/join">Join Us</a>
+      <a href="#/contact/email">Email</a>
+    </div>
+  </div>
+</div>
+</header>
+<main>
+<section class="page active" data-page="home" aria-label="ELSDR Homepage">
+<div class="home-scene">
+<div class="home-background" aria-hidden="true"></div>
+<div class="home-shade" aria-hidden="true"></div>
+<div class="wrap home-layout"><div class="home-message">
+<p class="home-kicker">ECOLOGICAL LANDSCAPE SYSTEM DESIGN & RESEARCH LAB</p>
+<h1 class="home-headline serif">For a <em>Resilient</em><br>and Sustainable<br><em>Tomorrow.</em></h1>
+<div class="lang-ko"><p class="home-lead">사람과 자연이 함께 만드는<br>지속가능하고 회복탄력적인 도시와 지역의 미래.</p><p class="home-desc">조경학을 기반으로 회복탄력성 사고와 근거기반 설계를 결합해 사회·생태 시스템의 변화를 연구하고, 과학적 지식을 실제 계획과 설계, 복원과 정책으로 연결합니다.</p></div>
+<div class="lang-en"><p class="home-lead">Toward resilient and sustainable cities and regions shaped together by people and nature.</p><p class="home-desc">We combine landscape architecture, resilience thinking, and evidence-based design to understand social–ecological change and translate research into planning, design, restoration and policy.</p></div>
+<a class="home-link" href="#/about"><span class="lang-ko">연구실 소개 보기</span><span class="lang-en">About the lab</span><span class="home-arrow">↗</span></a>
+</div></div>
+<div class="wrap home-footnote"><span>KOREA UNIVERSITY / ELSDR</span><span>LANDSCAPE ARCHITECTURE · RESILIENCE THINKING · EVIDENCE-BASED DESIGN</span></div>
+<span class="home-watermark">DESIGN CONCEPT / 2026</span>
+</div></section>
+<section class="page" data-page="about" id="about-page">
+  <nav class="about-navigation wrap ab-sections-nav" aria-label="About page section navigation">
+    <a href="#/about/vision"><span class="ab-nav-num">01</span> Vision <span class="ab-nav-arrow">↘</span></a>
+    <a href="#/about/identity"><span class="ab-nav-num">02</span> Identity <span class="ab-nav-arrow">↘</span></a>
+    <a href="#/about/themes"><span class="ab-nav-num">03</span> Research Themes <span class="ab-nav-arrow">↘</span></a>
+    <a href="#/about/approach"><span class="ab-nav-num">04</span> Research Approach <span class="ab-nav-arrow">↘</span></a>
+  </nav>
+
+
+  <section id="about-vision" class="ab-section ab-vision" aria-labelledby="ab-vision-h">
+    <div class="wrap">
+      <div class="ab-section-top">
+        <div class="ab-number">01 <span>/ VISION</span></div>
+        <div class="ab-section-intro">
+          <span class="ab-section-label">WHY WE RESEARCH</span>
+          <h2 id="ab-vision-h">Understanding change.<br><span>Designing tomorrow</span></h2>
+        </div>
+      </div>
+      <div class="ab-vision-columns">
+        <div class="ab-vision-statement">
+          <p>인간과 자연이 공존하며,<br><strong>변화에 대응하고 지속가능한 미래를 만들어가는 환경</strong>을 지향합니다</p>
+          <div class="ab-vision-rule"></div>
+          <span>PEOPLE AND NATURE, FOR A RESILIENT AND SUSTAINABLE TOMORROW</span>
+        </div>
+        <div class="ab-vision-explain">
+          <p>ELSDR은 도시와 지역이 직면한 복잡한 사회·생태적 문제를 조경학의 관점에서 연구합니다. 인간과 자연, 공간과 기술, 제도가 서로 영향을 주고받는 관계를 이해하며, 기후와 환경의 변화에 대응할 수 있는 공간적 해법을 탐구합니다.</p>
+          <p>과학적 연구와 현장 경험을 바탕으로 변화의 원리를 밝히고, 그 성과를 계획과 설계, 관리와 정책 등 실제 공간과 사회의 변화로 연결하고자 합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-identity" class="ab-section ab-identity" aria-labelledby="ab-identity-h">
+    <div class="wrap">
+      <div class="ab-section-top">
+        <div class="ab-number">02 <span>/ IDENTITY</span></div>
+        <div class="ab-section-intro">
+          <span class="ab-section-label">HOW WE THINK</span>
+          <h2 id="ab-identity-h">Three foundations.<br><span>One connected perspective</span></h2>
+          <p>연구실의 학문적 기반, 이론적 관점, 문제 해결 방식을 세 개의 축으로 연결합니다.</p>
+        </div>
+      </div>
+      <div class="ab-orbit" aria-label="Landscape Architecture, Resilience Thinking, and Evidence-based Design">
+        <div class="ab-orbit-axis" aria-hidden="true"></div>
+        <article class="ab-orb ab-orb-1">
+          <span class="ab-orb-num">01 / ACADEMIC FOUNDATION</span>
+          <div class="ab-orb-glyph" aria-hidden="true">◌</div>
+          <h3>Landscape<br>Architecture</h3>
+          <strong>학문적 기반</strong>
+          <p>사람과 자연을 연결하는 공간의 지식과 설계</p>
+        </article>
+        <article class="ab-orb ab-orb-2">
+          <span class="ab-orb-num">02 / THEORETICAL LENS</span>
+          <div class="ab-orb-glyph" aria-hidden="true">↝</div>
+          <h3>Resilience<br>Thinking</h3>
+          <strong>이론적 관점</strong>
+          <p>변화와 불확실성에 대응하는 시스템적 사고</p>
+        </article>
+        <article class="ab-orb ab-orb-3">
+          <span class="ab-orb-num">03 / PROBLEM-SOLVING APPROACH</span>
+          <div class="ab-orb-glyph" aria-hidden="true">⌁</div>
+          <h3>Evidence-based<br>Design</h3>
+          <strong>문제 해결 방식</strong>
+          <p>과학적 분석과 현장 경험을 공간적 해법으로 연결</p>
+        </article>
+      </div>
+      <div class="ab-orbit-connector" aria-hidden="true"><span></span><b>↓</b><span></span></div>
+      <div class="ab-ses">
+        <div class="ab-ses-title">
+          <span>SYSTEMS WE STUDY</span>
+          <h3>Social–Ecological Systems</h3>
+          <p>인간과 자연, 공간과 기술, 제도가 상호작용하며 변화하는 시스템</p>
+        </div>
+        <div class="ab-ses-nodes" aria-label="People, Nature, Space, Technology and Institutions">
+          <span>People <small>사람</small></span><i>↔</i>
+          <span>Nature <small>자연</small></span><i>↔</i>
+          <span>Space <small>공간</small></span><i>↔</i>
+          <span>Technology <small>기술</small></span><i>↔</i>
+          <span>Institutions <small>제도</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-themes" class="ab-section ab-themes" aria-labelledby="ab-themes-h">
+    <div class="wrap">
+      <div class="ab-section-top">
+        <div class="ab-number">03 <span>/ RESEARCH THEMES</span></div>
+        <div class="ab-section-intro">
+          <span class="ab-section-label">WHAT WE STUDY</span>
+          <h2 id="ab-themes-h">Four research themes.<br><span>Across landscapes</span></h2>
+          <p>기후적응, 자연기반해법, 연안 생태시스템, 지역 경관 전략을 네 가지 주요 연구영역으로 다룹니다.</p>
+        </div>
+      </div>
+      <div class="ab-theme-grid">
+        <article class="ab-theme-card ab-theme-climate">
+          <div class="ab-theme-content">
+            <div class="ab-theme-top"><span>01 / CLIMATE</span><span class="ab-theme-symbol">↗</span></div>
+            <h3>Climate Adaptation<br>and Resilience</h3>
+            <strong>기후적응과 회복탄력성</strong>
+            <p>기후위험과 사회·생태적 취약성을 분석하고, 도시와 지역의 적응역량과 회복탄력성을 높이는 공간적 해법을 연구합니다.</p>
+            <div class="ab-theme-keywords"><span>폭염</span><span>침수</span><span>미세먼지</span><span>기후위험·취약성</span></div>
+          </div>
+        </article>
+        <article class="ab-theme-card ab-theme-ecosystem">
+          <div class="ab-theme-content">
+            <div class="ab-theme-top"><span>02 / ECOSYSTEM</span><span class="ab-theme-symbol">↗</span></div>
+            <h3>Ecosystem Services<br>and Nature-based Solutions</h3>
+            <strong>생태계서비스와 자연기반해법</strong>
+            <p>생물다양성과 생태계서비스의 변화를 평가하고, 자연기반해법과 생태복원을 통해 지속가능한 공간계획 및 관리 전략을 연구합니다.</p>
+            <div class="ab-theme-keywords"><span>생물다양성</span><span>생태복원</span><span>그린블루 인프라</span><span>자연자본</span></div>
+          </div>
+        </article>
+        <article class="ab-theme-card ab-theme-coastal">
+          <div class="ab-theme-content">
+            <div class="ab-theme-top"><span>03 / COASTAL</span><span class="ab-theme-symbol">↗</span></div>
+            <h3>Coastal Landscape<br>and Living Systems</h3>
+            <strong>연안경관과 생태시스템</strong>
+            <p>갯벌과 연안습지의 생태적 변화, 기후위험과 개발 압력을 분석하고, 연안경관의 보전·이용·복원 및 관리 전략을 연구합니다.</p>
+            <div class="ab-theme-keywords"><span>갯벌·사구·연안습지</span><span>블루카본</span><span>해안 침식</span><span>해상풍력 경관평가</span></div>
+          </div>
+        </article>
+        <article class="ab-theme-card ab-theme-regional">
+          <div class="ab-theme-content">
+            <div class="ab-theme-top"><span>04 / REGIONAL</span><span class="ab-theme-symbol">↗</span></div>
+            <h3>Regional<br>Landscape Strategy</h3>
+            <strong>지역경관 전략</strong>
+            <p>농촌과 수변공간의 생태적·사회적 가치를 분석하고, 생태관광과 지역자원의 활용을 통해 지역 회복탄력성을 높이는 공간계획 및 관리 전략을 연구합니다.</p>
+            <div class="ab-theme-keywords"><span>농촌 어메니티</span><span>수변공간</span><span>생태관광</span><span>지역 회복탄력성</span></div>
+          </div>
+        </article>
+      </div>
+      
+    </div>
+    <div class="ab-landscapes">
+      <div class="wrap">
+        <div class="ab-landscape-heading"><span>ACROSS LANDSCAPES</span><h3>From cities to coastal wetlands</h3><p>도시에서 연안까지, 다양한 경관에서 연구하고 실천합니다.</p></div>
+        <div class="ab-landscape-grid">
+          <div><span>01</span><strong>Urban</strong><small>도시</small></div>
+          <div><span>02</span><strong>Forest &amp; Mountain</strong><small>산림 · 산지</small></div>
+          <div><span>03</span><strong>Rural &amp; Regional</strong><small>농촌 · 지역</small></div>
+          <div><span>04</span><strong>River Basin</strong><small>유역 · 하천</small></div>
+          <div><span>05</span><strong>Coastal &amp; Wetland</strong><small>연안 · 습지</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about-approach" class="ab-section ab-approach" aria-labelledby="ab-approach-h">
+    <div class="wrap">
+      <div class="ab-section-top">
+        <div class="ab-number">04 <span>/ RESEARCH APPROACH</span></div>
+        <div class="ab-section-intro">
+          <span class="ab-section-label">HOW WE WORK</span>
+          <h2 id="ab-approach-h">From Science<br><span>to Society</span></h2>
+          <p>인간과 자연의 상호작용을 이해하고 공간적 특성과 변화의 구조를 분석합니다. 시스템 모델링과 시나리오를 통해 미래를 탐색하고, 연구 결과를 계획·설계·관리·정책의 대안으로 발전시킵니다.</p>
+        </div>
+      </div>
+      <div class="ab-content-heading">
+        <span>01 / RESEARCH PROCESS</span>
+        <h3>Research Process</h3>
+      </div>
+      <div class="ab-process">
+        <div class="ab-process-cell"><span class="ab-process-index">01</span><strong>Understand</strong><p>인간과 자연의 관계 및<br>사회·생태 시스템의 이해</p></div>
+        <div class="ab-process-arrow" aria-hidden="true">→</div>
+        <div class="ab-process-cell"><span class="ab-process-index">02</span><strong>Analyze</strong><p>공간적 특성과 상호작용,<br>변화의 구조 분석</p></div>
+        <div class="ab-process-arrow" aria-hidden="true">→</div>
+        <div class="ab-process-cell"><span class="ab-process-index">03</span><strong>Model</strong><p>시스템 모델링과 시나리오를 통한<br>미래 변화 탐색</p></div>
+        <div class="ab-process-arrow" aria-hidden="true">→</div>
+        <div class="ab-process-cell"><span class="ab-process-index">04</span><strong>Design</strong><p>과학적 근거를 공간적·정책적<br>대안으로 구체화</p></div>
+      </div>
+      <div class="ab-content-heading">
+        <span>02 / RESEARCH METHODS</span>
+        <h3>Research Methods</h3>
+      </div>
+      <div class="ab-methods-grid">
+        <span>Systems Thinking &amp; Dynamics</span>
+        <span>Scenario Modeling</span>
+        <span>Ecological &amp; Environmental Assessment</span>
+        <span>Artificial Intelligence (AI)</span>
+        <span>Data Analytics &amp; Statistical Modeling</span>
+        <span>Landscape Simulation</span>
+        <span>Field Research</span>
+        <span>GIS &amp; Remote Sensing</span>
+      </div>
+      <div class="ab-content-heading">
+        <span>03 / AREAS OF PRACTICE</span>
+        <h3>Areas of Practice</h3>
+      </div>
+      <div class="ab-practice-line">
+        <div><span>01</span><strong>Planning</strong><small>계획</small></div>
+        <div><span>02</span><strong>Design</strong><small>설계</small></div>
+        <div><span>03</span><strong>Restoration</strong><small>복원</small></div>
+        <div><span>04</span><strong>Management</strong><small>관리</small></div>
+        <div><span>05</span><strong>Policy &amp;<br>Governance</strong><small>정책 및 거버넌스</small></div>
+      </div>
+    </div>
+  </section>
+  <section class="ab-end">
+    <div class="wrap">
+      <span>ELSDR / A SHARED VISION</span>
+      <h2>For a Resilient and<br>Sustainable Tomorrow.</h2>
+      <p>인간과 자연이 공존하며, 변화에 대응하고 지속가능한 미래를 만들어가는 환경을 지향합니다</p>
+      <a href="#/research">Explore Our Research <b>↗</b></a>
+    </div>
+  </section>
+</section>
+<section class="page rs-page" data-page="research" id="research-archive-v2" aria-labelledby="research-title">
+  <div class="wrap rs-main">
+    <header class="ra-header">
+      <div>
+        <span class="ra-eyebrow">ELSDR / RESEARCH</span>
+        <h1 id="research-title">Research Archive<span>.</span></h1>
+      </div>
+      <p>Projects와 Publications를 한곳에서 살펴보세요.<br>연구영역, 연도, 검색어를 조합해 탐색할 수 있습니다.</p>
+    </header>
+    <div class="ra-filter-toolbar" aria-label="Research Archive filters">
+      <div class="ra-filter-block" role="group" aria-label="자료 유형">
+        <span class="ra-label">Type</span>
+        <button type="button" class="ra-filter-btn is-selected" data-research-kind="all" aria-pressed="true">All</button>
+        <button type="button" class="ra-filter-btn" data-research-kind="project" aria-pressed="false">Projects</button>
+        <button type="button" class="ra-filter-btn" data-research-kind="publication" aria-pressed="false">Publications</button>
+      </div>
+      <div class="ra-filter-block" role="group" aria-label="연구영역">
+        <span class="ra-label">Research Theme</span>
+        <button type="button" class="ra-filter-btn is-selected" data-research-theme="all" aria-pressed="true">All Themes</button>
+        <button type="button" class="ra-filter-btn" data-research-theme="climate" aria-pressed="false">Climate</button>
+        <button type="button" class="ra-filter-btn" data-research-theme="ecosystem" aria-pressed="false">Ecosystem</button>
+        <button type="button" class="ra-filter-btn" data-research-theme="coastal" aria-pressed="false">Coastal</button>
+        <button type="button" class="ra-filter-btn" data-research-theme="regional" aria-pressed="false">Regional</button>
+      </div>
+      <div class="ra-filter-block">
+        <label class="ra-label" for="research-year">Year</label>
+        <select class="ra-filter-year" id="research-year" aria-label="연도 선택">
+          <option value="all">All Years</option>
+        </select>
+      </div>
+    </div>
+    <div class="ra-search-line">
+      <label class="ra-search-box" for="research-search">
+        <input id="research-search" class="ra-search-input" type="search" autocomplete="off" placeholder="Search title, researcher, or keywords…" aria-label="제목, 연구자, 키워드 검색">
+        <svg class="ra-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+      </label>
+      <span id="research-counter" class="ra-count" aria-live="polite">0 records</span>
+    </div>
+    <div class="ra-records" id="research-list" aria-label="연구성과 목록"></div>
+    <div id="research-empty" class="ra-empty" hidden>해당 조건의 연구자료가 없습니다. 필터나 검색어를 변경해 주세요.</div>
+    <button id="research-more" class="ra-load-more" type="button" hidden>Load more +</button>
+    <footer class="ra-notes">
+      <strong>SOURCE / ARCHIVE DATA</strong>
+      <p>현재 V2에 등록된 프로젝트 5건과 논문 5건을 기존 미리보기에서 이어받아 구성했습니다.
+      프로젝트의 연도는 확인 가능한 경우 연구 시작연도, 그 외에는 기존 게시연도이며 논문은 출판연도입니다.
+      일부 연구기간·지원기관 및 정식 초록·키워드는 검수 후 입력합니다.
+      <a href="https://edesign.korea.ac.kr/21" target="_blank" rel="noopener noreferrer">기존 Projects 목록</a> /
+      <a href="https://edesign.korea.ac.kr/22" target="_blank" rel="noopener noreferrer">기존 Research 목록</a></p>
+    </footer>
+  </div>
+</section>
+<section class="page pp-page" data-page="people">
+  <div class="wrap pp-main">
+    <header class="pp-intro"><span class="pp-kicker">ELSDR / PEOPLE</span>
+      <div class="pp-intro-row"><h1>People<span>.</span></h1><p>연구실을 이루는 사람들과<br>연구의 여정을 소개합니다.</p></div>
+    </header>
+    <nav class="pp-jump" aria-label="People 주요 메뉴">
+      <a href="#/people/professor" data-people-nav="professor">01 <span>Professor</span><span aria-hidden="true">↗</span></a>
+      <a href="#/people/researchers" data-people-nav="researchers">02 <span>Researchers</span><span aria-hidden="true">↗</span></a>
+      <a href="#/people/alumni" data-people-nav="alumni">03 <span>Alumni</span><span aria-hidden="true">↗</span></a>
+    </nav>
+    <nav class="pp-v2-depth-nav" id="pp-v2-depth-nav" aria-label="People 세부 메뉴"></nav>
+
+    <section class="pp-section pp-professor" id="people-professor" data-people-panel="professor">
+      <div class="pp-section-heading">
+        <span class="pp-section-index">01 / PROFESSOR — PROFILE</span>
+        <h2>Professor<span>.</span></h2>
+        <p class="pp-section-lead">Profile · 연구책임자의 소개와 연락처</p>
+      </div>
+      <div class="pp-prof-profile">
+   <div class="pp-prof-visual pp-v2-photo-slot" role="img" aria-label="전진형 교수 프로필 사진 등록 예정, 통일된 세로 사진 비율 4대5">
+     <span class="pp-v2-photo-caption">PROFESSOR PHOTO / 4:5</span>
+   </div>
+   <div class="pp-prof-content">
+    <span class="pp-prof-role">PROFESSOR · PRINCIPAL INVESTIGATOR</span>
+    <h3>Jinhyung Chon</h3>
+    <span class="pp-prof-korean">전진형 교수</span>
+    <p class="pp-prof-position">고려대학교 환경생태공학부 · 조경학 프로그램<br>Professor, Division of Environmental Science and Ecological Engineering</p>
+    <p class="pp-prof-desc">도시와 지역의 사회·생태적 변화와 시스템의 상호작용을 연구하며, 과학적 분석과 현장 경험을 회복탄력적인 공간 계획·설계 전략으로 연결합니다.</p>
+    
+    <div class="pp-prof-contacts"><a href="mailto:jchon@korea.ac.kr">jchon@korea.ac.kr <span aria-hidden="true">↗</span></a><span>02-3290-3048 <small>Professor's Office</small></span><span>02-3290-3621 <small>ELSDR Lab</small></span></div>
+    <a class="pp-source-link" href="https://edesign.korea.ac.kr/29" target="_blank" rel="noopener noreferrer">Original professor profile <span aria-hidden="true">↗</span></a>
+   </div>
+  </div>
+      <div class="pp-v2-related-links">
+        <a href="#/people/professor/career">Career &amp; Activities <span aria-hidden="true">↗</span></a>
+        <a href="#/people/professor/books">Books &amp; Writings <span aria-hidden="true">↗</span></a>
+        <a href="#/research">Projects &amp; Publications <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="pp-section pp-v2-section" id="people-professor-career" data-people-panel="professor/career" hidden>
+      <div class="pp-section-heading">
+        <span class="pp-section-index">01 / PROFESSOR — CAREER &amp; ACTIVITIES</span>
+        <h2>Career &amp; Activities<span>.</span></h2>
+        <p class="pp-section-lead">주요 경력과 보직, 학회 활동, 공공위원회·정책 자문, 수상 기록을 유형별로 관리합니다.</p>
+      </div>
+      <div id="pp-v2-career-collections"></div>
+      <p class="pp-v2-data-note">기존에 공개된 경력 일부를 이전했습니다. 최신 경력·보직·활동 이력은 추후 검수합니다.</p>
+    </section>
+
+    <section class="pp-section pp-v2-section" id="people-professor-books" data-people-panel="professor/books" hidden>
+      <div class="pp-section-heading">
+        <span class="pp-section-index">01 / PROFESSOR — BOOKS &amp; WRITINGS</span>
+        <h2>Books &amp; Writings<span>.</span></h2>
+        <p class="pp-section-lead">저서·번역서·신문 칼럼·잡지 및 기타 기고글을 분리하여 관리합니다.</p>
+      </div>
+      <div class="pp-v2-category-head"><span>01 / BOOKS</span><h3>Books</h3><p>저서 · 공저 · 번역서</p></div>
+      <div id="pp-v2-books" class="pp-v2-books-grid"></div>
+      <div class="pp-v2-category-head"><span>02 / NEWSPAPER COLUMNS</span><h3>Newspaper Columns</h3><p>제목 · 매체명 · 발행일 · 원문 링크</p></div>
+      <div id="pp-v2-columns"></div>
+      <div class="pp-v2-category-head"><span>03 / ESSAYS &amp; OTHER WRITINGS</span><h3>Essays &amp; Other Writings</h3><p>잡지 · 기고문 · 기타 저술</p></div>
+      <div id="pp-v2-essays"></div>
+    </section>
+
+    <section class="pp-section pp-researchers pp-v2-section" id="people-researchers" data-people-panel="researchers" hidden>
+      <div class="pp-section-heading">
+        <span class="pp-section-index">02 / RESEARCH COMMUNITY</span>
+        <h2>Researchers<span>.</span></h2>
+        <p class="pp-section-lead">Ph.D. Researchers / M.S. Researchers / Research Interns — 학위과정 또는 연구원 신분을 기준으로 분류합니다.</p>
+      </div>
+      <div id="pp-v2-researcher-groups"></div>
+      <p class="pp-v2-data-note">기존 Staff 시안의 공개 프로필을 학위과정에 따라 재분류한 상태입니다. 실제 재학·참여 상태와 사진, 이름 표기는 최종 확인이 필요합니다.</p>
+    </section>
+
+    <section class="pp-section pp-alumni pp-v2-section" id="people-alumni" data-people-panel="alumni" hidden>
+      <div class="pp-section-heading">
+        <span class="pp-section-index">03 / ALUMNI — DIRECTORY</span>
+        <h2>Alumni Directory<span>.</span></h2>
+        <p class="pp-section-lead">연구실을 거쳐 다양한 분야에서 활동하는 졸업생들. 학위·졸업연도·현재 소속 및 활동 분야 중심으로 살펴봅니다.</p>
+      </div>
+      <label class="pp-v2-search-label" for="pp-v2-alumni-search">SEARCH ALUMNI</label>
+      <div class="pp-v2-search-box"><input id="pp-v2-alumni-search" type="search" placeholder="이름 · 학위 · 졸업연도 · 소속 · 분야 검색" autocomplete="off" aria-label="졸업생 검색"></div>
+      <div class="pp-v2-list-heading"><span>ALUMNI / MOST RECENT FIRST</span><span id="pp-v2-alumni-count" aria-live="polite"></span></div>
+      <div id="pp-v2-alumni-list" class="pp-v2-alumni-directory"></div>
+      <div class="pp-v2-related-links"><a href="#/people/alumni/theses">Explore Thesis Archive <span aria-hidden="true">↗</span></a></div>
+      <p class="pp-v2-data-note">디렉터리 자료는 현재 시안에서 확인된 졸업생 일부입니다. 실제 현 소속과 활동 분야는 자료 확인 후 수정합니다.</p>
+    </section>
+
+    <section class="pp-section pp-alumni pp-v2-section" id="people-alumni-theses" data-people-panel="alumni/theses" hidden>
+      <div class="pp-section-heading">
+        <span class="pp-section-index">03 / ALUMNI — THESIS ARCHIVE</span>
+        <h2>Thesis Archive<span>.</span></h2>
+        <p class="pp-section-lead">연구실의 학위논문 기록. 졸업생 디렉터리와 연결되지만 독립적인 아카이브로 관리합니다.</p>
+      </div>
+      <div class="pp-v2-thesis-toolbar">
+        <div class="pp-v2-degree-tabs" role="group" aria-label="학위 종류 선택">
+          <button type="button" data-pp-v2-degree="all" aria-pressed="true" class="is-selected">All Degrees</button>
+          <button type="button" data-pp-v2-degree="master" aria-pressed="false">M.S.</button>
+          <button type="button" data-pp-v2-degree="doctor" aria-pressed="false">Ph.D.</button>
+        </div>
+        <div class="pp-v2-search-box"><label class="pp-v2-search-label" for="pp-v2-thesis-search">SEARCH TITLE / AUTHOR</label>
+          <input id="pp-v2-thesis-search" type="search" placeholder="학위논문 제목 · 저자 검색" autocomplete="off" aria-label="학위논문 검색"></div>
+      </div>
+      <div class="pp-v2-list-heading"><span>THESIS RECORDS / LATEST GRADUATION YEAR FIRST</span><span id="pp-v2-thesis-count" aria-live="polite"></span></div>
+      <div id="pp-v2-thesis-list" class="pp-v2-thesis-list"></div>
+      <p class="pp-v2-data-note">기존 시안에서 학위논문 항목을 이전한 목록입니다. 등록 건수는 연구실의 확정 학위논문 총수로 표시하지 않습니다. 원문 링크가 확인되지 않은 경우 기존 기록 페이지로 연결합니다.</p>
+    </section>
+  </div>
+</section>
+<section class="page st-page st-v2-page" data-page="study">
+  <div class="wrap st-inner">
+    <header class="st-head">
+      <span class="st-eyebrow">ELSDR / STUDY</span>
+      <div class="st-head-row">
+        <h1>Study<span>.</span></h1>
+        <p>연구실의 핵심 연구역량과<br>공개 연구자료를 소개합니다.</p>
+      </div>
+    </header>
+    <nav class="st-nav" aria-label="Study 섹션 바로가기">
+      <a href="#/study/learning" data-v2-study-nav="learning"><small>01</small>Learning &amp; Training <b aria-hidden="true">↗</b></a>
+      <a href="#/study/resources" data-v2-study-nav="resources"><small>02</small>Research Resources <b aria-hidden="true">↗</b></a>
+    </nav>
+
+    <section class="st-v2-section" id="v2-study-learning" aria-labelledby="v2-study-learning-title">
+      <div class="st-lead">
+        <div><span>01 / LEARNING &amp; TRAINING</span><h2 id="v2-study-learning-title">Learning &amp;<br>Training<span>.</span></h2></div>
+        <p>네 가지 핵심 연구역량을 중심으로<br>연구실의 학습 방향을 소개합니다.</p>
+      </div>
+      <p class="st-v2-intro">변화하는 사회·생태 시스템을 이해하고, 데이터를 분석하며, 연구 결과를 공간적 대안과 학술적 소통으로 연결하는 역량을 기릅니다.</p>
+      <div class="st-v2-learning-grid">
+        <article class="st-v2-learning-card">
+          <span class="st-v2-no">01 / SYSTEMS</span>
+          <h3>Systems Thinking<br>&amp; Modeling</h3>
+          <p>복잡한 사회·생태 시스템의 구성요소와 상호작용을 이해하고, 변화의 원인과 구조를 모델을 통해 탐색합니다.</p>
+          <div class="st-v2-activity"><span>LEARNING / EXAMPLE ACTIVITIES</span><p>시스템 사고, 인과순환지도, 시스템 모델링과 시나리오 해석</p></div>
+        </article>
+        <article class="st-v2-learning-card">
+          <span class="st-v2-no">02 / SPATIAL</span>
+          <h3>Spatial Analysis<br>&amp; Simulation</h3>
+          <p>공간 및 환경 데이터를 수집·분석하고, 대상지의 특성과 공간적 변화를 시각화하며 미래 시나리오를 탐구합니다.</p>
+          <div class="st-v2-activity"><span>LEARNING / EXAMPLE ACTIVITIES</span><p>GIS·원격탐사, 공간정보 분석, 경관 시뮬레이션</p></div>
+        </article>
+        <article class="st-v2-learning-card">
+          <span class="st-v2-no">03 / ASSESSMENT</span>
+          <h3>Ecological &amp;<br>Environmental Assessment</h3>
+          <p>생태계와 환경의 상태·영향·취약성을 평가하고, 평가 결과를 계획 및 관리의 근거로 활용하는 방법을 익힙니다.</p>
+          <div class="st-v2-activity"><span>LEARNING / EXAMPLE ACTIVITIES</span><p>생태·환경 지표 검토, 현장 조사, 생태계서비스 및 환경영향 평가</p></div>
+        </article>
+        <article class="st-v2-learning-card">
+          <span class="st-v2-no">04 / PRACTICE</span>
+          <h3>Research Practice<br>&amp; Communication</h3>
+          <p>연구문제를 설정하고 조사·분석·해석의 과정을 수행하며, 연구 성과를 논문과 발표 등으로 명확하게 전달합니다.</p>
+          <div class="st-v2-activity"><span>LEARNING / EXAMPLE ACTIVITIES</span><p>연구 설계, 자료 검토, 세미나, 논문 작성과 학술발표</p></div>
+        </article>
+      </div>
+      <p class="st-v2-notice">※ 위 학습 활동은 네 가지 핵심 역량을 설명하기 위한 예시이며, 현재 운영 중인 개별 정규 교육과정이나 수업 개설을 의미하지 않습니다.</p>
+    </section>
+
+    <section class="st-v2-section" id="v2-study-resources" aria-labelledby="v2-study-resources-title">
+      <div class="st-lead">
+        <div><span>02 / RESEARCH RESOURCES</span><h2 id="v2-study-resources-title">Research<br>Resources<span>.</span></h2></div>
+        <p>연구노트·교육자료·세미나 자료를<br>하나의 공개 자료 아카이브에서 탐색합니다.</p>
+      </div>
+      <p class="st-v2-intro">자료 유형과 연도, 검색어로 필요한 정보를 찾을 수 있습니다. 공개가 확인된 항목만 등록하며 원문 또는 다운로드 링크를 통해 자료에 접근하도록 구성합니다.</p>
+      <div class="st-v2-resource-top">
+        <div class="st-v2-resource-filter" role="group" aria-label="자료 유형 필터">
+          <button type="button" data-study-resource-type="all" class="is-selected" aria-pressed="true">All Resources</button>
+          <button type="button" data-study-resource-type="research-note" aria-pressed="false">Research Notes</button>
+          <button type="button" data-study-resource-type="learning-material" aria-pressed="false">Learning Materials</button>
+          <button type="button" data-study-resource-type="seminar-material" aria-pressed="false">Seminar Materials</button>
+        </div>
+        <label class="st-v2-year-label" for="v2-study-year">YEAR
+          <select id="v2-study-year"><option value="all">All Years</option></select>
+        </label>
+      </div>
+      <div class="st-v2-search-row">
+        <label for="v2-study-search"><span>SEARCH RESOURCES</span>
+          <input id="v2-study-search" type="search" placeholder="제목 · 주제 · 연도 검색" autocomplete="off">
+        </label>
+        <strong id="v2-study-count" aria-live="polite">0 resources</strong>
+      </div>
+      <div class="st-v2-resource-list" id="v2-study-list" aria-label="공개 연구자료 목록"></div>
+      <div class="st-v2-resource-empty" id="v2-study-empty" hidden>해당 조건의 공개 자료가 없습니다. 필터 또는 검색어를 변경해 주세요.</div>
+      <p class="st-v2-notice">기존 리질리언스 연구노트 4건을 이전했습니다. 현재는 각 게시물의 <strong>원문 페이지</strong>로 연결하며, 별도로 확인된 파일이 있을 때만 다운로드 링크를 표시합니다. 이후 교육자료와 세미나 자료를 추가할 수 있습니다.</p>
+      <p class="st-v2-official">학과 교과목 및 공식 학위과정 정보는 <a href="https://www.korea.ac.kr/" target="_blank" rel="noopener noreferrer">고려대학교 공식 홈페이지</a>의 최신 안내를 확인해 주세요. 이 페이지에서는 학부·대학원 교과목 목록을 제공하지 않습니다.</p>
+    </section>
+  </div>
+</section>
+<section class="page lf-page lf-v2-page" data-page="life"><div class="wrap lf-inner">
+<header class="lf-page-head"><span class="lf-kicker">ELSDR / LIFE &amp; FIELD RECORDS</span><div class="lf-header-flex"><h1>Life at <em>ELSDR.</em></h1><p>연구실의 공식 소식과 학술교류,<br>사람들이 함께 기록한 장소와 경험을 소개합니다.</p></div></header>
+<nav class="lf-tabs" aria-label="Life at ELSDR sections">
+  <a href="#/life/news" data-v2-life-nav="news"><small>01</small> News <b aria-hidden="true">↗</b></a>
+  <a href="#/life/events" data-v2-life-nav="events"><small>02</small> Events <b aria-hidden="true">↗</b></a>
+  <a href="#/life/activities" data-v2-life-nav="activities"><small>03</small> Activities <b aria-hidden="true">↗</b></a>
+</nav>
+<div class="lf-panel" data-life-view="news">
+  <div id="lf-news-list">
+    <div class="lf-intro"><div><span>01 / OFFICIAL LAB UPDATES</span><h2>News<span>.</span></h2></div>
+      <p>연구실 공식 소식과 연구성과, 수상,<br>연구실 관련 언론 보도를 전합니다.</p></div>
+    <div class="lf-v2-news-empty" role="status">
+      <span class="lf-v2-news-eyebrow">LAB NEWS / ARCHIVE</span>
+      <h3>연구실 공식 소식 등록 예정</h3>
+      <p>공식 연구실 소식과 연구성과·수상·언론 보도 중 공개가 확인된 자료부터 카드로 소개합니다. 실제 기사와 대표 이미지가 등록되면 이 자리에 표시됩니다.</p>
+      <div class="lf-v2-news-categories"><span>Official Updates</span><span>Research &amp; Awards</span><span>Media Coverage</span></div>
+    </div>
+    <p class="lf-v2-news-note">※ 공식 소식에 해당하는 검증된 자료가 확보되면 해당 소식의 실제 제목·내용·대표 이미지를 등록합니다. 기존 교수 개인 칼럼은 <a href="#/people/professor/books">People → Books &amp; Writings</a>, 모집 안내는 <a href="#/contact/join">Contact → Join Us</a>에서 확인할 수 있습니다.</p>
+  </div>
+</div>
+
+<div class="lf-panel" data-life-view="events" hidden>
+<div id="lf-events-list">
+<div class="lf-intro"><div><span>02 / EVENTS &amp; EXCHANGE</span><h2>Events<span>.</span></h2></div><p>초청강연부터 워크숍과 포럼까지,<br>연구실의 학술교류 기록을 한곳에.</p></div>
+<div class="lf-seminar-tools"><div class="lf-seminar-filters" role="group" aria-label="행사 유형 필터"><button type="button" class="lf-seminar-filter is-selected" data-seminar-filter="all" aria-pressed="true"># 전체<span>16</span></button>
+<button type="button" class="lf-seminar-filter" data-seminar-filter="seminar" aria-pressed="false"># 세미나<span>3</span></button>
+<button type="button" class="lf-seminar-filter" data-seminar-filter="lecture" aria-pressed="false"># 초청강연<span>8</span></button>
+<button type="button" class="lf-seminar-filter" data-seminar-filter="conference" aria-pressed="false"># 학술대회<span>3</span></button>
+<button type="button" class="lf-seminar-filter" data-seminar-filter="workshop" aria-pressed="false"># 워크숍<span>1</span></button>
+<button type="button" class="lf-seminar-filter" data-seminar-filter="forum" aria-pressed="false"># 포럼<span>1</span></button></div>
+<label class="lf-v2-year-label">YEAR <select id="lf-v2-event-year" aria-label="행사 연도 선택"><option value="all">All Years</option></select></label>
+<label class="lf-seminar-search-label"><span>SEARCH EVENTS</span><input type="search" id="lf-seminar-search" placeholder="행사명 · 연도 · 발표자" autocomplete="off" aria-label="행사 기록 검색"></label></div>
+<div class="lf-seminar-count"><span id="lf-seminar-count">전체 16개 기록</span><span>2012—2026 · ELSDR EVENT ARCHIVE</span></div>
+<div class="lf-seminar-header"><span>YEAR</span><span>EVENT / ACTIVITY</span><span>ARCHIVE ↗</span></div>
+<div class="lf-seminar-list"><a class="lf-seminar" data-seminar-category="workshop" data-seminar-search="기후 시뮬레이션 &amp; 환경문제 해결 워크숍 기후 시뮬레이션 및 환경문제 해결 워크숍 workshop 2026 2026.01.25–27" href="#/life/events/climate-simulation-2026">
+<span>01</span><span>2026</span>
+<div><small>WORKSHOP · 2026.01.25–27</small><h3>기후 시뮬레이션 &amp; 환경문제 해결 워크숍</h3><p class="lf-seminar-person">기후 시뮬레이션 및 환경문제 해결 워크숍</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="hld 특강 연구실 특강 기록 guest lecture 2025 2025.11.03" href="#/life/events/hld-lecture-2025">
+<span>02</span><span>2025</span>
+<div><small>GUEST LECTURE · 2025.11.03</small><h3>HLD 특강</h3><p class="lf-seminar-person">연구실 특강 기록</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="conference" data-seminar-search="2025 시스템다이내믹스학회 하계학술대회 기존 연구실 conference 아카이브에 등록된 학술대회 academic conference 2025" href="#/life/events/systems-dynamics-conference-2025">
+<span>03</span><span>2025</span>
+<div><small>ACADEMIC CONFERENCE · 2025</small><h3>2025 시스템다이내믹스학회 하계학술대회</h3><p class="lf-seminar-person">기존 연구실 Conference 아카이브에 등록된 학술대회</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="conference" data-seminar-search="2025 응용생태공학회 학술발표대회 기존 연구실 conference 아카이브에 등록된 학술발표대회 academic conference 2025" href="#/life/events/applied-ecology-conference-2025">
+<span>04</span><span>2025</span>
+<div><small>ACADEMIC CONFERENCE · 2025</small><h3>2025 응용생태공학회 학술발표대회</h3><p class="lf-seminar-person">기존 연구실 Conference 아카이브에 등록된 학술발표대회</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="conference" data-seminar-search="2025 한국조경학회 춘계학술대회 기존 연구실 conference 아카이브에 등록된 학술대회 academic conference 2025" href="#/life/events/landscape-conference-2025">
+<span>05</span><span>2025</span>
+<div><small>ACADEMIC CONFERENCE · 2025</small><h3>2025 한국조경학회 춘계학술대회</h3><p class="lf-seminar-person">기존 연구실 Conference 아카이브에 등록된 학술대회</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="seminar" data-seminar-search="한국시스템다이내믹스학회 6월 월례세미나 한국시스템다이내믹스학회 seminar 2025 2025" href="#/life/events/systems-dynamics-seminar-2025">
+<span>06</span><span>2025</span>
+<div><small>SEMINAR · 2025</small><h3>한국시스템다이내믹스학회 6월 월례세미나</h3><p class="lf-seminar-person">한국시스템다이내믹스학회</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="forum" data-seminar-search="science 2 society forum 연구실 학술교류 기록 forum 2024 2024" href="#/life/events/science-to-society-2024">
+<span>07</span><span>2024</span>
+<div><small>FORUM · 2024</small><h3>Science 2 Society Forum</h3><p class="lf-seminar-person">연구실 학술교류 기록</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="seminar" data-seminar-search="자연기반해법과 회복력원칙 출판기념 세미나 출판기념 세미나 book seminar 2023 2023.05.26" href="#/life/events/nbs-book-seminar-2023">
+<span>08</span><span>2023</span>
+<div><small>BOOK SEMINAR · 2023.05.26</small><h3>자연기반해법과 회복력원칙 출판기념 세미나</h3><p class="lf-seminar-person">출판기념 세미나</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="seminar" data-seminar-search="환경생태공학세미나 송영근 교수 · 서울대학교 환경대학원 lab seminar 2017 2017.10.10" href="#/life/events/environmental-ecology-seminar-2017">
+<span>09</span><span>2017</span>
+<div><small>LAB SEMINAR · 2017.10.10</small><h3>환경생태공학세미나</h3><p class="lf-seminar-person">송영근 교수 · 서울대학교 환경대학원</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="생태복원의 패러다임 변화와 발전 방안 조동길 교수 · 넥서스환경디자인연구원 guest lecture 2014 2014.10.28" href="#/life/events/restoration-paradigm-2014">
+<span>10</span><span>2014</span>
+<div><small>GUEST LECTURE · 2014.10.28</small><h3>생태복원의 패러다임 변화와 발전 방안</h3><p class="lf-seminar-person">조동길 교수 · 넥서스환경디자인연구원</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="하천호소 생태복원의 기본설계 이준헌 소장 · 케이씨리버텍 guest lecture 2014 2014.10.07" href="#/life/events/river-lake-restoration-2014">
+<span>11</span><span>2014</span>
+<div><small>GUEST LECTURE · 2014.10.07</small><h3>하천호소 생태복원의 기본설계</h3><p class="lf-seminar-person">이준헌 소장 · 케이씨리버텍</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="생물다양성평가 오충현 교수 · 동국대학교 guest lecture 2014 2014.09.30" href="#/life/events/biodiversity-evaluation-2014">
+<span>12</span><span>2014</span>
+<div><small>GUEST LECTURE · 2014.09.30</small><h3>생물다양성평가</h3><p class="lf-seminar-person">오충현 교수 · 동국대학교</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="green education, research, infrastructure, and practices for sustainability 안창우 교수 · george mason university guest lecture 2014 2014.04.18" href="#/life/events/green-education-2014">
+<span>13</span><span>2014</span>
+<div><small>GUEST LECTURE · 2014.04.18</small><h3>Green education, research, infrastructure, and practices for sustainability</h3><p class="lf-seminar-person">안창우 교수 · George Mason University</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="환경친화적 하천복원 기술 김용상 수석연구원 · 삼성안전환경연구소 guest lecture 2013 2013.11.27" href="#/life/events/eco-river-restoration-2013">
+<span>14</span><span>2013</span>
+<div><small>GUEST LECTURE · 2013.11.27</small><h3>환경친화적 하천복원 기술</h3><p class="lf-seminar-person">김용상 수석연구원 · 삼성안전환경연구소</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="대기환경변화가 해양 생지화학 및 생태계에 미치는 영향 김태욱 연구원 · 포항공과대학교 환경연구소 guest lecture 2013 2013.06.05" href="#/life/events/marine-biogeochemistry-2013">
+<span>15</span><span>2013</span>
+<div><small>GUEST LECTURE · 2013.06.05</small><h3>대기환경변화가 해양 생지화학 및 생태계에 미치는 영향</h3><p class="lf-seminar-person">김태욱 연구원 · 포항공과대학교 환경연구소</p></div>
+<span class="lf-seminar-arrow">↗</span></a>
+<a class="lf-seminar" data-seminar-category="lecture" data-seminar-search="designing landscape spaces 이유미 교수 · 서울대학교 guest lecture 2012 2012.05.23" href="#/life/events/landscape-space-design-2012">
+<span>16</span><span>2012</span>
+<div><small>GUEST LECTURE · 2012.05.23</small><h3>Designing Landscape Spaces</h3><p class="lf-seminar-person">이유미 교수 · 서울대학교</p></div>
+<span class="lf-seminar-arrow">↗</span></a></div>
+<p id="lf-seminar-empty" class="lf-seminar-empty" hidden>선택한 조건에 맞는 행사가 없습니다.</p>
+<p class="lf-sourcenote">기존 <a href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">Conference / 학술대회</a>, <a href="https://edesign.korea.ac.kr/105" target="_blank" rel="noopener noreferrer">Seminar</a> 및 Study의 <a href="https://edesign.korea.ac.kr/33" target="_blank" rel="noopener noreferrer">Lab Conference</a> 기록을 통합했어. 유형 태그는 방문자의 탐색을 돕기 위해 행사명과 공개된 설명을 기준으로 분류했으며, 각 항목에서 기본 정보를 확인하고 기존 연구실 원문으로 이동할 수 있어.</p></div>
+<div id="lf-event-stories" hidden>
+<article class="lf-event-article" data-event-detail="climate-simulation-2026" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 워크숍 <span class="lf-event-detail-sep">/</span> 2026</span>
+<h2>기후 시뮬레이션 &amp; 환경문제 해결 워크숍</h2>
+<p>기후 시뮬레이션 및 환경문제 해결 워크숍</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>01</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>워크숍</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2026.01.25–27</dd></div>
+<div><dt>ABOUT</dt><dd>기후 시뮬레이션 및 환경문제 해결 워크숍</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="hld-lecture-2025" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2025</span>
+<h2>HLD 특강</h2>
+<p>연구실 특강 기록</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>02</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2025.11.03</dd></div>
+<div><dt>ABOUT</dt><dd>연구실 특강 기록</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="systems-dynamics-conference-2025" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 학술대회 <span class="lf-event-detail-sep">/</span> 2025</span>
+<h2>2025 시스템다이내믹스학회 하계학술대회</h2>
+<p>기존 연구실 Conference 아카이브에 등록된 학술대회</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>03</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>학술대회</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2025</dd></div>
+<div><dt>ABOUT</dt><dd>기존 연구실 Conference 아카이브에 등록된 학술대회</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="applied-ecology-conference-2025" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 학술대회 <span class="lf-event-detail-sep">/</span> 2025</span>
+<h2>2025 응용생태공학회 학술발표대회</h2>
+<p>기존 연구실 Conference 아카이브에 등록된 학술발표대회</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>04</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>학술대회</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2025</dd></div>
+<div><dt>ABOUT</dt><dd>기존 연구실 Conference 아카이브에 등록된 학술발표대회</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="landscape-conference-2025" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 학술대회 <span class="lf-event-detail-sep">/</span> 2025</span>
+<h2>2025 한국조경학회 춘계학술대회</h2>
+<p>기존 연구실 Conference 아카이브에 등록된 학술대회</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>05</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>학술대회</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2025</dd></div>
+<div><dt>ABOUT</dt><dd>기존 연구실 Conference 아카이브에 등록된 학술대회</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="systems-dynamics-seminar-2025" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 세미나 <span class="lf-event-detail-sep">/</span> 2025</span>
+<h2>한국시스템다이내믹스학회 6월 월례세미나</h2>
+<p>한국시스템다이내믹스학회</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>06</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>세미나</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2025</dd></div>
+<div><dt>ABOUT</dt><dd>한국시스템다이내믹스학회</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="science-to-society-2024" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 포럼 <span class="lf-event-detail-sep">/</span> 2024</span>
+<h2>Science 2 Society Forum</h2>
+<p>연구실 학술교류 기록</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>07</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>포럼</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2024</dd></div>
+<div><dt>ABOUT</dt><dd>연구실 학술교류 기록</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/36" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="nbs-book-seminar-2023" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 세미나 <span class="lf-event-detail-sep">/</span> 2023</span>
+<h2>자연기반해법과 회복력원칙 출판기념 세미나</h2>
+<p>출판기념 세미나</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>08</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>세미나</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2023.05.26</dd></div>
+<div><dt>ABOUT</dt><dd>출판기념 세미나</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/105" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="environmental-ecology-seminar-2017" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 세미나 <span class="lf-event-detail-sep">/</span> 2017</span>
+<h2>환경생태공학세미나</h2>
+<p>송영근 교수 · 서울대학교 환경대학원</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>09</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>세미나</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2017.10.10</dd></div>
+<div><dt>ABOUT</dt><dd>송영근 교수 · 서울대학교 환경대학원</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667823" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="restoration-paradigm-2014" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2014</span>
+<h2>생태복원의 패러다임 변화와 발전 방안</h2>
+<p>조동길 교수 · 넥서스환경디자인연구원</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>10</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2014.10.28</dd></div>
+<div><dt>ABOUT</dt><dd>조동길 교수 · 넥서스환경디자인연구원</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667746" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="river-lake-restoration-2014" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2014</span>
+<h2>하천호소 생태복원의 기본설계</h2>
+<p>이준헌 소장 · 케이씨리버텍</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>11</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2014.10.07</dd></div>
+<div><dt>ABOUT</dt><dd>이준헌 소장 · 케이씨리버텍</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667739" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="biodiversity-evaluation-2014" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2014</span>
+<h2>생물다양성평가</h2>
+<p>오충현 교수 · 동국대학교</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>12</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2014.09.30</dd></div>
+<div><dt>ABOUT</dt><dd>오충현 교수 · 동국대학교</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667736" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="green-education-2014" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2014</span>
+<h2>Green education, research, infrastructure, and practices for sustainability</h2>
+<p>안창우 교수 · George Mason University</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>13</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2014.04.18</dd></div>
+<div><dt>ABOUT</dt><dd>안창우 교수 · George Mason University</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667734" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="eco-river-restoration-2013" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2013</span>
+<h2>환경친화적 하천복원 기술</h2>
+<p>김용상 수석연구원 · 삼성안전환경연구소</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>14</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2013.11.27</dd></div>
+<div><dt>ABOUT</dt><dd>김용상 수석연구원 · 삼성안전환경연구소</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667730" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="marine-biogeochemistry-2013" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2013</span>
+<h2>대기환경변화가 해양 생지화학 및 생태계에 미치는 영향</h2>
+<p>김태욱 연구원 · 포항공과대학교 환경연구소</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>15</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2013.06.05</dd></div>
+<div><dt>ABOUT</dt><dd>김태욱 연구원 · 포항공과대학교 환경연구소</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33/?bmode=view&amp;idx=7667716" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+<article class="lf-event-article" data-event-detail="landscape-space-design-2012" hidden>
+<a class="lf-event-back" href="#/life/events"><span aria-hidden="true">←</span> Back to Events</a>
+<header class="lf-event-detail-head">
+<span class="lf-event-detail-eyebrow">ELSDR / EVENTS <span class="lf-event-detail-sep">/</span> 초청강연 <span class="lf-event-detail-sep">/</span> 2012</span>
+<h2>Designing Landscape Spaces</h2>
+<p>이유미 교수 · 서울대학교</p>
+</header>
+<div class="lf-event-detail-grid">
+<div class="lf-event-detail-graphic" aria-label="행사 아카이브 장식 그래픽"><span>ELSDR / ACADEMIC EXCHANGE</span><strong>16</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>
+<div class="lf-event-detail-content">
+<h3>Event information</h3>
+<dl>
+<div><dt>TYPE</dt><dd>초청강연</dd></div>
+<div><dt>DATE / YEAR</dt><dd>2012.05.23</dd></div>
+<div><dt>ABOUT</dt><dd>이유미 교수 · 서울대학교</dd></div>
+</dl>
+<p>기존 연구실 홈페이지의 공개 행사 기록을 바탕으로 확인 가능한 정보를 정리했습니다. 행사 사진 및 발표 내용은 원본 자료를 확인한 뒤 추가할 수 있습니다.</p>
+<a class="lf-event-original" href="https://edesign.korea.ac.kr/33" target="_blank" rel="noopener noreferrer">View original archive <span aria-hidden="true">↗</span></a>
+</div></div>
+<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>
+</article>
+</div>
+</div>
+
+<div class="lf-panel lf-v2-activities" data-life-view="activities" hidden>
+  <div class="lf-intro"><div><span>03 / ACTIVITIES &amp; FIELD RECORDS</span><h2>Activities<span>.</span></h2></div>
+    <p>연구실이 직접 경험한 장소와 활동,<br>그 기록을 하나의 아카이브에서 살펴봅니다.</p></div>
+  <section class="lf-v2-places" aria-labelledby="lf-v2-places-title">
+    <div class="lf-v2-section-head"><div><span>MAP / CONNECTED ACTIVITIES</span><h3 id="lf-v2-places-title">Where We've Been<span>.</span></h3></div>
+      <p>국내외 연구·답사·교류 장소의 위치를 살펴보세요.<br>장소를 선택하면 연결된 활동 기록과 사진 영역으로 이동합니다.</p></div>
+    <div class="lf-v2-map-layout">
+      <div class="lf-v2-map-sidebar">
+        <div class="lf-v2-map-sidebar-head"><span>EXPLORE LOCATIONS</span><strong id="lf-v2-place-count">0 PLACES</strong></div>
+        <div class="lf-v2-map-switch" role="group" aria-label="지도 지역 필터">
+          <button type="button" data-lf-v2-region="all" class="is-selected" aria-pressed="true">All</button>
+          <button type="button" data-lf-v2-region="korea" aria-pressed="false">Korea</button>
+          <button type="button" data-lf-v2-region="overseas" aria-pressed="false">Overseas</button>
+        </div>
+        <div id="lf-v2-place-list" class="lf-v2-place-list" aria-label="방문지별 활동 목록"></div>
+        <button type="button" class="lf-v2-showall-places" id="lf-v2-places-reset">View all activities ↗</button>
+      </div>
+      <div class="lf-v2-map-wrap">
+        <div id="lf-v2-map" class="lf-v2-map" role="region" aria-label="국내외 연구실 활동 장소 지도">
+          <p class="lf-v2-map-placeholder">활동 위치 지도 준비 중…</p>
+        </div>
+        <div class="lf-v2-map-legend"><span>ELSDR / PLACES &amp; EXPERIENCES</span><span id="lf-v2-active-place">Select a location</span></div>
+      </div>
+    </div>
+    <p class="lf-v2-map-caution">위치는 등록된 활동 기록과 연결되어 있습니다. 정확한 방문 지점이 확인되지 않은 경우 도시·지역 중심 좌표를 사용합니다. 원본 ELDR 지도 전체를 옮긴 것은 아니며, 검증된 원문 링크가 없는 장소는 임의로 추가하지 않았습니다.</p>
+  </section>
+  <section class="lf-v2-activity-section" id="lf-v2-activity-archive" aria-labelledby="lf-v2-activity-title">
+    <div class="lf-v2-section-head"><div><span>ACTIVITIES / PHOTO &amp; RECORDS</span><h3 id="lf-v2-activity-title">Activity Archive<span>.</span></h3></div>
+      <p>현장답사·워크숍·학술교류·연구실 활동의 기록입니다.<br>장소가 없는 활동도 별도 카드로 게시할 수 있습니다.</p></div>
+    <div class="lf-v2-activity-controls">
+      <div class="lf-v2-activity-filters" role="group" aria-label="활동 유형">
+        <button type="button" data-lf-v2-activity-kind="all" aria-pressed="true" class="is-selected">All Activities</button>
+        <button type="button" data-lf-v2-activity-kind="fieldwork" aria-pressed="false">Fieldwork</button>
+        <button type="button" data-lf-v2-activity-kind="workshop" aria-pressed="false">Workshops</button>
+        <button type="button" data-lf-v2-activity-kind="exchange" aria-pressed="false">Academic Exchange</button>
+        <button type="button" data-lf-v2-activity-kind="lab" aria-pressed="false">Lab Life</button>
+      </div>
+      <label class="lf-v2-activity-search"><span>SEARCH ACTIVITIES</span>
+        <input id="lf-v2-activity-search" type="search" placeholder="활동명 · 장소 · 연도 검색" autocomplete="off"></label>
+    </div>
+    <div class="lf-v2-activity-status" aria-live="polite"><span id="lf-v2-activity-counter">0 activities</span><button id="lf-v2-clear-location" type="button" hidden>장소 필터 해제 ✕</button></div>
+    <div class="lf-v2-activity-grid" id="lf-v2-activity-grid"></div>
+    <div class="lf-v2-empty" id="lf-v2-activity-empty" hidden>조건에 맞는 활동이 없습니다. 유형·장소·검색어를 변경해 주세요.</div>
+    <p class="lf-v2-map-caution">기존 Fieldwork·Gallery의 공개 기록을 통합했습니다. 실제 행사·현장 사진이 확보되지 않은 항목에는 사진 자리만 표시하며, 원문 게시물로 연결합니다. 현장 경험을 입증할 수 없는 내용은 임의로 추가하지 않습니다.</p>
+  </section>
+</div>
+<div class="lf-panel lf-v2-activity-detail" data-life-view="activity-detail" hidden>
+  <a class="lf-v2-activity-back" href="#/life/activities">← Back to Activities</a>
+  <div id="lf-v2-activity-detail-body" aria-live="polite"></div>
+</div>
+
+</div></section>
+<section class="page ct-page ct-v2-page" data-page="contact">
+  <div class="wrap ct-content">
+    <header class="ct-intro">
+      <div class="ct-eyebrow">ELSDR / GET IN TOUCH</div>
+      <div class="ct-intro-row">
+        <h1>Contact<span>.</span></h1>
+        <p>연구실 위치와 연락처, 새로운 연구 참여 안내를<br>두 영역에서 확인하세요.</p>
+      </div>
+    </header>
+    <nav class="ct-jump" aria-label="Contact 섹션 바로가기">
+      <a href="#/contact/location" data-ct-v2-tab="location"><small>01</small><span>Location</span><b aria-hidden="true">↗</b></a>
+      <a href="#/contact/join" data-ct-v2-tab="join"><small>02</small><span>Join Us</span><b aria-hidden="true">↗</b></a>
+    </nav>
+
+    <section class="ct-section ct-location" id="contact-location" aria-labelledby="ct-location-title">
+      <div class="ct-section-heading">
+        <span>01 / FIND THE LAB</span>
+        <h2 id="ct-location-title">Location<span>.</span></h2>
+        <p>주소와 위치 안내, 연구실 및 교수 연락처를<br>한곳에서 확인합니다.</p>
+      </div>
+      <div class="ct-location-panel">
+        <div class="ct-v2-map-shell">
+          <div class="ct-v2-map-title"><span>ELSDR / KOREA UNIVERSITY</span><strong>VISIT THE LAB</strong></div>
+          <iframe title="고려대학교 생명과학관 서관 위치 지도" src="https://www.google.com/maps?q=Korea+University+Life+Science+West+Building&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="ct-v2-map-footer"><span>Life Science West Building · Seoul</span>
+            <a id="ct-v2-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Korea+University+Life+Science+West+Building" target="_blank" rel="noopener noreferrer">Open map ↗</a></div>
+        </div>
+        <div class="ct-location-info">
+          <span class="ct-location-label">LOCATION / ADDRESS &amp; ROOM</span>
+          <h3>Korea University<br><span>Life Science West Building</span></h3>
+          <dl>
+            <div><dt>Address / 주소</dt><dd><span id="ct-v2-address-ko">서울특별시 성북구 안암로 145</span><br><span id="ct-v2-address-en">145 Anam-ro, Seongbuk-gu, Seoul 02841, Korea</span></dd></div>
+            <div><dt>Building / 건물</dt><dd id="ct-v2-building">고려대학교 자연계캠퍼스 · 생명과학관 서관</dd></div>
+            <div><dt>Room / 호실</dt><dd id="ct-v2-room">501A호 · Room 501A</dd></div>
+          </dl>
+          <p class="ct-v2-contact-caution">방문 전 연구실에 연락하여 호실과 방문 가능 여부를 확인해 주세요. 지도는 건물 검색 결과를 보여줍니다.</p>
+        </div>
+      </div>
+      <div class="ct-v2-contact-heading"><span>CONTACT INFORMATION</span><h3>Get in touch<span>.</span></h3>
+        <p>기존에 별도로 있던 Email 정보를 Location 아래로 통합했습니다.</p></div>
+      <div class="ct-v2-contact-grid">
+        <article class="ct-v2-contact-card">
+          <span>01 / LAB OFFICE</span><h4>Research &amp; General Inquiries</h4>
+          <div><small>LAB EMAIL</small><a id="ct-v2-lab-email" href="mailto:chlghwns0117@korea.ac.kr">chlghwns0117@korea.ac.kr ↗</a></div>
+          <div><small>LAB TELEPHONE</small><a id="ct-v2-lab-phone" href="tel:+82232903621">02-3290-3621 ↗</a></div>
+        </article>
+        <article class="ct-v2-contact-card">
+          <span>02 / PRINCIPAL INVESTIGATOR</span><h4>Professor Jinhyung Chon <small>전진형</small></h4>
+          <div><small>PROFESSOR EMAIL</small><a id="ct-v2-professor-email" href="mailto:jchon@korea.ac.kr">jchon@korea.ac.kr ↗</a></div>
+          <div><small>PROFESSOR OFFICE</small><a id="ct-v2-professor-phone" href="tel:+82232903048">02-3290-3048 ↗</a></div>
+        </article>
+      </div>
+      <p class="ct-small-note">* 주소 및 연락처는 기존 연구실 홈페이지 시안에서 가져온 정보이며, 실제 게시 전에 최신 여부를 확인해야 합니다.</p>
+    </section>
+
+    <section class="ct-section ct-join" id="contact-join" aria-labelledby="ct-join-title">
+      <div class="ct-section-heading">
+        <span>02 / JOIN ELSDR</span>
+        <h2 id="ct-join-title">Join Us<span>.</span></h2>
+        <p>대학원생·연구 인턴 등 연구 참여에 관한 정보를<br>단계별로 확인할 수 있습니다.</p>
+      </div>
+      <div class="ct-join-layout ct-v2-join-hero">
+        <div class="ct-join-statement">
+          <span>RESEARCH WITH ELSDR</span>
+          <h3>Explore.<br><em>Learn.</em><br>Contribute.</h3>
+          <p>ELSDR은 도시·농촌·연안의 사회·생태 시스템을 탐구하며 과학적 분석을 공간 계획과 설계, 관리와 정책으로 연결합니다.</p>
+          <a class="ct-join-research" href="#/research">Explore our research <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="ct-join-details">
+          <span class="ct-join-status">GRADUATE STUDENTS &amp; RESEARCH INTERNS</span>
+          <h3>Research together.</h3>
+          <p class="ct-join-desc">관심 분야와 연구 경험을 바탕으로 연구실에 문의할 수 있습니다. 아래 항목은 참여 가능성, 대상, 지원 절차, 현재 모집 공고를 구분하여 안내합니다.</p>
+          <nav class="ct-v2-join-quicklinks" aria-label="Join Us 세부 항목">
+            <button type="button" data-ct-scroll="ct-v2-opportunities"><small>01</small>Research Opportunities <span aria-hidden="true">↗</span></button>
+            <button type="button" data-ct-scroll="ct-v2-looking-for"><small>02</small>Who We're Looking For <span aria-hidden="true">↗</span></button>
+            <button type="button" data-ct-scroll="ct-v2-how-to-apply"><small>03</small>How to Apply <span aria-hidden="true">↗</span></button>
+            <button type="button" data-ct-scroll="ct-v2-open-positions"><small>04</small>Open Positions <span aria-hidden="true">↗</span></button>
+          </nav>
+          <a href="mailto:chlghwns0117@korea.ac.kr?subject=ELSDR%20Research%20Inquiry" class="ct-solid-link" id="ct-v2-inquiry-link">Contact the lab <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="ct-v2-join-sections">
+        <section class="ct-v2-join-item" id="ct-v2-opportunities" aria-labelledby="ct-v2-opportunities-title">
+          <div class="ct-v2-join-head"><span>01 / RESEARCH OPPORTUNITIES</span><h3 id="ct-v2-opportunities-title">Research<br>Opportunities</h3></div>
+          <div class="ct-v2-join-body"><p>연구실에서 다루는 주제와 연구 활동을 소개합니다. 구체적인 참여 기회는 과제 운영 및 모집 상황에 따라 달라집니다.</p>
+            <div class="ct-v2-opportunity-list" id="ct-v2-opportunity-list"></div>
+            <div class="ct-v2-internal-links"><a href="#/about/themes">Research Themes / About ↗</a><a href="#/research">Research Archive ↗</a></div>
+          </div>
+        </section>
+
+        <section class="ct-v2-join-item" id="ct-v2-looking-for" aria-labelledby="ct-v2-looking-for-title">
+          <div class="ct-v2-join-head"><span>02 / WHO WE'RE LOOKING FOR</span><h3 id="ct-v2-looking-for-title">Who We're<br>Looking For</h3></div>
+          <div class="ct-v2-join-body"><p>대학원 진학 또는 연구 인턴 활동에 관심 있는 지원자가 연구실의 연구 방향과 본인의 관심 분야가 어떻게 연결되는지 설명할 수 있도록 안내합니다.</p>
+            <div class="ct-v2-criterion-grid">
+              <div><strong>INTEREST / 연구 관심</strong><p>도시·경관·생태·환경 문제 또는 사회·생태 시스템에 대한 관심</p></div>
+              <div><strong>RESEARCH / 연구 역량</strong><p>자료 조사·분석·현장조사 및 연구 내용을 소통하려는 태도</p></div>
+            </div>
+            <p class="ct-v2-caution">※ 이는 연구실의 방향을 이해하기 위한 참고사항이며, 공식 지원자격이나 필수 전공·기술을 확정한 것은 아닙니다.</p>
+            <div class="ct-v2-internal-links"><a href="#/study/learning">Learning &amp; Training / Study ↗</a><a href="#/about/identity">Lab Identity / About ↗</a></div>
+          </div>
+        </section>
+
+        <section class="ct-v2-join-item" id="ct-v2-how-to-apply" aria-labelledby="ct-v2-how-to-apply-title">
+          <div class="ct-v2-join-head"><span>03 / HOW TO APPLY</span><h3 id="ct-v2-how-to-apply-title">How to<br>Apply</h3></div>
+          <div class="ct-v2-join-body"><p>관심이 있다면 아래 내용을 간단히 정리하여 이메일로 문의하세요. 최종 지원 및 선발 절차는 모집 공고를 기준으로 확인해 주세요.</p>
+            <div class="ct-v2-application-steps">
+              <div><span>01</span><strong>Interest</strong><p>관심 과정과 연구 주제</p></div>
+              <div><span>02</span><strong>Background</strong><p>전공 및 관련 연구·활동 경험</p></div>
+              <div><span>03</span><strong>Introduction</strong><p>간단한 자기소개 또는 CV</p></div>
+            </div>
+            <div class="ct-v2-internal-links"><a id="ct-v2-apply-email" href="mailto:chlghwns0117@korea.ac.kr?subject=ELSDR%20Research%20Inquiry">Research inquiry by email ↗</a><a href="#/study/learning">Research Training / Study ↗</a></div>
+          </div>
+        </section>
+
+        <section class="ct-v2-join-item" id="ct-v2-open-positions" aria-labelledby="ct-v2-open-positions-title">
+          <div class="ct-v2-join-head"><span>04 / OPEN POSITIONS</span><h3 id="ct-v2-open-positions-title">Open<br>Positions</h3></div>
+          <div class="ct-v2-join-body"><p>공식적으로 확인된 모집 공고만 현재 모집 목록에 게시합니다. 모집 상태, 지원 기간, 공고 링크를 독립적으로 관리할 수 있도록 구성했습니다.</p>
+            <div id="ct-v2-open-position-list" aria-live="polite"></div>
+            <div class="ct-v2-prior-heading"><span>PREVIOUS RECRUITMENT NOTICES</span><h4>Previous announcements</h4></div>
+            <div id="ct-v2-recruitment-history"></div>
+            <p class="ct-v2-caution">※ 이전 모집 공고가 있다는 사실만으로 현재 지원을 받고 있다고 판단할 수 없습니다. 최신 모집 여부는 연구실에 확인해 주세요.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+  <div class="ct-bottom"><div class="wrap"><span>ELSDR / KOREA UNIVERSITY</span><h2>Let's make a more<br>resilient tomorrow.</h2><p>For a Resilient and Sustainable Tomorrow.</p></div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-upper"><div><a href="#/home" class="footer-logo">ELSDR</a><p style="color:#bcd0c1;margin-top:38px;font-size:13px;line-height:2">For a Resilient and Sustainable Tomorrow.<br>Ecological Landscape System Design & Research Lab<br>Korea University</p></div><div class="footer-right">ABOUT &nbsp; / &nbsp; RESEARCH &nbsp; / &nbsp; PEOPLE<br>STUDY &nbsp; / &nbsp; LIFE AT ELSDR &nbsp; / &nbsp; CONTACT<br><br><span style="font-size:10px;color:#8ca99a">CONCEPT PREVIEW — NOT THE OFFICIAL LAB WEBSITE</span></div></div><section class="footer-related" aria-label="Related external websites">
+<div class="footer-related-head"><span>EXPLORE MORE</span><h2>Related Sites<span aria-hidden="true">.</span></h2><p>연구실과 관련된 학교 및 연구기관 홈페이지 바로가기</p></div>
+<div class="footer-related-grid">
+<a class="footer-related-link" href="https://www.korea.ac.kr/ko/index.do" target="_blank" rel="noopener noreferrer" aria-label="고려대학교 새 창에서 열기"><span class="footer-related-index">01</span><span class="footer-related-name"><strong>Korea University</strong><small>고려대학교</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+<a class="footer-related-link" href="https://eco.korea.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="환경생태공학부 새 창에서 열기"><span class="footer-related-index">02</span><span class="footer-related-name"><strong>Environmental Science &amp; Ecological Engineering</strong><small>환경생태공학부</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+<a class="footer-related-link" href="https://lifesci.korea.ac.kr/lifesci/about/greeting.do" target="_blank" rel="noopener noreferrer" aria-label="고려대학교 생명과학대학 새 창에서 열기"><span class="footer-related-index">03</span><span class="footer-related-name"><strong>College of Life Sciences</strong><small>고려대학교 생명과학대학</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+<a class="footer-related-link" href="https://graduate.korea.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="고려대학교 일반대학원 새 창에서 열기"><span class="footer-related-index">04</span><span class="footer-related-name"><strong>Graduate School</strong><small>고려대학교 일반대학원</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+<a class="footer-related-link" href="https://ojeri.korea.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="오정리질리언스연구원 새 창에서 열기"><span class="footer-related-index">05</span><span class="footer-related-name"><strong>OJeong Resilience Institute</strong><small>오정리질리언스연구원</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+<a class="footer-related-link" href="https://edesign.korea.ac.kr/" target="_blank" rel="noopener noreferrer" aria-label="기존 연구실 홈페이지 새 창에서 열기"><span class="footer-related-index">06</span><span class="footer-related-name"><strong>ELSDR Original Website</strong><small>기존 연구실 홈페이지</small></span><span class="footer-related-arrow" aria-hidden="true">↗</span></a>
+</div>
+</section>
+<div class="footer-bottom"><span>© 2026 ELSDR — Website concept study. Design preview only.</span><span>Concept content / Illustrative imagery / No official domain connection</span></div></div></footer>
+<script>
+(function(){
+  const pages=[...document.querySelectorAll('.page')];
+  const nav=[...document.querySelectorAll('[data-nav]')];
+  const submenuLinks=[...document.querySelectorAll('[data-subnav]')];
+  const groups=[...document.querySelectorAll('.nav-group')];
+  const menu=document.getElementById('main-nav');
+  const btn=document.getElementById('mobile-btn');
+  const toggle=document.getElementById('lang-toggle');
+  const details={
+    "about/vision":["Vision","For a Resilient and Sustainable Tomorrow","사람과 자연이 함께 만드는 지속가능하고 회복탄력적인 도시와 지역의 미래.",["Resilient Tomorrow","Sustainable Landscapes"]],
+    "about/identity":["Identity","Our Research Identity","조경학을 학문적 기반으로 회복탄력성 사고와 근거기반 설계를 결합합니다.",["Landscape Architecture","Resilience Thinking","Evidence-based Design"]],
+    "about/approach":["Research Approach","From Research to Practice","과학적 분석과 현장 경험을 바탕으로 공간적 해법을 구체화하고 사회와 연결합니다.",["Planning","Design","Restoration","Management","Policy & Governance"]],
+    "research/themes":["4 Research Themes","Four Research Themes","ELSDR의 네 가지 주요 연구영역입니다.",["Climate Adaptation and Resilience","Ecosystem Services and Nature-based Solutions","Coastal Landscape and Living Systems","Regional Landscape Strategy"]],
+    "research/methods":["Methods","Research Methods","연구에 사용하는 구체적 방법론은 논문·연구성과를 확인한 뒤 정리할 예정입니다.",["Methods to be confirmed"]],
+    "projects/featured":["Featured Projects","Featured Projects","대표 프로젝트를 연구 질문·방법·결과·공간적 시사점으로 소개할 영역입니다.",["Featured Research","Research to Practice"]],
+    "projects/all":["All Projects","All Projects","연구영역·연도·대상지별 프로젝트 목록과 필터가 들어갈 영역입니다.",["Project Archive","Theme Filters"]],
+    "publications/articles":["Journal Articles","Journal Articles","학술지 논문을 연도 및 연구영역별로 분류할 예정입니다.",["Year","Authors","Journal","DOI"]],
+    "publications/reports":["Reports","Research Reports","연구보고서와 기술보고서 등을 정리할 예정입니다.",["Reports","Year","Research Area"]],
+    "publications/books":["Books","Books & Publications","저서와 단행본 등 출판 성과를 정리할 예정입니다.",["Books","Year","Publication"]],
+    "people/professor":["Professor","Professor","교수 소개와 연구 분야, 주요 연구·교육 활동을 소개할 예정입니다.",["Profile","Research Interests"]],
+    "people/researchers":["Researchers","Researchers","현재 연구 구성원을 소개할 예정입니다.",["Profiles","Research Topics"]],
+    "people/alumni":["Alumni","Alumni","졸업생과 이전 연구원을 소개할 예정입니다.",["Alumni Archive"]],
+    "life/news":["News","News","연구실 소식과 공지사항을 모아 보여줄 예정입니다.",["Updates","Announcements"]],
+    "life/fieldwork":["Fieldwork","Fieldwork","현장 조사와 답사 기록을 이미지 중심으로 소개할 예정입니다.",["Site Visits","Field Notes"]],
+    "life/events":["Seminars","Seminars","세미나·강연·학술 교류 활동을 소개할 예정입니다.",["Lab Seminars","Events"]],
+    "life/gallery":["Gallery","Gallery","연구실의 활동 사진과 기록을 정리할 예정입니다.",["Photo Archive"]],
+    "contact/location":["Location","Location","고려대학교 생명과학관 서관 501A호",["145 Anam-ro, Seongbuk-gu, Seoul"]],
+    "contact/join":["Join Us","Join ELSDR","대학원생·연구인턴 등 연구실 지원 안내가 들어갈 영역입니다.",["Recruitment","Application Information"]],
+    "contact/email":["Email","Contact by Email","연구실 공식 이메일 및 연락처를 안내합니다.",["chlghwns0117@korea.ac.kr","02-3290-3621"]]
+  };
+  function clearMobileAccordion(){
+    groups.forEach(group=>{
+      group.classList.remove('expanded');
+      const button=group.querySelector('.nav-expand');
+      if(button)button.setAttribute('aria-expanded','false');
+    });
+  }
+  function route(){
+    let raw=(location.hash.replace(/^#\/?/,'').split('?')[0]||'home').toLowerCase();
+    const aliases={'projects':'research/projects','publications':'research/publications',
+      'research/themes':'about/themes','research/methods':'about/approach',
+      'projects/featured':'research/projects','projects/all':'research/projects',
+      'publications/articles':'research/publications','publications/reports':'research/publications','publications/books':'research/publications'};
+    const legacyRoutes={'study/lab-conference':'life/events','study/lab-seminar':'study/research-notes','life/seminars':'life/events','people/staff':'people/researchers'};
+    if(legacyRoutes[raw]){location.replace('#/'+legacyRoutes[raw]);return;}
+    raw=aliases[raw]||raw;
+    const parts=raw.split('/');
+    let root=parts[0],slug=parts[1]||'';
+    if(!['home','about','research','people','study','life','contact'].includes(root)){root='home';slug=''}
+    const mapping={'research/projects':'research','research/publications':'research','study/research-notes':'study','study/course-guide':'study','life/events':'life','people/professor':'people','people/staff':'people','people/alumni':'people'};
+    const key=root+'/'+slug;
+    if(slug&&!details[key]&&!mapping[key]&&!(root==='about'&&['vision','identity','themes','approach'].includes(slug)))slug='';
+    const activeKey=root+'/'+slug,target=mapping[activeKey]||root;
+    document.body.classList.toggle('home-view',root==='home');
+    pages.forEach(el=>{
+      const active=el.dataset.page===target;
+      el.classList.toggle('active',active);
+      el.classList.remove('subview');
+      el.querySelectorAll('.sub-focus').forEach(node=>node.remove());
+      if(active&&root!=='about'&&root!=='people'&&root!=='life'&&root!=='study'&&root!=='contact'&&slug&&details[activeKey]){
+        el.classList.add('subview');
+        const [label,title,description,tags]=details[activeKey];
+        const section=document.createElement('section');section.className='sub-focus wrap';
+        const eyebrow=document.createElement('div');eyebrow.className='sub-focus-eyebrow';eyebrow.textContent=root.toUpperCase()+' / '+label.toUpperCase();
+        const heading=document.createElement('h2');heading.className='sub-focus-title';heading.textContent=title;
+        const body=document.createElement('p');body.className='sub-focus-body';body.textContent=description;
+        const chips=document.createElement('div');chips.className='sub-focus-tags';
+        tags.forEach(t=>{const chip=document.createElement('span');chip.textContent=t;chips.appendChild(chip)});
+        const note=document.createElement('p');note.className='sub-focus-note';note.textContent='STRUCTURE PREVIEW — 상세 콘텐츠는 추후 추가 예정';
+        section.append(eyebrow,heading,body,chips,note);
+        const hero=el.querySelector('.subhero');if(hero)hero.after(section);else el.prepend(section);
+      }
+    });
+    nav.forEach(el=>{
+      const selected=el.dataset.nav===root;
+      el.classList.toggle('active',selected);
+      if(selected)el.setAttribute('aria-current',slug?'false':'page');else el.removeAttribute('aria-current');
+    });
+    groups.forEach(group=>group.classList.toggle('selected',group.dataset.group===root));
+    submenuLinks.forEach(el=>{
+      const selected=el.dataset.subnav===activeKey&&!!slug;
+      el.classList.toggle('active',selected);
+      if(selected)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');
+    });
+    menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';
+    clearMobileAccordion();
+    document.title=(slug?submenuLinks.find(el=>el.dataset.subnav===activeKey)?.textContent||root:root==='home'?'ELSDR':root.charAt(0).toUpperCase()+root.slice(1))+' | ELSDR Concept Preview';
+    if(root==='about'&&slug&&['vision','identity','themes','approach'].includes(slug)){
+      // Keep all four submenu destinations on one continuous About page.
+      requestAnimationFrame(()=>{
+        const section=document.getElementById('about-'+slug);
+        if(section)section.scrollIntoView({block:'start',behavior:'smooth'});
+      });
+    }else if(root==='people'){window.scrollTo(0,0);
+    }else if(root==='contact'&&slug&&['location','join','email'].includes(slug)){
+      requestAnimationFrame(()=>{
+        document.getElementById('contact-'+slug)?.scrollIntoView({block:'start',behavior:'smooth'});
+      });
+    }else window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+  route();
+  btn.addEventListener('click',()=>{
+    const opened=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',String(opened));btn.textContent=opened?'×':'☰';
+    if(!opened)clearMobileAccordion();
+  });
+  document.querySelectorAll('.nav-expand').forEach(button=>{
+    button.addEventListener('click',()=>{
+      const group=button.closest('.nav-group');
+      const open=!group.classList.contains('expanded');
+      clearMobileAccordion();
+      if(open){group.classList.add('expanded');button.setAttribute('aria-expanded','true')}
+    });
+  });
+  toggle.addEventListener('click',()=>{
+    const ko=document.body.classList.toggle('ko');
+    document.documentElement.lang=ko?'ko':'en';
+    toggle.setAttribute('title',ko?'Switch to English':'한국어로 전환');
+  });
+})();
+</script>
+<script>
+/* Desktop full-width dropdown matching the original ELDR homepage navigation.
+   Mobile keeps the existing collapsible list. */
+(function(){
+  const header=document.querySelector('.site-head');
+  const panel=document.getElementById('mega-menu');
+  const links=[...document.querySelectorAll('#main-nav [data-nav]')];
+  const columns=[...panel.querySelectorAll('.mega-column')];
+  const breakpoint=window.matchMedia('(min-width: 1221px)');
+  let active=null;
+  const close=()=>{
+    active=null;
+    panel.hidden=true;
+    header.classList.remove('mega-open');
+    columns.forEach(x=>x.classList.remove('mega-current'));
+    links.forEach(x=>x.setAttribute('aria-expanded','false'));
+  };
+  const open=(key)=>{
+    active=key;
+    panel.hidden=false;
+    header.classList.add('mega-open');
+    columns.forEach(x=>x.classList.toggle('mega-current',x.dataset.mega===key));
+    links.forEach(x=>x.setAttribute('aria-expanded',String(x.dataset.nav===key)));
+  };
+  links.forEach(link=>{
+    link.setAttribute('aria-controls','mega-menu');
+    link.setAttribute('aria-expanded','false');
+    const group=link.closest('.nav-group');
+    // Desktop: reveal the entire submenu row as soon as the pointer enters a main menu.
+    group.addEventListener('pointerenter',event=>{
+      if(breakpoint.matches&&event.pointerType!=='touch')open(link.dataset.nav);
+    });
+    // Keyboard navigation shows the same submenu when a menu link receives focus.
+    link.addEventListener('focus',()=>{
+      if(breakpoint.matches)open(link.dataset.nav);
+    });
+    // A click still follows the main link. No click is required to reveal submenus.
+  });
+  header.addEventListener('pointerleave',event=>{
+    if(breakpoint.matches&&event.pointerType!=='touch')close();
+  });
+  panel.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{close();const id=link.getAttribute('href');if(id===location.hash&&/^(#\/about\/|#\/people\/)/.test(id))requestAnimationFrame(()=>document.getElementById((id.startsWith('#/about/')?'about-':'people-')+id.split('/').pop())?.scrollIntoView({block:'start',behavior:'smooth'}));}));
+  document.addEventListener('pointerdown',event=>{
+    if(active&&!header.contains(event.target))close();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&active){
+      const current=links.find(x=>x.dataset.nav===active);
+      close(); if(current)current.focus();
+    }
+  });
+  window.addEventListener('hashchange',close);
+  breakpoint.addEventListener('change',close);
+})();
+</script>
+
+
+
+
+<script>
+/* Re-activate in-page Contact navigation when an already selected section is clicked. */
+(function(){
+ document.querySelectorAll('a[href^="#/contact/"]').forEach(link=>{
+  link.addEventListener('click',()=>{
+   const href=link.getAttribute('href');
+   if(href!==location.hash)return;
+   const part=href.split('/').pop();
+   if(['location','join','email'].includes(part)){
+    requestAnimationFrame(()=>document.getElementById('contact-'+part)?.scrollIntoView({block:'start',behavior:'smooth'}));
+   }
+  });
+ });
+})();
+</script>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+<script src="home-contact.js"></script>
+<script src="menu-structure.js"></script>
+<script src="contact-records.js"></script>
+<script src="contact-page.js"></script>
+<script src="life-records.js"></script>
+<script src="life-page.js"></script>
+<script src="study-resources.js"></script>
+<script src="study-page.js"></script>
+<script src="people-records.js"></script>
+<script src="people-page.js"></script>
+<script src="research-records.js"></script>
+<script src="research-archive.js"></script>
+</body></html>
