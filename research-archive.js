@@ -4,7 +4,7 @@
   "use strict";
   const root=document.getElementById("research-archive-v2");
   if(!root)return;
-  const records=Array.isArray(window.ELSDR_RESEARCH_RECORDS)?window.ELSDR_RESEARCH_RECORDS:[];
+  const records=(Array.isArray(window.ELSDR_RESEARCH_RECORDS)?window.ELSDR_RESEARCH_RECORDS:[]).filter(record=>record.status!=='draft'&&record.status!=='archived');
   const $=(selector)=>root.querySelector(selector);
   const $$=(selector)=>Array.from(root.querySelectorAll(selector));
   const escapeHtml=(value)=>String(value??"").replace(/[&<>"']/g,c=>({
