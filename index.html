@@ -1338,15 +1338,21 @@ body.home-view .footer{display:none}
   const columns=[...panel.querySelectorAll('.mega-column')];
   const breakpoint=window.matchMedia('(min-width: 1221px)');
   let active=null;
-  // Match the six submenu columns to the actual primary navigation bounds.
+  // Align each dropdown column with its corresponding top-level menu.
+  // Measure the actual menu widths rather than assuming fixed side padding.
   const inner=panel.querySelector('.mega-inner');
   const nav=document.getElementById('main-nav');
+  const navGroups=[...nav.querySelectorAll('.nav-group')];
   const alignColumns=()=>{
     if(!breakpoint.matches||panel.hidden)return;
     const menuBounds=inner.getBoundingClientRect();
     const navBounds=nav.getBoundingClientRect();
     inner.style.paddingLeft=(navBounds.left-menuBounds.left)+'px';
     inner.style.paddingRight=(menuBounds.right-navBounds.right)+'px';
+    // Mirror each navigation grid track so the six column centers line up.
+    inner.style.setProperty('grid-template-columns',
+      navGroups.map(group=>group.getBoundingClientRect().width+'px').join(' '),
+      'important');
   };
   new ResizeObserver(alignColumns).observe(header);
   new ResizeObserver(alignColumns).observe(nav);
