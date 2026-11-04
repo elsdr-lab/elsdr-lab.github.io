@@ -263,8 +263,12 @@
     };
   }
   function renderListOnly(){
-    const holder=ctx?.editor.querySelector(".rc-panel");
-    if(holder)holder.outerHTML=listView();
+    const rows=filtered();
+    const container=ctx?.editor.querySelector(".rc-list");
+    if(container)container.innerHTML=rows.length?rows.map(row).join(""):
+      '<div class="rc-empty"><strong>해당하는 연구성과가 없습니다.</strong><p>검색 조건을 바꾸거나 새 항목을 등록해 주세요.</p></div>';
+    const counter=ctx?.editor.querySelector(".rc-list-caption span:last-child");
+    if(counter)counter.textContent=rows.length+"개 표시";
   }
   window.ELSDRResearchEditor={render,reset,validate};
 })();
