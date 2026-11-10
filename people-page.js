@@ -22,6 +22,47 @@ function validUrl(href){
  if(!href)return "";
  try{const v=new URL(String(href),window.location.href);return ["https:","http:"].includes(v.protocol)?v.href:"";}catch{return "";}
 }
+
+/* The professor profile uses the same editable record as the admin page. */
+function renderProfessor(){
+ const profile=$("#people-professor"),record=data.professor;
+ if(!profile||!record)return;
+ const set=(selector,value)=>{const node=$(selector,profile);if(node&&value!==undefined)node.textContent=String(value??"");};
+ set(".pp-prof-role.lang-ko",record.titleKo);
+ set(".pp-prof-role.lang-en",record.title);
+ set(".pp-prof-korean",record.nameKo?record.nameKo+" 교수":"");
+ set(".pp-prof-position.lang-ko",record.affiliationKo);
+ set(".pp-prof-position.lang-en",record.affiliation);
+ set(".pp-prof-desc.lang-ko",record.descriptionKo);
+ set(".pp-prof-desc.lang-en",record.descriptionEn);
+ const heading=$(".pp-prof-content h3",profile);
+ if(heading){
+  heading.replaceChildren(document.createTextNode(record.nameEn||""));
+  if(record.degree){const degree=document.createElement("span");degree.className="pp-prof-degree";degree.textContent=record.degree;heading.append(document.createTextNode(" "),degree);}
+ }
+ const photo=$(".pp-prof-photo img",profile);
+ if(photo){
+  const safe=validUrl(record.photo);
+  if(safe){photo.src=safe;photo.alt=(record.nameEn||record.nameKo||"Professor")+" portrait";photo.hidden=false;}
+  else{photo.removeAttribute("src");photo.hidden=true;}
+ }
+ const email=$(".pp-prof-contacts > a",profile);
+ if(email){email.href="mailto:"+String(record.email||"").replace(/[\r\n]/g,"");email.replaceChildren(document.createTextNode(record.email||""));}
+ const phones=$(".pp-prof-contacts > span",profile);
+ [record.officePhone,record.labPhone].forEach((value,i)=>{
+  if(!phones[i])return;
+  const textNode=Array.from(phones[i].childNodes).find(node=>node.nodeType===3);
+  if(textNode)textNode.nodeValue=String(value||"");else phones[i].prepend(document.createTextNode(value||""));
+ });
+ ["ko","en"].forEach(lang=>{
+  const body=$(".pp-prof-bio-body.lang-"+lang,profile);
+  const value=record[lang==="ko"?"biographyKo":"biographyEn"];
+  if(!body||value===undefined)return;
+  const paragraphs=String(value||"").trim().split(/\n\s*\n/).filter(Boolean);
+  body.replaceChildren(...paragraphs.map(value=>{const node=document.createElement("p");node.textContent=value;return node;}));
+ });
+}
+
 function outerLink(url,label){
  const safe=validUrl(url);
  return safe?'<a class="pp-v2-link" href="'+E(safe)+'" target="_blank" rel="noopener noreferrer">'+E(label)+' <span aria-hidden="true">↗</span></a>':"";
@@ -180,7 +221,7 @@ $("#pp-v2-thesis-search").addEventListener("input",renderTheses);
 $$("[data-pp-v2-degree]").forEach(button=>button.addEventListener("click",()=>{
  selectedDegree=button.dataset.ppV2Degree;renderTheses();
 }));
-renderCareer();renderWritings();renderResearchers();renderAlumni();renderTheses();
+renderProfessor();renderCareer();renderWritings();renderResearchers();renderAlumni();renderTheses();
 window.addEventListener("hashchange",renderRoute);
 renderRoute();
 })();
