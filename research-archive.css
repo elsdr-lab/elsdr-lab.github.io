@@ -84,3 +84,135 @@
  #research-archive-v2 .ra-notes strong{display:block;margin-bottom:12px}
  #research-archive-v2 .ra-notes p{font-size:11px}
 }
+
+
+/* Research Archive filter hierarchy — compact, aligned 3-row layout (2026-11-10).
+   Visual-only: retain existing data-research-kind/theme and search/year IDs. */
+#research-archive-v2 .ra-filter-toolbar.ra-filter-compact{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  align-items:stretch;
+  flex-wrap:nowrap;
+  padding:13px 0 14px;
+  border-top:1px solid rgba(83,109,94,.28);
+  border-bottom:1px solid rgba(83,109,94,.28);
+}
+#research-archive-v2 .ra-filter-row{
+  display:grid;
+  grid-template-columns:160px minmax(0,1fr);
+  align-items:center;
+  column-gap:22px;
+  row-gap:8px;
+  width:100%;
+  min-height:60px;
+  padding:10px 0;
+}
+#research-archive-v2 .ra-filter-row + .ra-filter-row{
+  border-top:1px solid rgba(83,109,94,.13);
+}
+#research-archive-v2 .ra-filter-label{
+  display:block;
+  margin:0;
+  color:#4d6956;
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.5;
+  letter-spacing:1.25px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+#research-archive-v2 .ra-filter-options{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 10px;
+  min-width:0;
+}
+#research-archive-v2 .ra-filter-compact .ra-filter-btn{
+  padding:10px 15px;
+  min-height:39px;
+  font-size:12px;
+}
+#research-archive-v2 .ra-filter-row-tools{
+  grid-template-columns:160px 170px 74px minmax(190px,1fr) auto;
+  column-gap:18px;
+  min-height:64px;
+}
+#research-archive-v2 .ra-filter-compact .ra-filter-year{
+  display:block;
+  width:170px;
+  min-width:0;
+  max-width:100%;
+  height:41px;
+  background:#fff;
+  border:1px solid #cbd6cb;
+  font-size:12px;
+}
+#research-archive-v2 .ra-filter-compact .ra-search-box{
+  display:flex;
+  align-items:center;
+  max-width:450px;
+  width:100%;
+  min-width:0;
+  flex:none;
+}
+#research-archive-v2 .ra-filter-compact .ra-search-input{
+  border:1px solid #cbd6cb;
+  border-radius:0;
+  background:#fff;
+  min-width:0;
+  height:41px;
+  padding:10px 35px 10px 13px;
+  font-size:12px;
+  line-height:1.4;
+}
+#research-archive-v2 .ra-filter-compact .ra-search-input:focus{
+  border:1px solid #536d5e;
+  outline:1px solid #536d5e;
+  outline-offset:0;
+}
+#research-archive-v2 .ra-filter-compact .ra-count{
+  justify-self:end;
+  text-align:right;
+  font-size:11px;
+  white-space:nowrap;
+}
+#research-archive-v2 .ra-filter-compact + .ra-records{
+  margin-top:23px;
+}
+@media(max-width:1100px){
+  #research-archive-v2 .ra-filter-row{grid-template-columns:145px minmax(0,1fr);column-gap:16px}
+  #research-archive-v2 .ra-filter-row-tools{grid-template-columns:145px 145px 70px minmax(150px,1fr)}
+  #research-archive-v2 .ra-filter-compact .ra-filter-year{width:145px}
+  #research-archive-v2 .ra-filter-compact .ra-count{grid-column:4;justify-self:end}
+}
+@media(max-width:760px){
+  #research-archive-v2 .ra-filter-row{
+    grid-template-columns:minmax(0,1fr);
+    min-height:0;
+    row-gap:9px;
+    padding:14px 0;
+  }
+  #research-archive-v2 .ra-filter-row-tools{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);
+    gap:7px 12px;
+    align-items:end;
+  }
+  #research-archive-v2 .ra-filter-row-tools > label[for="research-year"]{grid-column:1;grid-row:1}
+  #research-archive-v2 .ra-filter-row-tools > #research-year{grid-column:1;grid-row:2;width:100%;max-width:none}
+  #research-archive-v2 .ra-filter-label-search{grid-column:2;grid-row:1}
+  #research-archive-v2 .ra-filter-row-tools > .ra-search-box{grid-column:2;grid-row:2;max-width:none}
+  #research-archive-v2 .ra-filter-compact .ra-count{grid-column:1/-1;grid-row:3;margin-top:2px}
+  #research-archive-v2 .ra-filter-compact .ra-filter-btn{font-size:11px;padding:9px 11px}
+  #research-archive-v2 .ra-filter-toolbar.ra-filter-compact{padding:3px 0 6px}
+}
+@media(max-width:390px){
+  #research-archive-v2 .ra-filter-row-tools{grid-template-columns:minmax(0,1fr)}
+  #research-archive-v2 .ra-filter-row-tools > label[for="research-year"]{grid-column:1;grid-row:1}
+  #research-archive-v2 .ra-filter-row-tools > #research-year{grid-column:1;grid-row:2}
+  #research-archive-v2 .ra-filter-label-search{grid-column:1;grid-row:3;padding-top:7px}
+  #research-archive-v2 .ra-filter-row-tools > .ra-search-box{grid-column:1;grid-row:4}
+  #research-archive-v2 .ra-filter-compact .ra-count{grid-column:1;grid-row:5}
+}
