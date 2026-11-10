@@ -63,7 +63,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="research-archive.css?v=4.1">
 <link rel="stylesheet" href="design-review.css?v=4.1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="design-system.css?v=4.2">
+<link rel="stylesheet" href="design-system.css?v=4.1">
 </head>
 <body class="ko">
 <header class="site-head"><div class="wrap header-inner">
@@ -125,19 +125,12 @@ body.home-view .footer{display:none}
 <span class="home-watermark">DESIGN CONCEPT / 2026</span>
 </div></section>
 <section class="page" data-page="about" id="about-page">
-  <div class="wrap ds-masthead ds-about-masthead">
-    <div class="ds-masthead-top">
-      <div class="ds-breadcrumb"><span>ELSDR</span><i>/</i><strong>About</strong></div>
-      <nav class="about-navigation ab-sections-nav ds-subnav" aria-label="About page section navigation">
+  <nav class="about-navigation wrap ab-sections-nav" aria-label="About page section navigation">
     <a href="#/about/vision"><span class="ab-nav-num">01</span> Vision <span class="ab-nav-arrow">↘</span></a>
     <a href="#/about/identity"><span class="ab-nav-num">02</span> Identity <span class="ab-nav-arrow">↘</span></a>
     <a href="#/about/themes"><span class="ab-nav-num">03</span> Research Themes <span class="ab-nav-arrow">↘</span></a>
     <a href="#/about/approach"><span class="ab-nav-num">04</span> Research Approach <span class="ab-nav-arrow">↘</span></a>
   </nav>
-    </div>
-    <h1>About.</h1>
-  </div>
-  
 
 
   <section id="about-vision" class="ab-section ab-vision" aria-labelledby="ab-vision-h">
@@ -177,21 +170,21 @@ body.home-view .footer{display:none}
         <div class="ab-orbit-axis" aria-hidden="true"></div>
         <article class="ab-orb ab-orb-1">
           <span class="ab-orb-num">01 / ACADEMIC FOUNDATION</span>
-          <div class="ab-orb-glyph" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#536D5E" stroke-width="1.3" aria-hidden="true"><path d="M3 34c6-9 12-12 19-12s13 3 19 12"/><path d="M9 34c4-6 8-8 13-8s9 2 13 8"/><path d="M15 34c2-3 4.5-4 7-4s5 1 7 4"/><circle cx="31" cy="11" r="3.5"/></svg></div>
+          <div class="ab-orb-glyph" aria-hidden="true">◌</div>
           <h3>Landscape<br>Architecture</h3>
           <strong>학문적 기반</strong>
           <p>사람과 자연을 연결하는 공간의 지식과 설계</p>
         </article>
         <article class="ab-orb ab-orb-2">
           <span class="ab-orb-num">02 / THEORETICAL LENS</span>
-          <div class="ab-orb-glyph" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#5F8790" stroke-width="1.3" aria-hidden="true"><path d="M34 15a13 13 0 1 0 2 11"/><path d="M34 7v8h-8"/><circle cx="22" cy="22" r="3"/></svg></div>
+          <div class="ab-orb-glyph" aria-hidden="true">↝</div>
           <h3>Resilience<br>Thinking</h3>
           <strong>이론적 관점</strong>
           <p>변화와 불확실성에 대응하는 시스템적 사고</p>
         </article>
         <article class="ab-orb ab-orb-3">
           <span class="ab-orb-num">03 / PROBLEM-SOLVING APPROACH</span>
-          <div class="ab-orb-glyph" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#9C8763" stroke-width="1.3" aria-hidden="true"><rect x="6" y="6" width="32" height="32"/><path d="M6 17h32M6 27h32M17 6v32M27 6v32"/><circle cx="27" cy="17" r="3" fill="#D9C7A7"/></svg></div>
+          <div class="ab-orb-glyph" aria-hidden="true">⌁</div>
           <h3>Evidence-based<br>Design</h3>
           <strong>문제 해결 방식</strong>
           <p>과학적 분석과 현장 경험을 공간적 해법으로 연결</p>
@@ -341,17 +334,13 @@ body.home-view .footer{display:none}
 </section>
 <section class="page rs-page" data-page="research" id="research-archive-v2" aria-labelledby="research-title">
   <div class="wrap rs-main">
-    <header class="ra-header ds-masthead">
-  <div class="ds-masthead-top">
-    <div class="ds-breadcrumb"><span>ELSDR</span><i>/</i><span>Research</span><i>/</i><strong>Research Archive</strong></div>
-    <nav class="ds-masthead-tabs" aria-label="Research 유형 탐색">
-      <a href="#/research" data-ds-research="all"><small>01</small> All</a>
-      <a href="#/research/projects" data-ds-research="project"><small>02</small> Projects</a>
-      <a href="#/research/publications" data-ds-research="publication"><small>03</small> Publications</a>
-    </nav>
-  </div>
-  <h1 id="research-title">Research Archive.</h1>
-</header>
+    <header class="ra-header">
+      <div>
+        <span class="ra-eyebrow">ELSDR / RESEARCH</span>
+        <h1 id="research-title">Research Archive<span>.</span></h1>
+      </div>
+      <p>Projects와 Publications를 한곳에서 살펴보세요.<br>연구영역, 연도, 검색어를 조합해 탐색할 수 있습니다.</p>
+    </header>
     <div class="ra-filter-toolbar" aria-label="Research Archive filters">
       <div class="ra-filter-block" role="group" aria-label="자료 유형">
         <span class="ra-label">Type</span>
@@ -396,17 +385,14 @@ body.home-view .footer{display:none}
 </section>
 <section class="page pp-page" data-page="people">
   <div class="wrap pp-main">
-    <header class="ds-masthead ds-people-masthead">
- <div class="ds-masthead-top">
-  <div class="ds-breadcrumb"><span>ELSDR</span><i>/</i><span>People</span><i>/</i><strong id="ds-people-current">Professor</strong></div>
-  <nav class="ds-masthead-tabs pp-jump" aria-label="People 주요 메뉴">
-   <a href="#/people/professor" data-people-nav="professor"><small>01</small> Professor</a>
-   <a href="#/people/researchers" data-people-nav="researchers"><small>02</small> Researchers</a>
-   <a href="#/people/alumni" data-people-nav="alumni"><small>03</small> Alumni</a>
-  </nav>
- </div>
- <h1>People.</h1>
-</header>
+    <header class="pp-intro"><span class="pp-kicker">ELSDR / PEOPLE</span>
+      <div class="pp-intro-row"><h1>People<span>.</span></h1><p>연구실을 이루는 사람들과<br>연구의 여정을 소개합니다.</p></div>
+    </header>
+    <nav class="pp-jump" aria-label="People 주요 메뉴">
+      <a href="#/people/professor" data-people-nav="professor">01 <span>Professor</span><span aria-hidden="true">↗</span></a>
+      <a href="#/people/researchers" data-people-nav="researchers">02 <span>Researchers</span><span aria-hidden="true">↗</span></a>
+      <a href="#/people/alumni" data-people-nav="alumni">03 <span>Alumni</span><span aria-hidden="true">↗</span></a>
+    </nav>
     <nav class="pp-v2-depth-nav" id="pp-v2-depth-nav" aria-label="People 세부 메뉴"></nav>
 
     <section class="pp-section pp-professor" id="people-professor" data-people-panel="professor">
@@ -427,14 +413,13 @@ body.home-view .footer{display:none}
     <p class="pp-prof-desc">도시와 지역의 사회·생태적 변화와 시스템의 상호작용을 연구하며, 과학적 분석과 현장 경험을 회복탄력적인 공간 계획·설계 전략으로 연결합니다.</p>
     
     <div class="pp-prof-contacts"><a href="mailto:jchon@korea.ac.kr">jchon@korea.ac.kr <span aria-hidden="true">↗</span></a><span>02-3290-3048 <small>Professor's Office</small></span><span>02-3290-3621 <small>ELSDR Lab</small></span></div>
-    
+    <a class="pp-source-link" href="https://edesign.korea.ac.kr/29" target="_blank" rel="noopener noreferrer">Original professor profile <span aria-hidden="true">↗</span></a>
    </div>
   </div>
-      <div class="pp-v2-related-links" aria-label="Further links"><span class="ds-further-label">FURTHER</span>
+      <div class="pp-v2-related-links">
         <a href="#/people/professor/career">Career &amp; Activities <span aria-hidden="true">↗</span></a>
         <a href="#/people/professor/books">Books &amp; Writings <span aria-hidden="true">↗</span></a>
         <a href="#/research">Projects &amp; Publications <span aria-hidden="true">↗</span></a>
-        <a class="pp-source-link" href="https://edesign.korea.ac.kr/29" target="_blank" rel="noopener noreferrer">Original professor profile <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -1456,5 +1441,4 @@ body.home-view .footer{display:none}
 <script src="home-records.js"></script>
 <script src="home-content.js"></script>
 <script src="typography.js"></script>
-<script src="design-active-tabs.js"></script>
 </body></html>
