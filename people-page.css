@@ -105,3 +105,42 @@
  .pp-page .pp-jump > a span:nth-child(1){font-size:12px}
  .pp-page .pp-v2-depth-nav a{font-size:12px}
 }
+
+
+/* Professor portrait and bilingual research biography. */
+.pp-page .pp-prof-visual.pp-v2-photo-slot.pp-prof-photo{
+  position:relative;padding:0;overflow:hidden;aspect-ratio:4/5;
+}
+.pp-page .pp-prof-photo img{
+  position:absolute;inset:0;display:block;width:100%;height:100%;
+  object-fit:cover;object-position:center;max-width:none;
+}
+.pp-page .pp-prof-content h3 .pp-prof-degree{
+  display:inline-block;vertical-align:baseline;font-size:.36em;
+  font-weight:500;letter-spacing:0;color:#536d5e;white-space:nowrap;
+}
+.pp-page .pp-prof-biography{
+  margin:65px 0 0;padding:30px 0 0;border-top:1px solid #c5d1c5;
+}
+.pp-page .pp-prof-bio-head{margin-bottom:24px}
+.pp-page .pp-prof-bio-head h3{
+  font:500 28px/1.25 "IBM Plex Sans","Pretendard",sans-serif;
+  letter-spacing:-.6px;color:#252d2a;margin:0;
+}
+.pp-page .pp-prof-bio-dot{color:#8caab1}
+.pp-page .pp-prof-bio-body{max-width:1040px}
+.pp-page .pp-prof-bio-body p{
+  font-size:14px;line-height:1.95;color:#485e50;margin:0 0 20px;word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+.pp-page .pp-prof-bio-body[lang="en"] p{word-break:normal;line-height:1.85}
+.pp-page .pp-prof-contacts small.lang-ko,.pp-page .pp-prof-contacts small.lang-en{margin-top:5px}
+body.ko .pp-page .pp-prof-content .lang-en,
+body.ko .pp-page .pp-prof-biography .lang-en,
+body:not(.ko) .pp-page .pp-prof-content .lang-ko,
+body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
+@media(max-width:640px){
+ .pp-page .pp-prof-biography{margin-top:46px;padding-top:25px}
+ .pp-page .pp-prof-bio-head h3{font-size:24px}
+ .pp-page .pp-prof-bio-body p{font-size:14px;line-height:1.85}
+}
