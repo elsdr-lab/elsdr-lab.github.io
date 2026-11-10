@@ -60,7 +60,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="life-page.css?v=4.1">
 <link rel="stylesheet" href="study-page.css?v=4.1">
 <link rel="stylesheet" href="people-page.css?v=4.1">
-<link rel="stylesheet" href="research-archive.css?v=4.1">
+<link rel="stylesheet" href="research-archive.css?v=4.2">
 <link rel="stylesheet" href="design-review.css?v=4.1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="design-system.css?v=4.1">
@@ -341,34 +341,37 @@ body.home-view .footer{display:none}
       </div>
       <p>Projects와 Publications를 한곳에서 살펴보세요.<br>연구영역, 연도, 검색어를 조합해 탐색할 수 있습니다.</p>
     </header>
-    <div class="ra-filter-toolbar" aria-label="Research Archive filters">
-      <div class="ra-filter-block" role="group" aria-label="자료 유형">
-        <span class="ra-label">Type</span>
-        <button type="button" class="ra-filter-btn is-selected" data-research-kind="all" aria-pressed="true">All</button>
-        <button type="button" class="ra-filter-btn" data-research-kind="project" aria-pressed="false">Projects</button>
-        <button type="button" class="ra-filter-btn" data-research-kind="publication" aria-pressed="false">Publications</button>
+    <div class="ra-filter-toolbar ra-filter-compact" aria-label="Research Archive filters">
+      <div class="ra-filter-row ra-filter-row-type">
+        <span class="ra-filter-label" id="ra-filter-type-label">TYPE</span>
+        <div class="ra-filter-options" role="group" aria-labelledby="ra-filter-type-label">
+          <button type="button" class="ra-filter-btn is-selected" data-research-kind="all" aria-pressed="true">All</button>
+          <button type="button" class="ra-filter-btn" data-research-kind="project" aria-pressed="false">Projects</button>
+          <button type="button" class="ra-filter-btn" data-research-kind="publication" aria-pressed="false">Publications</button>
+        </div>
       </div>
-      <div class="ra-filter-block" role="group" aria-label="연구영역">
-        <span class="ra-label">Research Theme</span>
-        <button type="button" class="ra-filter-btn is-selected" data-research-theme="all" aria-pressed="true">All Themes</button>
-        <button type="button" class="ra-filter-btn" data-research-theme="climate" aria-pressed="false">Climate</button>
-        <button type="button" class="ra-filter-btn" data-research-theme="ecosystem" aria-pressed="false">Ecosystem</button>
-        <button type="button" class="ra-filter-btn" data-research-theme="coastal" aria-pressed="false">Coastal</button>
-        <button type="button" class="ra-filter-btn" data-research-theme="regional" aria-pressed="false">Regional</button>
+      <div class="ra-filter-row ra-filter-row-theme">
+        <span class="ra-filter-label" id="ra-filter-theme-label">RESEARCH THEME</span>
+        <div class="ra-filter-options" role="group" aria-labelledby="ra-filter-theme-label">
+          <button type="button" class="ra-filter-btn is-selected" data-research-theme="all" aria-pressed="true">All Themes</button>
+          <button type="button" class="ra-filter-btn" data-research-theme="climate" aria-pressed="false">Climate</button>
+          <button type="button" class="ra-filter-btn" data-research-theme="ecosystem" aria-pressed="false">Ecosystem</button>
+          <button type="button" class="ra-filter-btn" data-research-theme="coastal" aria-pressed="false">Coastal</button>
+          <button type="button" class="ra-filter-btn" data-research-theme="regional" aria-pressed="false">Regional</button>
+        </div>
       </div>
-      <div class="ra-filter-block">
-        <label class="ra-label" for="research-year">Year</label>
+      <div class="ra-filter-row ra-filter-row-tools">
+        <label class="ra-filter-label" for="research-year">YEAR</label>
         <select class="ra-filter-year" id="research-year" aria-label="연도 선택">
           <option value="all">All Years</option>
         </select>
+        <label class="ra-filter-label ra-filter-label-search" for="research-search">SEARCH</label>
+        <div class="ra-search-box">
+          <input id="research-search" class="ra-search-input" type="search" autocomplete="off" placeholder="Search title, researcher, or keywords…" aria-label="제목, 연구자, 키워드 검색">
+          <svg class="ra-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+        </div>
+        <span id="research-counter" class="ra-count" aria-live="polite">0 records</span>
       </div>
-    </div>
-    <div class="ra-search-line">
-      <label class="ra-search-box" for="research-search">
-        <input id="research-search" class="ra-search-input" type="search" autocomplete="off" placeholder="Search title, researcher, or keywords…" aria-label="제목, 연구자, 키워드 검색">
-        <svg class="ra-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
-      </label>
-      <span id="research-counter" class="ra-count" aria-live="polite">0 records</span>
     </div>
     <div class="ra-records" id="research-list" aria-label="연구성과 목록"></div>
     <div id="research-empty" class="ra-empty" hidden>해당 조건의 연구자료가 없습니다. 필터나 검색어를 변경해 주세요.</div>
