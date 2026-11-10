@@ -144,3 +144,8 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page .pp-prof-bio-head h3{font-size:24px}
  .pp-page .pp-prof-bio-body p{font-size:14px;line-height:1.85}
 }
+
+/* Body-only professor biography and editable multi-line affiliations. */
+.pp-page .pp-prof-position,.pp-page .pp-prof-bio-body p{white-space:pre-line}
+.pp-page .pp-prof-photo img[hidden]{display:none!important}
+.pp-page .pp-prof-biography{padding-top:30px}
