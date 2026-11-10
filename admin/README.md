@@ -55,3 +55,16 @@
 ## 교수님 경력·활동
 
 관리자 메뉴 ‘교수님 경력·활동’에서 학력, 경력·보직, 학회, 자문·정책, 전문활동, 수상을 추가·수정·삭제하거나 순서를 변경합니다. 저장하면 people-records.js의 career 목록이 공개 Career & Activities에 반영됩니다. 기간·직함·기관의 한영 입력과 출처 링크를 지원합니다. 출처에 없는 날짜는 빈칸으로 유지하세요.
+
+
+# GitHub 계정 로그인 활성화 (1회 설정)
+
+현재 공개 사이트는 GitHub Pages 정적 호스팅이다. 앱의 client secret을 공개 JavaScript에 두면 안 되므로 아래의 GitHub App + 인증 Worker 설정이 필요하다. 아직 활성화되지 않은 상태에서는 기존 토큰 연결을 이용할 수 있다.
+
+1. 연구실 조직 Owner가 https://github.com/organizations/elsdr-lab/settings/apps 에서 새 GitHub App을 만든다. Homepage URL: https://elsdr-lab.github.io/ ; Callback URL: https://elsdr-lab.github.io/admin/ ; Webhook Active 해제. Repository permissions: Contents Read & write, Metadata Read. 설치 범위는 해당 계정만(Only on this account), 저장소 선택은 elsdr-lab.github.io 한 개. 앱은 조직에 설치한다.
+2. GitHub App 설정에서 Client ID를 확인하고 Client secret을 생성한다. 사용자 액세스 토큰 만료 기능을 활성화한다. 비밀키는 채팅, GitHub 파일 또는 공개 페이지에 붙여 넣지 않는다.
+3. Cloudflare Workers에서 전용 Worker를 생성하여 `oauth-worker/worker.js`를 배포한다. Workers 환경 설정의 Secrets에 GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET을 등록한다. 별도 서비스 계정 권한이 필요하며 요금제/정책은 조직이 확인한다.
+4. `admin/github-login-config.js`에 공개 Client ID와 Worker의 HTTPS /exchange URL을 입력한다. 예시 URL을 실제 배포 주소로 교체한다. admin/index.html의 CSP connect-src에서 *.workers.dev를 실제 Worker 호스트로 좁히는 것을 권장한다.
+5. 관리자 페이지를 열어 GitHub 로그인, 사용자 권한 확인, 읽기 모드, 저장, 로그아웃, 권한 없는 계정의 거부를 시험한다. 로그인 성공 후에는 토큰을 페이지 메모리에서만 사용한다. 새로고침이나 만료 시 다시 로그인한다. 실제 쓰기 권한은 GitHub App과 사용자 양쪽의 권한에 따른다. 임시 기존 토큰 연결은 검증 완료 후 제거해도 된다.
+
+GitHub 공식 문서: https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app
