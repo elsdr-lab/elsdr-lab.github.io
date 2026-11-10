@@ -1,0 +1,24 @@
+name: Import professor portrait
+on:
+  push:
+    branches:
+      - design/professor-photo-bio-20261110
+    paths:
+      - .github/workflows/import-professor-photo.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy existing public portrait
+        run: |
+          mkdir -p assets/people
+          curl --fail --location --silent --show-error --retry 2 'https://cdn.imweb.me/thumbnail/20221019/4190b3f448890.jpg' -o assets/people/professor-chon.jpg
+          file assets/people/professor-chon.jpg | grep -qi 'JPEG image'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/people/professor-chon.jpg
+          git commit -m "Store professor portrait as a local website asset"
+          git push origin HEAD:design/professor-photo-bio-20261110
