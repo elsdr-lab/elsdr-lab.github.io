@@ -86,65 +86,6 @@ function renderWritings(){
  $("#pp-v2-columns").innerHTML=writingList(data.columns,"Newspaper Columns");
  $("#pp-v2-essays").innerHTML=writingList(data.essays,"Essays & Other Writings");
 }
-
-/* Professor overview reuses existing detail-page DOM from one data source. */
-function renderOverview(){
- const careerRows=$("#pp-v2-career-collections .pp-v2-career-row").slice(0,4);
- $("#pp-prof-overview-career-list").innerHTML=careerRows.length?
-   careerRows.map(row=>row.outerHTML).join(""):
-   '<p class="pp-prof-overview-empty">Career &amp; Activities 등록 예정</p>';
-
- const bookCards=(data.books||[]).length?
-   $("#pp-v2-books .pp-v2-book").slice(0,2):[];
- $("#pp-prof-overview-books-list").innerHTML=bookCards.length?
-   bookCards.map(card=>card.outerHTML).join(""):
-   '<p class="pp-prof-overview-empty">Books 등록 예정</p>';
-
- const columns=$("#pp-v2-columns .pp-v2-writing-row").slice(0,2);
- $("#pp-prof-overview-columns-list").innerHTML=columns.length?
-   '<div class="pp-v2-writings-list">'+columns.map(row=>row.outerHTML).join("")+'</div>':
-   '<p class="pp-prof-overview-empty">Newspaper Columns 등록 예정</p>';
-
- const essays=$("#pp-v2-essays .pp-v2-writing-row").slice(0,2);
- const essaysPanel=$("#pp-prof-overview-essays-group");
- essaysPanel.hidden=essays.length===0;
- $("#pp-prof-overview-essays-list").innerHTML=essays.length?
-   '<div class="pp-v2-writings-list">'+essays.map(row=>row.outerHTML).join("")+'</div>':"";
-}
-const overviewAnchors={
- profile:"#people-professor",
- career:"#pp-prof-overview-career",
- books:"#pp-prof-overview-books",
- research:"#pp-prof-overview-research"
-};
-function setOverviewActive(key){
- $("[data-pp-overview-scroll]").forEach(button=>{
-   const active=button.dataset.ppOverviewScroll===key;
-   button.classList.toggle("is-active",active);
-   if(active)button.setAttribute("aria-current","location");
-   else button.removeAttribute("aria-current");
- });
-}
-function updateOverviewActive(){
- const route=window.location.hash.replace(/^#\/?/,"").split("?")[0];
- if(route!=="people"&&route!=="people/professor")return;
- let active="profile";
- for(const [key,selector] of Object.entries(overviewAnchors)){
-   const node=$(selector);
-   if(node&&node.getBoundingClientRect().top<=170)active=key;
- }
- setOverviewActive(active);
-}
-let overviewScrollScheduled=false;
-window.addEventListener("scroll",()=>{
- if(overviewScrollScheduled)return;
- overviewScrollScheduled=true;
- window.requestAnimationFrame(()=>{
-   overviewScrollScheduled=false;
-   updateOverviewActive();
- });
-},{passive:true});
-
 function normalizeName(name){
  const s=clean(name).replace(/[^a-z,\s]/g,"").trim();
  if(!s)return "";
@@ -214,24 +155,10 @@ function renderRoute(){
    if(active)anchor.setAttribute("aria-current","page");else anchor.removeAttribute("aria-current");
  });
  const sub=$("#pp-v2-depth-nav");
- if(key==="professor"){
-    const overviewNav=[["profile","Profile"],["career","Career & Activities"],["books","Books & Writings"],["research","Research"]];
-    sub.innerHTML=overviewNav.map(([slug,label])=>
-      '<button type="button" data-pp-overview-scroll="'+slug+'"'+
-      (slug==="profile"?' class="is-active" aria-current="location"':'')+'>'+E(label)+'</button>'
-    ).join("");
-    $("[data-pp-overview-scroll]",sub).forEach(button=>button.addEventListener("click",()=>{
-      const target=$(overviewAnchors[button.dataset.ppOverviewScroll]);
-      if(!target)return;
-      setOverviewActive(button.dataset.ppOverviewScroll);
-      target.scrollIntoView({behavior:"smooth",block:"start"});
-    }));
-  }else{
-    sub.innerHTML=nav[primary].map(([slug,label])=>
-      '<a href="#/people/'+slug+'"'+(slug===key?' class="is-active" aria-current="page"':'')+'>'+E(label)+'</a>'
-    ).join("");
-  }
-  sub.hidden=primary==="researchers";
+ sub.innerHTML=nav[primary].map(([slug,label])=>
+   '<a href="#/people/'+slug+'"'+(slug===key?' class="is-active" aria-current="page"':'')+'>'+E(label)+'</a>'
+ ).join("");
+ sub.hidden=primary==="researchers";
  if(key==="alumni/theses"){
   const params=new URLSearchParams(query);
   if(params.has("q")){
@@ -253,7 +180,7 @@ $("#pp-v2-thesis-search").addEventListener("input",renderTheses);
 $$("[data-pp-v2-degree]").forEach(button=>button.addEventListener("click",()=>{
  selectedDegree=button.dataset.ppV2Degree;renderTheses();
 }));
-renderCareer();renderWritings();renderOverview();renderResearchers();renderAlumni();renderTheses();
+renderCareer();renderWritings();renderResearchers();renderAlumni();renderTheses();
 window.addEventListener("hashchange",renderRoute);
 renderRoute();
 })();
