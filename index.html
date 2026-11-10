@@ -59,7 +59,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="contact-page.css?v=4.1">
 <link rel="stylesheet" href="life-page.css?v=4.1">
 <link rel="stylesheet" href="study-page.css?v=4.1">
-<link rel="stylesheet" href="people-page.css?v=4.1">
+<link rel="stylesheet" href="people-page.css?v=4.2">
 <link rel="stylesheet" href="research-archive.css?v=4.2">
 <link rel="stylesheet" href="design-review.css?v=4.1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -419,10 +419,44 @@ body.home-view .footer{display:none}
     <a class="pp-source-link" href="https://edesign.korea.ac.kr/29" target="_blank" rel="noopener noreferrer">Original professor profile <span aria-hidden="true">↗</span></a>
    </div>
   </div>
-      <div class="pp-v2-related-links">
-        <a href="#/people/professor/career">Career &amp; Activities <span aria-hidden="true">↗</span></a>
-        <a href="#/people/professor/books">Books &amp; Writings <span aria-hidden="true">↗</span></a>
-        <a href="#/research">Projects &amp; Publications <span aria-hidden="true">↗</span></a>
+      <div class="pp-prof-overview-sections" aria-label="교수 주요 활동 미리보기">
+        <section class="pp-prof-overview-section" id="pp-prof-overview-career" aria-labelledby="pp-prof-overview-career-title">
+          <div class="pp-prof-overview-heading">
+            <div><span class="pp-prof-overview-index">02 / CAREER &amp; ACTIVITIES</span><h3 id="pp-prof-overview-career-title">Career &amp; Activities<span>.</span></h3></div>
+            <a class="pp-prof-overview-all" href="#/people/professor/career">View All <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="pp-v2-timeline pp-prof-overview-timeline" id="pp-prof-overview-career-list"></div>
+        </section>
+
+        <section class="pp-prof-overview-section" id="pp-prof-overview-books" aria-labelledby="pp-prof-overview-books-title">
+          <div class="pp-prof-overview-heading">
+            <div><span class="pp-prof-overview-index">03 / BOOKS &amp; WRITINGS</span><h3 id="pp-prof-overview-books-title">Books &amp; Writings<span>.</span></h3></div>
+            <a class="pp-prof-overview-all" href="#/people/professor/books">View All <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="pp-prof-overview-content">
+            <h4 class="pp-prof-overview-label">Books</h4>
+            <div class="pp-v2-books-grid pp-prof-overview-books-grid" id="pp-prof-overview-books-list"></div>
+            <div class="pp-prof-overview-columns" id="pp-prof-overview-columns-group">
+              <h4 class="pp-prof-overview-label">Newspaper Columns</h4>
+              <div id="pp-prof-overview-columns-list"></div>
+            </div>
+            <div class="pp-prof-overview-essays" id="pp-prof-overview-essays-group" hidden>
+              <h4 class="pp-prof-overview-label">Essays &amp; Other Writings</h4>
+              <div id="pp-prof-overview-essays-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pp-prof-overview-section" id="pp-prof-overview-research" aria-labelledby="pp-prof-overview-research-title">
+          <div class="pp-prof-overview-heading">
+            <div><span class="pp-prof-overview-index">04 / RESEARCH</span><h3 id="pp-prof-overview-research-title">Research<span>.</span></h3></div>
+            <span class="pp-prof-overview-archive-label">ELSDR RESEARCH ARCHIVE</span>
+          </div>
+          <div class="pp-prof-overview-research-links">
+            <a href="#/research/projects"><strong>Projects</strong><span>View Projects <span aria-hidden="true">↗</span></span></a>
+            <a href="#/research/publications"><strong>Publications</strong><span>View Publications <span aria-hidden="true">↗</span></span></a>
+          </div>
+        </section>
       </div>
     </section>
 
