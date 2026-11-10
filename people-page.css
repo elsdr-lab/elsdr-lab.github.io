@@ -95,3 +95,113 @@
  .pp-page .pp-v2-thesis-outlink{grid-column:2;text-align:left;margin-top:6px}
  .pp-page .pp-v2-list-heading{font-size:9px;letter-spacing:0}
 }
+
+/* Professor Overview — preserve profile and full Books & Writings layout.
+   Scroll tabs above; excerpt sections below. Details stay on original routes. */
+.pp-page .pp-v2-depth-nav button[data-pp-overview-scroll]{
+  appearance:none;background:transparent;border:1px solid transparent;
+  border-radius:0;color:#708575;cursor:pointer;
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
+  font-size:12px;font-weight:600;line-height:1.5;
+  padding:11px 16px;transition:background .2s,border-color .2s,color .2s;
+}
+.pp-page .pp-v2-depth-nav button[data-pp-overview-scroll]:hover,
+.pp-page .pp-v2-depth-nav button[data-pp-overview-scroll].is-active{
+  color:#345440;background:#e4ede4;border-color:#a8bfaa;
+}
+.pp-page .pp-v2-depth-nav button[data-pp-overview-scroll]:focus-visible{
+  outline:2px solid #536d5e;outline-offset:2px;
+}
+.pp-page .pp-prof-overview-section{scroll-margin-top:105px;margin-top:85px}
+.pp-page .pp-prof-overview-heading{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:22px;
+  padding:24px 0 26px;border-top:1px solid rgba(83,109,94,.38);
+}
+.pp-page .pp-prof-overview-index{
+  display:block;font-size:11px;font-weight:700;letter-spacing:1.5px;color:#536d5e;
+}
+.pp-page .pp-prof-overview-heading h3{
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
+  font-size:clamp(28px,3.3vw,42px);font-weight:500;letter-spacing:-1.3px;
+  color:#252d2a;line-height:1.12;margin:15px 0 0;
+}
+.pp-page .pp-prof-overview-heading h3 span{color:#8caab1}
+.pp-page .pp-prof-overview-all{
+  display:inline-flex;align-items:center;gap:13px;flex-shrink:0;
+  font-size:12px;font-weight:600;white-space:nowrap;color:#536d5e;
+  padding:10px 0 8px;border-bottom:1px solid #9cae9f;transition:color .2s,border-color .2s;
+}
+.pp-page .pp-prof-overview-all:hover{color:#252d2a;border-color:#252d2a;opacity:1}
+.pp-page .pp-prof-overview-all span{font-size:17px}
+.pp-page .pp-prof-overview-timeline .pp-v2-career-row{padding:20px 10px}
+.pp-page .pp-prof-overview-content{padding-top:8px}
+.pp-page .pp-prof-overview-label{
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
+  color:#2b4033;font-size:19px;font-weight:500;letter-spacing:-.3px;
+  padding-bottom:15px;margin:0 0 17px;border-bottom:1px solid #bacaba;
+}
+.pp-page .pp-prof-overview-books-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;
+}
+.pp-page .pp-prof-overview-books-grid .pp-v2-book{
+  display:grid;grid-template-columns:minmax(90px,130px) minmax(0,1fr);
+  align-items:start;gap:20px;padding:18px;
+}
+.pp-page .pp-prof-overview-books-grid .pp-v2-book h4{margin-top:0}
+.pp-page .pp-prof-overview-columns,
+.pp-page .pp-prof-overview-essays{margin-top:34px}
+.pp-page .pp-prof-overview-content .pp-v2-writing-row{
+  padding:19px 10px;grid-template-columns:125px minmax(0,1fr) 135px;
+}
+.pp-page .pp-prof-overview-empty{
+  grid-column:1/-1;font-size:12px;line-height:1.7;color:#809083;
+  padding:15px 9px 22px;margin:0;
+  border-bottom:1px solid #d2dcd1;
+}
+.pp-page .pp-prof-overview-archive-label{
+  font-size:11px;font-weight:700;letter-spacing:1px;color:#819586;
+  margin-bottom:4px;text-align:right;
+}
+.pp-page .pp-prof-overview-research-links{border-top:1px solid #b7c9b8}
+.pp-page .pp-prof-overview-research-links a{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:24px 10px;border-bottom:1px solid #cbd7ca;
+  color:#2e4435;transition:background .2s,padding .2s;
+}
+.pp-page .pp-prof-overview-research-links a:hover{
+  background:#e6ede6;padding-left:17px;opacity:1;
+}
+.pp-page .pp-prof-overview-research-links strong{
+  font-family:"IBM Plex Sans","Pretendard",sans-serif;
+  font-size:21px;font-weight:500;
+}
+.pp-page .pp-prof-overview-research-links a>span{
+  color:#647e6a;font-size:12px;font-weight:600;white-space:nowrap;
+}
+@media(max-width:980px){
+  .pp-page .pp-prof-overview-section{margin-top:66px}
+  .pp-page .pp-prof-overview-books-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .pp-page .pp-v2-depth-nav button[data-pp-overview-scroll]{padding:9px 10px;font-size:11px}
+  .pp-page .pp-prof-overview-section{margin-top:57px;scroll-margin-top:85px}
+  .pp-page .pp-prof-overview-heading{align-items:flex-start;gap:14px;padding:23px 0}
+  .pp-page .pp-prof-overview-heading h3{font-size:29px;letter-spacing:-.8px}
+  .pp-page .pp-prof-overview-index{font-size:10px;letter-spacing:1px}
+  .pp-page .pp-prof-overview-all{font-size:11px}
+  .pp-page .pp-prof-overview-archive-label{font-size:9px;max-width:100px}
+  .pp-page .pp-prof-overview-books-grid .pp-v2-book{
+    grid-template-columns:110px minmax(0,1fr);gap:15px;padding:14px;
+  }
+  .pp-page .pp-prof-overview-content .pp-v2-writing-row{
+    grid-template-columns:1fr;gap:10px;
+  }
+  .pp-page .pp-prof-overview-research-links strong{font-size:18px}
+  .pp-page .pp-prof-overview-research-links a>span{font-size:11px}
+}
+@media(max-width:390px){
+  .pp-page .pp-prof-overview-books-grid .pp-v2-book{
+    grid-template-columns:1fr;
+  }
+  .pp-page .pp-prof-overview-books-grid .pp-v2-book-cover{max-width:160px}
+}
