@@ -16,6 +16,49 @@ Object.assign(labels,{titleKo:'직함 / 제목 (국문)',periodKo:'기간 (국�
 const careerCategories={education:'Education / 학력',career:'Career & Appointments / 경력·보직',society:'Societies / 학회',advisory:'Advisory & Policy / 자문·정책',professional:'Professional Activities / 전문 활동',awards:'Honors & Awards / 수상'};
 const choices={type:['project','publication','research-note','learning-material','seminar-material'],theme:['climate','ecosystem','coastal','regional'],group:['phd','ms','researcher','staff','domestic','overseas'],status:['status-unverified','open','closed']};
 const $=id=>document.getElementById(id);let token='',selected=configs[0],current=null,dirty=false,busy=false,loadId=0;
+
+/* GitHub App OAuth: authorization code + PKCE. Only random state/verifier
+   persist across the redirect; the access token stays in memory. */
+const auth=window.ELSDR_GITHUB_LOGIN||{};
+const callback='https://elsdr-lab.github.io/admin/';
+const oauthReady=!!(auth.clientId&&auth.exchangeUrl);
+const oauthStorage='elsdr.github.oauth';
+const randomString=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),v=>v.toString(16).padStart(2,'0')).join('');
+const base64url=bytes=>btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+async function loginGitHub(){
+ if(!oauthReady)return;
+ try{
+  const state=randomString(),verifier=randomString();
+  const challenge=base64url(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(verifier))));
+  sessionStorage.setItem(oauthStorage,JSON.stringify({state,verifier,created:Date.now()}));
+  const params=new URLSearchParams({client_id:auth.clientId,redirect_uri:callback,state,code_challenge:challenge,code_challenge_method:'S256',allow_signup:'false'});
+  location.assign('https://github.com/login/oauth/authorize?'+params);
+ }catch(e){message('GitHub 로그인을 시작하지 못했습니다. '+e.message,true)}
+}
+async function finishGitHubLogin(){
+ const q=new URLSearchParams(location.search);
+ if(!q.has('code')&&!q.has('error'))return;
+ history.replaceState(null,'',location.pathname);
+ let saved;
+ try{saved=JSON.parse(sessionStorage.getItem(oauthStorage)||'null')}catch{}
+ sessionStorage.removeItem(oauthStorage);
+ if(!oauthReady||q.has('error')||!saved||q.get('state')!==saved.state||Date.now()-saved.created>10*60*1000){message('로그인 확인이 만료되었거나 취소되었습니다. 다시 로그인하세요.',true);return}
+ busy=true;controls();
+ try{
+  const response=await fetch(auth.exchangeUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:q.get('code'),verifier:saved.verifier})});
+  const result=await response.json();
+  if(!response.ok||!result.access_token)throw Error(result.error||'GitHub 인증을 완료하지 못했습니다.');
+  token=result.access_token;
+  const repository=await request('');
+  if(!repository.permissions?.push)throw Error('연구실 저장소 수정 권한이 없습니다.');
+  $('connection').textContent='GitHub 로그인됨'+(result.login?' · '+result.login:'');
+  $('disconnect').hidden=false;$('connect-panel').open=false;
+  if(current)render();
+  message('GitHub 계정으로 로그인했습니다. 내용을 수정하고 저장할 수 있습니다.');
+ }catch(e){token='';message(e.message,true)}
+ finally{busy=false;controls()}
+}
+
 const cache=new Map();
 function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n}
 function message(text,error=false){$('status').textContent=text;$('status').classList.toggle('error',error)}
@@ -69,5 +112,9 @@ $('save').onclick=async()=>{if(!token||busy||!current||!dirty)return;try{validat
 async function uploadImage(file,object,key,input){if(!file||busy)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>4*1024*1024){message('4MB 이하의 PNG, JPG, WebP 사진을 선택하세요.',true);return}if(!confirm('이 사진을 공개 홈페이지 저장소에 업로드할까요?'))return;busy=true;controls();const originalToken=token;try{const bytes=new Uint8Array(await file.arrayBuffer());let raw='';for(let i=0;i<bytes.length;i+=8192)raw+=String.fromCharCode(...bytes.subarray(i,i+8192));const extension={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[file.type];const path=(selected.id==='professor'?'assets/people/professor-':'assets/uploads/')+crypto.randomUUID()+'.'+extension;await request('/contents/'+path,{method:'PUT',body:JSON.stringify({message:'Upload website photo',content:btoa(raw),branch:'main'})});if(token!==originalToken)return;object[key]=path;input.value=path;changed();if(selected.id==='professor')render();message('사진을 업로드했습니다. 항목에도 적용하려면 변경 내용 저장을 누르세요.')}catch(e){message(e.message,true)}finally{busy=false;controls()}}
 for(const config of configs){const button=el('button',config.label);button.dataset.id=config.id;button.onclick=()=>load(config);$('navigation').append(button)}
 window.addEventListener('beforeunload',event=>{if(dirty||busy){event.preventDefault();event.returnValue=''}});
-load(configs[0]);
+$('github-login').disabled=!oauthReady;
+$('github-login').onclick=loginGitHub;
+$('github-login-status').textContent=oauthReady?'연구실 저장소 수정 권한이 있는 GitHub 계정으로 로그인하세요.':'GitHub 계정 로그인은 앱 등록 및 인증 서버 연결 후 활성화됩니다. 현재는 아래 기존 연결 방식을 이용할 수 있습니다.';
+$('connect-panel').open=!oauthReady;
+(async()=>{await load(configs[0]);await finishGitHubLogin()})();
 })();
