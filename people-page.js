@@ -96,17 +96,20 @@ function renderResearchers(){
 }
 function careerCollection(category,label,description){
  const entries=(data.career||[]).filter(entry=>entry.category===category);
+ if(!entries.length)return "";
  return '<section class="pp-v2-collection"><div class="pp-v2-category-head"><span>'+E(description)+'</span><h3>'+E(label)+'</h3></div>'+
-   (entries.length?'<div class="pp-v2-timeline">'+entries.map(item=>
-     '<div class="pp-v2-career-row"><time>'+E(item.period||item.year)+'</time><div><strong>'+E(item.title)+'</strong>'+
-     '<p>'+E(item.organization||"")+'</p></div></div>').join("")+'</div>':empty("등록 자료 없음","확인된 "+label+" 항목을 추후 등록합니다."))+'</section>';
+   '<div class="pp-v2-timeline">'+entries.map(item=>
+     '<div class="pp-v2-career-row"><div><time class="lang-en">'+E(item.period||item.year||"")+'</time><time class="lang-ko">'+E(item.periodKo||item.period||item.year||"")+'</time></div><div>'+
+     '<strong class="lang-en">'+E(item.title)+'</strong><strong class="lang-ko">'+E(item.titleKo||item.title)+'</strong>'+
+     '<p class="lang-en">'+E(item.organization||"")+'</p><p class="lang-ko">'+E(item.organizationKo||item.organization||"")+'</p></div></div>').join("")+'</div></section>';
 }
 function renderCareer(){
- $("#pp-v2-career-collections").innerHTML=
-  careerCollection("career","Major Career & Appointments","01 / CAREER & APPOINTMENTS")+
-  careerCollection("society","Academic Societies & Professional Associations","02 / SOCIETIES")+
-  careerCollection("advisory","Public Committees & Policy Advisory","03 / ADVISORY & POLICY")+
-  careerCollection("awards","Honors & Academic Achievements","04 / HONORS & AWARDS");
+ const groups=[["education","Education","EDUCATION"],["career","Major Career & Appointments","CAREER & APPOINTMENTS"],["society","Academic Societies & Professional Associations","SOCIETIES"],["advisory","Public Committees & Policy Advisory","ADVISORY & POLICY"],["professional","Professional Activities","PROFESSIONAL ACTIVITIES"],["awards","Honors & Academic Achievements","HONORS & AWARDS"]];
+ let index=0;
+ $("#pp-v2-career-collections").innerHTML=groups.map(([category,label,caption])=>{
+  if(!(data.career||[]).some(item=>item.category===category))return "";
+  return careerCollection(category,label,String(++index).padStart(2,"0")+" / "+caption);
+ }).join("")||empty("등록 자료 없음");
 }
 function writingList(records,title){
  if(!records?.length)return empty(title+" 등록 예정","제목 · 매체명 · 발행일 · 원문 링크를 입력할 수 있습니다.");
