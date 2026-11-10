@@ -4,7 +4,9 @@
 */
 window.ELSDR_PEOPLE_RECORDS={
   "professor": {
-    "nameEn": "Jinhyung Chon",
+    "nameEn": "Chon, Jin Hyung",
+    "degree": "Ph.D.",
+    "photo": "assets/people/professor-chon.jpg",
     "nameKo": "전진형",
     "title": "Professor / Principal Investigator",
     "affiliation": "Korea University · Division of Environmental Science and Ecological Engineering",
