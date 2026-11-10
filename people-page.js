@@ -94,12 +94,19 @@ function renderResearchers(){
  }).filter(Boolean).join("");
  $("#pp-v2-researcher-groups").innerHTML=html||empty("연구원 프로필 등록 예정","등록 인원이 없는 분류는 표시하지 않습니다.");
 }
-function careerCollection(category,label,description){
- const entries=(data.career||[]).filter(entry=>entry.category===category);
+function careerDateKey(item){
+ const value=String(item.period||item.year||"").trim();
+ const m=value.match(/(?:19|20)\d{2}(?:[.\/-](0?[1-9]|1[0-2])(?=$|[.\/\s–—-]))?/);
+ return m?Number(m[0].slice(0,4))*100+Number(m[1]||0):-1;
+}
+function sortCareer(items){return items.sort((a,b)=>careerDateKey(b)-careerDateKey(a));}
+
+function careerCollection(category,label){
+ const entries=sortCareer((data.career||[]).filter(entry=>entry.category===category));
  if(!entries.length)return "";
- return '<section class="pp-v2-collection"><div class="pp-v2-category-head"><span>'+E(description)+'</span><h3>'+E(label)+'</h3></div>'+
+ return '<section class="pp-v2-collection"><div class="pp-v2-category-head"><h3>'+E(label)+'</h3></div>'+
    '<div class="pp-v2-timeline">'+entries.map(item=>
-     '<div class="pp-v2-career-row"><div><time class="lang-en">'+E(item.period||item.year||"")+'</time><time class="lang-ko">'+E(item.periodKo||item.period||item.year||"")+'</time></div><div>'+
+     '<div class="pp-v2-career-row"><time>'+E(item.period||item.year||"")+'</time><div>'+
      '<strong class="lang-en">'+E(item.title)+'</strong><strong class="lang-ko">'+E(item.titleKo||item.title)+'</strong>'+
      '<p class="lang-en">'+E(item.organization||"")+'</p><p class="lang-ko">'+E(item.organizationKo||item.organization||"")+'</p></div></div>').join("")+'</div></section>';
 }
@@ -108,7 +115,7 @@ function renderCareer(){
  let index=0;
  $("#pp-v2-career-collections").innerHTML=groups.map(([category,label,caption])=>{
   if(!(data.career||[]).some(item=>item.category===category))return "";
-  return careerCollection(category,label,String(++index).padStart(2,"0")+" / "+caption);
+  return careerCollection(category,label);
  }).join("")||empty("등록 자료 없음");
 }
 function writingList(records,title){
