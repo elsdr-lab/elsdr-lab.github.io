@@ -47,7 +47,7 @@ function renderProfessor(){
   else{photo.removeAttribute("src");photo.hidden=true;}
  }
  const email=$(".pp-prof-contacts > a",profile);
- if(email){email.href="mailto:"+String(record.email||"").replace(/[\r\n]/g,"");email.replaceChildren(document.createTextNode(record.email||""));}
+ if(email){email.href="mailto:"+String(record.email||"").replace(/[\r\n]/g,"");const arrow=document.createElement("span");arrow.setAttribute("aria-hidden","true");arrow.textContent="↗";email.replaceChildren(document.createTextNode((record.email||"")+" "),arrow);}
  const phones=$(".pp-prof-contacts > span",profile);
  [record.officePhone,record.labPhone].forEach((value,i)=>{
   if(!phones[i])return;
