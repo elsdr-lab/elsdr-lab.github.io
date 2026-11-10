@@ -149,3 +149,16 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
 .pp-page .pp-prof-position,.pp-page .pp-prof-bio-body p{white-space:pre-line}
 .pp-page .pp-prof-photo img[hidden]{display:none!important}
 .pp-page .pp-prof-biography{padding-top:30px}
+
+
+/* People: compact spacing between title, primary categories and secondary tabs. */
+.page.pp-page .pp-intro{margin-bottom:26px}
+.page.pp-page .pp-intro h1{margin-bottom:12px}
+.page.pp-page .pp-jump{margin-bottom:24px}
+.page.pp-page .pp-v2-depth-nav{padding-top:8px}
+@media(max-width:640px){
+ .page.pp-page .pp-intro{margin-bottom:20px}
+ .page.pp-page .pp-intro h1{margin-bottom:10px}
+ .page.pp-page .pp-jump{margin-bottom:16px}
+ .page.pp-page .pp-v2-depth-nav{padding-top:6px}
+}
