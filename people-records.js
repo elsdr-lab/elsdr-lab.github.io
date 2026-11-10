@@ -22,32 +22,136 @@ window.ELSDR_PEOPLE_RECORDS={
   },
   "career": [
     {
+      "id": "education-phd",
+      "category": "education",
+      "period": "",
+      "title": "Ph.D. · Recreation, Park and Tourism Sciences",
+      "organization": "Texas A&M University, USA",
+      "titleKo": "박사 · Recreation, Park and Tourism Sciences (생태조경)",
+      "organizationKo": "Texas A&M University, 미국",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": ""
+    },
+    {
+      "id": "education-masters",
+      "category": "education",
+      "period": "",
+      "title": "Master’s degree · Landscape Architecture",
+      "organization": "University of Pennsylvania, USA",
+      "titleKo": "석사 · 조경학 (생태조경)",
+      "organizationKo": "University of Pennsylvania, 미국",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": ""
+    },
+    {
+      "id": "education-bachelors",
+      "category": "education",
+      "period": "",
+      "title": "Bachelor’s degree · Landscape Architecture",
+      "organization": "Jeonbuk National University, Republic of Korea",
+      "titleKo": "학사 · 조경학 (조경계획)",
+      "organizationKo": "전북대학교, 대한민국",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": ""
+    },
+    {
       "id": "career-1",
       "category": "career",
       "period": "2016–",
       "title": "Professor",
-      "organization": "Korea University · Environmental Science & Ecological Engineering"
+      "organization": "Korea University · Environmental Science & Ecological Engineering",
+      "titleKo": "교수",
+      "organizationKo": "고려대학교 환경생태공학부",
+      "sourceUrl": "",
+      "periodKo": "2016–"
     },
     {
       "id": "career-2",
       "category": "career",
       "period": "2006–2016",
       "title": "Associate Professor",
-      "organization": "Korea University"
+      "organization": "Korea University",
+      "titleKo": "부교수",
+      "organizationKo": "고려대학교",
+      "sourceUrl": "",
+      "periodKo": "2006–2016"
     },
     {
       "id": "career-3",
       "category": "career",
       "period": "2004–2006",
       "title": "Assistant Professor",
-      "organization": "Georgia Southern University, USA"
+      "organization": "Georgia Southern University, USA",
+      "titleKo": "조교수",
+      "organizationKo": "Georgia Southern University (미국)",
+      "sourceUrl": "",
+      "periodKo": "2004–2006"
     },
     {
       "id": "career-4",
       "category": "career",
       "period": "2011–2012",
       "title": "Assistant Director",
-      "organization": "Institute of Environment and Ecology, Korea University"
+      "organization": "Institute of Environment and Ecology, Korea University",
+      "titleKo": "부소장",
+      "organizationKo": "고려대학교 환경생태연구소",
+      "sourceUrl": "",
+      "periodKo": "2011–2012"
+    },
+    {
+      "id": "career-chair",
+      "category": "career",
+      "period": "",
+      "title": "Chair (Former), Interdisciplinary Program in Ecological Landscape Architecture",
+      "organization": "Korea University",
+      "titleKo": "생태조경학 협동과정 주임교수 역임",
+      "organizationKo": "고려대학교",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": ""
+    },
+    {
+      "id": "career-ori",
+      "category": "career",
+      "period": "2017–Present (as listed)",
+      "title": "Deputy Director, OJeong Resilience Institute",
+      "organization": "Korea University",
+      "titleKo": "오정리질리언스연구원 부원장",
+      "organizationKo": "고려대학교",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": "2017–현재 (출처 기재 기준)"
+    },
+    {
+      "id": "career-sustainable-campus",
+      "category": "advisory",
+      "period": "2007–Present (as listed)",
+      "title": "Advisory Committee, Office of Vice President for Sustainable Campus",
+      "organization": "Korea University",
+      "titleKo": "지속가능캠퍼스 부총장실 자문위원",
+      "organizationKo": "고려대학교",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": "2007–현재 (출처 기재 기준)"
+    },
+    {
+      "id": "career-eec",
+      "category": "professional",
+      "period": "2005–2006",
+      "title": "Consultant & Landscape Architect, Environmental Education Center",
+      "organization": "Georgia Southern University, USA",
+      "titleKo": "환경교육센터 자문 및 조경가",
+      "organizationKo": "Georgia Southern University, 미국",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": "2005–2006"
+    },
+    {
+      "id": "career-statesboro",
+      "category": "professional",
+      "period": "",
+      "title": "Landscape advisory committee activity, City of Statesboro, Georgia",
+      "organization": "Georgia Southern University, USA",
+      "titleKo": "미국 Georgia주 Statesboro시 조경 전문위원 활동",
+      "organizationKo": "Georgia Southern University, 미국",
+      "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883",
+      "periodKo": ""
     }
   ],
   "books": [],
