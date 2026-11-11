@@ -143,7 +143,7 @@ function renderProfessorEditor(editor){
 
 function render(){const editor=$('editor');editor.replaceChildren();editor.classList.toggle('research-cms',selected.id==='research');if(selected.id==='professor'){renderProfessorEditor(editor);$('count').textContent='';controls();return}if(selected.id==='career'){collection(current.data.career,'career',editor);$('count').textContent=current.data.career.length+'개 항목';controls();return}if(selected.id==='books'){if(!Array.isArray(current.data.books))current.data.books=[];collection(current.data.books,'books',editor);const link=el('a','공개 Books 페이지 보기 ↗','text-link');link.href='../#/people/professor/books';link.target='_blank';link.rel='noopener';editor.append(link);$('count').textContent=current.data.books.length+'권';controls();return}if(selected.id==='researchers'){
  if(!Array.isArray(current.data.researchers))current.data.researchers=[];
- const tip=el('p','연구원 유형은 Ph.D. / M.S. / Research Interns로 분류합니다. 입학 연도와 전기·후기를 함께 지정하면 각 그룹 안에서 입학이 빠른 연구원부터 자동 정렬합니다. 둘 중 하나라도 미입력한 연구원은 뒤에 두고 기존 순서를 유지합니다. 입학 정보는 공개 페이지에 보이지 않습니다.','notice');editor.append(tip);
+ const tip=el('p','연구원 유형은 Ph.D. / M.S. / Research Interns로 분류합니다. 입학 연도와 전기·후기를 함께 지정하면 각 그룹 안에서 입학이 빠른 연구원부터 자동 정렬합니다. 같은 연도·같은 학기는 국문 이름 기준 가나다순으로 정렬하며, 국문 이름이 없으면 영문 이름을 기준으로 합니다. 입학 정보 미입력자는 뒤에 두고 기존 순서를 유지합니다. 입학 정보는 공개 페이지에 보이지 않습니다.','notice');editor.append(tip);
  collection(current.data.researchers,'researchers',editor);
  const link=el('a','공개 Researchers 페이지 보기 ↗','text-link');link.href='../#/people/researchers';link.target='_blank';link.rel='noopener';editor.append(link);
  $('count').textContent=current.data.researchers.length+'명';controls();return;
