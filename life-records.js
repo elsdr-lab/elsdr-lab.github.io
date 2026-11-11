@@ -1159,7 +1159,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "Portland & Seattle 2025",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/portland-seattle-2025/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/131",
       "eventId": "",
       "places": [
@@ -1182,7 +1182,21 @@ window.ELSDR_LIFE_RECORDS={
           "approximate": true
         }
       ],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/portland-seattle-2025/cover.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/01.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/02.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/03.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/04.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/05.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/06.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/07.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/08.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/09.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/10.jpg",
+        "assets/life/activities/photos/portland-seattle-2025/11.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/131"
     },
     {
       "id": "greenboat-2025",
@@ -1191,11 +1205,19 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 그린보트",
       "category": "exchange",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/greenboat-2025/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/128",
       "eventId": "",
       "places": [],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/greenboat-2025/cover.jpg",
+        "assets/life/activities/photos/greenboat-2025/01.jpg",
+        "assets/life/activities/photos/greenboat-2025/02.jpg",
+        "assets/life/activities/photos/greenboat-2025/03.jpg",
+        "assets/life/activities/photos/greenboat-2025/04.jpg",
+        "assets/life/activities/photos/greenboat-2025/05.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/128"
     },
     {
       "id": "yangyang-workshop-2024",
@@ -1204,7 +1226,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2024 연구실 워크숍 · 양양",
       "category": "workshop",
       "summary": "강원도 양양 지역 연구실 워크숍 기록입니다.",
-      "photo": "",
+      "photo": "assets/life/activities/photos/yangyang-workshop-2024/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/126",
       "eventId": "",
       "places": [
@@ -1218,7 +1240,15 @@ window.ELSDR_LIFE_RECORDS={
           "approximate": true
         }
       ],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/yangyang-workshop-2024/cover.jpg",
+        "assets/life/activities/photos/yangyang-workshop-2024/01.jpg",
+        "assets/life/activities/photos/yangyang-workshop-2024/02.jpg",
+        "assets/life/activities/photos/yangyang-workshop-2024/03.jpg",
+        "assets/life/activities/photos/yangyang-workshop-2024/04.jpg",
+        "assets/life/activities/photos/yangyang-workshop-2024/05.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/126"
     },
     {
       "id": "seoulforest-trip-2024",
@@ -1227,7 +1257,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2024 서울숲 필드트립",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/seoulforest-trip-2024/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/124",
       "eventId": "",
       "places": [
@@ -1241,7 +1271,16 @@ window.ELSDR_LIFE_RECORDS={
           "approximate": true
         }
       ],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/seoulforest-trip-2024/cover.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/01.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/02.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/03.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/04.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/05.jpg",
+        "assets/life/activities/photos/seoulforest-trip-2024/06.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/124"
     },
     {
       "id": "norman-foster-2024",
@@ -1250,11 +1289,23 @@ window.ELSDR_LIFE_RECORDS={
       "title": "미래긍정: 노먼 포스터, 포스터 + 파트너스",
       "category": "exchange",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/norman-foster-2024/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/120",
       "eventId": "",
       "places": [],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/norman-foster-2024/cover.jpg",
+        "assets/life/activities/photos/norman-foster-2024/01.jpg",
+        "assets/life/activities/photos/norman-foster-2024/02.jpg",
+        "assets/life/activities/photos/norman-foster-2024/03.jpg",
+        "assets/life/activities/photos/norman-foster-2024/04.jpg",
+        "assets/life/activities/photos/norman-foster-2024/05.jpg",
+        "assets/life/activities/photos/norman-foster-2024/06.jpg",
+        "assets/life/activities/photos/norman-foster-2024/07.jpg",
+        "assets/life/activities/photos/norman-foster-2024/08.jpg",
+        "assets/life/activities/photos/norman-foster-2024/09.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/120"
     },
     {
       "id": "goyang-flowers-2024",
@@ -1263,11 +1314,19 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2024 고양국제꽃박람회",
       "category": "exchange",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/goyang-flowers-2024/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/116",
       "eventId": "",
       "places": [],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/goyang-flowers-2024/cover.jpg",
+        "assets/life/activities/photos/goyang-flowers-2024/01.jpg",
+        "assets/life/activities/photos/goyang-flowers-2024/02.jpg",
+        "assets/life/activities/photos/goyang-flowers-2024/03.jpg",
+        "assets/life/activities/photos/goyang-flowers-2024/04.jpg",
+        "assets/life/activities/photos/goyang-flowers-2024/05.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/116"
     },
     {
       "id": "siheung-valley-2023",
@@ -1276,11 +1335,19 @@ window.ELSDR_LIFE_RECORDS={
       "title": "금천구 시흥계곡 답사",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/siheung-valley-2023/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/111",
       "eventId": "",
       "places": [],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/siheung-valley-2023/cover.jpg",
+        "assets/life/activities/photos/siheung-valley-2023/01.jpg",
+        "assets/life/activities/photos/siheung-valley-2023/02.jpg",
+        "assets/life/activities/photos/siheung-valley-2023/03.jpg",
+        "assets/life/activities/photos/siheung-valley-2023/04.jpg",
+        "assets/life/activities/photos/siheung-valley-2023/05.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/111"
     },
     {
       "id": "sejong-arboretum-2023",
@@ -1289,11 +1356,21 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2023 조경 교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
+      "photo": "assets/life/activities/photos/sejong-arboretum-2023/cover.jpg",
       "sourceUrl": "https://edesign.korea.ac.kr/106",
       "eventId": "",
       "places": [],
-      "photos": []
+      "photos": [
+        "assets/life/activities/photos/sejong-arboretum-2023/cover.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/01.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/02.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/03.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/04.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/05.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/06.jpg",
+        "assets/life/activities/photos/sejong-arboretum-2023/07.jpg"
+      ],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/106"
     },
     {
       "id": "climate-workshop-2026",
@@ -1318,11 +1395,25 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2026 연구실 워크숍_경주",
       "category": "workshop",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/gyeongju-workshop-2026/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/gyeongju-workshop-2026/cover.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/01.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/02.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/03.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/04.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/05.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/06.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/07.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/08.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/09.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/10.jpg",
+        "assets/life/activities/photos/gyeongju-workshop-2026/11.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/152",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/152"
     },
     {
       "id": "ecolandscape-20th-2025",
@@ -1331,11 +1422,25 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 생태조경 융합전공 20주년 전시회",
       "category": "exchange",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/ecolandscape-20th-2025/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/ecolandscape-20th-2025/cover.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/01.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/02.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/03.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/04.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/05.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/06.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/07.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/08.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/09.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/10.jpg",
+        "assets/life/activities/photos/ecolandscape-20th-2025/11.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/149",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/149"
     },
     {
       "id": "yellow-sea-symposium-2025",
@@ -1344,11 +1449,25 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 Yellow Sea Ecosystem Symposium",
       "category": "exchange",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/yellow-sea-symposium-2025/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/yellow-sea-symposium-2025/cover.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/01.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/02.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/03.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/04.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/05.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/06.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/07.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/08.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/09.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/10.jpg",
+        "assets/life/activities/photos/yellow-sea-symposium-2025/11.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/147",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/147"
     },
     {
       "id": "water-resilience-workshop-2025",
@@ -1357,11 +1476,18 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 수변공간 사회생태시스템의 회복탄력성 증진을 위한 학술 워크숍",
       "category": "workshop",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/water-resilience-workshop-2025/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/water-resilience-workshop-2025/cover.jpg",
+        "assets/life/activities/photos/water-resilience-workshop-2025/01.jpg",
+        "assets/life/activities/photos/water-resilience-workshop-2025/02.jpg",
+        "assets/life/activities/photos/water-resilience-workshop-2025/03.jpg",
+        "assets/life/activities/photos/water-resilience-workshop-2025/04.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/148",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/148"
     },
     {
       "id": "singapore-2025",
@@ -1370,11 +1496,25 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 Singapore",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/singapore-2025/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/singapore-2025/cover.jpg",
+        "assets/life/activities/photos/singapore-2025/01.jpg",
+        "assets/life/activities/photos/singapore-2025/02.jpg",
+        "assets/life/activities/photos/singapore-2025/03.jpg",
+        "assets/life/activities/photos/singapore-2025/04.jpg",
+        "assets/life/activities/photos/singapore-2025/05.jpg",
+        "assets/life/activities/photos/singapore-2025/06.jpg",
+        "assets/life/activities/photos/singapore-2025/07.jpg",
+        "assets/life/activities/photos/singapore-2025/08.jpg",
+        "assets/life/activities/photos/singapore-2025/09.jpg",
+        "assets/life/activities/photos/singapore-2025/10.jpg",
+        "assets/life/activities/photos/singapore-2025/11.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/150",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/150"
     },
     {
       "id": "landscape-artists-exhibition-2025",
@@ -1383,11 +1523,24 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2025 조경가 그룹전: 연두빛사람들",
       "category": "exchange",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/landscape-artists-exhibition-2025/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/cover.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/01.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/02.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/03.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/04.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/05.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/06.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/07.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/08.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/09.jpg",
+        "assets/life/activities/photos/landscape-artists-exhibition-2025/10.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/138",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/138"
     },
     {
       "id": "ku-landscape-alumni-2024",
@@ -1396,11 +1549,21 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2024 고려대학교 조경교우회",
       "category": "lab",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/ku-landscape-alumni-2024/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/ku-landscape-alumni-2024/cover.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/01.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/02.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/03.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/04.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/05.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/06.jpg",
+        "assets/life/activities/photos/ku-landscape-alumni-2024/07.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/118",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/118"
     },
     {
       "id": "lee-kyungjun-exhibition",
@@ -1409,11 +1572,20 @@ window.ELSDR_LIFE_RECORDS={
       "title": "이경준 사진전: ONE STEP AWAY",
       "category": "exchange",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/lee-kyungjun-exhibition/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/lee-kyungjun-exhibition/cover.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/01.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/02.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/03.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/04.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/05.jpg",
+        "assets/life/activities/photos/lee-kyungjun-exhibition/06.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/112",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/112"
     },
     {
       "id": "discover-neom",
@@ -1422,11 +1594,19 @@ window.ELSDR_LIFE_RECORDS={
       "title": "DISCOVER NEOM",
       "category": "exchange",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/discover-neom/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/discover-neom/cover.jpg",
+        "assets/life/activities/photos/discover-neom/01.jpg",
+        "assets/life/activities/photos/discover-neom/02.jpg",
+        "assets/life/activities/photos/discover-neom/03.jpg",
+        "assets/life/activities/photos/discover-neom/04.jpg",
+        "assets/life/activities/photos/discover-neom/05.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/110",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/110"
     },
     {
       "id": "seoulforest-2023",
@@ -1435,11 +1615,19 @@ window.ELSDR_LIFE_RECORDS={
       "title": "서울숲 2023",
       "category": "fieldwork",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/seoulforest-2023/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/seoulforest-2023/cover.jpg",
+        "assets/life/activities/photos/seoulforest-2023/01.jpg",
+        "assets/life/activities/photos/seoulforest-2023/02.jpg",
+        "assets/life/activities/photos/seoulforest-2023/03.jpg",
+        "assets/life/activities/photos/seoulforest-2023/04.jpg",
+        "assets/life/activities/photos/seoulforest-2023/05.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/99",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/99"
     },
     {
       "id": "marine-assessment-workshop-2022",
@@ -1448,11 +1636,21 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍",
       "category": "workshop",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/marine-assessment-workshop-2022/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/marine-assessment-workshop-2022/cover.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/01.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/02.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/03.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/04.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/05.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/06.jpg",
+        "assets/life/activities/photos/marine-assessment-workshop-2022/07.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/91",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/91"
     },
     {
       "id": "green-infrastructure-workshop-2022",
@@ -1461,11 +1659,23 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
       "category": "workshop",
       "summary": "",
-      "photo": "",
-      "photos": [],
+      "photo": "assets/life/activities/photos/green-infrastructure-workshop-2022/cover.jpg",
+      "photos": [
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/cover.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/01.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/02.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/03.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/04.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/05.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/06.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/07.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/08.jpg",
+        "assets/life/activities/photos/green-infrastructure-workshop-2022/09.jpg"
+      ],
       "sourceUrl": "https://edesign.korea.ac.kr/93",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photoSourceUrl": "https://edesign.korea.ac.kr/93"
     }
   ],
   "news": [

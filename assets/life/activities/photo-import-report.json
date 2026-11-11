@@ -1,0 +1,108 @@
+{
+  "activities": 21,
+  "importedActivities": 20,
+  "images": 170,
+  "imported": {
+    "portland-seattle-2025": {
+      "photos": 12,
+      "source": "/131",
+      "errors": []
+    },
+    "greenboat-2025": {
+      "photos": 6,
+      "source": "/128",
+      "errors": []
+    },
+    "yangyang-workshop-2024": {
+      "photos": 6,
+      "source": "/126",
+      "errors": []
+    },
+    "seoulforest-trip-2024": {
+      "photos": 7,
+      "source": "/124",
+      "errors": []
+    },
+    "norman-foster-2024": {
+      "photos": 10,
+      "source": "/120",
+      "errors": []
+    },
+    "goyang-flowers-2024": {
+      "photos": 6,
+      "source": "/116",
+      "errors": []
+    },
+    "siheung-valley-2023": {
+      "photos": 6,
+      "source": "/111",
+      "errors": []
+    },
+    "sejong-arboretum-2023": {
+      "photos": 8,
+      "source": "/106",
+      "errors": []
+    },
+    "gyeongju-workshop-2026": {
+      "photos": 12,
+      "source": "/152",
+      "errors": []
+    },
+    "ecolandscape-20th-2025": {
+      "photos": 12,
+      "source": "/149",
+      "errors": []
+    },
+    "yellow-sea-symposium-2025": {
+      "photos": 12,
+      "source": "/147",
+      "errors": []
+    },
+    "water-resilience-workshop-2025": {
+      "photos": 5,
+      "source": "/148",
+      "errors": []
+    },
+    "singapore-2025": {
+      "photos": 12,
+      "source": "/150",
+      "errors": []
+    },
+    "landscape-artists-exhibition-2025": {
+      "photos": 11,
+      "source": "/138",
+      "errors": []
+    },
+    "ku-landscape-alumni-2024": {
+      "photos": 8,
+      "source": "/118",
+      "errors": []
+    },
+    "lee-kyungjun-exhibition": {
+      "photos": 7,
+      "source": "/112",
+      "errors": []
+    },
+    "discover-neom": {
+      "photos": 6,
+      "source": "/110",
+      "errors": []
+    },
+    "seoulforest-2023": {
+      "photos": 6,
+      "source": "/99",
+      "errors": []
+    },
+    "marine-assessment-workshop-2022": {
+      "photos": 8,
+      "source": "/91",
+      "errors": []
+    },
+    "green-infrastructure-workshop-2022": {
+      "photos": 10,
+      "source": "/93",
+      "errors": []
+    }
+  },
+  "failed": {}
+}
