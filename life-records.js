@@ -18,7 +18,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "기후 시뮬레이션과 환경문제 해결을 다룬 워크숍",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/153",
+      "photo": "assets/life/events/photos/climate-simulation-2026.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/153"
     },
     {
       "id": "hld-lecture-2025",
@@ -30,7 +32,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/146",
+      "photo": "assets/life/events/photos/hld-lecture-2025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/146"
     },
     {
       "id": "systems-dynamics-conference-2025",
@@ -42,7 +46,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/140",
+      "photo": "assets/life/events/photos/systems-dynamics-conference-2025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/140"
     },
     {
       "id": "applied-ecology-conference-2025",
@@ -54,7 +60,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/139",
+      "photo": "assets/life/events/photos/applied-ecology-conference-2025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/139"
     },
     {
       "id": "landscape-conference-2025",
@@ -66,7 +74,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/134",
+      "photo": "assets/life/events/photos/landscape-conference-2025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/134"
     },
     {
       "id": "systems-dynamics-seminar-2025",
@@ -78,7 +88,9 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/137",
+      "photo": "assets/life/events/photos/systems-dynamics-seminar-2025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/137"
     },
     {
       "id": "science-to-society-2024",
@@ -90,7 +102,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36"
+      "sourceUrl": "https://edesign.korea.ac.kr/36",
+      "photo": ""
     },
     {
       "id": "nbs-book-seminar-2023",
@@ -102,7 +115,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "자연기반해법과 회복력원칙을 주제로 한 출판기념 세미나",
-      "sourceUrl": "https://edesign.korea.ac.kr/105"
+      "sourceUrl": "https://edesign.korea.ac.kr/105",
+      "photo": ""
     },
     {
       "id": "environmental-ecology-seminar-2017",
@@ -114,7 +128,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667823"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667823",
+      "photo": ""
     },
     {
       "id": "restoration-paradigm-2014",
@@ -126,7 +141,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667746"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667746",
+      "photo": ""
     },
     {
       "id": "river-lake-restoration-2014",
@@ -138,7 +154,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667739"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667739",
+      "photo": ""
     },
     {
       "id": "biodiversity-evaluation-2014",
@@ -150,7 +167,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667736"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667736",
+      "photo": ""
     },
     {
       "id": "green-education-2014",
@@ -162,7 +180,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667734"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667734",
+      "photo": ""
     },
     {
       "id": "eco-river-restoration-2013",
@@ -174,7 +193,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667730"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667730",
+      "photo": ""
     },
     {
       "id": "marine-biogeochemistry-2013",
@@ -186,7 +206,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667716"
+      "sourceUrl": "https://edesign.korea.ac.kr/33/?bmode=view&idx=7667716",
+      "photo": ""
     },
     {
       "id": "landscape-space-design-2012",
@@ -198,7 +219,8 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/33"
+      "sourceUrl": "https://edesign.korea.ac.kr/33",
+      "photo": ""
     },
     {
       "id": "archive-2026-001",
@@ -210,8 +232,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/160",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2026-001.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/160"
     },
     {
       "id": "archive-2026-002",
@@ -223,8 +247,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/158",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2026-002.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/158"
     },
     {
       "id": "archive-2026-003",
@@ -237,7 +263,8 @@ window.ELSDR_LIFE_RECORDS={
       "location": "",
       "summary": "",
       "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceKind": "archive-list",
+      "photo": ""
     },
     {
       "id": "archive-2026-004",
@@ -249,8 +276,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/154",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2026-004.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/154"
     },
     {
       "id": "archive-2025-005",
@@ -262,8 +291,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/144",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-005.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/144"
     },
     {
       "id": "archive-2025-006",
@@ -275,8 +306,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/145",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-006.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/145"
     },
     {
       "id": "archive-2025-007",
@@ -288,8 +321,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/143",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-007.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/143"
     },
     {
       "id": "archive-2025-008",
@@ -302,7 +337,8 @@ window.ELSDR_LIFE_RECORDS={
       "location": "",
       "summary": "",
       "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceKind": "archive-list",
+      "photo": ""
     },
     {
       "id": "archive-2025-009",
@@ -314,8 +350,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/136",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-009.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/136"
     },
     {
       "id": "archive-2025-010",
@@ -327,8 +365,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/133",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-010.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/133"
     },
     {
       "id": "archive-2025-011",
@@ -340,8 +380,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/132",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-011.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/132"
     },
     {
       "id": "archive-2025-012",
@@ -353,8 +395,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/130",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-012.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/130"
     },
     {
       "id": "archive-2025-013",
@@ -366,8 +410,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/129",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2025-013.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/129"
     },
     {
       "id": "archive-2024-014",
@@ -379,8 +425,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/125",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2024-014.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/125"
     },
     {
       "id": "archive-2024-015",
@@ -392,8 +440,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/122",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2024-015.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/122"
     },
     {
       "id": "archive-2024-016",
@@ -405,8 +455,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/121",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2024-016.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/121"
     },
     {
       "id": "archive-2024-017",
@@ -418,8 +470,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/115",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2024-017.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/115"
     },
     {
       "id": "archive-2024-018",
@@ -431,8 +485,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/113",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2024-018.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/113"
     },
     {
       "id": "archive-2023-019",
@@ -444,8 +500,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/109",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-019.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/109"
     },
     {
       "id": "archive-2023-020",
@@ -457,8 +515,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/108",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-020.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/108"
     },
     {
       "id": "archive-2023-021",
@@ -470,8 +530,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/107",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-021.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/107"
     },
     {
       "id": "archive-2023-022",
@@ -483,8 +545,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/105",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-022.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/105"
     },
     {
       "id": "archive-2023-023",
@@ -496,8 +560,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/102",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-023.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/102"
     },
     {
       "id": "archive-2023-024",
@@ -509,8 +575,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/103",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-024.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/103"
     },
     {
       "id": "archive-2023-025",
@@ -522,8 +590,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/104",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2023-025.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/104"
     },
     {
       "id": "archive-2022-026",
@@ -535,8 +605,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/98",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-026.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/98"
     },
     {
       "id": "archive-2022-027",
@@ -548,8 +620,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/96",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-027.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/96"
     },
     {
       "id": "archive-2022-028",
@@ -561,8 +635,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/95",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-028.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/95"
     },
     {
       "id": "archive-2022-029",
@@ -574,8 +650,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/91",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-029.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/91"
     },
     {
       "id": "archive-2022-030",
@@ -587,8 +665,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/94",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-030.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/94"
     },
     {
       "id": "archive-2022-031",
@@ -600,8 +680,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/93",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-031.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/93"
     },
     {
       "id": "archive-2022-032",
@@ -613,8 +695,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/92",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2022-032.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/92"
     },
     {
       "id": "archive-2021-033",
@@ -626,8 +710,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/87",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2021-033.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/87"
     },
     {
       "id": "archive-2021-034",
@@ -639,8 +725,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/62",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2021-034.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/62"
     },
     {
       "id": "archive-2021-035",
@@ -652,8 +740,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/86",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2021-035.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/86"
     },
     {
       "id": "archive-2020-036",
@@ -665,8 +755,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/81",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2020-036.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/81"
     },
     {
       "id": "archive-2019-037",
@@ -678,8 +770,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/71",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2019-037.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/71"
     },
     {
       "id": "archive-2019-038",
@@ -691,8 +785,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/76",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2019-038.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/76"
     },
     {
       "id": "archive-2019-039",
@@ -704,8 +800,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/77",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2019-039.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/77"
     },
     {
       "id": "archive-2018-040",
@@ -717,8 +815,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/75",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-040.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/75"
     },
     {
       "id": "archive-2018-041",
@@ -730,8 +830,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/74",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-041.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/74"
     },
     {
       "id": "archive-2018-042",
@@ -743,8 +845,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/73",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-042.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/73"
     },
     {
       "id": "archive-2018-043",
@@ -756,8 +860,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/72",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-043.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/72"
     },
     {
       "id": "archive-2018-044",
@@ -769,8 +875,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/67",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-044.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/67"
     },
     {
       "id": "archive-2018-045",
@@ -782,8 +890,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/68",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2018-045.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/68"
     },
     {
       "id": "archive-2017-046",
@@ -795,8 +905,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/65",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2017-046.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/65"
     },
     {
       "id": "archive-2017-047",
@@ -808,8 +920,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/66",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2017-047.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/66"
     },
     {
       "id": "archive-2017-048",
@@ -821,8 +935,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/64",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2017-048.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/64"
     },
     {
       "id": "archive-2017-049",
@@ -834,8 +950,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/63",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-2017-049.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/63"
     },
     {
       "id": "archive-restored-2025-001",
@@ -847,8 +965,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/135",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2025-001.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/135"
     },
     {
       "id": "archive-restored-2024-002",
@@ -860,8 +980,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/127",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2024-002.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/127"
     },
     {
       "id": "archive-restored-2024-003",
@@ -873,8 +995,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/123",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2024-003.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/123"
     },
     {
       "id": "archive-restored-2024-004",
@@ -886,8 +1010,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/117",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2024-004.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/117"
     },
     {
       "id": "archive-restored-2024-005",
@@ -899,8 +1025,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/114",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2024-005.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/114"
     },
     {
       "id": "archive-restored-2023-006",
@@ -912,8 +1040,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/100",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2023-006.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/100"
     },
     {
       "id": "archive-restored-2022-007",
@@ -925,8 +1055,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/90",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2022-007.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/90"
     },
     {
       "id": "archive-restored-2021-008",
@@ -938,8 +1070,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/89",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2021-008.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/89"
     },
     {
       "id": "archive-restored-2021-009",
@@ -951,8 +1085,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/82",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2021-009.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/82"
     },
     {
       "id": "archive-restored-2019-010",
@@ -964,8 +1100,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/78",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2019-010.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/78"
     },
     {
       "id": "archive-restored-2019-011",
@@ -977,8 +1115,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/79",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2019-011.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/79"
     },
     {
       "id": "archive-restored-2018-012",
@@ -990,8 +1130,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/69",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2018-012.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/69"
     },
     {
       "id": "archive-restored-2018-013",
@@ -1003,8 +1145,10 @@ window.ELSDR_LIFE_RECORDS={
       "organizer": "",
       "location": "",
       "summary": "",
-      "sourceUrl": "https://edesign.korea.ac.kr/36",
-      "sourceKind": "archive-list"
+      "sourceUrl": "https://edesign.korea.ac.kr/70",
+      "sourceKind": "archive-list",
+      "photo": "assets/life/events/photos/archive-restored-2018-013.jpg",
+      "photoSourceUrl": "https://edesign.korea.ac.kr/70"
     }
   ],
   "activities": [
