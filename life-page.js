@@ -220,7 +220,12 @@ function renderEvents(){
   const type=btn.dataset.seminarFilter,active=type===state.eventType;
   btn.classList.toggle("is-selected",active);btn.setAttribute("aria-pressed",String(active));
   const count=events.filter(e=>type==="all"||e.category===type).length;
-  const badge=$("span",btn);if(badge)badge.textContent=count;
+  const label={all:"전체",seminar:"세미나",lecture:"초청강연",conference:"학술대회",workshop:"워크숍",forum:"포럼"}[type]||type;
+  // Rebuild from canonical labels and a single count; never reuse stale markup.
+  const badge=document.createElement("span");
+  badge.className="lf-seminar-filter-count";
+  badge.textContent=String(count);
+  btn.replaceChildren(document.createTextNode("# "+label),badge);
  });
  $("#lf-seminar-count").textContent=filtered.length+" event records";
  $("#lf-seminar-empty").hidden=filtered.length>0;
