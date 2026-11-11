@@ -126,12 +126,13 @@ function writingList(records,title){
     (item.url?outerLink(item.url,"View article"):"")+'</div>').join("")+'</div>';
 }
 function renderWritings(){
- const books=data.books||[];
+ const books=(data.books||[]).slice().sort((a,b)=>Number(b.year||0)-Number(a.year||0));
  $("#pp-v2-books").innerHTML=books.length?books.map(item=>
    '<article class="pp-v2-book"><div class="pp-v2-book-cover">'+
    (item.cover?'<img src="'+E(item.cover)+'" alt="'+E(item.title)+' 표지" loading="lazy">':'<span>BOOK COVER</span>')+
    '</div><div><h4>'+E(item.title)+'</h4><p>'+E(item.publisher)+' · '+E(item.year)+'</p>'+
-   '<p>'+E(item.summary||"")+'</p>'+outerLink(item.url,"Book details")+'</div></article>').join("") :
+   '<p>'+E(item.authors||"")+'</p>'+(item.role?'<p class="lang-ko">'+E(item.role)+'</p><p class="lang-en">'+E(item.roleEn||item.role)+'</p>':"")+
+   '<p class="lang-ko">'+E(item.summary||"")+'</p><p class="lang-en">'+E(item.summaryEn||item.summary||"")+'</p>'+outerLink(item.url,"Book details")+'</div></article>').join("") :
    '<article class="pp-v2-book pp-v2-book-template"><div class="pp-v2-book-cover"><span>BOOK COVER</span></div>'+
    '<div><h4>Books 등록 예정</h4><p>도서 제목 · 출판사 · 발행연도</p><p>단독 저서, 공동 저서, 번역서를 등록할 수 있습니다.</p></div></article>';
  $("#pp-v2-columns").innerHTML=writingList(data.columns,"Newspaper Columns");
