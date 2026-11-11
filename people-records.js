@@ -159,6 +159,21 @@ window.ELSDR_PEOPLE_RECORDS={
       "coverSourceUrl": "https://image.yes24.com/goods/167576944/XL"
     },
     {
+      "id": "forest-connectivity",
+      "title": "Ecological Connectivity of Forest Ecosystems",
+      "year": 2025,
+      "publisher": "Springer",
+      "authors": "Katharina Lapin, Janine Oettel, Martin Braun & Heino Konrad (Eds.) · Yuyoung Choi et al. (including Jin Hyung Chon)",
+      "role": "공동 장 집필",
+      "roleEn": "Chapter co-author",
+      "summary": "수록 장: Republic of Korea: Predicting Shifts in Forest Biodiversity. 한국의 기후변화와 토지이용 변화에 따른 산림 생물다양성 변화를 분석합니다.",
+      "summaryEn": "Chapter: Republic of Korea: Predicting Shifts in Forest Biodiversity (pp. 561–571). Examines shifts in Korean forest biodiversity under climate and land-use change.",
+      "isbn": "9783031822056",
+      "cover": "assets/people/books/forest-connectivity.jpg",
+      "url": "https://doi.org/10.1007/978-3-031-82206-3_31",
+      "coverSourceUrl": "https://link.springer.com/book/10.1007/978-3-031-82206-3"
+    },
+    {
       "id": "landscape-planning",
       "title": "조경계획론",
       "year": 2024,
@@ -187,6 +202,21 @@ window.ELSDR_PEOPLE_RECORDS={
       "cover": "assets/people/books/resilience-principles.jpg",
       "url": "https://kupress.com/books/20645/",
       "coverSourceUrl": "https://kupress.com/wp-content/uploads/%ED%9A%8C%EB%B3%B5%EB%A0%A5%EC%9D%98-%EC%9B%90%EC%B9%99_550.jpg"
+    },
+    {
+      "id": "pacific-rim-handbook",
+      "title": "The Routledge Handbook of Sustainable Cities and Landscapes in the Pacific Rim",
+      "year": 2022,
+      "publisher": "Routledge",
+      "authors": "Yizhao Yang & Anne Taufen (Eds.) · Jinhyung Chon (Chapter 25)",
+      "role": "장 집필",
+      "roleEn": "Chapter author",
+      "summary": "수록 장: Resilience-based planning and management of sustainable coastal cities and landscapes using spatial-temporal simulations. 시공간 시뮬레이션을 활용한 지속가능한 연안도시·경관의 회복탄력성 기반 계획 및 관리.",
+      "summaryEn": "Chapter 25: Resilience-based planning and management of sustainable coastal cities and landscapes using spatial-temporal simulations.",
+      "isbn": "9780367471149",
+      "cover": "assets/people/books/pacific-rim-handbook.jpg",
+      "url": "https://www.routledge.com/The-Routledge-Handbook-of-Sustainable-Cities-and-Landscapes/Yang-Taufen/p/book/9780367471149",
+      "coverSourceUrl": "https://www.routledge.com/The-Routledge-Handbook-of-Sustainable-Cities-and-Landscapes/Yang-Taufen/p/book/9780367471149"
     },
     {
       "id": "korean-landscape-horizons",
