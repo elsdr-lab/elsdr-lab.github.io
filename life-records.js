@@ -359,7 +359,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "태미경 연구원, 기후적응 형평성 연구로 한국연구재단 연구장려금 선정",
       "summary": "태미경 석박사통합과정생이 복합 기후재난 취약성과 기후적응 공간의 불평등 구조를 분석하는 연구로 2026년도 이공분야 박사과정생 연구장려금 지원사업에 선정됐다.",
       "publication": "환경과조경",
-      "photo": "",
+      "photo": "assets/life/news/news-2026-tae-grant.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=175089860",
       "externalUrl": "https://www.lak.co.kr/news/boardview.php?id=24087"
     },
@@ -381,7 +381,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "2026 KU ECO-UP 북토크: 《조경, 가까운 자연》",
       "summary": "기존 연구실 News에 2026 KU 에코업 북토크 《조경, 가까운 자연》 안내가 게시되었다.",
       "publication": "ELSDR",
-      "photo": "",
+      "photo": "assets/life/news/news-2026-book-talk.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=171080043",
       "externalUrl": ""
     },
@@ -447,7 +447,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "《회복력 원칙》 출판 기념 세미나 개최",
       "summary": "전진형 교수가 공동 역자로 참여한 《회복력 원칙》 출간을 기념해 2023년 5월 26일 고려대학교에서 자연기반해법과 회복력을 주제로 세미나가 열렸다.",
       "publication": "ELSDR",
-      "photo": "",
+      "photo": "assets/life/news/news-2023-resilience-book-seminar.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=15347940",
       "externalUrl": ""
     },
@@ -469,7 +469,7 @@ window.ELSDR_LIFE_RECORDS={
       "title": "전진형 교수, Routledge Handbook 공동저자로 참여",
       "summary": "전진형 교수는 《The Routledge Handbook of Sustainable Cities and Landscapes in the Pacific Rim》의 Water 분야 챕터 공동저자로 참여했다.",
       "publication": "ELSDR",
-      "photo": "",
+      "photo": "assets/life/news/news-2022-routledge.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=11004577",
       "externalUrl": ""
     },
