@@ -226,28 +226,110 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page #people-professor-books .pp-v2-book-cover{height:280px}
 }
 
-/* Expanding bookshelf — reference-inspired interaction, six existing publications. */
-.pp-page #people-professor-books .pp-books-showcase{background:#252D2A;color:#F4F3EE;padding:clamp(26px,4vw,56px);margin:24px 0 55px}
+
+/* Bookshelf v2 — real book-like hinged covers, original ivory background. */
+.pp-page #people-professor-books .pp-books-showcase{
+ background:transparent;color:#252D2A;padding:18px 0 0;margin:8px 0 55px;
+}
 .pp-page #people-professor-books .pp-v2-books-grid{display:block}
-.pp-page #people-professor-books .pp-shelf-label{text-align:center;color:#D9C7A7;font-size:11px;letter-spacing:2px;margin:0 0 34px}
-.pp-page #people-professor-books .pp-shelf-scroll{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#536D5E transparent}
-.pp-page #people-professor-books .pp-shelf-track{display:flex;justify-content:center;align-items:center;gap:10px;min-width:max-content;padding:10px 8px 25px}
-.pp-page #people-professor-books .pp-shelf-volume{position:relative;display:block;flex:0 0 54px;width:54px;height:310px;padding:0;border:0;border-radius:1px;background:var(--shelf-tint);color:#252D2A;cursor:pointer;overflow:hidden;opacity:1;box-shadow:5px 8px 16px rgba(0,0,0,.2);transition:flex-basis .48s ease,width .48s ease,transform .24s ease}
-.pp-page #people-professor-books .pp-shelf-volume:hover:not(.is-open){transform:translateY(-6px);opacity:1}
-.pp-page #people-professor-books .pp-shelf-volume.is-open{width:235px;flex-basis:235px;background:#35443C}
-.pp-page #people-professor-books .pp-shelf-spine{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;padding:15px 0;writing-mode:vertical-rl;gap:12px;font-size:12px;font-weight:600;transition:opacity .2s ease}
-.pp-page #people-professor-books .pp-shelf-spine>span{overflow:hidden;text-overflow:ellipsis}
-.pp-page #people-professor-books .pp-shelf-spine small{font-size:10px}
-.pp-page #people-professor-books .is-open .pp-shelf-spine{opacity:0}
-.pp-page #people-professor-books .pp-shelf-front{position:absolute;inset:13px;display:flex;justify-content:center;align-items:center;color:#F4F3EE;opacity:0;transition:opacity .3s ease .1s}
-.pp-page #people-professor-books .is-open .pp-shelf-front{opacity:1}
-.pp-page #people-professor-books .pp-shelf-front img{display:block;width:auto;height:100%;max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 6px 18px rgba(0,0,0,.2)}
-.pp-page #people-professor-books .pp-shelf-counter{text-align:center;font-size:11px;letter-spacing:2px;color:#8CAAB1;margin:0 0 24px}
-.pp-page #people-professor-books .pp-shelf-current{color:#F4F3EE}
-.pp-page #people-professor-books .pp-shelf-detail{border-top:1px solid rgba(244,243,238,.25);padding:25px 0 0;max-width:780px;margin:auto;text-align:center;min-height:140px}
-.pp-page #people-professor-books .pp-shelf-detail h4{color:#F4F3EE;font-size:21px;margin:0 0 14px}
-.pp-page #people-professor-books .pp-shelf-detail p{color:#C7D0C8;font-size:12px;line-height:1.9;margin:5px 0}
-.pp-page #people-professor-books .pp-shelf-detail .pp-v2-link{display:inline-block;margin-top:13px;color:#D9C7A7}
-.pp-page #people-professor-books .pp-shelf-detail .pp-v2-link:hover{color:#F4F3EE}
-@media(max-width:700px){.pp-page #people-professor-books .pp-books-showcase{padding:26px 16px}.pp-page #people-professor-books .pp-shelf-track{justify-content:flex-start}.pp-page #people-professor-books .pp-shelf-volume{height:260px;flex-basis:43px;width:43px}.pp-page #people-professor-books .pp-shelf-volume.is-open{flex-basis:185px;width:185px}.pp-page #people-professor-books .pp-shelf-label{font-size:9px;margin-bottom:18px}.pp-page #people-professor-books .pp-shelf-detail h4{font-size:18px}}
-@media(prefers-reduced-motion:reduce){.pp-page #people-professor-books .pp-shelf-volume,.pp-page #people-professor-books .pp-shelf-front{transition:none}}
+.pp-page #people-professor-books .pp-shelf-label{
+ text-align:center;color:#536D5E;font-size:11px;letter-spacing:2.1px;margin:0 0 34px;
+}
+.pp-page #people-professor-books .pp-shelf-scroll{
+ overflow-x:auto;overflow-y:hidden;
+ padding:8px 0 18px;scrollbar-width:thin;scrollbar-color:#8CAAB1 transparent;
+}
+.pp-page #people-professor-books .pp-shelf-track{
+ display:flex;justify-content:center;align-items:flex-end;gap:12px;
+ min-width:max-content;padding:18px 22px 30px;perspective:1100px;
+ border-bottom:1px solid rgba(37,45,42,.18);
+}
+.pp-page #people-professor-books .pp-shelf-volume{
+ --shelf-w:43px;--shelf-h:315px;--cover-w:205px;
+ position:relative;isolation:isolate;flex:0 0 var(--shelf-w);
+ width:var(--shelf-w);height:var(--shelf-h);padding:0;margin:0;
+ appearance:none;border:0;border-radius:0;background:transparent;
+ color:#252D2A;opacity:1;overflow:visible;text-align:left;cursor:pointer;
+ transform-style:preserve-3d;perspective:1200px;
+ transition:flex-basis .62s cubic-bezier(.22,.7,.2,1),width .62s cubic-bezier(.22,.7,.2,1),transform .3s ease;
+}
+.pp-page #people-professor-books .pp-shelf-volume.is-open{
+ width:calc(var(--shelf-w) + var(--cover-w) + 6px);
+ flex-basis:calc(var(--shelf-w) + var(--cover-w) + 6px);
+}
+.pp-page #people-professor-books .pp-shelf-volume:hover:not(.is-open){transform:translateY(-7px);opacity:1}
+.pp-page #people-professor-books .pp-shelf-volume:focus-visible{outline:2px solid #536D5E;outline-offset:5px}
+.pp-page #people-professor-books .pp-shelf-spine{
+ position:absolute;z-index:3;top:0;left:0;bottom:0;width:var(--shelf-w);
+ display:flex;justify-content:space-between;align-items:center;
+ flex-direction:column;gap:14px;padding:17px 8px;
+ writing-mode:vertical-rl;text-orientation:mixed;
+ background:linear-gradient(90deg,rgba(0,0,0,.28),transparent 18%,rgba(255,255,255,.2) 48%,rgba(0,0,0,.12) 100%),var(--shelf-tint);
+ border-left:2px solid rgba(37,45,42,.22);
+ border-right:2px solid rgba(37,45,42,.24);
+ box-shadow:inset 3px 0 3px rgba(0,0,0,.12),4px 9px 13px rgba(37,45,42,.15);
+}
+.pp-page #people-professor-books .pp-shelf-spine>span{
+ overflow:hidden;text-overflow:ellipsis;max-height:248px;
+ font-size:12px;line-height:1.4;font-weight:600;
+}
+.pp-page #people-professor-books .pp-shelf-spine small{font-size:10px;font-weight:500}
+.pp-page #people-professor-books .pp-shelf-hinge{
+ position:absolute;z-index:2;top:2px;bottom:2px;left:calc(var(--shelf-w) - 2px);
+ width:var(--cover-w);transform-style:preserve-3d;
+ transform-origin:left center;transform:rotateY(-88deg);
+ opacity:.55;pointer-events:none;
+ transition:transform .68s cubic-bezier(.2,.7,.16,1),opacity .36s ease;
+}
+.pp-page #people-professor-books .pp-shelf-volume.is-open .pp-shelf-hinge{
+ transform:rotateY(-8deg);opacity:1;
+}
+.pp-page #people-professor-books .pp-shelf-pages{
+ position:absolute;inset:4px -5px 0 4px;
+ background:repeating-linear-gradient(0deg,#e7e3d9 0 1px,#f7f5ef 1px 3px);
+ border:1px solid #d7d1c5;
+ box-shadow:5px 8px 14px rgba(37,45,42,.22);
+ transform:translateZ(-6px);
+}
+.pp-page #people-professor-books .pp-shelf-front{
+ position:absolute;inset:0;
+ display:flex;align-items:center;justify-content:center;
+ background:#ecebe5;color:#252D2A;
+ padding:0;overflow:hidden;
+ box-shadow:inset 6px 0 10px rgba(37,45,42,.15),5px 8px 18px rgba(37,45,42,.22);
+ backface-visibility:hidden;
+}
+.pp-page #people-professor-books .pp-shelf-front:after{
+ content:"";position:absolute;pointer-events:none;inset:0 auto 0 0;width:12px;
+ background:linear-gradient(90deg,rgba(0,0,0,.19),rgba(255,255,255,.08),transparent);
+}
+.pp-page #people-professor-books .pp-shelf-front img{
+ display:block;width:100%;height:100%;max-width:none;max-height:none;
+ object-fit:contain;object-position:center;
+ box-shadow:none;background:transparent;
+}
+.pp-page #people-professor-books .pp-shelf-counter{
+ text-align:center;font-size:11px;letter-spacing:2px;color:#536D5E;margin:20px 0 22px;
+}
+.pp-page #people-professor-books .pp-shelf-current{color:#252D2A;font-weight:600}
+.pp-page #people-professor-books .pp-shelf-detail{
+ border-top:1px solid rgba(37,45,42,.17);padding:26px 0 0;
+ max-width:790px;margin:auto;text-align:center;min-height:140px;
+}
+.pp-page #people-professor-books .pp-shelf-detail h4{color:#252D2A;font-size:21px;margin:0 0 14px}
+.pp-page #people-professor-books .pp-shelf-detail p{color:#536D5E;font-size:12px;line-height:1.9;margin:5px 0}
+.pp-page #people-professor-books .pp-shelf-detail .pp-v2-link{display:inline-block;margin-top:13px;color:#536D5E}
+.pp-page #people-professor-books .pp-shelf-detail .pp-v2-link:hover{color:#252D2A}
+@media(max-width:700px){
+ .pp-page #people-professor-books .pp-books-showcase{padding:12px 0 0}
+ .pp-page #people-professor-books .pp-shelf-track{justify-content:flex-start;gap:9px;padding:12px 15px 24px}
+ .pp-page #people-professor-books .pp-shelf-volume{--shelf-w:34px;--shelf-h:260px;--cover-w:168px}
+ .pp-page #people-professor-books .pp-shelf-spine{padding:12px 6px}
+ .pp-page #people-professor-books .pp-shelf-spine>span{font-size:10px;max-height:200px}
+ .pp-page #people-professor-books .pp-shelf-label{font-size:9px;margin-bottom:17px}
+ .pp-page #people-professor-books .pp-shelf-detail h4{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){
+ .pp-page #people-professor-books .pp-shelf-volume,
+ .pp-page #people-professor-books .pp-shelf-hinge{transition:none}
+}
