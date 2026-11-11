@@ -123,7 +123,7 @@ function writingList(records,title){
  return '<div class="pp-v2-writings-list">'+[...records].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).map(item=>
     '<div class="pp-v2-writing-row"><time>'+E(item.date||"")+'</time>'+
     '<div><h4>'+E(item.title)+'</h4><p>'+E(item.publication||item.medium||"")+'</p></div>'+
-    (item.url?outerLink(item.url,"View article"):"")+'</div>').join("")+'</div>';
+    (item.url?outerLink(item.url,"View article"):'<span class="pp-v2-writing-source-pending">원문 링크 확인 중</span>')+'</div>').join("")+'</div>';
 }
 function renderWritings(){
  const books=(data.books||[]).slice().sort((a,b)=>Number(b.year||0)-Number(a.year||0));
