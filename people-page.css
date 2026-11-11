@@ -532,3 +532,42 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  }
  .pp-page #people-professor-books .pp-shelf-spine small{bottom:10px}
 }
+
+/* Newspaper Columns — compact editorial index with publication beside date. */
+.pp-page #people-professor-books #pp-v2-columns{max-width:1120px;margin:0 auto 70px}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writings-list{border-bottom:1px solid #cbd7ca}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row{
+ display:grid;grid-template-columns:minmax(160px,195px) minmax(0,1fr) 120px;
+ align-items:center;gap:clamp(18px,3vw,42px);min-height:76px;
+ padding:17px 6px;border-top:1px solid #cbd7ca;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-meta{
+ display:flex;align-items:center;flex-wrap:wrap;column-gap:11px;row-gap:5px;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-meta time{
+ font-size:11px;white-space:nowrap;color:#536D5E;font-variant-numeric:tabular-nums;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-medium{
+ display:inline-block;padding:3px 6px;border:1px solid #cbd7ca;
+ color:#536D5E;font-size:10px;line-height:1.3;white-space:nowrap;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-title h4{
+ font-size:16px;font-weight:600;line-height:1.45;margin:0;word-break:keep-all;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row > .pp-v2-link,
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row > .pp-v2-writing-source-pending{
+ justify-self:end;white-space:nowrap;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-source-pending{font-size:11px;color:#6c8271}
+@media(max-width:680px){
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row{
+  grid-template-columns:minmax(0,1fr) auto;gap:9px 12px;padding:16px 2px;
+ }
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-meta{grid-column:1/-1}
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-title{grid-column:1;min-width:0}
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row > .pp-v2-link,
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-row > .pp-v2-writing-source-pending{
+  grid-column:2;grid-row:2;
+ }
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-title h4{font-size:15px}
+}
