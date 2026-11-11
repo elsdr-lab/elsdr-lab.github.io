@@ -17,7 +17,7 @@ jobs:
           import requests,bs4,json,pathlib,re
           sess=requests.Session()
           sess.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36'})
-          sources=['/131','/128','/126','/124','/120','/116','/111','/106','/32','/34','/35','/37']
+          sources=['/31','/36','/99','/91','/93','/131','/128','/126','/124','/120','/116','/111','/106','/32','/34','/35','/37']
           output={}
           for uri in sources:
             try:
