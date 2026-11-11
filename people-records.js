@@ -34,7 +34,7 @@ window.ELSDR_PEOPLE_RECORDS={
     {
       "id": "career-1",
       "category": "career",
-      "period": "2016~",
+      "period": "2016–",
       "title": "Professor",
       "organization": "Korea University · Environmental Science & Ecological Engineering",
       "titleKo": "교수",
