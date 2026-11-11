@@ -7,6 +7,7 @@
 const root=document.querySelector('[data-page="life"]');
 if(!root)return;
 const registry=window.ELSDR_LIFE_RECORDS||{events:[],activities:[]};
+const news=Array.isArray(registry.news)?registry.news:[];
 const events=Array.isArray(registry.events)?registry.events:[];
 const activities=Array.isArray(registry.activities)?registry.activities:[];
 const $=(s,base=root)=>base.querySelector(s);
@@ -58,6 +59,40 @@ function photoMarkup(a){
    return '<div class="lf-v2-activity-photo"><img loading="lazy" src="'+E(validUrl(a.photo))+'" alt="'+E(a.title)+' 현장 사진"></div>';
  }
  return '<div class="lf-v2-activity-photo lf-v2-no-photo"><span>PHOTO / TO BE ADDED</span><b>ELSDR</b></div>';
+}
+const newsCategories={award:"Research & Awards",research:"Research News",publication:"Books & Publications",media:"Media Coverage",update:"Lab Updates"};
+let newsFilter="all",newsQuery="";
+function renderNews(){
+ const list=$("#lf-v2-news-archive");
+ if(!list)return;
+ const filtered=[...news].filter(item=>
+  (newsFilter==="all"||item.category===newsFilter)&&
+  (!newsQuery||[item.title,item.date,item.publication,item.summary].join(" ").toLocaleLowerCase().includes(newsQuery))
+ ).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+ list.innerHTML=filtered.map(item=>{
+  const source=validUrl(item.sourceUrl||item.externalUrl);
+  const cover=item.photo&&validUrl(item.photo)?
+   '<div class="lf-v2-news-thumbnail"><img loading="lazy" src="'+E(validUrl(item.photo))+'" alt="'+E(item.title)+' 관련 이미지"></div>':"";
+  return '<article class="lf-v2-news-row">'+cover+
+   '<div class="lf-v2-news-date"><time>'+E(item.date||"")+'</time><small>'+E(newsCategories[item.category]||"Lab News")+'</small></div>'+
+   '<div class="lf-v2-news-content"><span class="lf-v2-news-publication">'+E(item.publication||"ELSDR")+'</span>'+
+   '<h3>'+E(item.title||"")+'</h3>'+
+   (item.summary?'<p>'+E(item.summary)+'</p>':"")+'</div>'+
+   '<div class="lf-v2-news-action">'+(source?extLink(source,"Read story"):'<span>원문 확인 중</span>')+'</div></article>';
+ }).join("");
+ $("#lf-v2-news-count").textContent=filtered.length+" news records";
+ $("#lf-v2-news-no-results").hidden=filtered.length>0;
+ $("[data-lf-news-category]").forEach(button=>{
+  const active=button.dataset.lfNewsCategory===newsFilter;
+  button.classList.toggle("is-selected",active);
+  button.setAttribute("aria-pressed",String(active));
+ });
+}
+function initNews(){
+ const search=$("#lf-v2-news-search");
+ if(search)search.addEventListener("input",e=>{newsQuery=e.target.value.trim().toLocaleLowerCase();renderNews()});
+ $("[data-lf-news-category]").forEach(button=>button.addEventListener("click",()=>{newsFilter=button.dataset.lfNewsCategory;renderNews()}));
+ renderNews();
 }
 function renderActivities(){
  const data=filteredActivities();
@@ -319,7 +354,7 @@ function renderRoute(){
  }
  if(!id)document.title=(current==="activities"?"Activities":current==="events"?"Events":"News")+" | ELSDR";
 }
-initEventFilters();updateEventDetails();initActivityFilters();
+initNews();initEventFilters();updateEventDetails();initActivityFilters();
 window.addEventListener("hashchange",renderRoute);
 window.addEventListener("load",()=>{renderRoute();if(!ready&&!failed&&!$('[data-life-view="activities"]').hidden)initializeMap();});
 renderRoute();
