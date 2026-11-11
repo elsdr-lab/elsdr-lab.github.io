@@ -1,4 +1,1598 @@
 {
+  "/31": {
+    "http": 200,
+    "title": "ELDR.korea.ac.kr",
+    "heading": "",
+    "gallery": [
+      {
+        "title": "",
+        "url": "/156",
+        "original": "S2021072113663b21de5af/bc43da9e38d7f.jpeg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260708/4065572ac06a2.jpeg"
+      },
+      {
+        "title": "2026 연구실 워크숍_경주",
+        "url": "/152",
+        "original": "S2021072113663b21de5af/5759a543bf272.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260121/32cf0b1916c7a.jpg"
+      },
+      {
+        "title": "2025 생태조경 융합전공 20주년 전시회",
+        "url": "/149",
+        "original": "S2021072113663b21de5af/2320f9252a650.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/b0fdea8982f44.jpg"
+      },
+      {
+        "title": "2025 Yellow Sea Ecosystem Symposium",
+        "url": "/147",
+        "original": "S2021072113663b21de5af/4ab5110d37b8d.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/bc2108dfdf6b8.jpg"
+      },
+      {
+        "title": "2025 수변공간 사회생태시스템의 회복탄력성 증진을 위한 학술 워크숍",
+        "url": "/148",
+        "original": "S2021072113663b21de5af/1a2f9c4a93203.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/69cd9a4f03b3f.jpg"
+      },
+      {
+        "title": "2025 Singapore",
+        "url": "/150",
+        "original": "S2021072113663b21de5af/5de150fc93436.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/0f45b21fc5f64.jpg"
+      },
+      {
+        "title": "2025 조경가 그룹전: 연두빛사람들",
+        "url": "/138",
+        "original": "S2021072113663b21de5af/cdfc39d7720a0.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250825/ebb348ae6dd8b.jpg"
+      },
+      {
+        "title": "Portland & Seattle 2025",
+        "url": "/131",
+        "original": "S2021072113663b21de5af/06474ef166efa.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250407/4796459b4fa40.jpg"
+      },
+      {
+        "title": "2025 그린보트",
+        "url": "/128",
+        "original": "S2021072113663b21de5af/8209ea1a8d583.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250205/dee676d3aa984.jpg"
+      },
+      {
+        "title": "2024 연구실 워크숍_양양",
+        "url": "/126",
+        "original": "S2021072113663b21de5af/f4bb327250d85.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20241209/3d078c01677f0.jpg"
+      },
+      {
+        "title": "2024 서울숲 필드트립",
+        "url": "/124",
+        "original": "S2021072113663b21de5af/4664beed14a05.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20241030/dd5ea33ff2b06.jpg"
+      },
+      {
+        "title": "미래긍정: 노먼 포스터, 포스터 + 파트너스",
+        "url": "/120",
+        "original": "S2021072113663b21de5af/c801d67446a79.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/a9cbc1784d2f1.jpg"
+      },
+      {
+        "title": "2024 고려대학교 조경교우회",
+        "url": "/118",
+        "original": "S2021072113663b21de5af/1cbc12c99a756.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/2f21cd3981411.jpg"
+      },
+      {
+        "title": "2024 고양국제꽃박람회",
+        "url": "/116",
+        "original": "S2021072113663b21de5af/80ee801950be0.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/e610d336b7d99.jpg"
+      },
+      {
+        "title": "이경준 사진전: ONE STEP AWAY",
+        "url": "/112",
+        "original": "S2021072113663b21de5af/175c2e31752d1.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20231219/7f3ed14ce0f1c.jpg"
+      },
+      {
+        "title": "금천구 시흥계곡 답사",
+        "url": "/111",
+        "original": "S2021072113663b21de5af/075ca3ab318ba.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20231219/e5e4d5bf5748c.jpg"
+      },
+      {
+        "title": "DISCOVER NEOM",
+        "url": "/110",
+        "original": "S2021072113663b21de5af/fd2d4c8a37970.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20231219/5a2b5faf97d47.jpg"
+      },
+      {
+        "title": "2023 조경 교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "url": "/106",
+        "original": "S2021072113663b21de5af/c47031ad3300f.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230613/58eea33b74754.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/99",
+        "original": "S2021072113663b21de5af/9829eb03cdc83.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/488c498bdec96.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/97",
+        "original": "S2021072113663b21de5af/52ca516e22566.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20221226/96f45e25afd82.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/59",
+        "original": "S2021072113663b21de5af/4d7e3c80027b4.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/c855a152cf7cf.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/58",
+        "original": "S2021072113663b21de5af/a2801762966c1.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/769475e493bdf.jpg"
+      },
+      {
+        "title": "국외답사 및 할술활동",
+        "url": "/57",
+        "original": "S2021072113663b21de5af/76f5de1c72d1d.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/1617b13550b33.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/56",
+        "original": "S2021072113663b21de5af/f020c42d08383.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/58c51bce3133e.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/55",
+        "original": "S2021072113663b21de5af/44d3755822cce.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/0580454e64645.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/54",
+        "original": "S2021072113663b21de5af/990438662d316.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/9dddb13cb4c1a.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/53",
+        "original": "S2021072113663b21de5af/ee58cb7850270.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/f076f60abab00.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/52",
+        "original": "S2021072113663b21de5af/5c274b65bc61a.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/22c53230ea4d9.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/51",
+        "original": "S2021072113663b21de5af/23e91adf18957.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/e1e6324b38caf.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/50",
+        "original": "S2021072113663b21de5af/ec2643b50158b.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/ded1d03648b1e.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/49",
+        "original": "S2021072113663b21de5af/85e0503726cbd.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/db50b9cbad8cd.jpg"
+      },
+      {
+        "title": "국외답사 및 학술활동",
+        "url": "/48",
+        "original": "S2021072113663b21de5af/7093aa7848dcf.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/a3b1583faba1c.png"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/47",
+        "original": "S2021072113663b21de5af/5d35de84b7942.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/4aaa0f589cc48.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/46",
+        "original": "S2021072113663b21de5af/012c659afaa99.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/361753c2a2257.png"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/45",
+        "original": "S2021072113663b21de5af/453958135c18f.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/032584729d65f.png"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/41",
+        "original": "S2021072113663b21de5af/7012e6ae31b6c.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/35dbb0cdd9c15.png"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/44",
+        "original": "S2021072113663b21de5af/b39cf28c7694f.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/715854ab0e1ea.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/40",
+        "original": "S2021072113663b21de5af/a7d5b9d3e5dd7.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/ef42a3a587205.jpg"
+      },
+      {
+        "title": "국내답사  및 학술활동",
+        "url": "/43",
+        "original": "S2021072113663b21de5af/a88b6bf4c2e8c.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/5163588afe225.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/42",
+        "original": "S2021072113663b21de5af/480726ce56601.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/70619fa505242.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/41",
+        "original": "S2021072113663b21de5af/344bbabb63e80.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/d7ef9c3a5f8cb.jpg"
+      },
+      {
+        "title": "국내답사 및 학술활동",
+        "url": "/39",
+        "original": "S2021072113663b21de5af/c14672e7abbde.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/b5761248bb704.jpg"
+      },
+      {
+        "title": "국내 답사 및 학술활동",
+        "url": "/38",
+        "original": "S2021072113663b21de5af/39404836276aa.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/17a417c9454cb.jpg"
+      },
+      {
+        "title": "국내 답사 및 학술활동",
+        "url": "/37",
+        "original": "S2021072113663b21de5af/02faf672b3ef8.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20210827/103417e383804.jpg"
+      }
+    ],
+    "contentImages": [
+      "https://cdn.imweb.me/thumbnail/20260911/a1cd4f87c55a8.png",
+      "https://cdn.imweb.me/thumbnail/20210828/f6ec5400a4f95.png",
+      "https://cdn.imweb.me/thumbnail/20260708/4065572ac06a2.jpeg",
+      "https://cdn.imweb.me/thumbnail/20260121/32cf0b1916c7a.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/b0fdea8982f44.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/bc2108dfdf6b8.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/69cd9a4f03b3f.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/0f45b21fc5f64.jpg",
+      "https://cdn.imweb.me/thumbnail/20250825/ebb348ae6dd8b.jpg",
+      "https://cdn.imweb.me/thumbnail/20250407/4796459b4fa40.jpg",
+      "https://cdn.imweb.me/thumbnail/20250205/dee676d3aa984.jpg",
+      "https://cdn.imweb.me/thumbnail/20241209/3d078c01677f0.jpg",
+      "https://cdn.imweb.me/thumbnail/20241030/dd5ea33ff2b06.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/a9cbc1784d2f1.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/2f21cd3981411.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/e610d336b7d99.jpg",
+      "https://cdn.imweb.me/thumbnail/20231219/7f3ed14ce0f1c.jpg",
+      "https://cdn.imweb.me/thumbnail/20231219/e5e4d5bf5748c.jpg",
+      "https://cdn.imweb.me/thumbnail/20231219/5a2b5faf97d47.jpg",
+      "https://cdn.imweb.me/thumbnail/20230613/58eea33b74754.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/488c498bdec96.jpg",
+      "https://cdn.imweb.me/thumbnail/20221226/96f45e25afd82.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/c855a152cf7cf.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/769475e493bdf.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/1617b13550b33.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/58c51bce3133e.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/0580454e64645.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/9dddb13cb4c1a.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/f076f60abab00.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/22c53230ea4d9.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/e1e6324b38caf.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/ded1d03648b1e.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/db50b9cbad8cd.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/a3b1583faba1c.png",
+      "https://cdn.imweb.me/thumbnail/20210827/4aaa0f589cc48.jpg",
+      "https://cdn.imweb.me/thumbnail/20231219/3a2685333c9dd.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/361753c2a2257.png",
+      "https://cdn.imweb.me/thumbnail/20210827/032584729d65f.png",
+      "https://cdn.imweb.me/thumbnail/20210827/35dbb0cdd9c15.png",
+      "https://cdn.imweb.me/thumbnail/20210827/715854ab0e1ea.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/ef42a3a587205.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/5163588afe225.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/70619fa505242.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/d7ef9c3a5f8cb.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/b5761248bb704.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/17a417c9454cb.jpg",
+      "https://cdn.imweb.me/thumbnail/20210827/103417e383804.jpg",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/d50b3a248738b.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/e5aa59ce9a87e.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/9ce418d5a2036.png"
+    ],
+    "links": [
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "2026 연구실 워크숍_경주 2026.01.18 ~ 20",
+        "href": "/152"
+      },
+      {
+        "text": "2025 수변공간 사회생태시스템의 회복탄력성 증진을 위한 학술 워크숍 2025.11.14 ~ 15",
+        "href": "/148"
+      },
+      {
+        "text": "2025 그린보트 2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양 2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립 2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사 금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경 교우회 국립세종수목원&세종정부청사 옥상 가이드 투어 2023 조경 교우회 국립세종수목원&세종정부청사 옥상 가이드",
+        "href": "/106"
+      },
+      {
+        "text": "국내답사 및 학술활동 2023.04.10 서울숲",
+        "href": "/99"
+      },
+      {
+        "text": "국외답사 및 학술활동 2022.11.14 Sausalito(2022 ASLA)",
+        "href": "/97"
+      },
+      {
+        "text": "국외답사 및 학술활동 2019. 11. 14 Mexico (2019 ASLA)",
+        "href": "/59"
+      },
+      {
+        "text": "국외답사 및 학술활동 2019. 11. 13 ~ 19 SanDiego (2019 ASLA)",
+        "href": "/58"
+      },
+      {
+        "text": "국외답사 및 할술활동 2019. 07. 19 ~ 21 광저우 YES 2019",
+        "href": "/57"
+      },
+      {
+        "text": "국외답사 및 학술활동 2019. 06. 27 Freizeitpark Rheinaue",
+        "href": "/56"
+      },
+      {
+        "text": "국외답사 및 학술활동 2019. 06. 25 Palmengarten",
+        "href": "/55"
+      },
+      {
+        "text": "국외답사 및 학술활동 2018. 08. 27 ~ 09. 05 APRU Field School",
+        "href": "/54"
+      },
+      {
+        "text": "국외답사 및 학술활동 2018. 07. 17 ~ 21 Singapore 55the FILA WO",
+        "href": "/53"
+      },
+      {
+        "text": "국내답사 및 학술활동 2018.07.20 Ganghwado",
+        "href": "/52"
+      },
+      {
+        "text": "국내답사 및 학술활동 2018.01.08 Seongsu, re-mi-con factory",
+        "href": "/51"
+      },
+      {
+        "text": "국외답사 및 학술활동 2017.10.16~22 Montreal in CANADA",
+        "href": "/50"
+      },
+      {
+        "text": "국외답사 및 학술활동 2017.07.05~08 Beijing in CHINA",
+        "href": "/49"
+      },
+      {
+        "text": "국외답사 및 학술활동 2016.04.18~27 Torino, Milano, and Venice",
+        "href": "/48"
+      },
+      {
+        "text": "국내답사 및 학술활동 2016.02.25-28 Haenam, Jeollanam-Do",
+        "href": "/47"
+      },
+      {
+        "text": "국내답사 및 학술활동 2015.10.11 Seoul Garden Festival, World",
+        "href": "/46"
+      },
+      {
+        "text": "국내답사 및 학술활동 2015.08.15. Korea National Arboretum, Pocheon-si, Gyeonggi",
+        "href": "/45"
+      },
+      {
+        "text": "국내답사 및 학술활동 2015.08.01 Seonyudo Park, Seoul 생태관",
+        "href": "/41"
+      },
+      {
+        "text": "국내답사 및 학술활동 2013.12 Goseong, Gangwon-do",
+        "href": "/44"
+      },
+      {
+        "text": "국내답사 및 학술활동 2013.08.10 Seoseoul lake park, Seoul",
+        "href": "/40"
+      },
+      {
+        "text": "국내답사  및 학술활동 2013.07.30 DreamForest, Seoul",
+        "href": "/43"
+      },
+      {
+        "text": "국내답사 및 학술활동 2013.07.20 Seoul Forest, Seoul",
+        "href": "/42"
+      },
+      {
+        "text": "국내답사 및 학술활동 2013.07.06 Seonyudo Park, Seoul",
+        "href": "/41"
+      },
+      {
+        "text": "국내답사 및 학술활동 2013.03.02 Yeouido Saetgang Ecological Park, Seoul",
+        "href": "/39"
+      },
+      {
+        "text": "국내 답사 및 학술활동 2013.01.19 SeoSeou Lake Park, Seoul",
+        "href": "/38"
+      },
+      {
+        "text": "국내 답사 및 학술활동 2013.01.19 Seonyudo Park, Seoul",
+        "href": "/37"
+      }
+    ]
+  },
+  "/36": {
+    "http": 200,
+    "title": "ELDR.korea.ac.kr",
+    "heading": "",
+    "gallery": [
+      {
+        "title": "2026 한국시스템다이내믹스학회 10월 월례세미나",
+        "url": "/163",
+        "original": "S2021072113663b21de5af/05a9262c0e63a.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20261026/90dfb82e5fc8c.jpg"
+      },
+      {
+        "title": "블루카본 기반 기후변화 적응형 해안조성 기술개발 5차년도 최종보고회",
+        "url": "/162",
+        "original": "S2021072113663b21de5af/fbc3be8321c27.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20261022/9dc7f4e3196c0.png"
+      },
+      {
+        "title": "2026 한국시스템다이내믹스학회 9월 월례세미나",
+        "url": "/161",
+        "original": "S2021072113663b21de5af/1503dfb215ea0.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20261008/b37e51efc32c8.png"
+      },
+      {
+        "title": "ICMP-11&YES 2026 Joint conference",
+        "url": "/160",
+        "original": "S2021072113663b21de5af/4432d7469231b.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260826/25635507cbfce.jpg"
+      },
+      {
+        "title": "2026 AI 에이전트 합동 워크숍",
+        "url": "/158",
+        "original": "S2021072113663b21de5af/61459f72dec7c.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260826/a905652b6d06d.jpg"
+      },
+      {
+        "title": "2026 한국시스템다이내믹스학화 4월 월례세미나",
+        "url": "/155",
+        "original": "S2021072113663b21de5af/553a5825a7336.jpeg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260430/d1d4bea904666.jpeg"
+      },
+      {
+        "title": "2026 한국시스템다이내믹스학회 동계학술대회",
+        "url": "/154",
+        "original": "S2021072113663b21de5af/4511fc6ede839.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260304/39c1bb099233d.jpg"
+      },
+      {
+        "title": "2026 기후 시뮬레이션 & 환경문제 해결 워크숍",
+        "url": "/153",
+        "original": "S2021072113663b21de5af/dcc5dd6e3bb16.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260205/87e913bfe2498.jpg"
+      },
+      {
+        "title": "2025 한국시스템다이내믹스학회 11월 월례세미나",
+        "url": "/144",
+        "original": "S2021072113663b21de5af/e4bfb158b6062.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/50cfdd70e3aa0.jpg"
+      },
+      {
+        "title": "2025 한국환경복원기술학회",
+        "url": "/145",
+        "original": "S2021072113663b21de5af/9be499d9b88bd.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/ca9425c80abdc.jpg"
+      },
+      {
+        "title": "2025 HLD 특강",
+        "url": "/146",
+        "original": "S2021072113663b21de5af/12be6e4260ddb.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/7d3367ab103ca.jpg"
+      },
+      {
+        "title": "2025 한국시스템다이내믹스학회 10월 월례세미나",
+        "url": "/143",
+        "original": "S2021072113663b21de5af/c0347edb5690d.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/ab5000aaf9cf4.jpg"
+      },
+      {
+        "title": "2025 Blue Carbon Global Forum",
+        "url": "",
+        "original": "S2021072113663b21de5af/57454db54db63.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20260105/570f6ca4de857.jpg"
+      },
+      {
+        "title": "2025 시스템다이내믹스학회 하계학술대회",
+        "url": "/140",
+        "original": "S2021072113663b21de5af/ab20e7d0eebde.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250826/75dabd45be5fe.jpg"
+      },
+      {
+        "title": "2025 응용생태공학회 학술발표대회",
+        "url": "/139",
+        "original": "S2021072113663b21de5af/4fe7507c36ec8.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250826/85c23d7c53f8f.jpg"
+      },
+      {
+        "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+        "url": "/137",
+        "original": "S2021072113663b21de5af/654d183faf511.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg"
+      },
+      {
+        "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
+        "url": "/136",
+        "original": "S2021072113663b21de5af/3c4d757f42832.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg"
+      },
+      {
+        "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
+        "url": "/135",
+        "original": "S2021072113663b21de5af/bf4091b536e23.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg"
+      },
+      {
+        "title": "2025 한국조경학회 춘계학술대회",
+        "url": "/134",
+        "original": "S2021072113663b21de5af/16bfbf3fecc65.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250424/d230d885ca1de.jpg"
+      },
+      {
+        "title": "2025 한국환경복원기술학회 춘계학술대회",
+        "url": "/133",
+        "original": "S2021072113663b21de5af/e3d6d86acc3f7.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg"
+      },
+      {
+        "title": "2025 CELA",
+        "url": "/132",
+        "original": "S2021072113663b21de5af/42ccfc8f4cc53.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250407/2176c47eaf180.jpg"
+      },
+      {
+        "title": "250313 1st Carbon Neutral Village Network Seminar",
+        "url": "/130",
+        "original": "S2021072113663b21de5af/006b03f6ef0e2.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250317/fcca1c1152e90.jpg"
+      },
+      {
+        "title": "2025 시스템다이내믹스학회 동계학술대회",
+        "url": "/129",
+        "original": "S2021072113663b21de5af/f42b9f06b826a.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20250225/dd05ba55ae6ca.jpg"
+      },
+      {
+        "title": "2024 한국환경복원기술학회",
+        "url": "/127",
+        "original": "S2021072113663b21de5af/0c06079e733d5.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20241209/4bc95e5031a86.jpg"
+      },
+      {
+        "title": "2024 OJERI & ARC",
+        "url": "/125",
+        "original": "S2021072113663b21de5af/830bd4de7f756.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20241030/c30dfcd9cd835.jpg"
+      },
+      {
+        "title": "2024 시스템다이내믹스학회 하계학술대회",
+        "url": "/123",
+        "original": "S2021072113663b21de5af/45300f62847ff.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20241018/e36ad1d7208bb.jpg"
+      },
+      {
+        "title": "2024 Yellow Sea Ecosystem Symposium",
+        "url": "/122",
+        "original": "S2021072113663b21de5af/6cb1da5fbf280.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240731/8ff0fa587fcac.jpg"
+      },
+      {
+        "title": "2024 Science 2 Society Forum",
+        "url": "",
+        "original": "S2021072113663b21de5af/0c02dcfb24707.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/efebcca63f026.jpg"
+      },
+      {
+        "title": "2024 한국시스템다이내믹스학회 4월 월례세미나",
+        "url": "/117",
+        "original": "S2021072113663b21de5af/221b0cfd6a4ee.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/4620e800c6492.jpg"
+      },
+      {
+        "title": "2024 European Geosciences Union(EGU)-Vienna, Austria",
+        "url": "/121",
+        "original": "S2021072113663b21de5af/705ec828d33f9.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240530/8c7066cff7e5f.jpg"
+      },
+      {
+        "title": "2024 환경부 환경교육팀 특강",
+        "url": "/115",
+        "original": "S2021072113663b21de5af/31d35aecb6b85.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240402/07f17e8ad7109.jpg"
+      },
+      {
+        "title": "2024 한국조경학회 춘계학술대회",
+        "url": "/114",
+        "original": "S2021072113663b21de5af/1c74fbdf07f9e.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240402/107d0f1e06849.jpg"
+      },
+      {
+        "title": "2024 한국시스템다이내믹스학회",
+        "url": "/113",
+        "original": "S2021072113663b21de5af/afcc5990291bd.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg"
+      },
+      {
+        "title": "2023 우리바다 현장연구 지원 사업 논문 발표",
+        "url": "/109",
+        "original": "S2021072113663b21de5af/3db8ff1025032.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20231219/20bf6ea7b8060.jpg"
+      },
+      {
+        "title": "2023 한국시스템다이내믹스학회 하계학술대회",
+        "url": "/108",
+        "original": "S2021072113663b21de5af/1182c1a968acd.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230913/0840e29b6fed5.jpg"
+      },
+      {
+        "title": "2023 시스템다이내믹스/시스템 사고 방법론 특강",
+        "url": "/107",
+        "original": "S2021072113663b21de5af/7e772aebe80bf.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230817/3cb42cc6fad58.jpg"
+      },
+      {
+        "title": "2023 자연기반해법과 회복력원칙에 기반한 환경관리",
+        "url": "/105",
+        "original": "S2021072113663b21de5af/ac10c4cc0a4be.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230531/38050613ac9d2.jpg"
+      },
+      {
+        "title": "2023 한국시스템다이내믹스학회 상반기 학술대회",
+        "url": "/102",
+        "original": "S2021072113663b21de5af/4d923d0ce5d0a.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230522/07b4b08161d04.jpg"
+      },
+      {
+        "title": "2023 박소현 교수님 특강",
+        "url": "/103",
+        "original": "S2021072113663b21de5af/28f0ad738073a.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230522/a39922ce89418.jpg"
+      },
+      {
+        "title": "2023 EGU",
+        "url": "/104",
+        "original": "S2021072113663b21de5af/219a14ede78b5.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230522/7cc1d92abca5c.jpg"
+      },
+      {
+        "title": "2023 한국조경학회 춘계학술대회",
+        "url": "/100",
+        "original": "S2021072113663b21de5af/ac2737c83bda2.jpg",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/3465cce56d17a.jpg"
+      },
+      {
+        "title": "2022 Risk and Resilience",
+        "url": "/98",
+        "original": "S2021072113663b21de5af/2e57a51b8beab.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/c507ada450b95.png"
+      },
+      {
+        "title": "2022 ASLA",
+        "url": "/96",
+        "original": "S2021072113663b21de5af/4a7c9405c4d1f.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/be92c34a18536.png"
+      },
+      {
+        "title": "2022 ARC Conference",
+        "url": "/95",
+        "original": "S2021072113663b21de5af/b974c12f75e09.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/7264d7b06b6c1.png"
+      },
+      {
+        "title": "2022 해역이용영향평가 기술개발 2차년도 워크숍",
+        "url": "/91",
+        "original": "S2021072113663b21de5af/d9790fc8e0c06.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/bf69fdf52d685.png"
+      },
+      {
+        "title": "The 58th IFLA World congress",
+        "url": "/94",
+        "original": "S2021072113663b21de5af/ab66abdcb3f1c.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/b183a98a47c6a.png"
+      },
+      {
+        "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발",
+        "url": "/93",
+        "original": "S2021072113663b21de5af/0001cbe82a552.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/0cf1f472b2b8f.png"
+      },
+      {
+        "title": "2022 제92차 한국관광학회 부산",
+        "url": "/92",
+        "original": "S2021072113663b21de5af/b9c5cdb2c8630.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/10d0d2bfe1405.png"
+      },
+      {
+        "title": "2022 한국시스템다이내믹스학회 상반기 학술대회",
+        "url": "/90",
+        "original": "S2021072113663b21de5af/5526d533c9cb6.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/8bbec855b0b66.png"
+      },
+      {
+        "title": "2021 Yellow Sea Ecosystem Symposium",
+        "url": "/89",
+        "original": "S2021072113663b21de5af/66888271611b6.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/13106e1f2192d.png"
+      },
+      {
+        "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
+        "url": "/87",
+        "original": "S2021072113663b21de5af/152a23a780625.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/4de635682057b.png"
+      },
+      {
+        "title": "해안 리질리언스 KU-KIOST-KOICA 공동 워크숍",
+        "url": "/62",
+        "original": "S2021072113663b21de5af/aa9a94ed0d71c.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/fa2f5fabbeb93.png"
+      },
+      {
+        "title": "2021 한국조경학회 추계학술대회",
+        "url": "/86",
+        "original": "S2021072113663b21de5af/c3b1d12775c9d.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/afb8c3ce41c7f.png"
+      },
+      {
+        "title": "2021 한국환경복원기술학회",
+        "url": "/82",
+        "original": "S2021072113663b21de5af/df55ef2d55632.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/f9db2dc1c7ba3.png"
+      },
+      {
+        "title": "2019 ARC Conference",
+        "url": "/78",
+        "original": "S2021072113663b21de5af/39f806666a826.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/6272f6a006ea0.png"
+      },
+      {
+        "title": "2018 APRU Sustainable cities and Landscaoe",
+        "url": "/75",
+        "original": "S2021072113663b21de5af/d011f1c928cb6.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/fa52a0487abba.png"
+      },
+      {
+        "title": "2019 ASLA",
+        "url": "/79",
+        "original": "S2021072113663b21de5af/77ae442f39e70.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/fe59200dfc7c3.png"
+      },
+      {
+        "title": "2020 한국환경복원기술학회 추계학술대회",
+        "url": "/81",
+        "original": "S2021072113663b21de5af/bd9bd10ef1d20.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/eb590e341d912.png"
+      },
+      {
+        "title": "미세먼지 R&D 아이디어 국민참여토론회",
+        "url": "/71",
+        "original": "S2021072113663b21de5af/54250ca043828.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/0b3e409f4d2b9.png"
+      },
+      {
+        "title": "The 5th Sino-Korea Symposium on Environment",
+        "url": "/76",
+        "original": "S2021072113663b21de5af/0d14b2854e088.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/dcfa8e0345bd3.png"
+      },
+      {
+        "title": "2019 Society of Wetland",
+        "url": "/77",
+        "original": "S2021072113663b21de5af/107f8ee047564.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/889bc3908aeb2.png"
+      },
+      {
+        "title": "2018 4th Yellow Sea Ecosystem Symposium",
+        "url": "/74",
+        "original": "S2021072113663b21de5af/531676bfd3689.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/a5ba34b4f7898.png"
+      },
+      {
+        "title": "2018 55th IFLA World Congress",
+        "url": "/73",
+        "original": "S2021072113663b21de5af/4d19f167f9c61.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/eb00dae0a9c90.png"
+      },
+      {
+        "title": "2018 International Coastal Symposium",
+        "url": "/72",
+        "original": "S2021072113663b21de5af/ae230097682d6.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/16d203d9abbc5.png"
+      },
+      {
+        "title": "해양생태융복합 2030 워크숍",
+        "url": "/67",
+        "original": "S2021072113663b21de5af/54907ae29ebd7.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/43d55d1a6c9c9.png"
+      },
+      {
+        "title": "2018 한국 시스템다이내믹스학회 동계학술대회",
+        "url": "/69",
+        "original": "S2021072113663b21de5af/a2f2c4df757f4.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/4e70be07eb55b.png"
+      },
+      {
+        "title": "2018 한국조경학회 춘계학술대회",
+        "url": "/70",
+        "original": "S2021072113663b21de5af/ae2fe74e70c60.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/a141a2a4a5eb1.png"
+      },
+      {
+        "title": "환경계획 및 조경학 Lab Conference",
+        "url": "/68",
+        "original": "S2021072113663b21de5af/686c5dc73fc88.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/7da384f599573.png"
+      },
+      {
+        "title": "Resilience2017",
+        "url": "/65",
+        "original": "S2021072113663b21de5af/1b0901170a6d3.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/96d59e0c38584.png"
+      },
+      {
+        "title": "2017 World design summit",
+        "url": "/66",
+        "original": "S2021072113663b21de5af/c78da90f7d630.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/51e3f5aa40e6e.png"
+      },
+      {
+        "title": "2017 KSDS Summer Conference",
+        "url": "/64",
+        "original": "S2021072113663b21de5af/711094659d07d.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/2bbcafdab9acd.png"
+      },
+      {
+        "title": "2017 3rd Yellow Sea Ecosystem symposium",
+        "url": "/63",
+        "original": "S2021072113663b21de5af/fdcaf8298292d.png",
+        "thumbnail": "https://cdn.imweb.me/thumbnail/20230417/766565cabd20a.png"
+      }
+    ],
+    "contentImages": [
+      "https://cdn.imweb.me/thumbnail/20260911/a1cd4f87c55a8.png",
+      "https://cdn.imweb.me/thumbnail/20210828/f6ec5400a4f95.png",
+      "https://cdn.imweb.me/thumbnail/20261026/90dfb82e5fc8c.jpg",
+      "https://cdn.imweb.me/thumbnail/20261022/9dc7f4e3196c0.png",
+      "https://cdn.imweb.me/thumbnail/20261008/b37e51efc32c8.png",
+      "https://cdn.imweb.me/thumbnail/20260826/25635507cbfce.jpg",
+      "https://cdn.imweb.me/thumbnail/20260826/a905652b6d06d.jpg",
+      "https://cdn.imweb.me/thumbnail/20260430/d1d4bea904666.jpeg",
+      "https://cdn.imweb.me/thumbnail/20260304/39c1bb099233d.jpg",
+      "https://cdn.imweb.me/thumbnail/20260205/87e913bfe2498.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/50cfdd70e3aa0.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/ca9425c80abdc.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/7d3367ab103ca.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/ab5000aaf9cf4.jpg",
+      "https://cdn.imweb.me/thumbnail/20260105/570f6ca4de857.jpg",
+      "https://cdn.imweb.me/thumbnail/20250826/75dabd45be5fe.jpg",
+      "https://cdn.imweb.me/thumbnail/20250826/85c23d7c53f8f.jpg",
+      "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+      "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg",
+      "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg",
+      "https://cdn.imweb.me/thumbnail/20250424/d230d885ca1de.jpg",
+      "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg",
+      "https://cdn.imweb.me/thumbnail/20250407/2176c47eaf180.jpg",
+      "https://cdn.imweb.me/thumbnail/20250317/fcca1c1152e90.jpg",
+      "https://cdn.imweb.me/thumbnail/20250225/dd05ba55ae6ca.jpg",
+      "https://cdn.imweb.me/thumbnail/20241209/4bc95e5031a86.jpg",
+      "https://cdn.imweb.me/thumbnail/20241030/c30dfcd9cd835.jpg",
+      "https://cdn.imweb.me/thumbnail/20241018/e36ad1d7208bb.jpg",
+      "https://cdn.imweb.me/thumbnail/20240731/8ff0fa587fcac.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/efebcca63f026.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/4620e800c6492.jpg",
+      "https://cdn.imweb.me/thumbnail/20240530/8c7066cff7e5f.jpg",
+      "https://cdn.imweb.me/thumbnail/20240402/07f17e8ad7109.jpg",
+      "https://cdn.imweb.me/thumbnail/20240402/107d0f1e06849.jpg",
+      "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg",
+      "https://cdn.imweb.me/thumbnail/20231219/20bf6ea7b8060.jpg",
+      "https://cdn.imweb.me/thumbnail/20230913/0840e29b6fed5.jpg",
+      "https://cdn.imweb.me/thumbnail/20230817/3cb42cc6fad58.jpg",
+      "https://cdn.imweb.me/thumbnail/20230531/38050613ac9d2.jpg",
+      "https://cdn.imweb.me/thumbnail/20230522/07b4b08161d04.jpg",
+      "https://cdn.imweb.me/thumbnail/20230522/a39922ce89418.jpg",
+      "https://cdn.imweb.me/thumbnail/20230522/7cc1d92abca5c.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/3465cce56d17a.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/c507ada450b95.png",
+      "https://cdn.imweb.me/thumbnail/20230417/be92c34a18536.png",
+      "https://cdn.imweb.me/thumbnail/20230417/7264d7b06b6c1.png",
+      "https://cdn.imweb.me/thumbnail/20230417/bf69fdf52d685.png",
+      "https://cdn.imweb.me/thumbnail/20230417/b183a98a47c6a.png",
+      "https://cdn.imweb.me/thumbnail/20230417/0cf1f472b2b8f.png",
+      "https://cdn.imweb.me/thumbnail/20230417/10d0d2bfe1405.png"
+    ],
+    "links": [
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "2026 AI 에이전트 합동 워크숍 2026 AI 에이전트 합동 워크숍",
+        "href": "/158"
+      },
+      {
+        "text": "2026 기후 시뮬레이션 & 환경문제 해결 워크숍 2026.01.25 ~ 01.27",
+        "href": "/153"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 워크숍 2022 해역이용영향평가 기술개발 2차년도 워크숍",
+        "href": "/91"
+      },
+      {
+        "text": "해안 리질리언스 KU-KIOST-KOICA 공동 워크숍 해안 리질리언스 KU-KIOST-KOICA 공동 워크숍",
+        "href": "/62"
+      },
+      {
+        "text": "해양생태융복합 2030 워크숍 해양생태융복합 2030 워크숍",
+        "href": "/67"
+      }
+    ]
+  },
+  "/99": {
+    "http": 200,
+    "title": "ELDR.korea.ac.kr",
+    "heading": "",
+    "gallery": [],
+    "contentImages": [
+      "https://cdn.imweb.me/thumbnail/20260911/a1cd4f87c55a8.png",
+      "https://cdn.imweb.me/thumbnail/20230417/75dc58aca08f5.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/446ced5e53d3b.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/4b092e73a18aa.jpg",
+      "https://cdn.imweb.me/thumbnail/20230417/ef845e2499d58.jpg",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/d50b3a248738b.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/e5aa59ce9a87e.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/9ce418d5a2036.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/1eaa6cd5c4d38.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/c4e29cafbb2a6.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/52d57b87d91d0.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/64b7b1d47d858.png"
+    ],
+    "links": [
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      }
+    ]
+  },
+  "/91": {
+    "http": 200,
+    "title": "ELDR.korea.ac.kr",
+    "heading": "",
+    "gallery": [],
+    "contentImages": [
+      "https://cdn.imweb.me/thumbnail/20260911/a1cd4f87c55a8.png",
+      "https://cdn.imweb.me/thumbnail/20220504/a447fb65738fc.png",
+      "https://cdn.imweb.me/thumbnail/20220504/e64a02e4cc8c2.png",
+      "https://cdn.imweb.me/thumbnail/20220504/3e4f11d01f6c8.png",
+      "https://cdn.imweb.me/thumbnail/20220504/3e0bb4e39f1cf.png",
+      "https://cdn.imweb.me/thumbnail/20220504/14fd902241238.jpg",
+      "https://cdn.imweb.me/thumbnail/20220504/46060b812e2aa.jpg",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/d50b3a248738b.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/e5aa59ce9a87e.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/9ce418d5a2036.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/1eaa6cd5c4d38.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/c4e29cafbb2a6.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/52d57b87d91d0.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/64b7b1d47d858.png"
+    ],
+    "links": [
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      }
+    ]
+  },
+  "/93": {
+    "http": 200,
+    "title": "ELDR.korea.ac.kr",
+    "heading": "",
+    "gallery": [],
+    "contentImages": [
+      "https://cdn.imweb.me/thumbnail/20260911/a1cd4f87c55a8.png",
+      "https://cdn.imweb.me/thumbnail/20220927/749805786baa9.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/4ae44a8dd01ca.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/f81e8bc9fd403.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/adb1d0aa33387.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/b8e89e83f72d0.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/d8c347ad8251d.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/13f7dc0c2cac7.jpg",
+      "https://cdn.imweb.me/thumbnail/20220927/a4c494165c29c.jpg",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/d50b3a248738b.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/e5aa59ce9a87e.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/9ce418d5a2036.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/1eaa6cd5c4d38.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/c4e29cafbb2a6.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/52d57b87d91d0.png",
+      "https://cdn.imweb.me/upload/S2021072113663b21de5af/64b7b1d47d858.png"
+    ],
+    "links": [
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "2025 그린보트",
+        "href": "/128"
+      },
+      {
+        "text": "2024 연구실 워크숍_양양",
+        "href": "/126"
+      },
+      {
+        "text": "2024 서울숲 필드트립",
+        "href": "/124"
+      },
+      {
+        "text": "금천구 시흥계곡 답사",
+        "href": "/111"
+      },
+      {
+        "text": "2023 조경교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
+        "href": "/106"
+      },
+      {
+        "text": "서울숲 2023",
+        "href": "/99"
+      },
+      {
+        "text": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍 (2022. 04. 27",
+        "href": "/91"
+      },
+      {
+        "text": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+        "href": "/93"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      },
+      {
+        "text": "Field trip",
+        "href": "/31"
+      },
+      {
+        "text": "Gallery",
+        "href": "/36"
+      }
+    ]
+  },
   "/131": {
     "http": 200,
     "title": "ELDR.korea.ac.kr",
