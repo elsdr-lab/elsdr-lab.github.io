@@ -1516,8 +1516,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2013,
       "affiliation": "국립농업과학원 농촌환경자원과 농업연구사",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038500",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038500",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1600,8 +1600,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2009,
       "affiliation": "",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000009636",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000009636",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1614,8 +1614,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2013,
       "affiliation": "고려대학교 환경생태공학부 부교수",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000039270",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000039270",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
