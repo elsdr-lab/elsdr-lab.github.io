@@ -1164,11 +1164,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2023,
       "affiliation": "경기도 광주시청 공무원",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000269756",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-09",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000269756.11009.0001418",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000269756"
     },
     {
       "id": "thesis-6",
@@ -1206,11 +1206,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "doctor",
       "graduationYear": 2022,
       "affiliation": "공주대학교 조경학과 조교수",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000269180",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-12",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000269180.11009.0001368",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000269180"
     },
     {
       "id": "thesis-9",
@@ -1220,11 +1220,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2022,
       "affiliation": "경기대명고등학교 교사",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000257832",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-14",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000257832.11009.0001228",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000257832"
     },
     {
       "id": "thesis-10",
@@ -1248,11 +1248,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2022,
       "affiliation": "서울대학교 박사과정",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000257830",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-16",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000257830.11009.0001242",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000257830"
     },
     {
       "id": "thesis-12",
@@ -1262,11 +1262,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "doctor",
       "graduationYear": 2021,
       "affiliation": "전북대학교 생태조경디자인학과 조교수",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000252179",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-17",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000252179.11009.0001239",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000252179"
     },
     {
       "id": "thesis-legacy-18-doctor",
@@ -1304,11 +1304,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "doctor",
       "graduationYear": 2018,
       "affiliation": "강원대학교 생태조경디자인학과 조교수",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081427",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-21",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000081427.11009.0000819",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081427"
     },
     {
       "id": "thesis-legacy-22-master",
@@ -1332,11 +1332,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2018,
       "affiliation": "국토연구원 국가균형발전지원센터 전문연구원",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000080676",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-23",
       "doi": "",
-      "libraryUrl": ""
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000080676"
     },
     {
       "id": "thesis-legacy-24-doctor",
@@ -1376,8 +1376,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2017,
       "affiliation": "(주)지역계획연구소 누리넷 대표",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000076968",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000076968",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
