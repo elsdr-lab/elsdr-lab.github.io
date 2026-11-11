@@ -82,7 +82,7 @@ function renderNews(){
  }).join("");
  $("#lf-v2-news-count").textContent=filtered.length+" news records";
  $("#lf-v2-news-no-results").hidden=filtered.length>0;
- $("[data-lf-news-category]").forEach(button=>{
+ $$("[data-lf-news-category]").forEach(button=>{
   const active=button.dataset.lfNewsCategory===newsFilter;
   button.classList.toggle("is-selected",active);
   button.setAttribute("aria-pressed",String(active));
@@ -91,7 +91,7 @@ function renderNews(){
 function initNews(){
  const search=$("#lf-v2-news-search");
  if(search)search.addEventListener("input",e=>{newsQuery=e.target.value.trim().toLocaleLowerCase();renderNews()});
- $("[data-lf-news-category]").forEach(button=>button.addEventListener("click",()=>{newsFilter=button.dataset.lfNewsCategory;renderNews()}));
+ $$("[data-lf-news-category]").forEach(button=>button.addEventListener("click",()=>{newsFilter=button.dataset.lfNewsCategory;renderNews()}));
  renderNews();
 }
 function renderActivities(){
