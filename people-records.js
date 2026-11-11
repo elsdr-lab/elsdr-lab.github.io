@@ -1290,11 +1290,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2020,
       "affiliation": "",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000127498",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-20",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000127498.11009.0000943",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000127498"
     },
     {
       "id": "thesis-15",
@@ -1319,9 +1319,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2018,
       "affiliation": "",
-      "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "doi": "10.23186/korea.000000081754.11009.0000814",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081754",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081754",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1418,8 +1418,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2016,
       "affiliation": "에이원 골프 대표",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000066206",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000066206",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1432,8 +1432,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2016,
       "affiliation": "(주) 그린인프라연구소",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000066082",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000066082",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1488,8 +1488,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2013,
       "affiliation": "환경보전협회 수변생태관리처 생태조성부",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038133",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038133",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1530,8 +1530,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2013,
       "affiliation": "농어촌공사 지역개발본부팀",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038054",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000038054",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1544,8 +1544,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2011,
       "affiliation": "환경부 온실가스종합정보센터",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000027041",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000027041",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1558,8 +1558,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2011,
       "affiliation": "한양대학교 산학협력단",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000024560",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000024560",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1586,8 +1586,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2009,
       "affiliation": "CJ 대한통운",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000009893",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000009893",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
