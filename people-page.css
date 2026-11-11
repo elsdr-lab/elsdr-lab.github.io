@@ -446,3 +446,57 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page #people-professor-books .pp-shelf-word-gap{height:5px}
  .pp-page #people-professor-books .pp-shelf-spine small{bottom:10px}
 }
+
+/* Bookshelf v9 — keep ALL spine glyphs on a single true centerline.
+   Explicit fixed one-character width prevents long Korean titles splitting into
+   a second column or shifting when punctuation is present. */
+.pp-page #people-professor-books .pp-shelf-spine{
+ padding:0;
+ box-sizing:border-box;
+}
+.pp-page #people-professor-books .pp-shelf-spine-title{
+ box-sizing:content-box;
+ width:1.15em;min-width:1.15em;max-width:1.15em;
+ padding:0;margin:0;
+ position:absolute;
+ left:50%;top:calc((100% - 42px)/2);
+ transform:translate(-50%,-50%);
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ overflow:hidden;
+ max-height:calc(100% - 64px);
+ white-space:nowrap;word-break:normal;
+ flex-wrap:nowrap;
+ text-align:center;
+}
+.pp-page #people-professor-books .pp-shelf-spine-title .pp-shelf-glyph{
+ display:block;flex:0 0 auto;
+ width:1.15em;min-width:1.15em;max-width:1.15em;
+ text-align:center;white-space:nowrap;
+ line-height:1.05;
+}
+.pp-page #people-professor-books .pp-shelf-spine-title .pp-shelf-word-gap{
+ flex:0 0 7px;height:7px;
+}
+.pp-page #people-professor-books .pp-shelf-spine small{
+ position:absolute;left:50%;right:auto;bottom:13px;
+ width:auto;transform:translateX(-50%);
+ font-variant-numeric:tabular-nums;
+}
+/* Expanded volume reserves extra physical clearance from the NEXT book. */
+.pp-page #people-professor-books .pp-shelf-volume{
+ transition:width .68s cubic-bezier(.2,.68,.2,1),
+ flex-basis .68s cubic-bezier(.2,.68,.2,1),
+ margin-right .68s cubic-bezier(.2,.68,.2,1),transform .2s ease;
+ margin-right:0;
+}
+.pp-page #people-professor-books .pp-shelf-volume.is-open{
+ margin-right:32px;
+}
+@media(max-width:700px){
+ .pp-page #people-professor-books .pp-shelf-spine-title{
+  width:1.15em;min-width:1.15em;max-width:1.15em;
+  top:calc((100% - 38px)/2);max-height:calc(100% - 55px);
+ }
+ .pp-page #people-professor-books .pp-shelf-volume.is-open{margin-right:22px}
+}
