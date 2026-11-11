@@ -233,43 +233,65 @@ $$("[data-pp-v2-degree]").forEach(button=>button.addEventListener("click",()=>{
  selectedDegree=button.dataset.ppV2Degree;renderTheses();
 }));
 
-/* Make the existing editable book records behave like an interactive bookshelf. */
+/* 3D bookshelf: a physical spine stays visible while the front cover hinges open.
+   Uses the existing CMS book records and keeps keyboard/touch interaction. */
 function enhanceBookshelf(){
  const host=$("#pp-v2-books");if(!host)return;
  const cards=Array.from(host.querySelectorAll(".pp-v2-book:not(.pp-v2-book-template)"));
  if(!cards.length)return;
  const details=cards.map(card=>card.querySelector(":scope > div:last-child")?.cloneNode(true));
- const track=document.createElement("div");track.className="pp-shelf-track";
+ const track=document.createElement("div");track.className="pp-shelf-track";track.setAttribute("role","group");
+ track.setAttribute("aria-label","Bookshelf — 책을 선택하면 표지가 펼쳐집니다");
  const shelf=document.createElement("div");shelf.className="pp-shelf-scroll";
+ const shades=["#536D5E","#8CAAB1","#D9C7A7","#66786F","#A8B7A8","#B8A98F"];
+ let current=0;
  cards.forEach((card,i)=>{
   const name=card.querySelector("h4")?.textContent||"Book";
-  const publisher=card.querySelector("p")?.textContent||"";
+  const pub=card.querySelector("p")?.textContent||"";
   const cover=card.querySelector(".pp-v2-book-cover img");
   const button=document.createElement("button");button.type="button";
   button.className="pp-shelf-volume"+(i===0?" is-open":"");
   button.setAttribute("aria-pressed",String(i===0));
-  button.setAttribute("aria-label",name+" 표지 보기");
-  button.style.setProperty("--shelf-tint",["#536D5E","#8CAAB1","#D9C7A7","#66786F","#A8B7A8","#B8A98F"][i%6]);
+  button.setAttribute("aria-label",name+" 책 펼치기");
+  button.style.setProperty("--shelf-tint",shades[i%shades.length]);
   const spine=document.createElement("span");spine.className="pp-shelf-spine";
   const title=document.createElement("span");title.textContent=name;
-  const year=document.createElement("small");year.textContent=publisher.split("·").pop().trim();
+  const year=document.createElement("small");year.textContent=pub.split("·").pop().trim();
   spine.append(title,year);
+  const pages=document.createElement("span");pages.className="pp-shelf-pages";
   const face=document.createElement("span");face.className="pp-shelf-front";
   if(cover){face.append(cover.cloneNode(true));}else{face.textContent=name;}
-  button.append(spine,face);track.append(button);
-  button.addEventListener("click",()=>{
-   track.querySelectorAll("button").forEach(el=>{
-    el.classList.toggle("is-open",el===button);
-    el.setAttribute("aria-pressed",String(el===button));
-   });
-   const counter=host.querySelector(".pp-shelf-current");if(counter)counter.textContent=String(i+1).padStart(2,"0");
-   const detail=host.querySelector(".pp-shelf-detail");
-   if(detail)detail.replaceChildren(details[i].cloneNode(true));
-   if(matchMedia("(max-width:700px)").matches)button.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
+  const hinge=document.createElement("span");hinge.className="pp-shelf-hinge";
+  hinge.append(pages,face);
+  button.append(spine,hinge);track.append(button);
+  button.addEventListener("click",()=>selectBook(i,true));
+ });
+ function selectBook(index,scroll){
+  current=index;
+  const buttons=Array.from(track.querySelectorAll(".pp-shelf-volume"));
+  buttons.forEach((button,i)=>{
+   const active=i===index;
+   button.classList.toggle("is-open",active);
+   button.setAttribute("aria-pressed",String(active));
   });
+  const counter=host.querySelector(".pp-shelf-current");
+  if(counter)counter.textContent=String(index+1).padStart(2,"0");
+  const detail=host.querySelector(".pp-shelf-detail");
+  if(detail)detail.replaceChildren(details[index].cloneNode(true));
+  if(scroll&&window.matchMedia("(max-width:700px)").matches){
+   buttons[index].scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"nearest",inline:"center"});
+  }
+ }
+ track.addEventListener("keydown",event=>{
+  if(event.key!=="ArrowRight"&&event.key!=="ArrowLeft")return;
+  event.preventDefault();
+  const next=(current+(event.key==="ArrowRight"?1:-1)+cards.length)%cards.length;
+  selectBook(next,true);
+  track.querySelectorAll(".pp-shelf-volume")[next].focus();
  });
  shelf.append(track);
- const eyebrow=document.createElement("div");eyebrow.className="pp-shelf-label";eyebrow.textContent="THE BOOKSHELF  —  SELECT A BOOK";
+ const eyebrow=document.createElement("div");eyebrow.className="pp-shelf-label";
+ eyebrow.textContent="THE BOOKSHELF  /  SELECT A BOOK";
  const counter=document.createElement("div");counter.className="pp-shelf-counter";
  counter.innerHTML='<span class="pp-shelf-current">01</span> / '+String(cards.length).padStart(2,"0");
  const detail=document.createElement("div");detail.className="pp-shelf-detail";detail.setAttribute("aria-live","polite");
