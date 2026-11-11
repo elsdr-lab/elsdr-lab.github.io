@@ -69,30 +69,44 @@ function outerLink(url,label){
 }
 const sources=(data.researchers||[]);
 function renderResearchers(){
- const groups=[["phd","Ph.D. Researchers","박사과정 연구원"],["ms","M.S. Researchers","석사과정 연구원"],["intern","Research Interns","연구인턴"]];
- const html=groups.map(([key,title,description],index)=>{
-   const people=sources.filter(p=>p.group===key);
-   if(!people.length)return "";
-   const cards=people.map(person=>{
-     const name=person.nameKo||person.nameEn||"이름 확인 중";
-     const translation=person.nameKo&&person.nameEn?'<span class="pp-person-korean">'+E(person.nameEn)+'</span>':"";
-     const initial=person.initials||name[0]||"";
-     const email=person.email?'<a class="pp-person-email" href="mailto:'+E(person.email)+'">'+E(person.email)+' <span aria-hidden="true">↗</span></a>':"";
-     const photo=person.photo?'<img alt="'+E(name)+' 프로필 사진" src="'+E(person.photo)+'" loading="lazy">':
-       '<span class="pp-photo-initials" aria-hidden="true">'+E(initial)+'</span><span class="pp-photo-caption" aria-hidden="true">PHOTO PENDING</span>';
-     return '<article class="pp-person-card pp-v2-researcher-card">'+
-       '<div class="pp-person-photo" aria-label="'+E(name)+' 사진 등록 영역">'+photo+'</div>'+
-       '<div class="pp-person-info">'+
-         '<div class="pp-person-topline"><span>'+E(person.academicStatus||title)+'</span></div>'+
-         '<h3>'+E(name)+'</h3>'+translation+
-         '<p class="pp-person-interests">'+E(person.interests||'연구 관심 분야 입력 예정')+'</p>'+
-         email+'</div></article>';
-   }).join("");
-   return '<section class="pp-v2-group"><div class="pp-group-heading"><div><span>RESEARCH COMMUNITY / '+String(index+1).padStart(2,"0")+'</span>'+
-          '<h3>'+title+'</h3></div><small>'+description+'</small></div>'+
-          '<div class="pp-people-grid">'+cards+'</div></section>';
+ const groups=[
+  ["phd","Ph.D. Researchers","박사과정 연구원"],
+  ["ms","M.S. Researchers","석사과정 연구원"],
+  ["intern","Research Interns","연구인턴"],
+  ["postdoc","Postdoctoral Researchers","박사후연구원"],
+  ["researcher","Research Staff","연구원"],
+  ["staff","Research Staff & Assistants","연구지원 인력"]
+ ];
+ const known=new Set(groups.map(group=>group[0]));
+ const extras=[...new Set(sources.map(p=>p.group).filter(group=>group&&!known.has(group)))].map(group=>[group,group,"연구원"]);
+ const cardsFor=people=>people.map(person=>{
+   const en=person.nameEn||"",ko=person.nameKo||"";
+   const name=ko||en||"이름 등록 예정";
+   const initial=person.initials||name.slice(0,2);
+   const email=person.email?'<a class="pp-person-email" href="mailto:'+E(person.email)+'">'+E(person.email)+' <span aria-hidden="true">↗</span></a>':"";
+   const photo=person.photo?'<img alt="'+E(name)+' 프로필 사진" src="'+E(person.photo)+'" loading="lazy">':
+     '<span class="pp-researcher-initials" aria-hidden="true">'+E(initial)+'</span>';
+   return '<article class="pp-person-card pp-v2-researcher-card">'+
+     '<div class="pp-person-photo">'+photo+'</div>'+
+     '<div class="pp-person-info">'+
+       '<span class="pp-researcher-status">'+E(person.academicStatus||"")+'</span>'+
+       '<h4 class="pp-researcher-name">'+E(name)+'</h4>'+
+       (ko&&en?'<p class="pp-researcher-name-en">'+E(en)+'</p>':"")+
+       (person.interests?'<p class="pp-person-interests">'+E(person.interests)+'</p>':"")+
+       (email?'<div class="pp-researcher-contact">'+email+'</div>':"")+
+     '</div></article>';
+ }).join("");
+ let sectionIndex=0;
+ const markup=[...groups,...extras].map(([key,title,description])=>{
+  const people=sources.filter(p=>p.group===key);
+  if(!people.length)return "";
+  sectionIndex++;
+  return '<section class="pp-v2-group pp-researcher-group">'+
+   '<div class="pp-group-heading"><div><span>RESEARCH COMMUNITY / '+String(sectionIndex).padStart(2,"0")+'</span><h3>'+E(title)+'</h3></div>'+
+   '<small>'+E(description)+'</small></div>'+
+   '<div class="pp-people-grid">'+cardsFor(people)+'</div></section>';
  }).filter(Boolean).join("");
- $("#pp-v2-researcher-groups").innerHTML=html||empty("연구원 프로필 등록 예정","등록 인원이 없는 분류는 표시하지 않습니다.");
+ $("#pp-v2-researcher-groups").innerHTML=markup||empty("연구원 프로필 등록 예정","등록 인원이 없는 분류는 표시하지 않습니다.");
 }
 function careerDateKey(item){
  const value=String(item.period||item.year||"").trim();
