@@ -264,7 +264,7 @@ function enhanceBookshelf(){
   // Whitespace becomes a larger vertical gap between words.
   for(const char of Array.from(titleText.trim())){
    const glyph=document.createElement("span");
-   glyph.className=/\\s/.test(char)?"pp-shelf-word-gap":"pp-shelf-glyph";
+   glyph.className=/\s/.test(char)?"pp-shelf-word-gap":"pp-shelf-glyph";
    if(glyph.className==="pp-shelf-glyph")glyph.textContent=char;
    else glyph.setAttribute("aria-hidden","true");
    spineTitle.append(glyph);
@@ -274,7 +274,13 @@ function enhanceBookshelf(){
   const front=document.createElement("span");front.className="pp-shelf-front";
   if(cover)front.append(cover.cloneNode(true));
   else front.textContent=titleText;
-  book.append(front,spine);button.append(book);track.append(button);
+  // Close the rectangular prism: six faces must rotate as ONE object.
+  const back=document.createElement("span");back.className="pp-shelf-back";
+  const edge=document.createElement("span");edge.className="pp-shelf-fore-edge";
+  const top=document.createElement("span");top.className="pp-shelf-top";
+  const bottom=document.createElement("span");bottom.className="pp-shelf-bottom";
+  book.append(front,back,spine,edge,top,bottom);
+  button.append(book);track.append(button);
   button.addEventListener("click",()=>selectBook(i,true));
  });
  function selectBook(index,scroll){
