@@ -181,14 +181,15 @@ function normalizeName(name){
 }
 function matchingThesis(person){
  const key=normalizeName(person.nameEn),all=data.theses||[];
- return all.filter(item=>key&&normalizeName(item.nameEn)===key);
+ return all.filter(item=>(item.alumniId&&item.alumniId===person.id)||
+   (key&&normalizeName(item.nameEn)===key));
 }
 function renderAlumni(){
  const q=clean($("#pp-v2-alumni-search").value);
  const entries=(data.alumni||[]).filter(person=>
   [person.nameEn,person.nameKo,person.degree,person.graduationYear,person.affiliation,person.field].some(value=>clean(value).includes(q))
  ).sort((a,b)=>Number(b.graduationYear)-Number(a.graduationYear));
- $("#pp-v2-alumni-count").textContent="표시 "+entries.length+"건 · 이관 자료";
+ $("#pp-v2-alumni-count").textContent="표시 "+entries.length+"명";
  $("#pp-v2-alumni-list").innerHTML=entries.length?entries.map(person=>{
     const thesis=matchingThesis(person);
     return '<article class="pp-v2-alumni-row">'+
@@ -198,7 +199,7 @@ function renderAlumni(){
       '<div class="pp-v2-alumni-meta"><strong>'+E(person.degree||"학위 확인 중")+'</strong>'+
        '<span>'+E(person.affiliation||"소속 입력 예정")+'</span>'+
        (person.field?'<small>'+E(person.field)+'</small>':"")+'</div>'+
-      (thesis.length?'<a class="pp-v2-thesis-crosslink" href="#/people/alumni/theses?q='+encodeURIComponent(thesis[0].nameEn||thesis[0].author)+'">Thesis Archive ↗</a>':'<span></span>')+
+      (thesis.length?'<a class="pp-v2-thesis-crosslink" href="#/people/alumni/theses?q='+encodeURIComponent(person.nameKo||thesis[0].author||person.nameEn)+'">학위논문 '+thesis.length+'편 보기 ↗</a>':'<span></span>')+
     '</article>';
  }).join(""):empty("일치하는 졸업생이 없습니다","검색어를 변경하거나 새 졸업생 정보를 등록해 주세요.");
 }
@@ -210,14 +211,19 @@ function renderTheses(){
   (selectedDegree==="all"||item.degree===selectedDegree)&&
   [item.title,item.author,item.nameEn].some(v=>clean(v).includes(q))
  ).sort((a,b)=>Number(b.graduationYear)-Number(a.graduationYear));
- $("#pp-v2-thesis-count").textContent="표시 "+entries.length+"건 · 이관 자료 검수 중";
+ $("#pp-v2-thesis-count").textContent="표시 "+entries.length+"건";
  $("#pp-v2-thesis-list").innerHTML=entries.length?entries.map(item=>
     '<article class="pp-v2-thesis-row"><span class="pp-v2-thesis-year">'+E(item.graduationYear)+'</span>'+
     '<div class="pp-v2-thesis-copy"><small>'+E(degreeLabel[item.degree]||"THESIS")+'</small>'+
     '<h3>'+E(item.title)+'</h3><p>'+E(item.author)+
     (item.nameEn?' <span>'+E(item.nameEn)+'</span>':'')+
     (item.affiliation?' · '+E(item.affiliation):'')+'</p></div>'+
-    '<div class="pp-v2-thesis-outlink">'+(item.fullTextUrl?outerLink(item.fullTextUrl,"원문 보기"):outerLink(item.sourceUrl,"기록 보기"))+'</div></article>'
+    '<div class="pp-v2-thesis-outlink">'+
+      (item.libraryUrl||item.fullTextUrl?
+        outerLink(item.libraryUrl||item.fullTextUrl,"학위논문 보기"):
+        '<a class="pp-v2-thesis-search-link" href="https://dcollection.korea.ac.kr/srch/srchSearch" target="_blank" rel="noopener noreferrer">도서관에서 검색 ↗</a>')+
+      (item.doi?'<a class="pp-v2-thesis-doi" href="https://doi.org/'+encodeURIComponent(item.doi)+'" target="_blank" rel="noopener noreferrer">DOI ↗</a>':"")+
+      '</div></article>'
  ).join(""):empty("일치하는 학위논문이 없습니다","논문 제목 또는 저자를 다시 검색해 주세요.");
  $$("[data-pp-v2-degree]").forEach(button=>{
   const active=button.dataset.ppV2Degree===selectedDegree;
