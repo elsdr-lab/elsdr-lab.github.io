@@ -1412,7 +1412,17 @@ window.ELSDR_LIFE_RECORDS={
       ],
       "sourceUrl": "https://edesign.korea.ac.kr/152",
       "eventId": "",
-      "places": [],
+      "places": [
+        {
+          "id": "gyeongju",
+          "name": "경주",
+          "region": "경북 · 대한민국",
+          "lat": 35.8562,
+          "lon": 129.2247,
+          "group": "korea",
+          "approximate": true
+        }
+      ],
       "photoSourceUrl": "https://edesign.korea.ac.kr/152"
     },
     {
@@ -1513,7 +1523,17 @@ window.ELSDR_LIFE_RECORDS={
       ],
       "sourceUrl": "https://edesign.korea.ac.kr/150",
       "eventId": "",
-      "places": [],
+      "places": [
+        {
+          "id": "singapore",
+          "name": "Singapore",
+          "region": "Singapore",
+          "lat": 1.3521,
+          "lon": 103.8198,
+          "group": "overseas",
+          "approximate": true
+        }
+      ],
       "photoSourceUrl": "https://edesign.korea.ac.kr/150"
     },
     {
@@ -1626,7 +1646,17 @@ window.ELSDR_LIFE_RECORDS={
       ],
       "sourceUrl": "https://edesign.korea.ac.kr/99",
       "eventId": "",
-      "places": [],
+      "places": [
+        {
+          "id": "seoulforest",
+          "name": "서울숲",
+          "region": "서울 · 대한민국",
+          "lat": 37.5446,
+          "lon": 127.0374,
+          "group": "korea",
+          "approximate": true
+        }
+      ],
       "photoSourceUrl": "https://edesign.korea.ac.kr/99"
     },
     {
