@@ -235,131 +235,131 @@ window.ELSDR_PEOPLE_RECORDS={
     }
   ],
   "columns": [
-      {
-          "id": "column-green-space",
-          "title": "녹지는 도시의 전략자산이다",
-          "publication": "한국경제",
-          "date": "2026-09-29",
-          "author": "전진형 교수",
-          "summary": "기후위기에 대비하는 공원과 숲은 도시의 장기적인 전략자산입니다.",
-          "url": "https://www.hankyung.com/article/2026092928511"
-      },
-      {
-          "id": "column-campus",
-          "title": "숲으로 이어지는 캠퍼스",
-          "publication": "고대신문",
-          "date": "2026-09-04",
-          "author": "전진형 교수",
-          "summary": "건물 사이를 이동하는 공간을 넘어, 머물고 만나는 캠퍼스 경관의 가치를 살펴봅니다.",
-          "url": "https://www.kunews.ac.kr/news/articleView.html?idxno=51293"
-      },
-      {
-          "id": "column-light",
-          "title": "밝기 경쟁의 승자는 없다",
-          "publication": "한국경제",
-          "date": "2026-09-01",
-          "author": "전진형 교수",
-          "summary": "대형 전광판의 빛환경이 도시 안전과 쾌적성, 경제적 활동에 미치는 영향을 살펴봅니다.",
-          "url": "https://www.hankyung.com/article/2026090175081"
-      },
-      {
-          "id": "column-summer",
-          "title": "여름은 평등하지 않다",
-          "publication": "한국경제",
-          "date": "2026-07-21",
-          "author": "전진형 교수",
-          "summary": "폭염·극한호우 경보를 넘어 실제 그늘과 물길이 만드는 도시 안전망을 생각합니다.",
-          "url": "https://www.hankyung.com/article/2026072177031"
-      },
-      {
-          "id": "column-garden-infrastructure",
-          "title": "필수 인프라로서의 정원",
-          "publication": "한국경제",
-          "date": "2026-06-07",
-          "author": "전진형 교수",
-          "summary": "정원을 도시의 미관을 넘어 시민의 생활과 기후 적응을 지원하는 필수 기반시설로 바라봅니다.",
-          "url": "https://www.hankyung.com/article/2026060716771"
-      },
-      {
-          "id": "column-repeat-disaster",
-          "title": "왜 우리는 같은 재난 뉴스를 반복하나",
-          "publication": "한국경제",
-          "date": "2026-05-04",
-          "author": "전진형 교수",
-          "summary": "반복되는 기후 재난과 도시 설계의 취약성을 짚고, 피해를 줄이는 방재 인프라의 중요성을 논합니다.",
-          "url": "https://www.hankyung.com/article/2026050453481"
-      },
-      {
-          "id": "column-marine-resilience",
-          "title": "해양, 리질리언스로 다시 설계하다",
-          "publication": "현대해양",
-          "date": "2026-03-09",
-          "author": "전진형 교수",
-          "summary": "해양 관광의 지속가능성을 위해 자연기반해법과 회복탄력성 중심의 연안 공간 계획을 제안합니다.",
-          "url": ""
-      }
+    {
+      "id": "column-green-space",
+      "title": "녹지는 도시의 전략자산이다",
+      "publication": "한국경제",
+      "date": "2026-09-29",
+      "author": "전진형 교수",
+      "summary": "기후위기에 대비하는 공원과 숲은 도시의 장기적인 전략자산입니다.",
+      "url": "https://www.hankyung.com/article/2026092928511"
+    },
+    {
+      "id": "column-campus",
+      "title": "숲으로 이어지는 캠퍼스",
+      "publication": "고대신문",
+      "date": "2026-09-04",
+      "author": "전진형 교수",
+      "summary": "건물 사이를 이동하는 공간을 넘어, 머물고 만나는 캠퍼스 경관의 가치를 살펴봅니다.",
+      "url": "https://www.kunews.ac.kr/news/articleView.html?idxno=51293"
+    },
+    {
+      "id": "column-light",
+      "title": "밝기 경쟁의 승자는 없다",
+      "publication": "한국경제",
+      "date": "2026-09-01",
+      "author": "전진형 교수",
+      "summary": "대형 전광판의 빛환경이 도시 안전과 쾌적성, 경제적 활동에 미치는 영향을 살펴봅니다.",
+      "url": "https://www.hankyung.com/article/2026090175081"
+    },
+    {
+      "id": "column-summer",
+      "title": "여름은 평등하지 않다",
+      "publication": "한국경제",
+      "date": "2026-07-21",
+      "author": "전진형 교수",
+      "summary": "폭염·극한호우 경보를 넘어 실제 그늘과 물길이 만드는 도시 안전망을 생각합니다.",
+      "url": "https://www.hankyung.com/article/2026072177031"
+    },
+    {
+      "id": "column-garden-infrastructure",
+      "title": "필수 인프라로서의 정원",
+      "publication": "한국경제",
+      "date": "2026-06-07",
+      "author": "전진형 교수",
+      "summary": "정원을 도시의 미관을 넘어 시민의 생활과 기후 적응을 지원하는 필수 기반시설로 바라봅니다.",
+      "url": "https://www.hankyung.com/article/2026060716771"
+    },
+    {
+      "id": "column-repeat-disaster",
+      "title": "왜 우리는 같은 재난 뉴스를 반복하나",
+      "publication": "한국경제",
+      "date": "2026-05-04",
+      "author": "전진형 교수",
+      "summary": "반복되는 기후 재난과 도시 설계의 취약성을 짚고, 피해를 줄이는 방재 인프라의 중요성을 논합니다.",
+      "url": "https://www.hankyung.com/article/2026050453481"
+    },
+    {
+      "id": "column-marine-resilience",
+      "title": "해양, 리질리언스로 다시 설계하다",
+      "publication": "현대해양",
+      "date": "2026-03-09",
+      "author": "전진형 교수",
+      "summary": "해양 관광의 지속가능성을 위해 자연기반해법과 회복탄력성 중심의 연안 공간 계획을 제안합니다.",
+      "url": ""
+    }
   ],
   "essays": [
-      {
-          "id": "essay-resilience-06",
-          "title": "새로운 패러다임을 위한 도전, 해안 리질리언스",
-          "publication": "환경과조경 · 리질리언스 읽기 6",
-          "date": "2016-11",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/view.php?cid=64237&id=479&theme=ecoscape",
-          "summary": "기후위기에 대응하는 해안 생태계와 자연·혼합형 기반시설의 역할을 다룬 연재."
-      },
-      {
-          "id": "essay-resilience-05",
-          "title": "새로운 패러다임을 위한 도전, 도시 리질리언스",
-          "publication": "환경과조경 · 리질리언스 읽기 5",
-          "date": "2016-10",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/view.php?cid=64179&id=477&theme=greenn",
-          "summary": "폭염과 도시 재난을 배경으로 회복력 있는 도시의 설계 방향을 논의한 연재."
-      },
-      {
-          "id": "essay-resilience-04",
-          "title": "리질리언스 향상을 위한 전략, 적응과 전환",
-          "publication": "환경과조경 · 리질리언스 읽기 4",
-          "date": "2016-09",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/view.php?ca=2040&cid=64447&id=&order=f_good&page=64",
-          "summary": "생태계의 회복력과 적응·전환 전략에 관해 다룬 연재."
-      },
-      {
-          "id": "essay-resilience-03",
-          "title": "새로운 사고의 틀, 리질리언스 사고",
-          "publication": "환경과조경 · 리질리언스 읽기 3",
-          "date": "2016-08",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/view.php?cid=64123&id=471&theme=ecoscape",
-          "summary": "사회생태시스템의 복잡성과 리질리언스적 사고를 설명한 연재."
-      },
-      {
-          "id": "essay-resilience-02",
-          "title": "리질리언스 개념의 등장과 확장",
-          "publication": "환경과조경 · 리질리언스 읽기 2",
-          "date": "2016-07",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/view.php?cid=488&id=&keyword=&option=f_subject&order=f_good&page=355&theme=ecoscape",
-          "summary": "허리케인 카트리나 이후 확대된 리질리언스의 개념과 적용을 다룬 연재."
-      },
-      {
-          "id": "essay-resilience-01",
-          "title": "21세기 패러다임의 변화, 지속가능성을 넘어 리질리언스로",
-          "publication": "환경과조경 · 리질리언스 읽기 1",
-          "date": "2016-06",
-          "author": "전진형",
-          "genre": "연재 기고",
-          "url": "https://www.lak.co.kr/greenn/magazine.php?id=9",
-          "summary": "지속가능성과 리질리언스의 차이를 제시하는 연재의 첫 번째 글. 연결 링크는 해당 호 목차입니다."
-      }
+    {
+      "id": "essay-resilience-06",
+      "title": "리질리언스 읽기 6 — 새로운 패러다임을 위한 도전, 해안 리질리언스",
+      "publication": "환경과조경",
+      "date": "2016-11",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/view.php?cid=64237&id=479&theme=ecoscape",
+      "summary": "기후위기에 대응하는 해안 생태계와 자연·혼합형 기반시설의 역할을 다룬 연재."
+    },
+    {
+      "id": "essay-resilience-05",
+      "title": "리질리언스 읽기 5 — 새로운 패러다임을 위한 도전, 도시 리질리언스",
+      "publication": "환경과조경",
+      "date": "2016-10",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/view.php?cid=64179&id=477&theme=greenn",
+      "summary": "폭염과 도시 재난을 배경으로 회복력 있는 도시의 설계 방향을 논의한 연재."
+    },
+    {
+      "id": "essay-resilience-04",
+      "title": "리질리언스 읽기 4 — 리질리언스 향상을 위한 전략, 적응과 전환",
+      "publication": "환경과조경",
+      "date": "2016-09",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/view.php?ca=2040&cid=64447&id=&order=f_good&page=64",
+      "summary": "생태계의 회복력과 적응·전환 전략에 관해 다룬 연재."
+    },
+    {
+      "id": "essay-resilience-03",
+      "title": "리질리언스 읽기 3 — 새로운 사고의 틀, 리질리언스 사고",
+      "publication": "환경과조경",
+      "date": "2016-08",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/view.php?cid=64123&id=471&theme=ecoscape",
+      "summary": "사회생태시스템의 복잡성과 리질리언스적 사고를 설명한 연재."
+    },
+    {
+      "id": "essay-resilience-02",
+      "title": "리질리언스 읽기 2 — 리질리언스 개념의 등장과 확장",
+      "publication": "환경과조경",
+      "date": "2016-07",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/view.php?cid=488&id=&keyword=&option=f_subject&order=f_good&page=355&theme=ecoscape",
+      "summary": "허리케인 카트리나 이후 확대된 리질리언스의 개념과 적용을 다룬 연재."
+    },
+    {
+      "id": "essay-resilience-01",
+      "title": "리질리언스 읽기 1 — 21세기 패러다임의 변화, 지속가능성을 넘어 리질리언스로",
+      "publication": "환경과조경",
+      "date": "2016-06",
+      "author": "전진형",
+      "genre": "연재 기고",
+      "url": "https://www.lak.co.kr/greenn/magazine.php?id=9",
+      "summary": "지속가능성과 리질리언스의 차이를 제시하는 연재의 첫 번째 글. 연결 링크는 해당 호 목차입니다."
+    }
   ],
   "researchers": [
     {
