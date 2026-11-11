@@ -1,49 +1,125 @@
 {
-  "albumCount": 0,
+  "albumCount": 70,
   "eventCount": 78,
-  "matched": 0,
+  "matched": 64,
   "matches": [
     {
       "id": "climate-simulation-2026",
       "title": "기후 시뮬레이션 & 환경문제 해결 워크숍",
       "year": 2026,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2026 기후 시뮬레이션 & 환경문제 해결 워크숍",
+          "href": "/153",
+          "image": "S2021072113663b21de5af/dcc5dd6e3bb16.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260205/87e913bfe2498.jpg",
+          "score": 0.889
+        }
+      ]
     },
     {
       "id": "hld-lecture-2025",
       "title": "HLD 특강",
       "year": 2025,
       "confident": false,
-      "choices": []
+      "choices": [
+        {
+          "title": "2025 HLD 특강",
+          "href": "/146",
+          "image": "S2021072113663b21de5af/12be6e4260ddb.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/7d3367ab103ca.jpg",
+          "score": 0.714
+        }
+      ]
     },
     {
       "id": "systems-dynamics-conference-2025",
       "title": "2025 시스템다이내믹스학회 하계학술대회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 시스템다이내믹스학회 하계학술대회",
+          "href": "/140",
+          "image": "S2021072113663b21de5af/ab20e7d0eebde.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250826/75dabd45be5fe.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 시스템다이내믹스학회 동계학술대회",
+          "href": "/129",
+          "image": "S2021072113663b21de5af/f42b9f06b826a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250225/dd05ba55ae6ca.jpg",
+          "score": 0.95
+        }
+      ]
     },
     {
       "id": "applied-ecology-conference-2025",
       "title": "2025 응용생태공학회 학술발표대회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 응용생태공학회 학술발표대회",
+          "href": "/139",
+          "image": "S2021072113663b21de5af/4fe7507c36ec8.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250826/85c23d7c53f8f.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "landscape-conference-2025",
       "title": "2025 한국조경학회 춘계학술대회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국조경학회 춘계학술대회",
+          "href": "/134",
+          "image": "S2021072113663b21de5af/16bfbf3fecc65.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250424/d230d885ca1de.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국환경복원기술학회 춘계학술대회",
+          "href": "/133",
+          "image": "S2021072113663b21de5af/e3d6d86acc3f7.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg",
+          "score": 0.833
+        }
+      ]
     },
     {
       "id": "systems-dynamics-seminar-2025",
       "title": "한국시스템다이내믹스학회 6월 월례세미나",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+          "href": "/137",
+          "image": "S2021072113663b21de5af/654d183faf511.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+          "score": 0.905
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
+          "href": "/136",
+          "image": "S2021072113663b21de5af/3c4d757f42832.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg",
+          "score": 0.857
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
+          "href": "/135",
+          "image": "S2021072113663b21de5af/bf4091b536e23.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg",
+          "score": 0.857
+        }
+      ]
     },
     {
       "id": "science-to-society-2024",
@@ -119,50 +195,162 @@
       "id": "archive-2026-001",
       "title": "ICMP-11&YES 2026 Joint conference",
       "year": 2026,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "ICMP-11&YES 2026 Joint conference",
+          "href": "/160",
+          "image": "S2021072113663b21de5af/4432d7469231b.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260826/25635507cbfce.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2026-002",
       "title": "2026 AI 에이전트 합동 워크숍",
       "year": 2026,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2026 AI 에이전트 합동 워크숍",
+          "href": "/158",
+          "image": "S2021072113663b21de5af/61459f72dec7c.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260826/a905652b6d06d.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2026-003",
       "title": "2026 한국시스템다이내믹스학회 4월 월례세미나",
       "year": 2026,
       "confident": false,
-      "choices": []
+      "choices": [
+        {
+          "title": "2026 한국시스템다이내믹스학회 9월 월례세미나",
+          "href": "/161",
+          "image": "S2021072113663b21de5af/1503dfb215ea0.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20261008/b37e51efc32c8.png",
+          "score": 0.957
+        },
+        {
+          "title": "2026 한국시스템다이내믹스학화 4월 월례세미나",
+          "href": "/155",
+          "image": "S2021072113663b21de5af/553a5825a7336.jpeg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260430/d1d4bea904666.jpeg",
+          "score": 0.957
+        },
+        {
+          "title": "2026 한국시스템다이내믹스학회 10월 월례세미나",
+          "href": "/163",
+          "image": "S2021072113663b21de5af/05a9262c0e63a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20261026/90dfb82e5fc8c.jpg",
+          "score": 0.936
+        }
+      ]
     },
     {
       "id": "archive-2026-004",
       "title": "2026 한국시스템다이내믹스학회 동계학술대회",
       "year": 2026,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2026 한국시스템다이내믹스학회 동계학술대회",
+          "href": "/154",
+          "image": "S2021072113663b21de5af/4511fc6ede839.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260304/39c1bb099233d.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2026 한국시스템다이내믹스학회 9월 월례세미나",
+          "href": "/161",
+          "image": "S2021072113663b21de5af/1503dfb215ea0.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20261008/b37e51efc32c8.png",
+          "score": 0.711
+        }
+      ]
     },
     {
       "id": "archive-2025-005",
       "title": "2025 한국시스템다이내믹스학회 11월 월례세미나",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국시스템다이내믹스학회 11월 월례세미나",
+          "href": "/144",
+          "image": "S2021072113663b21de5af/e4bfb158b6062.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/50cfdd70e3aa0.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 10월 월례세미나",
+          "href": "/143",
+          "image": "S2021072113663b21de5af/c0347edb5690d.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/ab5000aaf9cf4.jpg",
+          "score": 0.958
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+          "href": "/137",
+          "image": "S2021072113663b21de5af/654d183faf511.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+          "score": 0.936
+        }
+      ]
     },
     {
       "id": "archive-2025-006",
       "title": "2025 한국환경복원기술학회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국환경복원기술학회",
+          "href": "/145",
+          "image": "S2021072113663b21de5af/9be499d9b88bd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/ca9425c80abdc.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국환경복원기술학회 춘계학술대회",
+          "href": "/133",
+          "image": "S2021072113663b21de5af/e3d6d86acc3f7.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg",
+          "score": 0.824
+        }
+      ]
     },
     {
       "id": "archive-2025-007",
       "title": "2025 한국시스템다이내믹스학회 10월 월례세미나",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국시스템다이내믹스학회 10월 월례세미나",
+          "href": "/143",
+          "image": "S2021072113663b21de5af/c0347edb5690d.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/ab5000aaf9cf4.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 11월 월례세미나",
+          "href": "/144",
+          "image": "S2021072113663b21de5af/e4bfb158b6062.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/50cfdd70e3aa0.jpg",
+          "score": 0.958
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+          "href": "/137",
+          "image": "S2021072113663b21de5af/654d183faf511.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+          "score": 0.936
+        }
+      ]
     },
     {
       "id": "archive-2025-008",
@@ -175,246 +363,617 @@
       "id": "archive-2025-009",
       "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
+          "href": "/136",
+          "image": "S2021072113663b21de5af/3c4d757f42832.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+          "href": "/137",
+          "image": "S2021072113663b21de5af/654d183faf511.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+          "score": 0.957
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
+          "href": "/135",
+          "image": "S2021072113663b21de5af/bf4091b536e23.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg",
+          "score": 0.957
+        }
+      ]
     },
     {
       "id": "archive-2025-010",
       "title": "2025 한국환경복원기술학회 춘계학술대회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국환경복원기술학회 춘계학술대회",
+          "href": "/133",
+          "image": "S2021072113663b21de5af/e3d6d86acc3f7.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국조경학회 춘계학술대회",
+          "href": "/134",
+          "image": "S2021072113663b21de5af/16bfbf3fecc65.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250424/d230d885ca1de.jpg",
+          "score": 0.833
+        },
+        {
+          "title": "2025 한국환경복원기술학회",
+          "href": "/145",
+          "image": "S2021072113663b21de5af/9be499d9b88bd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20260105/ca9425c80abdc.jpg",
+          "score": 0.824
+        }
+      ]
     },
     {
       "id": "archive-2025-011",
       "title": "2025 CELA",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 CELA",
+          "href": "/132",
+          "image": "S2021072113663b21de5af/42ccfc8f4cc53.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250407/2176c47eaf180.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2025-012",
       "title": "250313 1st Carbon Neutral Village Network Seminar",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "250313 1st Carbon Neutral Village Network Seminar",
+          "href": "/130",
+          "image": "S2021072113663b21de5af/006b03f6ef0e2.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250317/fcca1c1152e90.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2025-013",
       "title": "2025 시스템다이내믹스학회 동계학술대회",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 시스템다이내믹스학회 동계학술대회",
+          "href": "/129",
+          "image": "S2021072113663b21de5af/f42b9f06b826a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250225/dd05ba55ae6ca.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 시스템다이내믹스학회 하계학술대회",
+          "href": "/140",
+          "image": "S2021072113663b21de5af/ab20e7d0eebde.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250826/75dabd45be5fe.jpg",
+          "score": 0.95
+        }
+      ]
     },
     {
       "id": "archive-2024-014",
       "title": "2024 OJERI & ARC",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 OJERI & ARC",
+          "href": "/125",
+          "image": "S2021072113663b21de5af/830bd4de7f756.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20241030/c30dfcd9cd835.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2024-015",
       "title": "2024 Yellow Sea Ecosystem Symposium",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 Yellow Sea Ecosystem Symposium",
+          "href": "/122",
+          "image": "S2021072113663b21de5af/6cb1da5fbf280.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240731/8ff0fa587fcac.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2024-016",
       "title": "2024 European Geosciences Union(EGU)-Vienna, Austria",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 European Geosciences Union(EGU)-Vienna, Austria",
+          "href": "/121",
+          "image": "S2021072113663b21de5af/705ec828d33f9.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240530/8c7066cff7e5f.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2024-017",
       "title": "2024 환경부 환경교육팀 특강",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 환경부 환경교육팀 특강",
+          "href": "/115",
+          "image": "S2021072113663b21de5af/31d35aecb6b85.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240402/07f17e8ad7109.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2024-018",
       "title": "2024 한국시스템다이내믹스학회",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 한국시스템다이내믹스학회",
+          "href": "/113",
+          "image": "S2021072113663b21de5af/afcc5990291bd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2024 한국시스템다이내믹스학회 4월 월례세미나",
+          "href": "/117",
+          "image": "S2021072113663b21de5af/221b0cfd6a4ee.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240530/4620e800c6492.jpg",
+          "score": 0.821
+        },
+        {
+          "title": "2024 시스템다이내믹스학회 하계학술대회",
+          "href": "/123",
+          "image": "S2021072113663b21de5af/45300f62847ff.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20241018/e36ad1d7208bb.jpg",
+          "score": 0.778
+        }
+      ]
     },
     {
       "id": "archive-2023-019",
       "title": "2023 우리바다 현장연구 지원 사업 논문 발표",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 우리바다 현장연구 지원 사업 논문 발표",
+          "href": "/109",
+          "image": "S2021072113663b21de5af/3db8ff1025032.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20231219/20bf6ea7b8060.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2023-020",
       "title": "2023 한국시스템다이내믹스학회 하계학술대회",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 한국시스템다이내믹스학회 하계학술대회",
+          "href": "/108",
+          "image": "S2021072113663b21de5af/1182c1a968acd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230913/0840e29b6fed5.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2023 한국시스템다이내믹스학회 상반기 학술대회",
+          "href": "/102",
+          "image": "S2021072113663b21de5af/4d923d0ce5d0a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230522/07b4b08161d04.jpg",
+          "score": 0.889
+        }
+      ]
     },
     {
       "id": "archive-2023-021",
       "title": "2023 시스템다이내믹스/시스템 사고 방법론 특강",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 시스템다이내믹스/시스템 사고 방법론 특강",
+          "href": "/107",
+          "image": "S2021072113663b21de5af/7e772aebe80bf.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230817/3cb42cc6fad58.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2023-022",
       "title": "2023 자연기반해법과 회복력원칙에 기반한 환경관리",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 자연기반해법과 회복력원칙에 기반한 환경관리",
+          "href": "/105",
+          "image": "S2021072113663b21de5af/ac10c4cc0a4be.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230531/38050613ac9d2.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2023-023",
       "title": "2023 한국시스템다이내믹스학회 상반기 학술대회",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 한국시스템다이내믹스학회 상반기 학술대회",
+          "href": "/102",
+          "image": "S2021072113663b21de5af/4d923d0ce5d0a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230522/07b4b08161d04.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2023 한국시스템다이내믹스학회 하계학술대회",
+          "href": "/108",
+          "image": "S2021072113663b21de5af/1182c1a968acd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230913/0840e29b6fed5.jpg",
+          "score": 0.889
+        }
+      ]
     },
     {
       "id": "archive-2023-024",
       "title": "2023 박소현 교수님 특강",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 박소현 교수님 특강",
+          "href": "/103",
+          "image": "S2021072113663b21de5af/28f0ad738073a.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230522/a39922ce89418.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2023-025",
       "title": "2023 EGU",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 EGU",
+          "href": "/104",
+          "image": "S2021072113663b21de5af/219a14ede78b5.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230522/7cc1d92abca5c.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-026",
       "title": "2022 Risk and Resilience",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 Risk and Resilience",
+          "href": "/98",
+          "image": "S2021072113663b21de5af/2e57a51b8beab.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/c507ada450b95.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-027",
       "title": "2022 ASLA",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 ASLA",
+          "href": "/96",
+          "image": "S2021072113663b21de5af/4a7c9405c4d1f.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/be92c34a18536.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-028",
       "title": "2022 ARC Conference",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 ARC Conference",
+          "href": "/95",
+          "image": "S2021072113663b21de5af/b974c12f75e09.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/7264d7b06b6c1.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-029",
       "title": "2022 해역이용영향평가 기술개발 2차년도 워크숍",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 해역이용영향평가 기술개발 2차년도 워크숍",
+          "href": "/91",
+          "image": "S2021072113663b21de5af/d9790fc8e0c06.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/bf69fdf52d685.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-030",
       "title": "The 58th IFLA World congress",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "The 58th IFLA World congress",
+          "href": "/94",
+          "image": "S2021072113663b21de5af/ab66abdcb3f1c.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/b183a98a47c6a.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-031",
       "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발",
+          "href": "/93",
+          "image": "S2021072113663b21de5af/0001cbe82a552.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/0cf1f472b2b8f.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2022-032",
       "title": "2022 제92차 한국관광학회 부산",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 제92차 한국관광학회 부산",
+          "href": "/92",
+          "image": "S2021072113663b21de5af/b9c5cdb2c8630.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/10d0d2bfe1405.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2021-033",
       "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
       "year": 2021,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
+          "href": "/87",
+          "image": "S2021072113663b21de5af/152a23a780625.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/4de635682057b.png",
+          "score": 1.0
+        },
+        {
+          "title": "2021 한국조경학회 추계학술대회",
+          "href": "/86",
+          "image": "S2021072113663b21de5af/c3b1d12775c9d.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/afb8c3ce41c7f.png",
+          "score": 0.732
+        },
+        {
+          "title": "2021 한국환경복원기술학회",
+          "href": "/82",
+          "image": "S2021072113663b21de5af/df55ef2d55632.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/f9db2dc1c7ba3.png",
+          "score": 0.718
+        }
+      ]
     },
     {
       "id": "archive-2021-034",
       "title": "해안 리질리언스 KU-KIOST-KOICA 공동 워크숍",
       "year": 2021,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "해안 리질리언스 KU-KIOST-KOICA 공동 워크숍",
+          "href": "/62",
+          "image": "S2021072113663b21de5af/aa9a94ed0d71c.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/fa2f5fabbeb93.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2021-035",
       "title": "2021 한국조경학회 추계학술대회",
       "year": 2021,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2021 한국조경학회 추계학술대회",
+          "href": "/86",
+          "image": "S2021072113663b21de5af/c3b1d12775c9d.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/afb8c3ce41c7f.png",
+          "score": 1.0
+        },
+        {
+          "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
+          "href": "/87",
+          "image": "S2021072113663b21de5af/152a23a780625.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/4de635682057b.png",
+          "score": 0.732
+        }
+      ]
     },
     {
       "id": "archive-2020-036",
       "title": "2020 한국환경복원기술학회 추계학술대회",
       "year": 2020,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2020 한국환경복원기술학회 추계학술대회",
+          "href": "/81",
+          "image": "S2021072113663b21de5af/bd9bd10ef1d20.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/eb590e341d912.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2019-037",
       "title": "미세먼지 R&D 아이디어 국민참여토론회",
       "year": 2019,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "미세먼지 R&D 아이디어 국민참여토론회",
+          "href": "/71",
+          "image": "S2021072113663b21de5af/54250ca043828.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/0b3e409f4d2b9.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2019-038",
       "title": "The 5th Sino-Korea Symposium on Environment",
       "year": 2019,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "The 5th Sino-Korea Symposium on Environment",
+          "href": "/76",
+          "image": "S2021072113663b21de5af/0d14b2854e088.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/dcfa8e0345bd3.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2019-039",
       "title": "2019 Society of Wetland",
       "year": 2019,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2019 Society of Wetland",
+          "href": "/77",
+          "image": "S2021072113663b21de5af/107f8ee047564.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/889bc3908aeb2.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2018-040",
       "title": "2018 APRU Sustainable cities and Landscaoe",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 APRU Sustainable cities and Landscaoe",
+          "href": "/75",
+          "image": "S2021072113663b21de5af/d011f1c928cb6.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/fa52a0487abba.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2018-041",
       "title": "2018 4th Yellow Sea Ecosystem Symposium",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 4th Yellow Sea Ecosystem Symposium",
+          "href": "/74",
+          "image": "S2021072113663b21de5af/531676bfd3689.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/a5ba34b4f7898.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2018-042",
       "title": "2018 55th IFLA World Congress",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 55th IFLA World Congress",
+          "href": "/73",
+          "image": "S2021072113663b21de5af/4d19f167f9c61.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/eb00dae0a9c90.png",
+          "score": 1.0
+        },
+        {
+          "title": "The 58th IFLA World congress",
+          "href": "/94",
+          "image": "S2021072113663b21de5af/ab66abdcb3f1c.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/b183a98a47c6a.png",
+          "score": 0.816
+        }
+      ]
     },
     {
       "id": "archive-2018-043",
       "title": "2018 International Coastal Symposium",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 International Coastal Symposium",
+          "href": "/72",
+          "image": "S2021072113663b21de5af/ae230097682d6.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/16d203d9abbc5.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2018-044",
@@ -427,128 +986,728 @@
       "id": "archive-2018-045",
       "title": "환경계획 및 조경학 Lab Conference",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "환경계획 및 조경학 Lab Conference",
+          "href": "/68",
+          "image": "S2021072113663b21de5af/686c5dc73fc88.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/7da384f599573.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2017-046",
       "title": "Resilience2017",
       "year": 2017,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "Resilience2017",
+          "href": "/65",
+          "image": "S2021072113663b21de5af/1b0901170a6d3.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/96d59e0c38584.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2017-047",
       "title": "2017 World design summit",
       "year": 2017,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2017 World design summit",
+          "href": "/66",
+          "image": "S2021072113663b21de5af/c78da90f7d630.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/51e3f5aa40e6e.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2017-048",
       "title": "2017 KSDS Summer Conference",
       "year": 2017,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2017 KSDS Summer Conference",
+          "href": "/64",
+          "image": "S2021072113663b21de5af/711094659d07d.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/2bbcafdab9acd.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-2017-049",
       "title": "2017 3rd Yellow Sea Ecosystem symposium",
       "year": 2017,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2017 3rd Yellow Sea Ecosystem symposium",
+          "href": "/63",
+          "image": "S2021072113663b21de5af/fdcaf8298292d.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/766565cabd20a.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2025-001",
       "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
       "year": 2025,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
+          "href": "/135",
+          "image": "S2021072113663b21de5af/bf4091b536e23.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+          "href": "/137",
+          "image": "S2021072113663b21de5af/654d183faf511.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg",
+          "score": 0.957
+        },
+        {
+          "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
+          "href": "/136",
+          "image": "S2021072113663b21de5af/3c4d757f42832.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg",
+          "score": 0.957
+        }
+      ]
     },
     {
       "id": "archive-restored-2024-002",
       "title": "2024 한국환경복원기술학회",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 한국환경복원기술학회",
+          "href": "/127",
+          "image": "S2021072113663b21de5af/0c06079e733d5.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20241209/4bc95e5031a86.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2024-003",
       "title": "2024 시스템다이내믹스학회 하계학술대회",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 시스템다이내믹스학회 하계학술대회",
+          "href": "/123",
+          "image": "S2021072113663b21de5af/45300f62847ff.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20241018/e36ad1d7208bb.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2024 한국시스템다이내믹스학회",
+          "href": "/113",
+          "image": "S2021072113663b21de5af/afcc5990291bd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg",
+          "score": 0.778
+        }
+      ]
     },
     {
       "id": "archive-restored-2024-004",
       "title": "2024 한국시스템다이내믹스학회 4월 월례세미나",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 한국시스템다이내믹스학회 4월 월례세미나",
+          "href": "/117",
+          "image": "S2021072113663b21de5af/221b0cfd6a4ee.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240530/4620e800c6492.jpg",
+          "score": 1.0
+        },
+        {
+          "title": "2024 한국시스템다이내믹스학회",
+          "href": "/113",
+          "image": "S2021072113663b21de5af/afcc5990291bd.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg",
+          "score": 0.821
+        }
+      ]
     },
     {
       "id": "archive-restored-2024-005",
       "title": "2024 한국조경학회 춘계학술대회",
       "year": 2024,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2024 한국조경학회 춘계학술대회",
+          "href": "/114",
+          "image": "S2021072113663b21de5af/1c74fbdf07f9e.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20240402/107d0f1e06849.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2023-006",
       "title": "2023 한국조경학회 춘계학술대회",
       "year": 2023,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2023 한국조경학회 춘계학술대회",
+          "href": "/100",
+          "image": "S2021072113663b21de5af/ac2737c83bda2.jpg",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/3465cce56d17a.jpg",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2022-007",
       "title": "2022 한국시스템다이내믹스학회 상반기 학술대회",
       "year": 2022,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2022 한국시스템다이내믹스학회 상반기 학술대회",
+          "href": "/90",
+          "image": "S2021072113663b21de5af/5526d533c9cb6.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/8bbec855b0b66.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2021-008",
       "title": "2021 Yellow Sea Ecosystem Symposium",
       "year": 2021,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2021 Yellow Sea Ecosystem Symposium",
+          "href": "/89",
+          "image": "S2021072113663b21de5af/66888271611b6.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/13106e1f2192d.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2021-009",
       "title": "2021 한국환경복원기술학회",
       "year": 2021,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2021 한국환경복원기술학회",
+          "href": "/82",
+          "image": "S2021072113663b21de5af/df55ef2d55632.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/f9db2dc1c7ba3.png",
+          "score": 1.0
+        },
+        {
+          "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
+          "href": "/87",
+          "image": "S2021072113663b21de5af/152a23a780625.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/4de635682057b.png",
+          "score": 0.718
+        }
+      ]
     },
     {
       "id": "archive-restored-2019-010",
       "title": "2019 ARC Conference",
       "year": 2019,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2019 ARC Conference",
+          "href": "/78",
+          "image": "S2021072113663b21de5af/39f806666a826.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/6272f6a006ea0.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2019-011",
       "title": "2019 ASLA",
       "year": 2019,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2019 ASLA",
+          "href": "/79",
+          "image": "S2021072113663b21de5af/77ae442f39e70.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/fe59200dfc7c3.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2018-012",
       "title": "2018 한국 시스템다이내믹스학회 동계학술대회",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 한국 시스템다이내믹스학회 동계학술대회",
+          "href": "/69",
+          "image": "S2021072113663b21de5af/a2f2c4df757f4.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/4e70be07eb55b.png",
+          "score": 1.0
+        }
+      ]
     },
     {
       "id": "archive-restored-2018-013",
       "title": "2018 한국조경학회 춘계학술대회",
       "year": 2018,
-      "confident": false,
-      "choices": []
+      "confident": true,
+      "choices": [
+        {
+          "title": "2018 한국조경학회 춘계학술대회",
+          "href": "/70",
+          "image": "S2021072113663b21de5af/ae2fe74e70c60.png",
+          "thumb": "https://cdn.imweb.me/thumbnail/20230417/a141a2a4a5eb1.png",
+          "score": 1.0
+        }
+      ]
     }
   ],
-  "gallery": []
+  "gallery": [
+    {
+      "title": "2026 한국시스템다이내믹스학회 10월 월례세미나",
+      "href": "/163",
+      "image": "S2021072113663b21de5af/05a9262c0e63a.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20261026/90dfb82e5fc8c.jpg"
+    },
+    {
+      "title": "블루카본 기반 기후변화 적응형 해안조성 기술개발 5차년도 최종보고회",
+      "href": "/162",
+      "image": "S2021072113663b21de5af/fbc3be8321c27.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20261022/9dc7f4e3196c0.png"
+    },
+    {
+      "title": "2026 한국시스템다이내믹스학회 9월 월례세미나",
+      "href": "/161",
+      "image": "S2021072113663b21de5af/1503dfb215ea0.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20261008/b37e51efc32c8.png"
+    },
+    {
+      "title": "ICMP-11&YES 2026 Joint conference",
+      "href": "/160",
+      "image": "S2021072113663b21de5af/4432d7469231b.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260826/25635507cbfce.jpg"
+    },
+    {
+      "title": "2026 AI 에이전트 합동 워크숍",
+      "href": "/158",
+      "image": "S2021072113663b21de5af/61459f72dec7c.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260826/a905652b6d06d.jpg"
+    },
+    {
+      "title": "2026 한국시스템다이내믹스학화 4월 월례세미나",
+      "href": "/155",
+      "image": "S2021072113663b21de5af/553a5825a7336.jpeg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260430/d1d4bea904666.jpeg"
+    },
+    {
+      "title": "2026 한국시스템다이내믹스학회 동계학술대회",
+      "href": "/154",
+      "image": "S2021072113663b21de5af/4511fc6ede839.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260304/39c1bb099233d.jpg"
+    },
+    {
+      "title": "2026 기후 시뮬레이션 & 환경문제 해결 워크숍",
+      "href": "/153",
+      "image": "S2021072113663b21de5af/dcc5dd6e3bb16.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260205/87e913bfe2498.jpg"
+    },
+    {
+      "title": "2025 한국시스템다이내믹스학회 11월 월례세미나",
+      "href": "/144",
+      "image": "S2021072113663b21de5af/e4bfb158b6062.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260105/50cfdd70e3aa0.jpg"
+    },
+    {
+      "title": "2025 한국환경복원기술학회",
+      "href": "/145",
+      "image": "S2021072113663b21de5af/9be499d9b88bd.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260105/ca9425c80abdc.jpg"
+    },
+    {
+      "title": "2025 HLD 특강",
+      "href": "/146",
+      "image": "S2021072113663b21de5af/12be6e4260ddb.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260105/7d3367ab103ca.jpg"
+    },
+    {
+      "title": "2025 한국시스템다이내믹스학회 10월 월례세미나",
+      "href": "/143",
+      "image": "S2021072113663b21de5af/c0347edb5690d.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20260105/ab5000aaf9cf4.jpg"
+    },
+    {
+      "title": "2025 시스템다이내믹스학회 하계학술대회",
+      "href": "/140",
+      "image": "S2021072113663b21de5af/ab20e7d0eebde.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250826/75dabd45be5fe.jpg"
+    },
+    {
+      "title": "2025 응용생태공학회 학술발표대회",
+      "href": "/139",
+      "image": "S2021072113663b21de5af/4fe7507c36ec8.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250826/85c23d7c53f8f.jpg"
+    },
+    {
+      "title": "2025 한국시스템다이내믹스학회 6월 월례세미나",
+      "href": "/137",
+      "image": "S2021072113663b21de5af/654d183faf511.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250625/18f4b6879f838.jpg"
+    },
+    {
+      "title": "2025 한국시스템다이내믹스학회 5월 월례세미나",
+      "href": "/136",
+      "image": "S2021072113663b21de5af/3c4d757f42832.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250623/f41b12dd24ae7.jpg"
+    },
+    {
+      "title": "2025 한국시스템다이내믹스학회 4월 월례세미나",
+      "href": "/135",
+      "image": "S2021072113663b21de5af/bf4091b536e23.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250623/12027e2e0bf3c.jpg"
+    },
+    {
+      "title": "2025 한국조경학회 춘계학술대회",
+      "href": "/134",
+      "image": "S2021072113663b21de5af/16bfbf3fecc65.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250424/d230d885ca1de.jpg"
+    },
+    {
+      "title": "2025 한국환경복원기술학회 춘계학술대회",
+      "href": "/133",
+      "image": "S2021072113663b21de5af/e3d6d86acc3f7.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250407/809bb8506dd5d.jpg"
+    },
+    {
+      "title": "2025 CELA",
+      "href": "/132",
+      "image": "S2021072113663b21de5af/42ccfc8f4cc53.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250407/2176c47eaf180.jpg"
+    },
+    {
+      "title": "250313 1st Carbon Neutral Village Network Seminar",
+      "href": "/130",
+      "image": "S2021072113663b21de5af/006b03f6ef0e2.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250317/fcca1c1152e90.jpg"
+    },
+    {
+      "title": "2025 시스템다이내믹스학회 동계학술대회",
+      "href": "/129",
+      "image": "S2021072113663b21de5af/f42b9f06b826a.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20250225/dd05ba55ae6ca.jpg"
+    },
+    {
+      "title": "2024 한국환경복원기술학회",
+      "href": "/127",
+      "image": "S2021072113663b21de5af/0c06079e733d5.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20241209/4bc95e5031a86.jpg"
+    },
+    {
+      "title": "2024 OJERI & ARC",
+      "href": "/125",
+      "image": "S2021072113663b21de5af/830bd4de7f756.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20241030/c30dfcd9cd835.jpg"
+    },
+    {
+      "title": "2024 시스템다이내믹스학회 하계학술대회",
+      "href": "/123",
+      "image": "S2021072113663b21de5af/45300f62847ff.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20241018/e36ad1d7208bb.jpg"
+    },
+    {
+      "title": "2024 Yellow Sea Ecosystem Symposium",
+      "href": "/122",
+      "image": "S2021072113663b21de5af/6cb1da5fbf280.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240731/8ff0fa587fcac.jpg"
+    },
+    {
+      "title": "2024 한국시스템다이내믹스학회 4월 월례세미나",
+      "href": "/117",
+      "image": "S2021072113663b21de5af/221b0cfd6a4ee.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240530/4620e800c6492.jpg"
+    },
+    {
+      "title": "2024 European Geosciences Union(EGU)-Vienna, Austria",
+      "href": "/121",
+      "image": "S2021072113663b21de5af/705ec828d33f9.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240530/8c7066cff7e5f.jpg"
+    },
+    {
+      "title": "2024 환경부 환경교육팀 특강",
+      "href": "/115",
+      "image": "S2021072113663b21de5af/31d35aecb6b85.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240402/07f17e8ad7109.jpg"
+    },
+    {
+      "title": "2024 한국조경학회 춘계학술대회",
+      "href": "/114",
+      "image": "S2021072113663b21de5af/1c74fbdf07f9e.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240402/107d0f1e06849.jpg"
+    },
+    {
+      "title": "2024 한국시스템다이내믹스학회",
+      "href": "/113",
+      "image": "S2021072113663b21de5af/afcc5990291bd.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20240226/cb85e58bea60d.jpg"
+    },
+    {
+      "title": "2023 우리바다 현장연구 지원 사업 논문 발표",
+      "href": "/109",
+      "image": "S2021072113663b21de5af/3db8ff1025032.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20231219/20bf6ea7b8060.jpg"
+    },
+    {
+      "title": "2023 한국시스템다이내믹스학회 하계학술대회",
+      "href": "/108",
+      "image": "S2021072113663b21de5af/1182c1a968acd.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230913/0840e29b6fed5.jpg"
+    },
+    {
+      "title": "2023 시스템다이내믹스/시스템 사고 방법론 특강",
+      "href": "/107",
+      "image": "S2021072113663b21de5af/7e772aebe80bf.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230817/3cb42cc6fad58.jpg"
+    },
+    {
+      "title": "2023 자연기반해법과 회복력원칙에 기반한 환경관리",
+      "href": "/105",
+      "image": "S2021072113663b21de5af/ac10c4cc0a4be.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230531/38050613ac9d2.jpg"
+    },
+    {
+      "title": "2023 한국시스템다이내믹스학회 상반기 학술대회",
+      "href": "/102",
+      "image": "S2021072113663b21de5af/4d923d0ce5d0a.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230522/07b4b08161d04.jpg"
+    },
+    {
+      "title": "2023 박소현 교수님 특강",
+      "href": "/103",
+      "image": "S2021072113663b21de5af/28f0ad738073a.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230522/a39922ce89418.jpg"
+    },
+    {
+      "title": "2023 EGU",
+      "href": "/104",
+      "image": "S2021072113663b21de5af/219a14ede78b5.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230522/7cc1d92abca5c.jpg"
+    },
+    {
+      "title": "2023 한국조경학회 춘계학술대회",
+      "href": "/100",
+      "image": "S2021072113663b21de5af/ac2737c83bda2.jpg",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/3465cce56d17a.jpg"
+    },
+    {
+      "title": "2022 Risk and Resilience",
+      "href": "/98",
+      "image": "S2021072113663b21de5af/2e57a51b8beab.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/c507ada450b95.png"
+    },
+    {
+      "title": "2022 ASLA",
+      "href": "/96",
+      "image": "S2021072113663b21de5af/4a7c9405c4d1f.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/be92c34a18536.png"
+    },
+    {
+      "title": "2022 ARC Conference",
+      "href": "/95",
+      "image": "S2021072113663b21de5af/b974c12f75e09.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/7264d7b06b6c1.png"
+    },
+    {
+      "title": "2022 해역이용영향평가 기술개발 2차년도 워크숍",
+      "href": "/91",
+      "image": "S2021072113663b21de5af/d9790fc8e0c06.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/bf69fdf52d685.png"
+    },
+    {
+      "title": "The 58th IFLA World congress",
+      "href": "/94",
+      "image": "S2021072113663b21de5af/ab66abdcb3f1c.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/b183a98a47c6a.png"
+    },
+    {
+      "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발",
+      "href": "/93",
+      "image": "S2021072113663b21de5af/0001cbe82a552.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/0cf1f472b2b8f.png"
+    },
+    {
+      "title": "2022 제92차 한국관광학회 부산",
+      "href": "/92",
+      "image": "S2021072113663b21de5af/b9c5cdb2c8630.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/10d0d2bfe1405.png"
+    },
+    {
+      "title": "2022 한국시스템다이내믹스학회 상반기 학술대회",
+      "href": "/90",
+      "image": "S2021072113663b21de5af/5526d533c9cb6.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/8bbec855b0b66.png"
+    },
+    {
+      "title": "2021 Yellow Sea Ecosystem Symposium",
+      "href": "/89",
+      "image": "S2021072113663b21de5af/66888271611b6.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/13106e1f2192d.png"
+    },
+    {
+      "title": "2021 한국환경복원기술학회 임시 총회 및 추계학술대회",
+      "href": "/87",
+      "image": "S2021072113663b21de5af/152a23a780625.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/4de635682057b.png"
+    },
+    {
+      "title": "해안 리질리언스 KU-KIOST-KOICA 공동 워크숍",
+      "href": "/62",
+      "image": "S2021072113663b21de5af/aa9a94ed0d71c.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/fa2f5fabbeb93.png"
+    },
+    {
+      "title": "2021 한국조경학회 추계학술대회",
+      "href": "/86",
+      "image": "S2021072113663b21de5af/c3b1d12775c9d.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/afb8c3ce41c7f.png"
+    },
+    {
+      "title": "2021 한국환경복원기술학회",
+      "href": "/82",
+      "image": "S2021072113663b21de5af/df55ef2d55632.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/f9db2dc1c7ba3.png"
+    },
+    {
+      "title": "2019 ARC Conference",
+      "href": "/78",
+      "image": "S2021072113663b21de5af/39f806666a826.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/6272f6a006ea0.png"
+    },
+    {
+      "title": "2018 APRU Sustainable cities and Landscaoe",
+      "href": "/75",
+      "image": "S2021072113663b21de5af/d011f1c928cb6.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/fa52a0487abba.png"
+    },
+    {
+      "title": "2019 ASLA",
+      "href": "/79",
+      "image": "S2021072113663b21de5af/77ae442f39e70.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/fe59200dfc7c3.png"
+    },
+    {
+      "title": "2020 한국환경복원기술학회 추계학술대회",
+      "href": "/81",
+      "image": "S2021072113663b21de5af/bd9bd10ef1d20.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/eb590e341d912.png"
+    },
+    {
+      "title": "미세먼지 R&D 아이디어 국민참여토론회",
+      "href": "/71",
+      "image": "S2021072113663b21de5af/54250ca043828.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/0b3e409f4d2b9.png"
+    },
+    {
+      "title": "The 5th Sino-Korea Symposium on Environment",
+      "href": "/76",
+      "image": "S2021072113663b21de5af/0d14b2854e088.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/dcfa8e0345bd3.png"
+    },
+    {
+      "title": "2019 Society of Wetland",
+      "href": "/77",
+      "image": "S2021072113663b21de5af/107f8ee047564.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/889bc3908aeb2.png"
+    },
+    {
+      "title": "2018 4th Yellow Sea Ecosystem Symposium",
+      "href": "/74",
+      "image": "S2021072113663b21de5af/531676bfd3689.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/a5ba34b4f7898.png"
+    },
+    {
+      "title": "2018 55th IFLA World Congress",
+      "href": "/73",
+      "image": "S2021072113663b21de5af/4d19f167f9c61.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/eb00dae0a9c90.png"
+    },
+    {
+      "title": "2018 International Coastal Symposium",
+      "href": "/72",
+      "image": "S2021072113663b21de5af/ae230097682d6.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/16d203d9abbc5.png"
+    },
+    {
+      "title": "해양생태융복합 2030 워크숍",
+      "href": "/67",
+      "image": "S2021072113663b21de5af/54907ae29ebd7.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/43d55d1a6c9c9.png"
+    },
+    {
+      "title": "2018 한국 시스템다이내믹스학회 동계학술대회",
+      "href": "/69",
+      "image": "S2021072113663b21de5af/a2f2c4df757f4.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/4e70be07eb55b.png"
+    },
+    {
+      "title": "2018 한국조경학회 춘계학술대회",
+      "href": "/70",
+      "image": "S2021072113663b21de5af/ae2fe74e70c60.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/a141a2a4a5eb1.png"
+    },
+    {
+      "title": "환경계획 및 조경학 Lab Conference",
+      "href": "/68",
+      "image": "S2021072113663b21de5af/686c5dc73fc88.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/7da384f599573.png"
+    },
+    {
+      "title": "Resilience2017",
+      "href": "/65",
+      "image": "S2021072113663b21de5af/1b0901170a6d3.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/96d59e0c38584.png"
+    },
+    {
+      "title": "2017 World design summit",
+      "href": "/66",
+      "image": "S2021072113663b21de5af/c78da90f7d630.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/51e3f5aa40e6e.png"
+    },
+    {
+      "title": "2017 KSDS Summer Conference",
+      "href": "/64",
+      "image": "S2021072113663b21de5af/711094659d07d.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/2bbcafdab9acd.png"
+    },
+    {
+      "title": "2017 3rd Yellow Sea Ecosystem symposium",
+      "href": "/63",
+      "image": "S2021072113663b21de5af/fdcaf8298292d.png",
+      "thumb": "https://cdn.imweb.me/thumbnail/20230417/766565cabd20a.png"
+    }
+  ]
 }
