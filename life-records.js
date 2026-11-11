@@ -17,7 +17,7 @@ window.ELSDR_LIFE_RECORDS={
       "speaker": "기후 시뮬레이션 및 환경문제 해결 워크숍",
       "organizer": "",
       "location": "",
-      "summary": "기후 시뮬레이션과 환경문제 해결을 다룬 워크숍",
+      "summary": "",
       "sourceUrl": "https://edesign.korea.ac.kr/153",
       "photo": "assets/life/events/photos/climate-simulation-2026.jpg",
       "photoSourceUrl": "https://edesign.korea.ac.kr/153"
@@ -114,7 +114,7 @@ window.ELSDR_LIFE_RECORDS={
       "speaker": "",
       "organizer": "",
       "location": "",
-      "summary": "자연기반해법과 회복력원칙을 주제로 한 출판기념 세미나",
+      "summary": "",
       "sourceUrl": "https://edesign.korea.ac.kr/105",
       "photo": ""
     },
