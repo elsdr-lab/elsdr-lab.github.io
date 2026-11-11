@@ -57,7 +57,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="palette.css?v=4.1">
 <link rel="stylesheet" href="menu-structure.css?v=4.1">
 <link rel="stylesheet" href="contact-page.css?v=4.1">
-<link rel="stylesheet" href="life-page.css?v=4.1">
+<link rel="stylesheet" href="life-page.css?v=20261111-news">
 <link rel="stylesheet" href="study-page.css?v=4.1">
 <link rel="stylesheet" href="people-page.css?v=20261111-alumni-v2">
 <link rel="stylesheet" href="research-archive.css?v=4.2">
@@ -589,17 +589,26 @@ body.home-view .footer{display:none}
   <a href="#/life/events" data-v2-life-nav="events"><small>02</small> Events <b aria-hidden="true">↗</b></a>
   <a href="#/life/activities" data-v2-life-nav="activities"><small>03</small> Activities <b aria-hidden="true">↗</b></a>
 </nav>
-<div class="lf-panel" data-life-view="news">
+<div class="lf-panel lf-v2-news-panel" data-life-view="news">
   <div id="lf-news-list">
-    <div class="lf-intro"><div><span>01 / OFFICIAL LAB UPDATES</span><h2>News<span>.</span></h2></div>
+    <div class="lf-intro"><div><span>01 / LAB NEWS &amp; RESEARCH UPDATES</span><h2>News<span>.</span></h2></div></div>
+    <div class="lf-v2-news-tools">
+      <div class="lf-v2-news-filters" role="group" aria-label="소식 유형">
+        <button type="button" data-lf-news-category="all" aria-pressed="true" class="is-selected">All</button>
+        <button type="button" data-lf-news-category="award" aria-pressed="false">Research &amp; Awards</button>
+        <button type="button" data-lf-news-category="research" aria-pressed="false">Research News</button>
+        <button type="button" data-lf-news-category="publication" aria-pressed="false">Publications</button>
+        <button type="button" data-lf-news-category="media" aria-pressed="false">Media</button>
+        <button type="button" data-lf-news-category="update" aria-pressed="false">Lab Updates</button>
       </div>
-    <div class="lf-v2-news-empty" role="status">
-      <span class="lf-v2-news-eyebrow">LAB NEWS / ARCHIVE</span>
-      <h3>연구실 공식 소식 등록 예정</h3>
-      <p>공식 연구실 소식과 연구성과·수상·언론 보도 중 공개가 확인된 자료부터 카드로 소개합니다. 실제 기사와 대표 이미지가 등록되면 이 자리에 표시됩니다.</p>
-      <div class="lf-v2-news-categories"><span>Official Updates</span><span>Research &amp; Awards</span><span>Media Coverage</span></div>
+      <label class="lf-v2-news-search-label">SEARCH NEWS
+        <input id="lf-v2-news-search" type="search" placeholder="제목 · 연도 · 매체 · 키워드 검색" autocomplete="off">
+      </label>
     </div>
-    <p class="lf-v2-news-note">※ 공식 소식에 해당하는 검증된 자료가 확보되면 해당 소식의 실제 제목·내용·대표 이미지를 등록합니다. 기존 교수 개인 칼럼은 <a href="#/people/professor/books">People → Books &amp; Writings</a>, 모집 안내는 <a href="#/contact/join">Contact → Join Us</a>에서 확인할 수 있습니다.</p>
+    <div class="lf-v2-news-index"><span id="lf-v2-news-count"></span><span>NEWEST FIRST / ELSDR ARCHIVE</span></div>
+    <div id="lf-v2-news-archive" class="lf-v2-news-archive" aria-live="polite"></div>
+    <p id="lf-v2-news-no-results" class="lf-v2-news-empty-message" hidden>일치하는 소식이 없습니다. 검색어나 분류를 변경해 주세요.</p>
+    <p class="lf-v2-news-note">연구실 공식 성과·출판·언론 소식을 모아 정리한 기록입니다. 교수 개인 칼럼은 <a href="#/people/professor/books">Books &amp; Writings</a>, 연구원 모집은 <a href="#/contact/join">Join Us</a>에서 확인할 수 있습니다.</p>
   </div>
 </div>
 
@@ -1440,8 +1449,8 @@ body.home-view .footer{display:none}
 <script src="menu-structure.js"></script>
 <script src="contact-records.js"></script>
 <script src="contact-page.js"></script>
-<script src="life-records.js"></script>
-<script src="life-page.js"></script>
+<script src="life-records.js?v=20261111-news"></script>
+<script src="life-page.js?v=20261111-news"></script>
 <script src="study-resources.js"></script>
 <script src="study-page.js"></script>
 <script src="people-records.js?v=20261111-alumni-links32"></script>
