@@ -185,8 +185,8 @@ function activityPhotosField(photos,parent){
  photos.forEach((url,index)=>{
   const wrap=el('div',undefined,'field photo-file-field');
   const preview=el('img');preview.alt='활동 사진 '+(index+1);preview.loading='lazy';
-  const address=new URL(url||'',location.origin+'/');
-  if(url&&['http:','https:'].includes(address.protocol)){preview.src=photoPreviews.get(url)||address.href;preview.style.maxWidth='190px';preview.style.maxHeight='160px';wrap.append(preview)}
+  let previewUrl='';try{if(url){const address=new URL(url,location.origin+'/');if(['http:','https:'].includes(address.protocol))previewUrl=photoPreviews.get(url)||address.href}}catch{}
+  if(previewUrl){preview.src=previewUrl;preview.style.maxWidth='190px';preview.style.maxHeight='160px';wrap.append(preview)}
   const label=el('span','사진 '+(index+1));wrap.append(label);
   const input=el('input');input.type='text';input.value=url||'';input.placeholder='이미지 주소 또는 업로드';input.onchange=()=>{photos[index]=input.value.trim();changed()};wrap.append(input);
   const upload=el('input');upload.type='file';upload.accept='image/png,image/jpeg,image/webp';upload.disabled=!token;
