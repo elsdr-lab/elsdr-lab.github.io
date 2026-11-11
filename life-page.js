@@ -58,7 +58,7 @@ function photoMarkup(a){
  if(a.photo&&validUrl(a.photo)){
    return '<div class="lf-v2-activity-photo"><img loading="lazy" src="'+E(validUrl(a.photo))+'" alt="'+E(a.title)+' 현장 사진"></div>';
  }
- return '<div class="lf-v2-activity-photo lf-v2-no-photo"><span>PHOTO / TO BE ADDED</span><b>ELSDR</b></div>';
+ return '<div class="lf-v2-activity-photo lf-v2-no-photo" aria-hidden="true"></div>';
 }
 const newsCategories={award:"Research & Awards",research:"Research News",publication:"Books & Publications",media:"Media Coverage",update:"Lab Updates"};
 let newsFilter="all",newsQuery="";
@@ -100,7 +100,7 @@ function renderActivities(){
    '<a class="lf-v2-activity-card" href="#/life/activities/'+encodeURIComponent(a.id)+'">'+photoMarkup(a)+
      '<div class="lf-v2-card-copy"><span class="lf-v2-card-meta">'+E(a.date||a.year||"")+' / '+E(categories[a.category]||"Activity")+'</span>'+
      '<h4>'+E(a.title)+'</h4>'+
-     '<p>'+E(formattedPlaces(a)||"장소 미등록 / 기록만 표시")+'</p>'+
+     (formattedPlaces(a)?'<p>'+E(formattedPlaces(a))+'</p>':"")+
      '<span class="lf-v2-card-link">View activity <b aria-hidden="true">↗</b></span></div></a>'
  ).join("");
  $("#lf-v2-activity-counter").textContent=data.length+" activities";
@@ -121,26 +121,33 @@ function renderActivities(){
 function activityDetail(id){
  const target=activities.find(x=>x.id===id);
  const container=$("#lf-v2-activity-detail-body");
+ if(!container)return;
  if(!target){
-   container.innerHTML='<h2>활동 기록을 찾지 못했습니다.</h2><p>Activities 목록에서 다시 확인해 주세요.</p>';
-   return;
+  container.innerHTML='<h2>활동 기록을 찾지 못했습니다.</h2>';
+  return;
  }
- const fromEvent=target.eventId?events.find(e=>e.id===target.eventId):null;
- const eventLink=fromEvent?'<a class="lf-v2-crosslink" href="#/life/events/'+encodeURIComponent(fromEvent.id)+'">Connected Event / 행사 안내 ↗</a>':"";
- const rawPlaces=(target.places||[]);
+ const event=target.eventId?events.find(e=>e.id===target.eventId):null;
+ const connected=event?'<a class="lf-v2-crosslink" href="#/life/events/'+encodeURIComponent(event.id)+'">Related Event ↗</a>':"";
+ const photos=[...new Set((Array.isArray(target.photos)?target.photos:[]).concat(target.photo||""))]
+  .filter(src=>!!validUrl(src));
+ const photoGallery=photos.length?'<section class="lf-v2-activity-gallery"><div class="lf-v2-activity-gallery-head">'+
+  '<h3>Photo Archive<span>.</span></h3><small>'+photos.length+' PHOTOS</small></div>'+
+  '<div class="lf-v2-activity-gallery-grid">'+
+  photos.map((photo,i)=>'<figure><img loading="lazy" src="'+E(validUrl(photo))+'" alt="'+E(target.title)+' 현장 기록 '+(i+1)+'"></figure>').join("")+
+  '</div></section>':"";
+ const facts=[
+  ["DATE / YEAR",target.date||target.year||""],
+  ["LOCATION",(target.places||[]).map(p=>p.name).join(" · ")],
+  ["ACTIVITY TYPE",categories[target.category]||"Activity"]
+ ].filter(([,val])=>String(val).trim())
+  .map(([name,value])=>'<div><dt>'+E(name)+'</dt><dd>'+E(value)+'</dd></div>').join("");
  container.innerHTML='<header class="lf-v2-activity-detail-head">'+
-    '<span>ELSDR / ACTIVITY RECORD / '+E(categories[target.category]||"Activity")+'</span>'+
-    '<h2>'+E(target.title)+'</h2><p>'+E(target.summary||"활동 내용 입력 예정")+'</p></header>'+
-    '<dl class="lf-v2-activity-facts">'+
-      '<div><dt>DATE / YEAR</dt><dd>'+E(target.date||target.year||"등록 예정")+'</dd></div>'+
-      '<div><dt>LOCATION</dt><dd>'+E(rawPlaces.map(p=>p.name).join(" · ")||"위치 정보 없음")+'</dd></div>'+
-      '<div><dt>ACTIVITY TYPE</dt><dd>'+E(categories[target.category]||"Activity")+'</dd></div>'+
-    '</dl>'+
-    '<section class="lf-v2-activity-gallery"><h3>Photos &amp; Records</h3>'+photoMarkup(target)+
-      '<p>기존 게시물의 현장 사진은 확인 후 등록합니다. 현재 예시 이미지를 실제 기록으로 오인하지 않도록 사진 자리만 표시했습니다.</p></section>'+
-    '<div class="lf-v2-activity-links">'+
-       extLink(target.sourceUrl,"Original activity record")+eventLink+
-    '</div>';
+  '<span>ELSDR / ACTIVITY RECORD / '+E(categories[target.category]||"Activity")+'</span>'+
+  '<h2>'+E(target.title)+'</h2>'+
+  (String(target.summary||"").trim()?'<p>'+E(target.summary)+'</p>':"")+
+  '</header><dl class="lf-v2-activity-facts">'+facts+'</dl>'+
+  photoGallery+
+  (connected?'<div class="lf-v2-activity-links">'+connected+'</div>':"");
  document.title=target.title+" | ELSDR";
 }
 
