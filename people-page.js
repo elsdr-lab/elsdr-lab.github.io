@@ -109,7 +109,16 @@ function renderResearchers(){
      if(!Number.isInteger(year)||year<1900||!["first","second"].includes(term))return Infinity;
      return year*2+(term==="second"?1:0);
     };
-    return k(a.person)-k(b.person)||a.index-b.index;
+    const ka=k(a.person),kb=k(b.person);
+    if(ka!==kb)return ka-kb;
+    // Ties with a known admission term: Korean alphabetical order, then English.
+    if(Number.isFinite(ka)){
+     const name=p=>String(p.nameKo||p.nameEn||"").trim();
+     const compare=name(a.person).localeCompare(name(b.person),"ko");
+     if(compare)return compare;
+    }
+    // Unknown dates, or identical names: retain administrator record order.
+    return a.index-b.index;
    }).map(entry=>entry.person);
   if(!people.length)return "";
   sectionIndex++;
