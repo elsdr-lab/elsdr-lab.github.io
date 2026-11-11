@@ -700,3 +700,37 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page #people-researchers .pp-people-grid{grid-template-columns:1fr}
  .pp-page #people-researchers .pp-v2-researcher-card .pp-person-photo{max-width:350px}
 }
+
+/* Alumni Directory + Thesis Archive — aligned 1240px editorial layout. */
+.pp-page :is(#people-alumni,#people-alumni-theses).pp-v2-section{
+ width:100%;max-width:1240px;margin-inline:auto;
+}
+.pp-page #people-alumni .pp-v2-alumni-row{
+ grid-template-columns:75px minmax(0,1.1fr) minmax(0,1.45fr) 148px;
+ gap:clamp(16px,2vw,30px);padding:23px 8px;
+}
+.pp-page #people-alumni .pp-v2-alumni-primary h3{font-size:21px;font-weight:600}
+.pp-page #people-alumni .pp-v2-alumni-meta{gap:5px}
+.pp-page #people-alumni-theses .pp-v2-thesis-row{
+ grid-template-columns:80px minmax(0,1fr) 140px;gap:25px;padding:21px 8px;
+}
+.pp-page #people-alumni-theses .pp-v2-thesis-outlink{
+ display:flex;flex-direction:column;align-items:flex-end;gap:7px;
+}
+.pp-page #people-alumni-theses .pp-v2-thesis-search-link,
+.pp-page #people-alumni-theses .pp-v2-thesis-doi{
+ color:#536D5E;font-size:11px;text-decoration:underline;text-underline-offset:4px;
+}
+@media(max-width:800px){
+ .pp-page #people-alumni .pp-v2-alumni-row{
+  grid-template-columns:64px minmax(0,1fr);gap:12px 18px;
+ }
+ .pp-page #people-alumni .pp-v2-alumni-meta,
+ .pp-page #people-alumni .pp-v2-thesis-crosslink{grid-column:2}
+ .pp-page #people-alumni-theses .pp-v2-thesis-row{
+  grid-template-columns:65px minmax(0,1fr);gap:13px;
+ }
+ .pp-page #people-alumni-theses .pp-v2-thesis-outlink{
+  grid-column:2;align-items:flex-start;
+ }
+}
