@@ -232,7 +232,53 @@ $("#pp-v2-thesis-search").addEventListener("input",renderTheses);
 $$("[data-pp-v2-degree]").forEach(button=>button.addEventListener("click",()=>{
  selectedDegree=button.dataset.ppV2Degree;renderTheses();
 }));
+
+/* Make the existing editable book records behave like an interactive bookshelf. */
+function enhanceBookshelf(){
+ const host=$("#pp-v2-books");if(!host)return;
+ const cards=Array.from(host.querySelectorAll(".pp-v2-book:not(.pp-v2-book-template)"));
+ if(!cards.length)return;
+ const details=cards.map(card=>card.querySelector(":scope > div:last-child")?.cloneNode(true));
+ const track=document.createElement("div");track.className="pp-shelf-track";
+ const shelf=document.createElement("div");shelf.className="pp-shelf-scroll";
+ cards.forEach((card,i)=>{
+  const name=card.querySelector("h4")?.textContent||"Book";
+  const publisher=card.querySelector("p")?.textContent||"";
+  const cover=card.querySelector(".pp-v2-book-cover img");
+  const button=document.createElement("button");button.type="button";
+  button.className="pp-shelf-volume"+(i===0?" is-open":"");
+  button.setAttribute("aria-pressed",String(i===0));
+  button.setAttribute("aria-label",name+" 표지 보기");
+  button.style.setProperty("--shelf-tint",["#536D5E","#8CAAB1","#D9C7A7","#66786F","#A8B7A8","#B8A98F"][i%6]);
+  const spine=document.createElement("span");spine.className="pp-shelf-spine";
+  const title=document.createElement("span");title.textContent=name;
+  const year=document.createElement("small");year.textContent=publisher.split("·").pop().trim();
+  spine.append(title,year);
+  const face=document.createElement("span");face.className="pp-shelf-front";
+  if(cover){face.append(cover.cloneNode(true));}else{face.textContent=name;}
+  button.append(spine,face);track.append(button);
+  button.addEventListener("click",()=>{
+   track.querySelectorAll("button").forEach(el=>{
+    el.classList.toggle("is-open",el===button);
+    el.setAttribute("aria-pressed",String(el===button));
+   });
+   const counter=host.querySelector(".pp-shelf-current");if(counter)counter.textContent=String(i+1).padStart(2,"0");
+   const detail=host.querySelector(".pp-shelf-detail");
+   if(detail)detail.replaceChildren(details[i].cloneNode(true));
+   if(matchMedia("(max-width:700px)").matches)button.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
+  });
+ });
+ shelf.append(track);
+ const eyebrow=document.createElement("div");eyebrow.className="pp-shelf-label";eyebrow.textContent="THE BOOKSHELF  —  SELECT A BOOK";
+ const counter=document.createElement("div");counter.className="pp-shelf-counter";
+ counter.innerHTML='<span class="pp-shelf-current">01</span> / '+String(cards.length).padStart(2,"0");
+ const detail=document.createElement("div");detail.className="pp-shelf-detail";detail.setAttribute("aria-live","polite");
+ detail.append(details[0].cloneNode(true));
+ host.replaceChildren(eyebrow,shelf,counter,detail);
+}
+
 renderProfessor();renderCareer();renderWritings();renderResearchers();renderAlumni();renderTheses();
+enhanceBookshelf();
 window.addEventListener("hashchange",renderRoute);
 renderRoute();
 })();
