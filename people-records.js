@@ -1347,9 +1347,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "doctor",
       "graduationYear": 2024,
       "affiliation": "안산 조경건설㈜ 대표",
-      "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "doi": "10.23186/korea.000000280464.11009.0000382",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000280464",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000280464",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1474,8 +1474,8 @@ window.ELSDR_PEOPLE_RECORDS={
       "graduationYear": 2014,
       "affiliation": "국가녹색기술연구소",
       "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000052998",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000052998",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
@@ -1501,9 +1501,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "doctor",
       "graduationYear": 2018,
       "affiliation": "국립농업과학원 농촌환경자원과 농업연구사",
-      "doi": "",
-      "libraryUrl": "",
-      "fullTextUrl": "",
+      "doi": "10.23186/korea.000000081342.11009.0000819",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081342",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000081342",
       "sourceUrl": "https://edesign.korea.ac.kr/30"
     },
     {
