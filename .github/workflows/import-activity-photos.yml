@@ -1,0 +1,118 @@
+name: Import original ELSDR Activities photo galleries
+on:
+  push:
+    paths:
+      - .github/workflows/import-activity-photos.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and optimize original activity photographs
+        run: |
+          python -m pip -q install requests beautifulsoup4 Pillow
+          python - <<'PY'
+          import pathlib,json,re,io,time,requests,bs4
+          from PIL import Image,ImageOps
+          root=pathlib.Path('.')
+          source=(root/'life-records.js').read_text(encoding='utf-8')
+          prefix='window.ELSDR_LIFE_RECORDS='
+          head,tail=source.split(prefix,1)
+          data=json.loads(tail.strip().rstrip(';'))
+          audit=json.loads((root/'assets/life/activities/activity-audit.json').read_text(encoding='utf-8'))
+          covers={}
+          for group in ['/31','/36']:
+              for entry in audit[group]['gallery']:
+                  if entry['url']:
+                      covers.setdefault(entry['url'],entry)
+          ses=requests.Session()
+          ses.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0 Safari/537.36'})
+          folder=root/'assets/life/activities/photos'
+          folder.mkdir(parents=True,exist_ok=True)
+          def normalized_image(url):
+              if url.startswith('//'):url='https:'+url
+              return url.split('?')[0]
+          def is_content_photo(url):
+              return 'cdn.imweb.me/thumbnail/' in url and not any(t in url for t in ['/20260911/a1cd4f87c55a8','/20210828/082d36485f25a','/20210828/f6ec5400a4f95'])
+          def save_jpg(url,destination):
+              response=ses.get(url,timeout=18)
+              response.raise_for_status()
+              if len(response.content)>14000000:raise ValueError('Image exceeds 14MB')
+              im=Image.open(io.BytesIO(response.content))
+              im=ImageOps.exif_transpose(im)
+              if im.width<180 or im.height<140:raise ValueError('Image dimensions too small')
+              if im.mode in ('RGBA','LA') or 'transparency' in im.info:
+                  bg=Image.new('RGB',im.size,'white')
+                  bg.paste(im,mask=im.convert('RGBA').getchannel('A'))
+                  im=bg
+              else:im=im.convert('RGB')
+              im.thumbnail((1450,1450),Image.Resampling.LANCZOS)
+              im.save(destination,'JPEG',quality=84,optimize=True,subsampling=0)
+              return destination.stat().st_size
+          imported={}
+          failed={}
+          for activity in data['activities']:
+              id=activity['id']
+              if id=='climate-workshop-2026':continue
+              page='/'+activity.get('sourceUrl','').split('/')[-1].split('?')[0]
+              if not page[1:].isdigit():continue
+              try:
+                  resp=ses.get('https://edesign.korea.ac.kr'+page,timeout=25)
+                  resp.raise_for_status()
+                  soup=bs4.BeautifulSoup(resp.text,'html.parser')
+                  candidates=[]
+                  cover=covers.get(page)
+                  if cover:
+                      orig=cover.get('original','')
+                      if orig.startswith('S20'):candidates.append('https://cdn.imweb.me/upload/'+orig)
+                      if cover.get('thumbnail'):candidates.append(cover['thumbnail'])
+                  for img in soup.select('img[src], [data-src], [data-bg]'):
+                      raw=img.get('src','') or img.get('data-src','')
+                      if not raw and img.has_attr('data-bg'):raw=re.search(r'https?[^) ]+',img.get('data-bg','') or '')
+                      if not isinstance(raw,str):raw=raw.group() if raw else ''
+                      raw=normalized_image(raw)
+                      if is_content_photo(raw):candidates.append(raw)
+                  seen=set();unique=[]
+                  for url in candidates:
+                      if url not in seen:seen.add(url);unique.append(url)
+                  # Existing original gallery images and up to 11 body photos
+                  unique=unique[:24]
+                  image_paths=[]
+                  this=folder/id
+                  this.mkdir(parents=True,exist_ok=True)
+                  errors=[]
+                  for num,url in enumerate(unique):
+                      if len(image_paths)>=12:break
+                      output=this/('cover.jpg' if not image_paths else f'{len(image_paths):02d}.jpg')
+                      try:
+                          size=save_jpg(url,output)
+                          image_paths.append(str(output))
+                      except Exception as e:errors.append({'url':url,'error':str(e)})
+                      time.sleep(.04)
+                  if image_paths:
+                      activity['photo']=image_paths[0]
+                      activity['photos']=image_paths
+                      activity['photoSourceUrl']='https://edesign.korea.ac.kr'+page
+                      imported[id]={'photos':len(image_paths),'source':page,'errors':errors[:4]}
+                  else:
+                      failed[id]={'source':page,'errors':errors[:4]}
+              except Exception as e:failed[id]={'source':page,'error':str(e)}
+              print('ACTIVITY',id,len(imported.get(id,{}).get('photos',[]) if isinstance(imported.get(id,{}).get('photos'),list) else []),imported.get(id,{}).get('photos',0),flush=True)
+          (root/'life-records.js').write_text(head+prefix+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+          report={'activities':len(data['activities']),'importedActivities':len(imported),'images':sum(v['photos'] for v in imported.values()),'imported':imported,'failed':failed}
+          p=root/'assets/life/activities/photo-import-report.json'
+          p.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+          print('FINAL',{'activities':report['activities'],'importedActivities':len(imported),'images':report['images'],'failures':failed},flush=True)
+          PY
+      - name: Commit archived activity galleries
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/life/activities/photos assets/life/activities/photo-import-report.json life-records.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive original Activity galleries and connect photos to site records"
+            git push origin HEAD:main
+          fi
