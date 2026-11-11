@@ -350,5 +350,139 @@ window.ELSDR_LIFE_RECORDS={
       "places": [],
       "status": "pending"
     }
+  ],
+  "news": [
+    {
+      "id": "news-2026-tae-grant",
+      "date": "2026-10-14",
+      "category": "award",
+      "title": "태미경 연구원, 기후적응 형평성 연구로 한국연구재단 연구장려금 선정",
+      "summary": "태미경 석박사통합과정생이 복합 기후재난 취약성과 기후적응 공간의 불평등 구조를 분석하는 연구로 2026년도 이공분야 박사과정생 연구장려금 지원사업에 선정됐다.",
+      "publication": "환경과조경",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=175089860",
+      "externalUrl": "https://www.lak.co.kr/news/boardview.php?id=24087"
+    },
+    {
+      "id": "news-2026-professor-lafent",
+      "date": "2026-10-14",
+      "category": "media",
+      "title": "전진형 교수, 조경의 사회적 가치와 공간의 역할에 관해 인터뷰",
+      "summary": "라펜트는 전진형 교수의 인터뷰를 통해 건축과 조경의 관계, 사람이 살아가는 조건을 만드는 조경의 역할을 소개했다.",
+      "publication": "라펜트",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=175089767",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2026-book-talk",
+      "date": "2026-04-30",
+      "category": "publication",
+      "title": "2026 KU ECO-UP 북토크: 《조경, 가까운 자연》",
+      "summary": "기존 연구실 News에 2026 KU 에코업 북토크 《조경, 가까운 자연》 안내가 게시되었다.",
+      "publication": "ELSDR",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=171080043",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2026-street-tree-interview",
+      "date": "2026-03-09",
+      "category": "media",
+      "title": "전진형 교수, 가로수와 도시 조경의 경제적 가치 인터뷰",
+      "summary": "매일경제에 전진형 교수의 가로수와 조경의 가치에 관한 인터뷰가 소개되었다.",
+      "publication": "매일경제",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=170309302",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2026-book-release",
+      "date": "2026-02-16",
+      "category": "publication",
+      "title": "전진형 교수 신간 《조경, 가까운 자연》 소개",
+      "summary": "전진형 교수의 신간 《조경, 가까운 자연》(21세기북스)의 출간과 조경이 도시인의 일상에 미치는 가치가 한국경제 기사에서 소개됐다.",
+      "publication": "한국경제",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=170043051",
+      "externalUrl": "https://n.news.naver.com/article/015/0005223774"
+    },
+    {
+      "id": "news-2026-marine-interview",
+      "date": "2026-02-16",
+      "category": "media",
+      "title": "전진형 교수, 기후위기 시대 해양의 역할에 관해 인터뷰",
+      "summary": "고대신문 인터뷰에서 해양 탄소흡수원과 바다숲·갯벌 복원, 기후위기 대응의 중요성을 다뤘다.",
+      "publication": "고대신문",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=170043101",
+      "externalUrl": "https://www.kunews.ac.kr/news/articleView.html?idxno=43264"
+    },
+    {
+      "id": "news-2024-climate-policy",
+      "date": "2024-12-09",
+      "category": "media",
+      "title": "전진형 교수, 기후정책과 회복탄력성의 역할에 관해 언급",
+      "summary": "환경일보에 기후위기 정책의 전환과 회복탄력성, 지속가능성의 조화를 다룬 기사가 소개됐다.",
+      "publication": "환경일보",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=132029493",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2023-kmi",
+      "date": "2023-12-15",
+      "category": "research",
+      "title": "ELSDR, 2023 우리바다 현장연구 지원사업 선정",
+      "summary": "연구실이 한국해양수산개발원(KMI)의 우리바다 현장연구 지원사업에 선정됐다. 전진형 교수를 책임자로 석영선·태미경·최호준이 참여하며 해안 리질리언스와 블루카본 자원 관리방안을 연구했다.",
+      "publication": "ELSDR",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=17278982",
+      "externalUrl": "http://www.haesanews.com/news/articleView.html?idxno=110854"
+    },
+    {
+      "id": "news-2023-resilience-book-seminar",
+      "date": "2023-06-05",
+      "category": "publication",
+      "title": "《회복력 원칙》 출판 기념 세미나 개최",
+      "summary": "전진형 교수가 공동 역자로 참여한 《회복력 원칙》 출간을 기념해 2023년 5월 26일 고려대학교에서 자연기반해법과 회복력을 주제로 세미나가 열렸다.",
+      "publication": "ELSDR",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=15347940",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2022-ku-today",
+      "date": "2022-05-03",
+      "category": "media",
+      "title": "전진형 교수, KU TODAY 리질리언스 인터뷰",
+      "summary": "KU TODAY는 전진형 교수의 리질리언스 연구와 지속가능한 성장에 관한 인터뷰를 소개했다.",
+      "publication": "KU TODAY",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=11328556",
+      "externalUrl": "https://ibook.korea.ac.kr/Viewer/9FI7PBH8UNW9"
+    },
+    {
+      "id": "news-2022-routledge",
+      "date": "2022-03-22",
+      "category": "publication",
+      "title": "전진형 교수, Routledge Handbook 공동저자로 참여",
+      "summary": "전진형 교수는 《The Routledge Handbook of Sustainable Cities and Landscapes in the Pacific Rim》의 Water 분야 챕터 공동저자로 참여했다.",
+      "publication": "ELSDR",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=11004577",
+      "externalUrl": ""
+    },
+    {
+      "id": "news-2022-carbon-interview",
+      "date": "2022-01-20",
+      "category": "media",
+      "title": "이우균·전진형 교수, 탄소중립과 리질리언스 연구 인터뷰",
+      "summary": "뉴스포스트는 고려대학교 오정리질리언스연구원의 이우균·전진형 교수 인터뷰를 통해 탄소중립과 회복탄력성 연구의 의미를 소개했다.",
+      "publication": "뉴스포스트",
+      "photo": "",
+      "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=9523225",
+      "externalUrl": "http://www.newspost.kr/news/articleView.html?idxno=95400"
+    }
   ]
 };
