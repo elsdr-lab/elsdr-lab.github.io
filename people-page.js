@@ -98,7 +98,19 @@ function renderResearchers(){
  }).join("");
  let sectionIndex=0;
  const markup=[...groups,...extras].map(([key,title,description])=>{
-  const people=sources.filter(p=>p.group===key);
+  // Earlier admissions appear first. When dates are missing or identical,
+  // retain the existing admin record order; dates never appear on cards.
+  const people=sources.map((person,index)=>({person,index}))
+   .filter(entry=>entry.person.group===key)
+   .sort((a,b)=>{
+    const k=p=>{
+     const year=Number(p.entryYear);
+     const term=String(p.entrySemester||"").trim();
+     if(!Number.isInteger(year)||year<1900||!["first","second"].includes(term))return Infinity;
+     return year*2+(term==="second"?1:0);
+    };
+    return k(a.person)-k(b.person)||a.index-b.index;
+   }).map(entry=>entry.person);
   if(!people.length)return "";
   sectionIndex++;
   return '<section class="pp-v2-group pp-researcher-group">'+
