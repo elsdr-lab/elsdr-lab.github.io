@@ -571,3 +571,24 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  }
  .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-title h4{font-size:15px}
 }
+
+/* Books & Writings — coherent centered editorial content width (2026-11-11).
+   Applies only to the Professor Books page, leaving the rest of People untouched. */
+.pp-page #people-professor-books.pp-v2-section{
+ width:100%;
+ max-width:1240px;
+ margin-inline:auto;
+}
+.pp-page #people-professor-books #pp-v2-columns{
+ max-width:none;
+ width:100%;
+ margin-inline:0;
+}
+.pp-page #people-professor-books .pp-books-showcase{
+ width:100%;
+}
+@media(max-width:900px){
+ .pp-page #people-professor-books.pp-v2-section{
+  max-width:100%;
+ }
+}
