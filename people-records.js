@@ -299,7 +299,68 @@ window.ELSDR_PEOPLE_RECORDS={
           "url": ""
       }
   ],
-  "essays": [],
+  "essays": [
+      {
+          "id": "essay-resilience-06",
+          "title": "새로운 패러다임을 위한 도전, 해안 리질리언스",
+          "publication": "환경과조경 · 리질리언스 읽기 6",
+          "date": "2016-11",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/view.php?cid=64237&id=479&theme=ecoscape",
+          "summary": "기후위기에 대응하는 해안 생태계와 자연·혼합형 기반시설의 역할을 다룬 연재."
+      },
+      {
+          "id": "essay-resilience-05",
+          "title": "새로운 패러다임을 위한 도전, 도시 리질리언스",
+          "publication": "환경과조경 · 리질리언스 읽기 5",
+          "date": "2016-10",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/view.php?cid=64179&id=477&theme=greenn",
+          "summary": "폭염과 도시 재난을 배경으로 회복력 있는 도시의 설계 방향을 논의한 연재."
+      },
+      {
+          "id": "essay-resilience-04",
+          "title": "리질리언스 향상을 위한 전략, 적응과 전환",
+          "publication": "환경과조경 · 리질리언스 읽기 4",
+          "date": "2016-09",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/view.php?ca=2040&cid=64447&id=&order=f_good&page=64",
+          "summary": "생태계의 회복력과 적응·전환 전략에 관해 다룬 연재."
+      },
+      {
+          "id": "essay-resilience-03",
+          "title": "새로운 사고의 틀, 리질리언스 사고",
+          "publication": "환경과조경 · 리질리언스 읽기 3",
+          "date": "2016-08",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/view.php?cid=64123&id=471&theme=ecoscape",
+          "summary": "사회생태시스템의 복잡성과 리질리언스적 사고를 설명한 연재."
+      },
+      {
+          "id": "essay-resilience-02",
+          "title": "리질리언스 개념의 등장과 확장",
+          "publication": "환경과조경 · 리질리언스 읽기 2",
+          "date": "2016-07",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/view.php?cid=488&id=&keyword=&option=f_subject&order=f_good&page=355&theme=ecoscape",
+          "summary": "허리케인 카트리나 이후 확대된 리질리언스의 개념과 적용을 다룬 연재."
+      },
+      {
+          "id": "essay-resilience-01",
+          "title": "21세기 패러다임의 변화, 지속가능성을 넘어 리질리언스로",
+          "publication": "환경과조경 · 리질리언스 읽기 1",
+          "date": "2016-06",
+          "author": "전진형",
+          "genre": "연재 기고",
+          "url": "https://www.lak.co.kr/greenn/magazine.php?id=9",
+          "summary": "지속가능성과 리질리언스의 차이를 제시하는 연재의 첫 번째 글. 연결 링크는 해당 호 목차입니다."
+      }
+  ],
   "researchers": [
     {
       "id": "researcher-1",
