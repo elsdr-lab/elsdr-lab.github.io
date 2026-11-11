@@ -142,7 +142,68 @@ window.ELSDR_PEOPLE_RECORDS={
       "sourceUrl": "https://tlo.korea.ac.kr/researcher/2883"
     }
   ],
-  "books": [],
+  "books": [
+    {
+      "id": "landscape-nearby",
+      "title": "조경, 가까운 자연",
+      "year": 2025,
+      "publisher": "21세기북스",
+      "authors": "전진형",
+      "role": "단독 저서",
+      "roleEn": "Author",
+      "summary": "일상에서 만나는 조경과 도시·자연의 관계를 소개하는 책.",
+      "summaryEn": "Explores landscape architecture in everyday life and the relationship between cities and nature.",
+      "isbn": "9791173576362",
+      "cover": "assets/people/books/landscape-nearby.jpg",
+      "url": "https://www.book21.com/book/book_view.html?bookSID=7240",
+      "coverSourceUrl": "https://image.yes24.com/goods/167576944/XL"
+    },
+    {
+      "id": "landscape-planning",
+      "title": "조경계획론",
+      "year": 2024,
+      "publisher": "문운당",
+      "authors": "김진오 외 (전진형 공동 집필)",
+      "role": "공동 저서",
+      "roleEn": "Co-author",
+      "summary": "조경계획의 개념과 목표, 이론, 방법 및 계획 실무를 다루는 전문서.",
+      "summaryEn": "A textbook on landscape planning concepts, theory, methods and practice.",
+      "isbn": "9791156926887",
+      "cover": "assets/people/books/landscape-planning.jpg",
+      "url": "https://www.yes24.com/product/goods/125133531",
+      "coverSourceUrl": "https://image.yes24.com/goods/125133531/XL"
+    },
+    {
+      "id": "resilience-principles",
+      "title": "회복력 원칙",
+      "year": 2023,
+      "publisher": "고려대학교출판문화원",
+      "authors": "레넷 빅스·마야 슐뤼터·마이클 L. 스쿤 엮음 / 김정규·전진형·김민 옮김",
+      "role": "공동 번역",
+      "roleEn": "Co-translator",
+      "summary": "사생계에서 지속가능한 생태계 서비스를 위한 회복력의 원칙을 다룬 번역서.",
+      "summaryEn": "A translated volume on resilience principles for sustaining ecosystem services in social-ecological systems.",
+      "isbn": "9791169560139",
+      "cover": "assets/people/books/resilience-principles.jpg",
+      "url": "https://kupress.com/books/20645/",
+      "coverSourceUrl": "https://kupress.com/wp-content/uploads/%ED%9A%8C%EB%B3%B5%EB%A0%A5%EC%9D%98-%EC%9B%90%EC%B9%99_550.jpg"
+    },
+    {
+      "id": "korean-landscape-horizons",
+      "title": "한국 조경의 새로운 지평",
+      "year": 2021,
+      "publisher": "한숲",
+      "authors": "김아연 외 (전진형 공동 집필)",
+      "role": "공동 저서",
+      "roleEn": "Co-author",
+      "summary": "한국 조경의 변화와 미래 방향을 다양한 전문가의 관점에서 살펴보는 책.",
+      "summaryEn": "Examines changes and future directions in Korean landscape architecture through multiple professional perspectives.",
+      "isbn": "9791187511267",
+      "cover": "assets/people/books/korean-landscape-horizons.jpg",
+      "url": "https://www.yes24.com/product/goods/97697233",
+      "coverSourceUrl": "https://image.yes24.com/goods/97697233/XL"
+    }
+  ],
   "columns": [
     {
       "id": "column-green-space",
