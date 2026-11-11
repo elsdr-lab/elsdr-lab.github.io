@@ -260,7 +260,15 @@ function enhanceBookshelf(){
   const book=document.createElement("span");book.className="pp-shelf-object";
   const spine=document.createElement("span");spine.className="pp-shelf-spine";
   const spineTitle=document.createElement("span");spineTitle.className="pp-shelf-spine-title";
-  spineTitle.textContent=titleText;
+  // Stack actual characters rather than rotating the writing direction.
+  // Whitespace becomes a larger vertical gap between words.
+  for(const char of Array.from(titleText.trim())){
+   const glyph=document.createElement("span");
+   glyph.className=/\\s/.test(char)?"pp-shelf-word-gap":"pp-shelf-glyph";
+   if(glyph.className==="pp-shelf-glyph")glyph.textContent=char;
+   else glyph.setAttribute("aria-hidden","true");
+   spineTitle.append(glyph);
+  }
   const spineYear=document.createElement("small");spineYear.textContent=year;
   spine.append(spineTitle,spineYear);
   const front=document.createElement("span");front.className="pp-shelf-front";
