@@ -137,18 +137,23 @@
 .lf-v2-news-action{text-align:right}
 .lf-v2-news-action a{color:#536D5E;font-size:11px;font-weight:600;white-space:nowrap;text-decoration:underline;text-underline-offset:5px}
 .lf-v2-news-action span{font-size:11px;color:#87988B}
-.lf-v2-news-thumbnail{grid-column:1;grid-row:1;width:100%;aspect-ratio:4/3;overflow:hidden}
-.lf-v2-news-thumbnail img{width:100%;height:100%;object-fit:cover}
-.lf-v2-news-row:has(.lf-v2-news-thumbnail){grid-template-columns:118px 105px minmax(0,1fr) 108px}
-.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-date{grid-column:2}
-.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-content{grid-column:3}
-.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-action{grid-column:4}
 .lf-v2-news-empty-message{padding:35px 6px;color:#536D5E;font-size:13px}
-@media(max-width:800px){.lf-v2-news-row,.lf-v2-news-row:has(.lf-v2-news-thumbnail){grid-template-columns:minmax(0,1fr) auto;gap:12px 16px;padding:22px 4px}
-.lf-v2-news-date,.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-date{grid-column:1/-1;grid-row:auto;flex-direction:row;align-items:center;padding:0}
-.lf-v2-news-content,.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-content{grid-column:1;grid-row:auto}
-.lf-v2-news-action,.lf-v2-news-row:has(.lf-v2-news-thumbnail) .lf-v2-news-action{grid-column:2;grid-row:auto}
-.lf-v2-news-thumbnail{display:none}
+@media(max-width:800px){.lf-v2-news-row{grid-template-columns:minmax(0,1fr) auto;gap:12px 16px;padding:22px 4px}
+.lf-v2-news-date{grid-column:1/-1;grid-row:auto;flex-direction:row;align-items:center;padding:0}
+.lf-v2-news-content{grid-column:1;grid-row:auto}
+.lf-v2-news-action{grid-column:2;grid-row:auto}
 .lf-v2-news-search-label{max-width:none}
 }
 @media(max-width:520px){.lf-v2-news-action{align-self:end}.lf-v2-news-content h3{font-size:15px}}
+
+/* News is deliberately text-only, with identical columns for every item. */
+.lf-v2-page .lf-v2-news-row{grid-template-columns:135px minmax(0,1fr) 105px}
+.lf-v2-page .lf-v2-news-row .lf-v2-news-date{grid-column:1}
+.lf-v2-page .lf-v2-news-row .lf-v2-news-content{grid-column:2}
+.lf-v2-page .lf-v2-news-row .lf-v2-news-action{grid-column:3}
+@media(max-width:800px){
+ .lf-v2-page .lf-v2-news-row{grid-template-columns:minmax(0,1fr) auto}
+ .lf-v2-page .lf-v2-news-row .lf-v2-news-date{grid-column:1/-1}
+ .lf-v2-page .lf-v2-news-row .lf-v2-news-content{grid-column:1}
+ .lf-v2-page .lf-v2-news-row .lf-v2-news-action{grid-column:2}
+}
