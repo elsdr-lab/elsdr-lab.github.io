@@ -1178,11 +1178,11 @@ window.ELSDR_PEOPLE_RECORDS={
       "degree": "master",
       "graduationYear": 2023,
       "affiliation": "국가녹색기술연구소",
-      "fullTextUrl": "",
+      "fullTextUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000270450",
       "sourceUrl": "https://edesign.korea.ac.kr/30",
       "alumniId": "alumni-legacy-10",
-      "doi": "",
-      "libraryUrl": ""
+      "doi": "10.23186/korea.000000270450.11009.0001405",
+      "libraryUrl": "https://dcollection.korea.ac.kr/srch/srchDetail/000000270450"
     },
     {
       "id": "thesis-7",
