@@ -121,8 +121,8 @@ function renderCareer(){
 function writingList(records,title){
  if(!records?.length)return empty(title+" 등록 예정","제목 · 매체명 · 발행일 · 원문 링크를 입력할 수 있습니다.");
  return '<div class="pp-v2-writings-list">'+[...records].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).map(item=>
-    '<div class="pp-v2-writing-row"><time>'+E(item.date||"")+'</time>'+
-    '<div><h4>'+E(item.title)+'</h4><p>'+E(item.publication||item.medium||"")+'</p></div>'+
+    '<div class="pp-v2-writing-row"><div class="pp-v2-writing-meta"><time>'+E(item.date||"")+'</time><span class="pp-v2-writing-medium">'+E(item.publication||item.medium||"")+'</span></div>'+
+    '<div class="pp-v2-writing-title"><h4>'+E(item.title)+'</h4></div>'+
     (item.url?outerLink(item.url,"View article"):'<span class="pp-v2-writing-source-pending">원문 링크 확인 중</span>')+'</div>').join("")+'</div>';
 }
 function renderWritings(){
