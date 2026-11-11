@@ -592,3 +592,28 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
   max-width:100%;
  }
 }
+
+/* Newspaper columns — centered, slightly larger publication badges between date and title. */
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-meta{
+ display:grid;
+ grid-template-columns:86px minmax(0,1fr);
+ align-items:center;
+ column-gap:10px;
+ width:100%;
+}
+.pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-medium{
+ justify-self:center;
+ text-align:center;
+ min-width:66px;
+ padding:5px 9px;
+ font-size:12px;
+ line-height:1.25;
+}
+@media(max-width:680px){
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-meta{
+  display:flex;align-items:center;justify-content:flex-start;gap:14px;
+ }
+ .pp-page #people-professor-books #pp-v2-columns .pp-v2-writing-medium{
+  justify-self:auto;
+ }
+}
