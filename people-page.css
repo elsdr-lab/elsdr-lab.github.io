@@ -500,3 +500,35 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  }
  .pp-page #people-professor-books .pp-shelf-volume.is-open{margin-right:22px}
 }
+
+/* Bookshelf v10 — plain preformatted ONE-column spine text, true horizontal center.
+   No nested glyph spans, line wrapping, columns, or rotated text. */
+.pp-page #people-professor-books .pp-shelf-spine{padding:0;text-align:center;}
+.pp-page #people-professor-books .pp-shelf-spine-title{
+ position:absolute;
+ inset:auto 0 auto 0;
+ top:calc((100% - 39px)/2);
+ transform:translateY(-50%);
+ box-sizing:border-box;
+ display:block;
+ width:100%;min-width:0;max-width:none;
+ height:auto;max-height:calc(var(--book-height) - 64px);
+ margin:0;padding:0 4px;
+ font-size:12px;line-height:1.22;letter-spacing:0;
+ font-weight:600;
+ white-space:pre;word-break:normal;overflow-wrap:normal;
+ overflow:hidden;text-align:center;
+ writing-mode:horizontal-tb;text-orientation:mixed;
+}
+.pp-page #people-professor-books .pp-shelf-spine small{
+ position:absolute;bottom:13px;left:0;right:0;
+ width:100%;transform:none;text-align:center;
+ white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+@media(max-width:700px){
+ .pp-page #people-professor-books .pp-shelf-spine-title{
+  top:calc((100% - 35px)/2);font-size:11px;line-height:1.18;
+  max-height:calc(var(--book-height) - 57px);
+ }
+ .pp-page #people-professor-books .pp-shelf-spine small{bottom:10px}
+}
