@@ -13,6 +13,7 @@ const configs=[
  {id:'people',label:'구성원',file:'people-records.js',variable:'ELSDR_PEOPLE_RECORDS',description:'저술·연구원·졸업생 기록을 관리합니다.'},
  {id:'research',label:'연구성과',file:'research-records.js',variable:'ELSDR_RESEARCH_RECORDS',description:'프로젝트와 논문의 내용·연도·연구영역을 관리합니다.'},
  {id:'news',label:'Life · News',file:'life-records.js',variable:'ELSDR_LIFE_RECORDS',description:'연구실 공식 소식·성과·언론 보도를 추가·수정·삭제합니다. 발행일과 원문 링크를 관리합니다.'},
+ {id:'activities',label:'Life · Activities',file:'life-records.js',variable:'ELSDR_LIFE_RECORDS',description:'답사·연구실 활동·사진 아카이브를 추가·수정하고 사진을 관리합니다.'},
  {id:'events',label:'Life · Events',file:'life-records.js',variable:'ELSDR_LIFE_RECORDS',description:'학술대회·세미나·특강·워크숍의 날짜, 발표자, 장소와 원문 링크를 관리합니다.'},
  {id:'life',label:'소식·활동',file:'life-records.js',variable:'ELSDR_LIFE_RECORDS',description:'행사와 현장활동 기록을 관리합니다. 교수 칼럼은 구성원 메뉴에서 수정합니다.'},
  {id:'study',label:'연구자료',file:'study-resources.js',variable:'ELSDR_STUDY_RESOURCES',description:'공개 연구노트와 교육·세미나 자료를 관리합니다.'},
@@ -87,7 +88,7 @@ function careerDateKey(item){
 function sortCareer(items){return items.sort((a,b)=>careerDateKey(b)-careerDateKey(a));}
 
 function template(key){if(key==='career')return {id:'career-'+crypto.randomUUID().slice(0,8),category:'career',period:'',title:'',titleKo:'',organization:'',organizationKo:'',sourceUrl:''};const base={id:'record-'+crypto.randomUUID().slice(0,8),title:'',url:''};if(key==='places')return {id:base.id,name:'',region:'',lat:0,lon:0,group:'domestic',approximate:false};if(key==='keywords')return '';if(key==='positions')return {...base,description:'',status:'open',published:''};return {...base,year:new Date().getFullYear(),authors:'',publisher:'',description:''}}
-function newItem(array,key){if(key==='events')return {id:'event-'+crypto.randomUUID().slice(0,8),year:new Date().getFullYear(),category:'seminar',title:'',date:'',speaker:'',organizer:'',location:'',summary:'',photo:'',sourceUrl:'',sourceKind:''};if(key==='news')return {id:'news-'+crypto.randomUUID().slice(0,8),date:'',category:'update',title:'',summary:'',publication:'ELSDR',photo:'',sourceUrl:'',externalUrl:''};
+function newItem(array,key){if(key==='activities')return {id:'activity-'+crypto.randomUUID().slice(0,8),year:new Date().getFullYear(),date:'',category:'fieldwork',title:'',summary:'',photo:'',photos:[],sourceUrl:'',eventId:'',places:[]};if(key==='events')return {id:'event-'+crypto.randomUUID().slice(0,8),year:new Date().getFullYear(),category:'seminar',title:'',date:'',speaker:'',organizer:'',location:'',summary:'',photo:'',sourceUrl:'',sourceKind:''};if(key==='news')return {id:'news-'+crypto.randomUUID().slice(0,8),date:'',category:'update',title:'',summary:'',publication:'ELSDR',photo:'',sourceUrl:'',externalUrl:''};
  if(key==='alumni')return {id:'alumni-'+crypto.randomUUID().slice(0,8),nameKo:'',nameEn:'',degree:'',graduationYear:'',affiliation:'',field:'',sourceUrl:'',sourceNote:''};
  if(key==='theses')return {id:'thesis-'+crypto.randomUUID().slice(0,8),alumniId:'',title:'',author:'',nameEn:'',degree:'master',graduationYear:'',affiliation:'',doi:'',libraryUrl:'',fullTextUrl:'',sourceUrl:''};
  if(key==='researchers')return {id:'researcher-'+crypto.randomUUID().slice(0,8),nameKo:'',nameEn:'',academicStatus:'',group:'ms',interests:'',email:'',initials:'',photo:'',entryYear:'',entrySemester:'',verification:''};if(key==='career')return template(key);if(key==='books')return {id:'book-'+crypto.randomUUID().slice(0,8),title:'',year:new Date().getFullYear(),publisher:'',authors:'',role:'',roleEn:'',summary:'',summaryEn:'',cover:'',url:''};if(key==='columns'||key==='essays')return template(key);if(key==='columns'||key==='essays')return {id:(key==='columns'?'column-':'essay-')+crypto.randomUUID().slice(0,8),title:'',publication:'',date:'',author:'전진형',summary:'',url:'',...(key==='essays'?{genre:'기고'}:{})};if(!array.length)return template(key);if(array[0]&&typeof array[0]==='object'&&!Array.isArray(array[0])){const union={};for(const item of array)for(const [k,v] of Object.entries(item))if(!(k in union))union[k]=v;return blank(union)}return blank(array[0])}
@@ -114,7 +115,13 @@ function collection(array,key,parent){if(key==='career')sortCareer(array);const 
   actions.append(transfer);
  }
  const remove=el('button','항목 삭제','danger');remove.disabled=!token;remove.onclick=()=>{if(confirm('이 항목을 삭제할까요? 저장 전까지 홈페이지에는 반영되지 않습니다.')){array.splice(index,1);changed();render()}};actions.append(remove);area.append(actions);card.append(area);section.append(card)});parent.append(section)}
-function field(object,key,parent){if(key==='id'||(selected.id==='career'&&key==='periodKo'))return;if(key==='photo'||key==='cover'){photoField(object,key,parent);return}const value=object[key],name=selected.id==='news'&&key==='sourceUrl'?'기존 사이트 아카이브 주소 (관리용)':selected.id==='news'&&key==='externalUrl'?'Read story · 원문 출처 주소 (공개용)':selected.id==='professor'&&key==='title'?'직함 (영문)':selected.id==='professor'&&key==='affiliation'?'소속 (영문)':labels[key]||String(key),wrapper=el('label',undefined,'field');wrapper.append(el('span',name));let input;if(typeof value==='boolean'){input=el('input');input.type='checkbox';input.checked=value;input.onchange=()=>{object[key]=input.checked;changed()}}else if(selected.id==='career'&&key==='category'){input=el('select');for(const [v,label] of Object.entries(careerCategories)){const option=el('option',label);option.value=v;input.append(option)}input.value=value;input.onchange=()=>{object[key]=input.value;changed()} }else if(selected.id==='events'&&key==='category'){
+function field(object,key,parent){if(key==='id'||(selected.id==='career'&&key==='periodKo'))return;if(key==='photo'||key==='cover'){photoField(object,key,parent);return}const value=object[key],name=selected.id==='news'&&key==='sourceUrl'?'기존 사이트 아카이브 주소 (관리용)':selected.id==='news'&&key==='externalUrl'?'Read story · 원문 출처 주소 (공개용)':selected.id==='professor'&&key==='title'?'직함 (영문)':selected.id==='professor'&&key==='affiliation'?'소속 (영문)':labels[key]||String(key),wrapper=el('label',undefined,'field');wrapper.append(el('span',name));let input;if(typeof value==='boolean'){input=el('input');input.type='checkbox';input.checked=value;input.onchange=()=>{object[key]=input.checked;changed()}}else if(selected.id==='career'&&key==='category'){input=el('select');for(const [v,label] of Object.entries(careerCategories)){const option=el('option',label);option.value=v;input.append(option)}input.value=value;input.onchange=()=>{object[key]=input.value;changed()} }else if(selected.id==='activities'&&key==='category'){
+ input=el('select');
+ for(const [v,label] of [['fieldwork','Fieldwork / 답사'],['workshop','Workshop / 워크숍'],['exchange','Academic Exchange / 학술·문화 교류'],['lab','Lab Life / 연구실 활동']]){
+  const opt=el('option',label);opt.value=v;input.append(opt);
+ }
+ input.value=value||'fieldwork';input.onchange=()=>{object[key]=input.value;changed()};
+ }else if(selected.id==='events'&&key==='category'){
  input=el('select');
  for(const [v,label] of [['seminar','Seminar / 세미나'],['lecture','Guest Lecture / 특강'],['conference','Conference / 학술대회'],['workshop','Workshop / 워크숍'],['forum','Forum / 포럼']]){const option=el('option',label);option.value=v;input.append(option)}
  input.value=value||'seminar';input.onchange=()=>{object[key]=input.value;changed()};
@@ -170,7 +177,31 @@ function photoField(object,key,parent){
  layout.append(picture,controlsBox);wrapper.append(layout);parent.append(wrapper);
 }
 
-function fields(object,parent){const grid=el('div',undefined,'fields');for(const key of Object.keys(object)){const value=object[key];if(Array.isArray(value)){const nested=el('div',undefined,'nested');collection(value,key,nested);grid.append(nested)}else if(value&&typeof value==='object'){const nested=el('section',undefined,'nested');nested.append(el('h3',labels[key]||key));fields(value,nested);grid.append(nested)}else field(object,key,grid)}parent.append(grid)}
+function activityPhotosField(photos,parent){
+ const section=el('section',undefined,'nested');
+ section.append(el('h3','추가 활동 사진'));
+ const info=el('p','사진을 여러 장 등록할 수 있습니다. 업로드 후 반드시 상단의 변경 내용 저장을 눌러주세요.','notice');
+ section.append(info);
+ photos.forEach((url,index)=>{
+  const wrap=el('div',undefined,'field photo-file-field');
+  const preview=el('img');preview.alt='활동 사진 '+(index+1);preview.loading='lazy';
+  const address=new URL(url||'',location.origin+'/');
+  if(url&&['http:','https:'].includes(address.protocol)){preview.src=photoPreviews.get(url)||address.href;preview.style.maxWidth='190px';preview.style.maxHeight='160px';wrap.append(preview)}
+  const label=el('span','사진 '+(index+1));wrap.append(label);
+  const input=el('input');input.type='text';input.value=url||'';input.placeholder='이미지 주소 또는 업로드';input.onchange=()=>{photos[index]=input.value.trim();changed()};wrap.append(input);
+  const upload=el('input');upload.type='file';upload.accept='image/png,image/jpeg,image/webp';upload.disabled=!token;
+  const object={photo:url};
+  upload.onchange=()=>uploadImage(upload.files[0],object,'photo',upload,()=>{photos[index]=object.photo;changed();render()});
+  wrap.append(upload);
+  const remove=el('button','사진 삭제','secondary');remove.disabled=!token;
+  remove.onclick=()=>{photos.splice(index,1);changed();render()};wrap.append(remove);
+  section.append(wrap);
+ });
+ const add=el('button','+ 사진 추가','secondary');add.disabled=!token;
+ add.onclick=()=>{photos.push('');changed();render()};section.append(add);
+ parent.append(section);
+}
+function fields(object,parent){const grid=el('div',undefined,'fields');for(const key of Object.keys(object)){const value=object[key];if(Array.isArray(value)){if(selected.id==='activities'&&key==='photos'){activityPhotosField(value,grid);continue;}const nested=el('div',undefined,'nested');collection(value,key,nested);grid.append(nested)}else if(value&&typeof value==='object'){const nested=el('section',undefined,'nested');nested.append(el('h3',labels[key]||key));fields(value,nested);grid.append(nested)}else field(object,key,grid)}parent.append(grid)}
 
 function renderProfessorEditor(editor){
  const p=current.data.professor;
@@ -190,7 +221,13 @@ function renderProfessorEditor(editor){
  const link=el('a','공개 Professor 페이지 보기 ↗','text-link');link.href='../#/people/professor';link.target='_blank';link.rel='noopener';editor.append(link);
 }
 
-function render(){const editor=$('editor');editor.replaceChildren();editor.classList.toggle('research-cms',selected.id==='research');if(selected.id==='professor'){renderProfessorEditor(editor);$('count').textContent='';controls();return}if(selected.id==='career'){collection(current.data.career,'career',editor);$('count').textContent=current.data.career.length+'개 항목';controls();return}if(selected.id==='books'){if(!Array.isArray(current.data.books))current.data.books=[];collection(current.data.books,'books',editor);const link=el('a','공개 Books 페이지 보기 ↗','text-link');link.href='../#/people/professor/books';link.target='_blank';link.rel='noopener';editor.append(link);$('count').textContent=current.data.books.length+'권';controls();return}if(selected.id==='events'){
+function render(){const editor=$('editor');editor.replaceChildren();editor.classList.toggle('research-cms',selected.id==='research');if(selected.id==='professor'){renderProfessorEditor(editor);$('count').textContent='';controls();return}if(selected.id==='career'){collection(current.data.career,'career',editor);$('count').textContent=current.data.career.length+'개 항목';controls();return}if(selected.id==='books'){if(!Array.isArray(current.data.books))current.data.books=[];collection(current.data.books,'books',editor);const link=el('a','공개 Books 페이지 보기 ↗','text-link');link.href='../#/people/professor/books';link.target='_blank';link.rel='noopener';editor.append(link);$('count').textContent=current.data.books.length+'권';controls();return}if(selected.id==='activities'){
+ if(!Array.isArray(current.data.activities))current.data.activities=[];
+ editor.append(el('p','원본 Field trip / Gallery에서 확인된 활동을 관리합니다. 요약을 비우면 공개 상세 페이지에도 표시되지 않습니다. 대표 사진은 목록과 상세에, 추가 사진은 상세 갤러리에 표시됩니다. 장소 정보(places)는 지도 위치와 연결되므로 확인된 지점만 입력해 주세요.','notice'));
+ collection(current.data.activities,'activities',editor);
+ const link=el('a','공개 Activities 페이지 보기 ↗','text-link');link.href='../#/life/activities';link.target='_blank';link.rel='noopener';editor.append(link);
+ $('count').textContent=current.data.activities.length+'건';controls();return;
+ }if(selected.id==='events'){
  if(!Array.isArray(current.data.events))current.data.events=[];
  editor.append(el('p','기존 아카이브의 확인된 행사를 관리합니다. 행사 제목·날짜·발표자·장소는 사실 확인 후 입력하고, 원문 상세 링크가 확인된 경우에는 sourceUrl을 해당 주소로 수정하세요. 행사 설명(summary)을 입력하면 상세 페이지에 표시되고, 비워 두면 설명 영역 자체가 표시되지 않습니다. 기존 행사 아카이브 링크는 공개 상세 페이지에 표시하지 않습니다. 대표 사진은 해당 행사에서 확보한 이미지만 등록하며, 공개 상세 페이지에만 표시합니다. 새 행사 등록 후 저장하면 공개 Events 목록과 상세 화면에 자동으로 반영됩니다.','notice'));
  collection(current.data.events,'events',editor);
