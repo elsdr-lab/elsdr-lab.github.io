@@ -1158,7 +1158,7 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2025,
       "title": "Portland & Seattle 2025",
       "category": "fieldwork",
-      "summary": "기존 Field trip 아카이브의 해외 답사 기록입니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/131",
       "eventId": "",
@@ -1181,7 +1181,8 @@ window.ELSDR_LIFE_RECORDS={
           "group": "overseas",
           "approximate": true
         }
-      ]
+      ],
+      "photos": []
     },
     {
       "id": "greenboat-2025",
@@ -1189,11 +1190,12 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2025,
       "title": "2025 그린보트",
       "category": "exchange",
-      "summary": "기존 Field trip 기록입니다. 정확한 활동 장소와 사진은 원문 확인 후 입력합니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/128",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photos": []
     },
     {
       "id": "yangyang-workshop-2024",
@@ -1215,7 +1217,8 @@ window.ELSDR_LIFE_RECORDS={
           "group": "korea",
           "approximate": true
         }
-      ]
+      ],
+      "photos": []
     },
     {
       "id": "seoulforest-trip-2024",
@@ -1223,7 +1226,7 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2024,
       "title": "2024 서울숲 필드트립",
       "category": "fieldwork",
-      "summary": "서울숲 현장답사 아카이브의 공개 기록입니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/124",
       "eventId": "",
@@ -1237,19 +1240,21 @@ window.ELSDR_LIFE_RECORDS={
           "group": "korea",
           "approximate": true
         }
-      ]
+      ],
+      "photos": []
     },
     {
       "id": "norman-foster-2024",
       "date": "2024",
       "year": 2024,
-      "title": "미래긍정: 노먼 포스터",
+      "title": "미래긍정: 노먼 포스터, 포스터 + 파트너스",
       "category": "exchange",
-      "summary": "기존 Gallery 아카이브의 전시 관람 기록입니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/120",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photos": []
     },
     {
       "id": "goyang-flowers-2024",
@@ -1257,11 +1262,12 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2024,
       "title": "2024 고양국제꽃박람회",
       "category": "exchange",
-      "summary": "기존 Gallery 기록입니다. 정확한 방문 위치와 사진은 추후 확인합니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/116",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photos": []
     },
     {
       "id": "siheung-valley-2023",
@@ -1269,23 +1275,25 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2023,
       "title": "금천구 시흥계곡 답사",
       "category": "fieldwork",
-      "summary": "기존 Gallery 아카이브에 등록된 답사 기록입니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/111",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photos": []
     },
     {
       "id": "sejong-arboretum-2023",
       "date": "2023",
       "year": 2023,
-      "title": "세종수목원 가이드 투어",
+      "title": "2023 조경 교우회 국립세종수목원&세종정부청사 옥상 가이드 투어",
       "category": "fieldwork",
-      "summary": "기존 Gallery 아카이브의 가이드 투어 기록입니다.",
+      "summary": "",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/106",
       "eventId": "",
-      "places": []
+      "places": [],
+      "photos": []
     },
     {
       "id": "climate-workshop-2026",
@@ -1293,12 +1301,171 @@ window.ELSDR_LIFE_RECORDS={
       "year": 2026,
       "title": "기후 시뮬레이션 & 환경문제 해결 워크숍",
       "category": "workshop",
-      "summary": "Events 아카이브의 공식 행사와 연결된 활동 기록 영역입니다. 참여·현장 사진은 확인 후 입력합니다.",
-      "photo": "",
+      "summary": "",
+      "photo": "assets/life/events/photos/climate-simulation-2026.jpg",
       "sourceUrl": "",
       "eventId": "climate-simulation-2026",
       "places": [],
-      "status": "pending"
+      "status": "pending",
+      "photos": [
+        "assets/life/events/photos/climate-simulation-2026.jpg"
+      ]
+    },
+    {
+      "id": "gyeongju-workshop-2026",
+      "date": "2026",
+      "year": 2026,
+      "title": "2026 연구실 워크숍_경주",
+      "category": "workshop",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/152",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "ecolandscape-20th-2025",
+      "date": "2025",
+      "year": 2025,
+      "title": "2025 생태조경 융합전공 20주년 전시회",
+      "category": "exchange",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/149",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "yellow-sea-symposium-2025",
+      "date": "2025",
+      "year": 2025,
+      "title": "2025 Yellow Sea Ecosystem Symposium",
+      "category": "exchange",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/147",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "water-resilience-workshop-2025",
+      "date": "2025",
+      "year": 2025,
+      "title": "2025 수변공간 사회생태시스템의 회복탄력성 증진을 위한 학술 워크숍",
+      "category": "workshop",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/148",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "singapore-2025",
+      "date": "2025",
+      "year": 2025,
+      "title": "2025 Singapore",
+      "category": "fieldwork",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/150",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "landscape-artists-exhibition-2025",
+      "date": "2025",
+      "year": 2025,
+      "title": "2025 조경가 그룹전: 연두빛사람들",
+      "category": "exchange",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/138",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "ku-landscape-alumni-2024",
+      "date": "2024",
+      "year": 2024,
+      "title": "2024 고려대학교 조경교우회",
+      "category": "lab",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/118",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "lee-kyungjun-exhibition",
+      "date": "",
+      "year": 0,
+      "title": "이경준 사진전: ONE STEP AWAY",
+      "category": "exchange",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/112",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "discover-neom",
+      "date": "",
+      "year": 0,
+      "title": "DISCOVER NEOM",
+      "category": "exchange",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/110",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "seoulforest-2023",
+      "date": "2023",
+      "year": 2023,
+      "title": "서울숲 2023",
+      "category": "fieldwork",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/99",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "marine-assessment-workshop-2022",
+      "date": "2022",
+      "year": 2022,
+      "title": "2022 해역이용영향평가 기술개발 2차년도 중과제 워크숍",
+      "category": "workshop",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/91",
+      "eventId": "",
+      "places": []
+    },
+    {
+      "id": "green-infrastructure-workshop-2022",
+      "date": "2022",
+      "year": 2022,
+      "title": "2022 도시생태계 현안대응을 위한 다중기반 그린인프라 기술개발 워크숍",
+      "category": "workshop",
+      "summary": "",
+      "photo": "",
+      "photos": [],
+      "sourceUrl": "https://edesign.korea.ac.kr/93",
+      "eventId": "",
+      "places": []
     }
   ],
   "news": [
