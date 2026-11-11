@@ -617,3 +617,86 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
   justify-self:auto;
  }
 }
+
+/* Researchers editorial profile directory — faculty feedback, 2026-11-11. */
+.pp-page #people-researchers.pp-v2-section{
+ width:100%;max-width:1240px;margin-inline:auto;
+}
+.pp-page #people-researchers .pp-v2-group{
+ margin:0 0 78px;
+}
+.pp-page #people-researchers .pp-group-heading{
+ margin:0 0 24px;
+ padding:0 0 18px;
+ border-bottom:1px solid #cbd7ca;
+}
+.pp-page #people-researchers .pp-group-heading span{
+ font-size:10px;letter-spacing:1.5px;
+}
+.pp-page #people-researchers .pp-group-heading h3{
+ margin-top:9px;
+}
+.pp-page #people-researchers .pp-people-grid{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:34px 18px;
+}
+.pp-page #people-researchers .pp-v2-researcher-card{
+ min-width:0;display:flex;flex-direction:column;
+ padding:0;background:transparent;border:0;
+ border-bottom:1px solid #cbd7ca;
+ border-radius:0;box-shadow:none;
+}
+.pp-page #people-researchers .pp-v2-researcher-card .pp-person-photo{
+ width:100%;height:auto;min-height:0;
+ aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
+ background:#E2E7E1;overflow:hidden;border:0;border-radius:0;
+}
+.pp-page #people-researchers .pp-v2-researcher-card .pp-person-photo img{
+ display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+}
+.pp-page #people-researchers .pp-researcher-initials{
+ font-family:"IBM Plex Sans",sans-serif;
+ font-size:clamp(30px,3vw,50px);font-weight:400;
+ letter-spacing:-1px;color:#8CAAB1;
+}
+.pp-page #people-researchers .pp-v2-researcher-card .pp-person-info{
+ display:flex;flex-direction:column;flex:1;
+ padding:19px 0 23px;
+}
+.pp-page #people-researchers .pp-researcher-status{
+ font-size:11px;color:#536D5E;letter-spacing:.3px;
+ line-height:1.5;
+}
+.pp-page #people-researchers .pp-researcher-name{
+ font-size:21px;line-height:1.35;font-weight:600;color:#252D2A;
+ margin:11px 0 0;word-break:keep-all;
+}
+.pp-page #people-researchers .pp-researcher-name-en{
+ font-size:12px;color:#536D5E;
+ margin:5px 0 0;line-height:1.5;
+}
+.pp-page #people-researchers .pp-v2-researcher-card .pp-person-interests{
+ min-height:0;margin:16px 0 19px;
+ font-size:12px;line-height:1.8;color:#536D5E;
+}
+.pp-page #people-researchers .pp-researcher-contact{margin-top:auto}
+.pp-page #people-researchers .pp-person-email{
+ font-size:11px;line-height:1.5;overflow-wrap:anywhere;
+ color:#536D5E;
+}
+@media(max-width:1100px){
+ .pp-page #people-researchers .pp-people-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+ }
+}
+@media(max-width:750px){
+ .pp-page #people-researchers .pp-people-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 14px;
+ }
+ .pp-page #people-researchers .pp-researcher-name{font-size:18px}
+ .pp-page #people-researchers .pp-v2-group{margin-bottom:55px}
+}
+@media(max-width:420px){
+ .pp-page #people-researchers .pp-people-grid{grid-template-columns:1fr}
+ .pp-page #people-researchers .pp-v2-researcher-card .pp-person-photo{max-width:350px}
+}
