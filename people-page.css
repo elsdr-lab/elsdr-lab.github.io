@@ -413,3 +413,53 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page #people-professor-books .pp-shelf-spine-title{font-size:11px}
  .pp-page #people-professor-books .pp-shelf-spine small{font-size:9px}
 }
+
+/* Bookshelf v6: literal top-to-bottom stacked upright glyphs, not CSS vertical writing. */
+.pp-page #people-professor-books .pp-shelf-spine{
+ writing-mode:horizontal-tb;
+ text-orientation:mixed;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:space-between;
+}
+.pp-page #people-professor-books .pp-shelf-spine-title{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:flex-start;
+ flex:0 1 auto;
+ min-width:0;
+ width:100%;
+ max-height:calc(var(--book-height) - 96px);
+ overflow:hidden;
+ white-space:normal;
+ writing-mode:horizontal-tb;
+ text-orientation:mixed;
+ line-height:1;
+ gap:3px;
+ font-size:12px;
+ letter-spacing:0;
+}
+.pp-page #people-professor-books .pp-shelf-glyph{
+ display:block;flex:none;writing-mode:horizontal-tb;
+ text-orientation:mixed;line-height:1.1;
+ white-space:nowrap;text-align:center;
+ transform:none;
+}
+.pp-page #people-professor-books .pp-shelf-word-gap{
+ display:block;flex:none;height:9px;width:1px;
+}
+.pp-page #people-professor-books .pp-shelf-spine small{
+ display:block;flex:none;
+ writing-mode:horizontal-tb;
+ text-orientation:mixed;
+ white-space:nowrap;
+ text-align:center;transform:none;
+ font-size:10px;line-height:1.2;
+}
+@media(max-width:700px){
+ .pp-page #people-professor-books .pp-shelf-spine-title{gap:2px;font-size:11px}
+ .pp-page #people-professor-books .pp-shelf-word-gap{height:7px}
+ .pp-page #people-professor-books .pp-shelf-spine small{font-size:9px}
+}
