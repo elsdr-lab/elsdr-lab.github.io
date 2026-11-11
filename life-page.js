@@ -172,6 +172,11 @@ function renderEventDetail(id){
  const related=activities.filter(a=>a.eventId===e.id);
  const relatedHtml=related.length?'<div class="lf-v2-event-related"><strong>RELATED ACTIVITIES</strong>'+
   related.map(a=>'<a href="#/life/activities/'+encodeURIComponent(a.id)+'">'+E(a.title)+' · Activity Archive ↗</a>').join("")+'</div>':"";
+ const photoUrl=validUrl(e.photo);
+ const eventVisual=photoUrl?
+   '<div class="lf-v2-event-photo"><img loading="lazy" src="'+E(photoUrl)+'" alt="'+E(e.title)+' 행사 기록 사진"></div>':
+   '<div class="lf-event-detail-graphic" aria-hidden="true"><span>ELSDR / ACADEMIC EXCHANGE</span>'+
+    '<strong>'+E(e.year||"")+'</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>';
  const source=validUrl(e.sourceUrl);
  const srcLink=source?'<a class="lf-event-original" href="'+E(source)+'" target="_blank" rel="noopener noreferrer">'+
   (e.sourceKind==="archive-list"?"기존 행사 아카이브 보기":"기존 행사 기록 보기")+' <span aria-hidden="true">↗</span></a>':"";
@@ -179,8 +184,7 @@ function renderEventDetail(id){
   '<header class="lf-event-detail-head"><span class="lf-event-detail-eyebrow">ELSDR / EVENTS / '+E(category)+' / '+E(e.year||"")+'</span>'+
   '<h2>'+E(e.title)+'</h2></header>'+
   '<div class="lf-event-detail-grid">'+
-   '<div class="lf-event-detail-graphic" aria-hidden="true"><span>ELSDR / ACADEMIC EXCHANGE</span>'+
-    '<strong>'+E(e.year||"")+'</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>'+
+   eventVisual+
    '<div class="lf-event-detail-content"><h3>Event information</h3><dl>'+facts+'</dl>'+
    (e.summary?'<p>'+E(e.summary)+'</p>':"")+
    (e.sourceKind==="archive-list"?'<p>기존 연구실 행사 목록에서 제목과 연도를 확인한 기록입니다. 발표자·장소·세부 일정은 확인된 경우에만 표시합니다.</p>':"")+
