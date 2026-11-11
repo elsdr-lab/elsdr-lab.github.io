@@ -17,7 +17,12 @@ jobs:
           import requests,bs4,re,json,pathlib,unicodedata,difflib
           text=pathlib.Path('life-records.js').read_text()
           data=json.loads(text.split('window.ELSDR_LIFE_RECORDS=',1)[1].strip().rstrip(';'))
-          soup=bs4.BeautifulSoup(requests.get('https://edesign.korea.ac.kr/36',timeout=35).text,'html.parser')
+          session=requests.Session()
+          session.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36'})
+          response=session.get('https://edesign.korea.ac.kr/36',timeout=35)
+          print('HTTP',response.status_code,'HTML LENGTH',len(response.content))
+          soup=bs4.BeautifulSoup(response.text,'html.parser')
+          print('GALLERY ANCHORS',len(soup.select('a.item_container[href]')),'GALLERY DIVS',len(soup.select('div.item_gallary')),'BODY START',soup.get_text(' ',strip=True)[:180])
           albums=[]
           for a in soup.select('a.item_container[href]'):
             block=a.find_parent('div',class_='item_gallary')
