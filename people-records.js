@@ -159,21 +159,6 @@ window.ELSDR_PEOPLE_RECORDS={
       "coverSourceUrl": "https://image.yes24.com/goods/167576944/XL"
     },
     {
-      "id": "forest-connectivity",
-      "title": "Ecological Connectivity of Forest Ecosystems",
-      "year": 2025,
-      "publisher": "Springer",
-      "authors": "Katharina Lapin, Janine Oettel, Martin Braun & Heino Konrad (Eds.) · Yuyoung Choi et al. (including Jin Hyung Chon)",
-      "role": "공동 장 집필",
-      "roleEn": "Chapter co-author",
-      "summary": "수록 장: Republic of Korea: Predicting Shifts in Forest Biodiversity. 한국의 기후변화와 토지이용 변화에 따른 산림 생물다양성 변화를 분석합니다.",
-      "summaryEn": "Chapter: Republic of Korea: Predicting Shifts in Forest Biodiversity (pp. 561–571). Examines shifts in Korean forest biodiversity under climate and land-use change.",
-      "isbn": "9783031822056",
-      "cover": "assets/people/books/forest-connectivity.jpg",
-      "url": "https://doi.org/10.1007/978-3-031-82206-3_31",
-      "coverSourceUrl": "https://link.springer.com/book/10.1007/978-3-031-82206-3"
-    },
-    {
       "id": "landscape-planning",
       "title": "조경계획론",
       "year": 2024,
@@ -204,21 +189,6 @@ window.ELSDR_PEOPLE_RECORDS={
       "coverSourceUrl": "https://kupress.com/wp-content/uploads/%ED%9A%8C%EB%B3%B5%EB%A0%A5%EC%9D%98-%EC%9B%90%EC%B9%99_550.jpg"
     },
     {
-      "id": "pacific-rim-handbook",
-      "title": "The Routledge Handbook of Sustainable Cities and Landscapes in the Pacific Rim",
-      "year": 2022,
-      "publisher": "Routledge",
-      "authors": "Yizhao Yang & Anne Taufen (Eds.) · Jinhyung Chon (Chapter 25)",
-      "role": "장 집필",
-      "roleEn": "Chapter author",
-      "summary": "수록 장: Resilience-based planning and management of sustainable coastal cities and landscapes using spatial-temporal simulations. 시공간 시뮬레이션을 활용한 지속가능한 연안도시·경관의 회복탄력성 기반 계획 및 관리.",
-      "summaryEn": "Chapter 25: Resilience-based planning and management of sustainable coastal cities and landscapes using spatial-temporal simulations.",
-      "isbn": "9780367471149",
-      "cover": "assets/people/books/pacific-rim-handbook.jpg",
-      "url": "https://www.routledge.com/The-Routledge-Handbook-of-Sustainable-Cities-and-Landscapes/Yang-Taufen/p/book/9780367471149",
-      "coverSourceUrl": "https://www.routledge.com/The-Routledge-Handbook-of-Sustainable-Cities-and-Landscapes/Yang-Taufen/p/book/9780367471149"
-    },
-    {
       "id": "korean-landscape-horizons",
       "title": "한국 조경의 새로운 지평",
       "year": 2021,
@@ -232,6 +202,36 @@ window.ELSDR_PEOPLE_RECORDS={
       "cover": "assets/people/books/korean-landscape-horizons.jpg",
       "url": "https://www.yes24.com/product/goods/97697233",
       "coverSourceUrl": "https://image.yes24.com/goods/97697233/XL"
+    },
+    {
+      "id": "urban-forest-theory",
+      "title": "도시숲 이론과 실제",
+      "year": 2010,
+      "publisher": "이채",
+      "authors": "변우혁·김기원 외 (전진형 공동 집필)",
+      "role": "공동 저서",
+      "roleEn": "Co-author",
+      "summary": "도시숲의 기능과 가치, 생태환경, 계획·조성 및 관리 방법을 다룬 전문서.",
+      "summaryEn": "A reference on urban forest functions, ecological environments, planning, establishment and management.",
+      "isbn": "9788988621806",
+      "cover": "assets/people/books/urban-forest-theory.jpg",
+      "url": "https://m.yes24.com/Goods/Detail/3863802",
+      "coverSourceUrl": "https://image.yes24.com/goods/3863802/XL"
+    },
+    {
+      "id": "world-urban-forests",
+      "title": "세계의 도시숲을 걷는다",
+      "year": 2009,
+      "publisher": "이채",
+      "authors": "변우혁 외 (전진형 공동 집필)",
+      "role": "공동 저서",
+      "roleEn": "Co-author",
+      "summary": "세계 16개국의 도시숲 25개소를 소개하는 공동 저서. 전진형 교수는 캐나다 밴쿠버의 스탠리파크를 다루었습니다.",
+      "summaryEn": "A collective volume presenting 25 urban forests in 16 countries. Professor Chon contributed the chapter on Stanley Park in Vancouver, Canada.",
+      "isbn": "9788988621745",
+      "cover": "assets/people/books/world-urban-forests.jpg",
+      "url": "https://www.yes24.com/Product/Goods/137204347",
+      "coverSourceUrl": "https://image.yes24.com/goods/137204347/XL"
     }
   ],
   "columns": [
