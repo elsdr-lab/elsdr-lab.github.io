@@ -371,7 +371,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "도시 재해를 줄이기 위한 기후변화 적응, 탄소배출 감축과 도시 사회·생태시스템의 지속가능성",
       "email": "chlghwns0117@korea.ac.kr",
       "initials": "CH",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20220712/81a448922cb72.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -383,7 +383,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "도시 생태계의 회복탄력성을 위한 3차원 데이터, 기후변화, 탄소 저감",
       "email": "tmk1999@korea.ac.kr",
       "initials": "TM",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20220712/d569b84ea2deb.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -395,7 +395,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "사회·생태시스템 내 상호작용의 이해와 모델링을 통한 지속가능성 및 회복탄력성 향상",
       "email": "jeongeun01@korea.ac.kr",
       "initials": "LJ",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20260417/2f2a4723bbc84.png",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -407,7 +407,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "기후변화에 따른 도시 폭염 문제, 자연기반해법과 그린인프라",
       "email": "ejk7712@korea.ac.kr",
       "initials": "JH",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20260907/f0a3e516e8bcc.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -419,7 +419,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "정원 디자인",
       "email": "flower7117@naver.com",
       "initials": "AI",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20250826/16122c8b3de96.png",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -431,7 +431,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "도시 취약계층을 위한 그린인프라의 미세먼지 저감과 식물 관리를 위한 IoT 기술",
       "email": "sangury1@korea.ac.kr",
       "initials": "SK",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20210828/c338163145723.png",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -443,7 +443,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "기후변화에 대응하는 회복탄력적 경관과 인간–환경 관계",
       "email": "seoheelee326@korea.ac.kr",
       "initials": "LS",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20250826/cf103da1e5f64.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -455,7 +455,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "기후변화 및 회복탄력성",
       "email": "lsawondh@naver.com",
       "initials": "WD",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20230220/87fd117ffbe7e.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -467,7 +467,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "",
       "email": "Stuck-mo-jo@hanmail.net",
       "initials": "CJ",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20210828/44750b4d51491.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -479,7 +479,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "국립공원 및 유니버설 디자인",
       "email": "yoonsh64@hanmail.net",
       "initials": "YS",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20250826/ee3f9dd2f908f.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -491,7 +491,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "",
       "email": "chojh@kwater.or.kr",
       "initials": "CJ",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20210828/81de827502d72.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -527,7 +527,7 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "",
       "email": "sungwoola@hanmail.net",
       "initials": "SM",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20220727/99a81f6a38258.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
     },
     {
@@ -539,8 +539,32 @@ window.ELSDR_PEOPLE_RECORDS={
       "interests": "",
       "email": "na79ya@kwater.or.kr",
       "initials": "PC",
-      "photo": "",
+      "photo": "https://cdn.imweb.me/thumbnail/20250826/2a85815b97070.jpg",
       "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+    },
+    {
+      "id": "researcher-intern-kim-hun-po",
+      "nameEn": "Kim, Hun PO",
+      "nameKo": "",
+      "academicStatus": "Research Intern",
+      "group": "intern",
+      "interests": "생태적 건전성과 지속가능한 인간 이용 사이의 균형을 위한 통합 경관계획·관리 전략",
+      "email": "okhoonpyo3@naver.com",
+      "initials": "KH",
+      "photo": "https://cdn.imweb.me/thumbnail/20261106/3721b1ec33cfa.jpg",
+      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준"
+    },
+    {
+      "id": "researcher-intern-kim-cheon-ju",
+      "nameEn": "Kim, Cheon Ju",
+      "nameKo": "",
+      "academicStatus": "Research Intern",
+      "group": "intern",
+      "interests": "생태계서비스와 도시 회복탄력성, 생태복원 접근법의 효과성과 지속가능성",
+      "email": "rlacjswn0305@naver.com",
+      "initials": "KC",
+      "photo": "https://cdn.imweb.me/thumbnail/20261106/a5a3a27e1e6e6.png",
+      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준"
     }
   ],
   "alumni": [
