@@ -143,79 +143,87 @@ function activityDetail(id){
     '</div>';
  document.title=target.title+" | ELSDR";
 }
-function updateEventDetails(){
- const rows=$$('[data-event-detail]');
- rows.forEach(article=>{
-  if(article.dataset.lfV2Updated==="true")return;
-  const id=article.dataset.eventDetail;
-  const event=events.find(e=>e.id===id);
-  if(!event)return;
-  const dl=$(".lf-event-detail-content dl",article);
-  if(dl){
-    const fields=[
-      ["SPEAKER / ORGANIZER",event.speaker||event.organizer||"추후 확인"],
-      ["LOCATION",event.location||"장소 정보 확인 후 입력"]
-    ];
-    fields.forEach(([label,value])=>{
-      const row=document.createElement("div"),dt=document.createElement("dt"),dd=document.createElement("dd");
-      dt.textContent=label;dd.textContent=value;row.append(dt,dd);dl.append(row);
-    });
-  }
-  const detail=$(".lf-event-detail-content",article);
-  if(detail){
-    const materials=document.createElement("div");
-    materials.className="lf-v2-event-materials";
-    materials.innerHTML='<div><strong>자료 / MATERIALS</strong><p>공개 가능한 발표자료가 확인되면 파일 링크를 등록합니다.</p></div>'+
-      '<div><strong>사진 / PHOTOS</strong><p>해당 행사 현장 사진은 추후 확인 후 등록합니다.</p></div>';
-    detail.append(materials);
-    const linked=activities.filter(a=>a.eventId===id);
-    if(linked.length){
-      const cross=document.createElement("div");cross.className="lf-v2-event-related";
-      const heading=document.createElement("strong");heading.textContent="RELATED ACTIVITIES";cross.append(heading);
-      linked.forEach(a=>{
-        const link=document.createElement("a");link.href="#/life/activities/"+encodeURIComponent(a.id);
-        link.textContent=a.title+" · Activity Archive ↗";cross.append(link);
-      });
-      detail.append(cross);
-    }
-  }
-  article.dataset.lfV2Updated="true";
- });
+
+const eventCategoryLabels={seminar:"Seminar",lecture:"Guest Lecture",conference:"Conference",workshop:"Workshop",forum:"Forum"};
+function eventSort(a,b){
+ const y=Number(b.year||0)-Number(a.year||0);
+ if(y)return y;
+ const dateA=String(a.date||""),dateB=String(b.date||"");
+ const aPrecise=/^\d{4}[.\/-]\d{2}/.test(dateA),bPrecise=/^\d{4}[.\/-]\d{2}/.test(dateB);
+ if(aPrecise!==bPrecise)return aPrecise?-1:1;
+ return dateB.localeCompare(dateA,"ko");
+}
+function eventMeta(record){
+ return [record.speaker,record.organizer,record.location,record.summary].filter(Boolean).join(" · ");
+}
+function renderEventDetail(id){
+ const e=events.find(item=>item.id===id);
+ const target=$("#lf-event-detail-dynamic");
+ if(!target)return false;
+ if(!e){
+  target.innerHTML='<a class="lf-event-back" href="#/life/events">← Back to Events</a><h2>행사 정보를 찾지 못했습니다.</h2>';
+  document.title="Events | ELSDR";
+  return false;
+ }
+ const category=eventCategoryLabels[e.category]||"Event";
+ const parts=[["TYPE",category],["DATE / YEAR",e.date||e.year||""],["SPEAKER",e.speaker],["ORGANIZER",e.organizer],["LOCATION",e.location]]
+  .filter(([,v])=>String(v??"").trim());
+ const facts=parts.map(([label,value])=>'<div><dt>'+E(label)+'</dt><dd>'+E(value)+'</dd></div>').join("");
+ const related=activities.filter(a=>a.eventId===e.id);
+ const relatedHtml=related.length?'<div class="lf-v2-event-related"><strong>RELATED ACTIVITIES</strong>'+
+  related.map(a=>'<a href="#/life/activities/'+encodeURIComponent(a.id)+'">'+E(a.title)+' · Activity Archive ↗</a>').join("")+'</div>':"";
+ const source=validUrl(e.sourceUrl);
+ const srcLink=source?'<a class="lf-event-original" href="'+E(source)+'" target="_blank" rel="noopener noreferrer">'+
+  (e.sourceKind==="archive-list"?"기존 행사 아카이브 보기":"기존 행사 기록 보기")+' <span aria-hidden="true">↗</span></a>':"";
+ target.innerHTML='<a class="lf-event-back" href="#/life/events">← Back to Events</a>'+
+  '<header class="lf-event-detail-head"><span class="lf-event-detail-eyebrow">ELSDR / EVENTS / '+E(category)+' / '+E(e.year||"")+'</span>'+
+  '<h2>'+E(e.title)+'</h2></header>'+
+  '<div class="lf-event-detail-grid">'+
+   '<div class="lf-event-detail-graphic" aria-hidden="true"><span>ELSDR / ACADEMIC EXCHANGE</span>'+
+    '<strong>'+E(e.year||"")+'</strong><span>RESEARCH · COMMUNITY · IDEAS</span></div>'+
+   '<div class="lf-event-detail-content"><h3>Event information</h3><dl>'+facts+'</dl>'+
+   (e.summary?'<p>'+E(e.summary)+'</p>':"")+
+   (e.sourceKind==="archive-list"?'<p>기존 연구실 행사 목록에서 제목과 연도를 확인한 기록입니다. 발표자·장소·세부 일정은 확인된 경우에만 표시합니다.</p>':"")+
+   srcLink+relatedHtml+'</div></div>'+
+   '<div class="lf-event-detail-foot"><a href="#/life/events">← All events</a><span>ELSDR / LIFE</span></div>';
+ document.title=e.title+" | ELSDR";
+ return true;
 }
 function initEventFilters(){
  const year=$("#lf-v2-event-year");
- const years=[...new Set(events.map(e=>Number(e.year)).filter(Number.isFinite))].sort((a,b)=>b-a);
- years.forEach(y=>{const opt=document.createElement("option");opt.value=y;opt.textContent=y;year.append(opt);});
+ year.innerHTML='<option value="all">All Years</option>';
+ [...new Set(events.map(e=>Number(e.year)).filter(y=>Number.isFinite(y)&&y>0))].sort((a,b)=>b-a).forEach(y=>{
+  const opt=document.createElement("option");opt.value=String(y);opt.textContent=String(y);year.append(opt);
+ });
  $$("[data-seminar-filter]").forEach(btn=>{
-  const type=btn.dataset.seminarFilter;
-  const count=events.filter(e=>type==="all"||e.category===type).length;
-  const badge=$("span",btn);
-  if(badge)badge.textContent=String(count);
-  btn.addEventListener("click",()=>{state.eventType=type;renderEvents();});
+  btn.addEventListener("click",()=>{state.eventType=btn.dataset.seminarFilter;renderEvents();});
  });
  year.addEventListener("change",()=>{state.eventYear=year.value;renderEvents();});
  $("#lf-seminar-search").addEventListener("input",e=>{state.eventQuery=e.target.value.trim().toLocaleLowerCase();renderEvents();});
  renderEvents();
 }
 function renderEvents(){
- let count=0;
- $$(".lf-seminar").forEach(row=>{
-   const id=row.getAttribute("href")?.split("/").pop();
-   const event=events.find(e=>e.id===id);
-   const text=[event?.title,event?.speaker,event?.organizer,event?.date,event?.year,row.dataset.seminarSearch].join(" ").toLocaleLowerCase();
-   const show=!!event&&(state.eventType==="all"||state.eventType===event.category)&&
-     (state.eventYear==="all"||String(event.year)===state.eventYear)&&
-     (!state.eventQuery||text.includes(state.eventQuery));
-   row.hidden=!show;
-   if(show)count++;
- });
+ const filtered=[...events].filter(e=>
+  (state.eventType==="all"||state.eventType===e.category)&&
+  (state.eventYear==="all"||String(e.year)===state.eventYear)&&
+  (!state.eventQuery||[e.title,e.speaker,e.organizer,e.location,e.summary,e.date,e.year].join(" ").toLocaleLowerCase().includes(state.eventQuery))
+ ).sort(eventSort);
+ const list=$(".lf-seminar-list");
+ if(list)list.innerHTML=filtered.map((e,i)=>
+  '<a class="lf-seminar" href="#/life/events/'+encodeURIComponent(e.id)+'">'+
+  '<span>'+String(i+1).padStart(2,"0")+'</span><span>'+E(e.year||"—")+'</span>'+
+  '<div><small>'+E(eventCategoryLabels[e.category]||"Event")+' · '+E(e.date||e.year||"")+'</small>'+
+  '<h3>'+E(e.title)+'</h3>'+
+  (e.speaker||e.organizer?'<p class="lf-seminar-person">'+E(e.speaker||e.organizer)+'</p>':"")+'</div>'+
+  '<span class="lf-seminar-arrow">↗</span></a>').join("");
  $$("[data-seminar-filter]").forEach(btn=>{
-   const selected=btn.dataset.seminarFilter===state.eventType;
-   btn.classList.toggle("is-selected",selected);
-   btn.setAttribute("aria-pressed",String(selected));
+  const type=btn.dataset.seminarFilter,active=type===state.eventType;
+  btn.classList.toggle("is-selected",active);btn.setAttribute("aria-pressed",String(active));
+  const count=events.filter(e=>type==="all"||e.category===type).length;
+  const badge=$("span",btn);if(badge)badge.textContent=count;
  });
- $("#lf-seminar-count").textContent=count+" event records";
- $("#lf-seminar-empty").hidden=count>0;
+ $("#lf-seminar-count").textContent=filtered.length+" event records";
+ $("#lf-seminar-empty").hidden=filtered.length>0;
 }
 function popupForPlace(p){
  const wrap=document.createElement("div");wrap.className="lf-v2-map-popup";
@@ -342,10 +350,9 @@ function renderRoute(){
  });
  const eventList=$("#lf-events-list"),eventContainer=$("#lf-event-stories");
  if(eventList&&eventContainer){
-  const selected=eventDetail?$('[data-event-detail="'+CSS.escape(id)+'"]',eventContainer):null;
-  eventList.hidden=!!selected;eventContainer.hidden=!selected;
-  $$("[data-event-detail]",eventContainer).forEach(article=>article.hidden=article!==selected);
-  if(selected){document.title=(selected.querySelector("h2")?.textContent||"Event")+" | ELSDR";}
+  eventList.hidden=eventDetail;
+  eventContainer.hidden=!eventDetail;
+  if(eventDetail)renderEventDetail(id);
  }
  if(activityDetailOpen)activityDetail(id);
  if(current==="activities"&&!activityDetailOpen){
@@ -353,7 +360,7 @@ function renderRoute(){
  }
  if(!id)document.title=(current==="activities"?"Activities":current==="events"?"Events":"News")+" | ELSDR";
 }
-initNews();initEventFilters();updateEventDetails();initActivityFilters();
+initNews();initEventFilters();initActivityFilters();
 window.addEventListener("hashchange",renderRoute);
 window.addEventListener("load",()=>{renderRoute();if(!ready&&!failed&&!$('[data-life-view="activities"]').hidden)initializeMap();});
 renderRoute();
