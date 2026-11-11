@@ -371,3 +371,45 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .pp-page #people-professor-books .pp-shelf-info-heading{margin-bottom:10px}
  .pp-page #people-professor-books .pp-shelf-track{justify-content:flex-start}
 }
+
+/* Bookshelf v5 — fix spine orientation. The book rotates +90deg when shut,
+   so its spine side must face -90deg relative to the front (not +90deg).
+   Upright vertical glyphs avoid sideways Korean titles. */
+.pp-page #people-professor-books .pp-shelf-spine{
+ transform-origin:left center;
+ transform:rotateY(-90deg);
+ backface-visibility:hidden;
+ writing-mode:vertical-rl;
+ text-orientation:upright;
+ flex-direction:column;
+ justify-content:space-between;
+ align-items:center;
+}
+.pp-page #people-professor-books .pp-shelf-spine-title{
+ display:block;
+ writing-mode:vertical-rl;
+ text-orientation:upright;
+ white-space:nowrap;
+ overflow:hidden;
+ text-overflow:clip;
+ overflow-wrap:normal;
+ word-break:normal;
+ font-size:12px;
+ font-weight:600;
+ line-height:1.3;
+ letter-spacing:0;
+ max-height:calc(var(--book-height) - 92px);
+}
+.pp-page #people-professor-books .pp-shelf-spine small{
+ display:block;
+ writing-mode:vertical-rl;
+ text-orientation:upright;
+ white-space:nowrap;
+ font-size:10px;
+ line-height:1.2;
+ letter-spacing:0;
+}
+@media(max-width:700px){
+ .pp-page #people-professor-books .pp-shelf-spine-title{font-size:11px}
+ .pp-page #people-professor-books .pp-shelf-spine small{font-size:9px}
+}
