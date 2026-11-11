@@ -361,7 +361,7 @@ window.ELSDR_LIFE_RECORDS={
       "publication": "환경과조경",
       "photo": "assets/life/news/news-2026-tae-grant.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=175089860",
-      "externalUrl": "https://www.lak.co.kr/news/boardview.php?id=24087"
+      "externalUrl": "https://www.lak.co.kr/news/boardview.php?ca_id=1020b0&id=24087&order=f_wdate&page=4"
     },
     {
       "id": "news-2026-professor-lafent",
@@ -372,7 +372,7 @@ window.ELSDR_LIFE_RECORDS={
       "publication": "라펜트",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=175089767",
-      "externalUrl": ""
+      "externalUrl": "https://18f2bfe3c0706e2d.kinxzone.com/Lafe/inews/news/news_view?news_seq=62327"
     },
     {
       "id": "news-2026-book-talk",
@@ -383,7 +383,7 @@ window.ELSDR_LIFE_RECORDS={
       "publication": "ELSDR",
       "photo": "assets/life/news/news-2026-book-talk.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=171080043",
-      "externalUrl": ""
+      "externalUrl": "https://koreaeco.re.kr/sub04/notice_view.php?seq=NOTI_0097"
     },
     {
       "id": "news-2026-street-tree-interview",
@@ -394,7 +394,7 @@ window.ELSDR_LIFE_RECORDS={
       "publication": "매일경제",
       "photo": "",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=170309302",
-      "externalUrl": ""
+      "externalUrl": "https://www.mk.co.kr/news/society/11929676"
     },
     {
       "id": "news-2026-book-release",
@@ -471,7 +471,7 @@ window.ELSDR_LIFE_RECORDS={
       "publication": "ELSDR",
       "photo": "assets/life/news/news-2022-routledge.png",
       "sourceUrl": "https://edesign.korea.ac.kr/60/?bmode=view&idx=11004577",
-      "externalUrl": ""
+      "externalUrl": "https://www.routledge.com/The-Routledge-Handbook-of-Sustainable-Cities-and-Landscapes-in-the-Pacific/Yang-Taufen/p/book/9781003033530"
     },
     {
       "id": "news-2022-carbon-interview",
