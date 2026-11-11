@@ -303,7 +303,13 @@ function enhanceBookshelf(){
  const detail=document.createElement("div");detail.className="pp-shelf-detail";
  detail.setAttribute("aria-live","polite");
  detail.append(details[0].cloneNode(true));
- host.replaceChildren(eyebrow,scroller,counter,detail);
+ const left=document.createElement("div");left.className="pp-shelf-left";
+ left.append(eyebrow,scroller,counter);
+ const right=document.createElement("div");right.className="pp-shelf-right";
+ const heading=document.createElement("span");heading.className="pp-shelf-info-heading";
+ heading.textContent="PUBLICATION DETAILS";
+ right.append(heading,detail);
+ host.replaceChildren(left,right);
 }
 
 renderProfessor();renderCareer();renderWritings();renderResearchers();renderAlumni();renderTheses();
