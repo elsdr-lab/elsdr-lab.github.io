@@ -372,7 +372,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "chlghwns0117@korea.ac.kr",
       "initials": "CH",
       "photo": "assets/people/researchers/researcher-1.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-2",
@@ -384,7 +386,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "tmk1999@korea.ac.kr",
       "initials": "TM",
       "photo": "assets/people/researchers/researcher-2.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-3",
@@ -396,7 +400,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "jeongeun01@korea.ac.kr",
       "initials": "LJ",
       "photo": "assets/people/researchers/researcher-3.png",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-4",
@@ -408,7 +414,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "ejk7712@korea.ac.kr",
       "initials": "JH",
       "photo": "assets/people/researchers/researcher-4.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-5",
@@ -420,7 +428,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "flower7117@naver.com",
       "initials": "AI",
       "photo": "assets/people/researchers/researcher-5.png",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-6",
@@ -432,7 +442,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "sangury1@korea.ac.kr",
       "initials": "SK",
       "photo": "assets/people/researchers/researcher-6.png",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-7",
@@ -444,7 +456,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "seoheelee326@korea.ac.kr",
       "initials": "LS",
       "photo": "assets/people/researchers/researcher-7.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-8",
@@ -456,7 +470,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "lsawondh@naver.com",
       "initials": "WD",
       "photo": "assets/people/researchers/researcher-8.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-9",
@@ -468,7 +484,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "Stuck-mo-jo@hanmail.net",
       "initials": "CJ",
       "photo": "assets/people/researchers/researcher-9.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-10",
@@ -480,7 +498,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "yoonsh64@hanmail.net",
       "initials": "YS",
       "photo": "assets/people/researchers/researcher-10.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-11",
@@ -492,7 +512,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "chojh@kwater.or.kr",
       "initials": "CJ",
       "photo": "assets/people/researchers/researcher-11.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-12",
@@ -504,7 +526,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "",
       "initials": "KH",
       "photo": "",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-13",
@@ -516,7 +540,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "",
       "initials": "OJ",
       "photo": "",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-14",
@@ -528,7 +554,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "sungwoola@hanmail.net",
       "initials": "SM",
       "photo": "assets/people/researchers/researcher-14.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-15",
@@ -540,7 +568,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "na79ya@kwater.or.kr",
       "initials": "PC",
       "photo": "assets/people/researchers/researcher-15.jpg",
-      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요"
+      "verification": "기존 Staff 페이지의 공개 자료 기준. 현재 소속·신분 확인 필요",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-intern-kim-hun-po",
@@ -552,7 +582,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "okhoonpyo3@naver.com",
       "initials": "KH",
       "photo": "assets/people/researchers/researcher-intern-kim-hun-po.jpg",
-      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준"
+      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준",
+      "entryYear": "",
+      "entrySemester": ""
     },
     {
       "id": "researcher-intern-kim-cheon-ju",
@@ -564,7 +596,9 @@ window.ELSDR_PEOPLE_RECORDS={
       "email": "rlacjswn0305@naver.com",
       "initials": "KC",
       "photo": "assets/people/researchers/researcher-intern-kim-cheon-ju.png",
-      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준"
+      "verification": "기존 ELSDR Staff 페이지(2026-11-11 확인) 기준",
+      "entryYear": "",
+      "entrySemester": ""
     }
   ],
   "alumni": [
