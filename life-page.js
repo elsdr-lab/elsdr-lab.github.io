@@ -70,14 +70,14 @@ function renderNews(){
   (!newsQuery||[item.title,item.date,item.publication,item.summary].join(" ").toLocaleLowerCase().includes(newsQuery))
  ).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
  list.innerHTML=filtered.map(item=>{
-  const source=validUrl(item.sourceUrl||item.externalUrl);
+  const source=validUrl(item.externalUrl);
   // News is a consistently aligned text-only editorial index.
   return '<article class="lf-v2-news-row">'+
    '<div class="lf-v2-news-date"><time>'+E(item.date||"")+'</time><small>'+E(newsCategories[item.category]||"Lab News")+'</small></div>'+
    '<div class="lf-v2-news-content"><span class="lf-v2-news-publication">'+E(item.publication||"ELSDR")+'</span>'+
    '<h3>'+E(item.title||"")+'</h3>'+
    (item.summary?'<p>'+E(item.summary)+'</p>':"")+'</div>'+
-   '<div class="lf-v2-news-action">'+(source?extLink(source,"Read story"):'<span>원문 확인 중</span>')+'</div></article>';
+   '<div class="lf-v2-news-action">'+(source?extLink(source,"Read story"):"")+'</div></article>';
  }).join("");
  $("#lf-v2-news-count").textContent=filtered.length+" news records";
  $("#lf-v2-news-no-results").hidden=filtered.length>0;
