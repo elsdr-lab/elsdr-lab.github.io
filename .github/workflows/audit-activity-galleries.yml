@@ -1,0 +1,55 @@
+name: Audit original ELSDR Activities galleries
+on:
+  push:
+    paths:
+      - .github/workflows/audit-activity-galleries.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect original fieldwork gallery posts
+        run: |
+          python -m pip -q install requests beautifulsoup4
+          python - <<'PY'
+          import requests,bs4,json,pathlib,re
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36'})
+          sources=['/131','/128','/126','/124','/120','/116','/111','/106','/32','/34','/35','/37']
+          output={}
+          for uri in sources:
+            try:
+              res=sess.get('https://edesign.korea.ac.kr'+uri,timeout=30)
+              soup=bs4.BeautifulSoup(res.text,'html.parser')
+              gallery=[]
+              for card in soup.select('div.item_gallary'):
+                heading=card.select_one('h4')
+                link=card.select_one('a.item_container[href]')
+                label=heading.get_text(' ',strip=True) if heading else ''
+                if not label and link:label=link.get_text(' ',strip=True)
+                cover=card.get('data-org','')
+                thumb=card.select_one('.img_wrap')
+                image=(thumb.get('data-src','') if thumb else '')
+                if label or (link and cover):gallery.append({'title':label,'url':link.get('href','') if link else '', 'original':cover,'thumbnail':image})
+              imgs=[]
+              for img in soup.select('img[src], .img_wrap[data-src]'):
+                url=img.get('src') or img.get('data-src')
+                if url and 'cdn.imweb.me' in url:imgs.append(url)
+              heading=soup.select_one('h1')
+              output[uri]={'http':res.status_code,'title':soup.title.get_text(' ',strip=True) if soup.title else '', 'heading':heading.get_text(' ',strip=True) if heading else '',
+                'gallery':gallery,'contentImages':list(dict.fromkeys(imgs))[:50], 'links':[{ 'text':a.get_text(' ',strip=True)[:70],'href':a.get('href')} for a in soup.select('a[href]') if any(q in a.get_text(' ',strip=True).lower() for q in ['field','trip','gallery','워크숍','답사','서울숲','수목원','그린보트'])][:70]}
+              print(uri,res.status_code,'gallery',len(gallery),'bytes',len(res.content))
+            except Exception as e:output[uri]={'error':str(e)}
+          path=pathlib.Path('assets/life/activities/activity-audit.json')
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding='utf-8')
+          PY
+      - name: Commit audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/life/activities/activity-audit.json
+          git commit -m "Audit original activity gallery records and linked image files" || true
+          git push origin HEAD:main
