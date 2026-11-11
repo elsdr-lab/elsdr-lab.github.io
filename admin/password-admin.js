@@ -192,7 +192,7 @@ function renderProfessorEditor(editor){
 
 function render(){const editor=$('editor');editor.replaceChildren();editor.classList.toggle('research-cms',selected.id==='research');if(selected.id==='professor'){renderProfessorEditor(editor);$('count').textContent='';controls();return}if(selected.id==='career'){collection(current.data.career,'career',editor);$('count').textContent=current.data.career.length+'개 항목';controls();return}if(selected.id==='books'){if(!Array.isArray(current.data.books))current.data.books=[];collection(current.data.books,'books',editor);const link=el('a','공개 Books 페이지 보기 ↗','text-link');link.href='../#/people/professor/books';link.target='_blank';link.rel='noopener';editor.append(link);$('count').textContent=current.data.books.length+'권';controls();return}if(selected.id==='events'){
  if(!Array.isArray(current.data.events))current.data.events=[];
- editor.append(el('p','기존 아카이브의 확인된 행사를 관리합니다. 행사 제목·날짜·발표자·장소는 사실 확인 후 입력하고, 원문 상세 링크가 확인된 경우에는 sourceUrl을 해당 주소로 수정하세요. 대표 사진은 해당 행사에서 확보한 이미지만 등록하며, 공개 상세 페이지에만 표시합니다. 새 행사 등록 후 저장하면 공개 Events 목록과 상세 화면에 자동으로 반영됩니다.','notice'));
+ editor.append(el('p','기존 아카이브의 확인된 행사를 관리합니다. 행사 제목·날짜·발표자·장소는 사실 확인 후 입력하고, 원문 상세 링크가 확인된 경우에는 sourceUrl을 해당 주소로 수정하세요. 행사 설명(summary)을 입력하면 상세 페이지에 표시되고, 비워 두면 설명 영역 자체가 표시되지 않습니다. 기존 행사 아카이브 링크는 공개 상세 페이지에 표시하지 않습니다. 대표 사진은 해당 행사에서 확보한 이미지만 등록하며, 공개 상세 페이지에만 표시합니다. 새 행사 등록 후 저장하면 공개 Events 목록과 상세 화면에 자동으로 반영됩니다.','notice'));
  collection(current.data.events,'events',editor);
  const link=el('a','공개 Events 페이지 보기 ↗','text-link');link.href='../#/life/events';link.target='_blank';link.rel='noopener';editor.append(link);
  $('count').textContent=current.data.events.length+'건';controls();return;
