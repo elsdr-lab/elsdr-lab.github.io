@@ -162,3 +162,66 @@ body:not(.ko) .pp-page .pp-prof-biography .lang-ko{display:none}
  .page.pp-page .pp-jump{margin-bottom:16px}
  .page.pp-page .pp-v2-depth-nav{padding-top:6px}
 }
+
+/* Books & Writings — restrained editorial book gallery (2026-11-11).
+   Only the Books subsection is dark; columns/essays remain unchanged. */
+.pp-page #people-professor-books .pp-books-showcase{
+  background:#252D2A;color:#F4F3EE;
+  padding:clamp(28px,4vw,58px);
+  margin:8px 0 55px;
+}
+.pp-page #people-professor-books .pp-books-showcase .pp-v2-category-head{
+  border-color:rgba(244,243,238,.25);
+  margin-bottom:30px;
+}
+.pp-page #people-professor-books .pp-books-showcase .pp-v2-category-head span,
+.pp-page #people-professor-books .pp-books-showcase .pp-v2-category-head p{
+  color:#B8C6BC;
+}
+.pp-page #people-professor-books .pp-books-showcase .pp-v2-category-head h3{color:#F4F3EE}
+.pp-page #people-professor-books .pp-v2-books-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 26px;
+  align-items:stretch;
+}
+.pp-page #people-professor-books .pp-v2-book{
+  min-width:0;padding:0 0 23px;
+  background:transparent;border:0;border-bottom:1px solid rgba(244,243,238,.22);
+  display:flex;flex-direction:column;
+}
+.pp-page #people-professor-books .pp-v2-book-cover{
+  height:310px;aspect-ratio:auto;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  padding:17px;background:#34413B;color:#B8C6BC;
+}
+.pp-page #people-professor-books .pp-v2-book-cover img{
+  display:block;width:auto;height:100%;max-width:100%;max-height:100%;
+  object-fit:contain;object-position:center;
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
+}
+.pp-page #people-professor-books .pp-v2-book>div:last-child{flex:1}
+.pp-page #people-professor-books .pp-v2-book h4{
+  margin:21px 0 9px;color:#F4F3EE;font-size:17px;line-height:1.5;
+  font-weight:600;word-break:keep-all;
+}
+.pp-page #people-professor-books .pp-v2-book p{
+  color:#C7D0C8;font-size:12px;line-height:1.8;margin:6px 0;
+}
+.pp-page #people-professor-books .pp-v2-book .pp-v2-link{
+  color:#D9C7A7;text-decoration-color:rgba(217,199,167,.55);
+}
+.pp-page #people-professor-books .pp-v2-book .pp-v2-link:hover{color:#F4F3EE}
+@media(max-width:900px){
+ .pp-page #people-professor-books .pp-v2-books-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+ .pp-page #people-professor-books .pp-v2-book-cover{height:285px}
+}
+@media(max-width:600px){
+ .pp-page #people-professor-books .pp-books-showcase{padding:24px 18px;margin-bottom:42px}
+ .pp-page #people-professor-books .pp-v2-books-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px}
+ .pp-page #people-professor-books .pp-v2-book-cover{height:220px;padding:11px}
+ .pp-page #people-professor-books .pp-v2-book h4{font-size:14px;margin-top:14px}
+ .pp-page #people-professor-books .pp-v2-book p{font-size:11px}
+}
+@media(max-width:390px){
+ .pp-page #people-professor-books .pp-v2-books-grid{grid-template-columns:1fr}
+ .pp-page #people-professor-books .pp-v2-book-cover{height:280px}
+}
