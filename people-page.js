@@ -219,10 +219,7 @@ function renderTheses(){
     (item.nameEn?' <span>'+E(item.nameEn)+'</span>':'')+
     (item.affiliation?' · '+E(item.affiliation):'')+'</p></div>'+
     '<div class="pp-v2-thesis-outlink">'+
-      (item.libraryUrl||item.fullTextUrl?
-        outerLink(item.libraryUrl||item.fullTextUrl,"학위논문 보기"):
-        '<a class="pp-v2-thesis-search-link" href="https://dcollection.korea.ac.kr/srch/srchSearch" target="_blank" rel="noopener noreferrer">도서관에서 검색 ↗</a>')+
-      (item.doi?'<a class="pp-v2-thesis-doi" href="https://doi.org/'+E(encodeURI(item.doi))+'" target="_blank" rel="noopener noreferrer">DOI ↗</a>':"")+
+      outerLink(item.libraryUrl||item.fullTextUrl||"https://dcollection.korea.ac.kr/srch/srchSearch","학위논문 보기")+
       '</div></article>'
  ).join(""):empty("일치하는 학위논문이 없습니다","논문 제목 또는 저자를 다시 검색해 주세요.");
  $$("[data-pp-v2-degree]").forEach(button=>{
