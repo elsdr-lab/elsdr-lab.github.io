@@ -71,9 +71,8 @@ function renderNews(){
  ).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
  list.innerHTML=filtered.map(item=>{
   const source=validUrl(item.sourceUrl||item.externalUrl);
-  const cover=item.photo&&validUrl(item.photo)?
-   '<div class="lf-v2-news-thumbnail"><img loading="lazy" src="'+E(validUrl(item.photo))+'" alt="'+E(item.title)+' 관련 이미지"></div>':"";
-  return '<article class="lf-v2-news-row">'+cover+
+  // News is a consistently aligned text-only editorial index.
+  return '<article class="lf-v2-news-row">'+
    '<div class="lf-v2-news-date"><time>'+E(item.date||"")+'</time><small>'+E(newsCategories[item.category]||"Lab News")+'</small></div>'+
    '<div class="lf-v2-news-content"><span class="lf-v2-news-publication">'+E(item.publication||"ELSDR")+'</span>'+
    '<h3>'+E(item.title||"")+'</h3>'+
