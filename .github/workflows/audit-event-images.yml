@@ -10,44 +10,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect old event pages
+      - name: Inspect event article markup and thumbnails
         run: |
           python -m pip -q install requests beautifulsoup4
           python - <<'PY'
-          import requests,bs4,json,re,pathlib
-          sess=requests.Session()
-          sess.headers.update({'User-Agent':'Mozilla/5.0 (compatible; ELSDR archival migration)'})
+          import requests,bs4,json,pathlib,re
+          session=requests.Session()
+          session.headers.update({'User-Agent':'Mozilla/5.0'})
           base='https://edesign.korea.ac.kr'
           report={}
           for slug in ['36','127','160','153','145','105','33']:
-            try:
-              resp=sess.get(base+'/'+slug,timeout=25);resp.raise_for_status()
-              soup=bs4.BeautifulSoup(resp.text,'html.parser')
-              result={'status':resp.status_code,'size':len(resp.content),'title':soup.title.get_text(' ',strip=True) if soup.title else '',
-                'images':[],'anchors':[],'ogimages':[]}
-              for tag in soup.find_all('meta',property='og:image'):
-                result['ogimages'].append(tag.get('content',''))
-              for img in soup.find_all('img'):
-                attrs={key:img.get(key,'') for key in ['src','data-src','data-original','data-lazy-src','alt','class']}
-                attrs['context']=img.parent.get_text(' ',strip=True)[:90] if img.parent else ''
-                if any('imweb' in str(v) for v in attrs.values()):result['images'].append(attrs)
-              for a in soup.find_all('a',href=True):
-                title=a.get_text(' ',strip=True)
-                if any(word in title for word in ['학술대회','세미나','워크숍','포럼','Conference','Symposium','Forum','ICMP','HLD','EGU']):
-                  result['anchors'].append({'text':title[:120],'url':a.get('href','')})
-              result['images']=result['images'][:35]
-              result['anchors']=result['anchors'][:130]
-              report[slug]=result
-            except Exception as e: report[slug]={'error':str(e)}
-          path=pathlib.Path('assets/life/events/source-audit.json')
-          path.parent.mkdir(parents=True,exist_ok=True)
-          path.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-          print({k:{'images':len(v.get('images',[])),'anchors':len(v.get('anchors',[])),'error':v.get('error')} for k,v in report.items()})
+            raw=session.get(base+'/'+slug,timeout=30).text
+            soup=bs4.BeautifulSoup(raw,'html.parser')
+            result={}
+            for target in ['/163','/160','/153','/145','/127','/123','/117']:
+              a=soup.find('a',href=target)
+              if not a:continue
+              block=a
+              contexts=[]
+              for depth in range(5):
+                if block is None:break
+                snippet=str(block)
+                urls=list(dict.fromkeys(re.findall(r'https?[^"\\\s<>]+?(?:png|jpg|jpeg|webp)',snippet,flags=re.I)))
+                contexts.append({'tag':block.name,'classes':block.get('class',[]),'snippet':snippet[:1100], 'imageURLs':urls[:12]})
+                block=block.parent
+              result[target]=contexts
+            # images in content/article and imweb attributes
+            patterns=['_post','post-content','board','view_body','widget','thumb','background']
+            result['metaImages']=[str(t)[:500] for t in soup.find_all('meta') if t.get('property') in ('og:image','twitter:image')]
+            result['urlNeighborhoods']=[]
+            for match in list(re.finditer(r'cdn\.imweb\.me/[^"\\\s<>]{5,200}',raw,re.I))[:35]:
+              start=match.start()
+              result['urlNeighborhoods'].append(raw[max(0,start-130):min(len(raw),start+220)].replace('\\n',' ')[:350])
+            report[slug]=result
+          p=pathlib.Path('assets/life/events/source-audit-extended.json')
+          p.parent.mkdir(parents=True,exist_ok=True)
+          p.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+          print({k:len(v) for k,v in report.items()})
           PY
-      - name: Save audit
+      - name: Store audit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/life/events/source-audit.json
-          git commit -m "Audit original ELSDR event photo sources" || true
+          git add assets/life/events/source-audit-extended.json
+          git commit -m "Inspect original event thumbnail DOM" || true
           git push origin HEAD:main
