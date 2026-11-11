@@ -1,0 +1,53 @@
+name: Audit original Events image sources
+on:
+  push:
+    paths:
+      - .github/workflows/audit-event-images.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect old event pages
+        run: |
+          python -m pip -q install requests beautifulsoup4
+          python - <<'PY'
+          import requests,bs4,json,re,pathlib
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0 (compatible; ELSDR archival migration)'})
+          base='https://edesign.korea.ac.kr'
+          report={}
+          for slug in ['36','127','160','153','145','105','33']:
+            try:
+              resp=sess.get(base+'/'+slug,timeout=25);resp.raise_for_status()
+              soup=bs4.BeautifulSoup(resp.text,'html.parser')
+              result={'status':resp.status_code,'size':len(resp.content),'title':soup.title.get_text(' ',strip=True) if soup.title else '',
+                'images':[],'anchors':[],'ogimages':[]}
+              for tag in soup.find_all('meta',property='og:image'):
+                result['ogimages'].append(tag.get('content',''))
+              for img in soup.find_all('img'):
+                attrs={key:img.get(key,'') for key in ['src','data-src','data-original','data-lazy-src','alt','class']}
+                attrs['context']=img.parent.get_text(' ',strip=True)[:90] if img.parent else ''
+                if any('imweb' in str(v) for v in attrs.values()):result['images'].append(attrs)
+              for a in soup.find_all('a',href=True):
+                title=a.get_text(' ',strip=True)
+                if any(word in title for word in ['학술대회','세미나','워크숍','포럼','Conference','Symposium','Forum','ICMP','HLD','EGU']):
+                  result['anchors'].append({'text':title[:120],'url':a.get('href','')})
+              result['images']=result['images'][:35]
+              result['anchors']=result['anchors'][:130]
+              report[slug]=result
+            except Exception as e: report[slug]={'error':str(e)}
+          path=pathlib.Path('assets/life/events/source-audit.json')
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+          print({k:{'images':len(v.get('images',[])),'anchors':len(v.get('anchors',[])),'error':v.get('error')} for k,v in report.items()})
+          PY
+      - name: Save audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/life/events/source-audit.json
+          git commit -m "Audit original ELSDR event photo sources" || true
+          git push origin HEAD:main
