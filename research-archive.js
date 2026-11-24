@@ -10,11 +10,11 @@
   const archiveView=window.ELSDRResearchView;
   if(!archiveView)return;
   const {archiveRow,searchString}=archiveView;
-  const state={type:"all",theme:"all",year:"all",query:"",limit:12};
+  const state={type:"all",theme:"all",year:"all",query:"",page:1,pageSize:15};
   const typeBtns=$$("[data-research-kind]"),themeBtns=$$("[data-research-theme]");
   const yearInput=$("#research-year"),searchInput=$("#research-search");
   const list=$("#research-list"),counter=$("#research-counter");
-  const more=$("#research-more"),empty=$("#research-empty");
+  const pagination=$("#research-pagination"),pageSizeInput=$("#research-page-size"),empty=$("#research-empty");
 
   // Build year options from available data, rather than a fixed list.
   const years=[...new Set(records.map(record=>Number(record.year)).filter(Number.isFinite))].sort((a,b)=>b-a);
@@ -31,13 +31,46 @@
     ).sort((a,b)=>Number(b.year)-Number(a.year));
   }
   function update(){
-    const previousOpen=new Set($$(".ra-entry[open]").map(x=>x.dataset.recordId));
     const results=filter();
-    list.innerHTML=results.slice(0,state.limit).map(archiveRow).join("");
-    $$(".ra-entry").forEach(el=>{if(previousOpen.has(el.dataset.recordId))el.open=true;});
+    const pageCount=Math.max(1,Math.ceil(results.length/state.pageSize));
+    state.page=Math.min(Math.max(1,state.page),pageCount);
+    const start=(state.page-1)*state.pageSize;
+    list.innerHTML=results.slice(start,start+state.pageSize).map(archiveRow).join("");
     counter.textContent=results.length+" records"+(results.length===records.length?"":" / "+records.length+" total");
     empty.hidden=results.length!==0;
-    more.hidden=results.length<=state.limit;
+    pagination.hidden=pageCount<=1;
+    pagination.replaceChildren();
+    if(pageCount>1){
+      const addButton=(label,page,disabled=false,current=false)=>{
+        const button=document.createElement("button");
+        button.type="button";
+        button.className="ra-page-button"+(current?" is-current":"");
+        button.textContent=label;
+        button.disabled=disabled;
+        if(current)button.setAttribute("aria-current","page");
+        button.setAttribute("aria-label",current?"현재 "+page+"페이지":label==="이전"||label==="다음"?label+" 페이지":page+"페이지로 이동");
+        button.addEventListener("click",()=>{
+          state.page=page;update();
+          root.querySelector(".ra-list-controls")?.scrollIntoView({block:"start",behavior:"smooth"});
+        });
+        pagination.append(button);
+      };
+      addButton("이전",Math.max(1,state.page-1),state.page===1);
+      // Show a compact sliding window even when the archive grows to hundreds of pages.
+      const pageButtons=new Set([1,pageCount]);
+      for(let n=Math.max(1,state.page-2);n<=Math.min(pageCount,state.page+2);n++)pageButtons.add(n);
+      let previous=0;
+      [...pageButtons].sort((a,b)=>a-b).forEach(page=>{
+        if(previous&&page>previous+1){
+          const dots=document.createElement("span");
+          dots.className="ra-page-ellipsis";dots.textContent="…";dots.setAttribute("aria-hidden","true");
+          pagination.append(dots);
+        }
+        addButton(String(page),page,false,page===state.page);
+        previous=page;
+      });
+      addButton("다음",Math.min(pageCount,state.page+1),state.page===pageCount);
+    }
     typeBtns.forEach(btn=>{
       const selected=btn.dataset.researchKind===state.type;
       btn.classList.toggle("is-selected",selected);
@@ -49,7 +82,7 @@
       btn.setAttribute("aria-pressed",String(selected));
     });
   }
-  function newFilter(){state.limit=12;update();}
+  function newFilter(){state.page=1;update();}
   function urlType(){
     const route=window.location.hash.replace(/^#\/?/,"").split("?")[0];
     if(route==="research/projects")return "project";
@@ -59,7 +92,7 @@
   function syncRoute(){
     const route=window.location.hash.replace(/^#\/?/,"").split("?")[0];
     if(route.split("/")[0]!=="research")return;
-    state.type=urlType();update();
+    const type=urlType();if(state.type!==type){state.type=type;state.page=1;}update();
   }
   typeBtns.forEach(btn=>btn.addEventListener("click",()=>{
     state.type=btn.dataset.researchKind;
@@ -73,7 +106,7 @@
   themeBtns.forEach(btn=>btn.addEventListener("click",()=>{state.theme=btn.dataset.researchTheme;newFilter();}));
   yearInput.addEventListener("change",()=>{state.year=yearInput.value;newFilter();});
   searchInput.addEventListener("input",()=>{state.query=searchInput.value.trim().toLocaleLowerCase();newFilter();});
-  more.addEventListener("click",()=>{state.limit+=12;update();});
+  pageSizeInput.addEventListener("change",()=>{state.pageSize=Number(pageSizeInput.value)===20?20:15;state.page=1;update();});
   window.addEventListener("hashchange",syncRoute);
   syncRoute();
 })();
