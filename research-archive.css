@@ -216,3 +216,33 @@
   #research-archive-v2 .ra-filter-row-tools > .ra-search-box{grid-column:1;grid-row:4}
   #research-archive-v2 .ra-filter-compact .ra-count{grid-column:1;grid-row:5}
 }
+
+/* Numbered pagination and compact archive entries — 2026-11-24 */
+#research-archive-v2 .ra-list-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:24px;color:#536d5e;font-size:12px}
+#research-archive-v2 .ra-list-hint{margin-right:auto;color:#718577}
+#research-archive-v2 .ra-page-size{background:#fff;border:1px solid #cbd6cb;border-radius:0;padding:8px 24px 8px 10px;color:#344b3b;font:inherit;min-height:38px}
+#research-archive-v2 .ra-list-controls + .ra-records{margin-top:14px}
+#research-archive-v2 .ra-summary{padding-top:17px;padding-bottom:17px;min-height:65px;align-items:center}
+#research-archive-v2 .ra-chevron{margin-top:0}
+#research-archive-v2 .ra-entry[open] .ra-chevron{margin-top:5px}
+#research-archive-v2 .ra-title-stack{gap:3px}
+#research-archive-v2 .ra-submeta{font-size:11px}
+#research-archive-v2 .ra-pagination{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:5px;margin:32px 0 0}
+#research-archive-v2 .ra-page-button{min-width:36px;min-height:36px;padding:7px 10px;border:1px solid #d1dcd1;background:transparent;color:#4e6d57;font-size:12px;cursor:pointer}
+#research-archive-v2 .ra-page-button.is-current{background:#536d5e;color:#fff;border-color:#536d5e;font-weight:700}
+#research-archive-v2 .ra-page-button:hover:not(:disabled):not(.is-current){background:#e8eee7}
+#research-archive-v2 .ra-page-button:disabled{opacity:.35;cursor:not-allowed}
+#research-archive-v2 .ra-page-ellipsis{padding:0 5px;color:#789087}
+#research-archive-v2 .ra-list-controls{scroll-margin-top:110px}
+@media(max-width:640px){
+ #research-archive-v2 .ra-list-controls{flex-wrap:wrap;justify-content:flex-end;gap:7px 10px}
+ #research-archive-v2 .ra-list-hint{flex-basis:100%;margin-bottom:5px}
+ #research-archive-v2 .ra-summary{padding-top:15px;padding-bottom:15px;min-height:64px}
+ #research-archive-v2 .ra-kind{display:inline-flex;grid-column:2;grid-row:2;justify-self:start;font-size:9px;padding:3px 6px}
+ #research-archive-v2 .ra-summary{grid-template-columns:48px minmax(0,1fr) 18px}
+ #research-archive-v2 .ra-title-stack{grid-column:2;grid-row:1}
+ #research-archive-v2 .ra-year{grid-column:1;grid-row:1}
+ #research-archive-v2 .ra-chevron{grid-column:3;grid-row:1}
+ #research-archive-v2 .ra-pagination{gap:3px}
+ #research-archive-v2 .ra-page-button{min-width:32px;padding:6px}
+}
