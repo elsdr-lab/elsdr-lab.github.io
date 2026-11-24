@@ -92,3 +92,57 @@ body .page :is(.ab-theme-card,.st-v2-learning-card,.lf-v2-card-copy,.ct-v2-conta
 @media(max-width:920px){body.home-view{overflow:auto}}
 body,body .page,body .page :is(h1,h2,h3,p,.serif),body .home-headline,body .home-headline em,body .brand-original-caption {font-family:var(--ds-font)!important}
 .home-lead{white-space:pre-line}
+
+
+/* About readability pass (2026-11-24): tighter rhythm; preserve content and numbering. */
+@media (min-width: 769px) {
+  #about-page .ab-section { padding-top: 78px; padding-bottom: 78px; }
+  #about-page .ab-approach { padding-bottom: 0; }
+  #about-page .ab-section-top { margin-bottom: 44px; gap: 42px; }
+  #about-page .ab-section-label { margin-bottom: 14px; }
+  #about-page .ab-section-intro > p { margin-top: 17px; }
+  #about-page .ab-number span { margin-top: 7px; }
+  #about-page .ab-vision-statement { padding-top: 25px; }
+  #about-page .ab-vision-statement p { margin-bottom: 25px; }
+  #about-page .ab-vision-explain { padding-top: 23px; }
+  #about-page .ab-vision-explain p { margin-bottom: 16px; line-height: 1.9; }
+  #about-page .ab-vision-signature { margin-top: 27px; }
+  #about-page .ab-orbit { margin-top: 12px; }
+  #about-page .ab-orb-glyph { margin-top: 11px; }
+  #about-page .ab-orb h3 { margin: 6px 0 10px; }
+  #about-page .ab-orb p { margin-top: 5px; }
+  #about-page .ab-orbit-connector { height: 48px; }
+  #about-page .ab-ses { padding-top: 33px; padding-bottom: 31px; }
+  #about-page .ab-theme-top { margin-bottom: 16px; }
+  #about-page .ab-theme-card strong { margin-bottom: 9px; }
+  #about-page .ab-theme-card p { margin-bottom: 17px; }
+  #about-page .ab-process { margin-bottom: 48px; }
+  #about-page .ab-process-cell { min-height: 165px; padding-top: 21px; padding-bottom: 24px; }
+  #about-page .ab-process-cell strong { margin-top: 24px; }
+  #about-page .ab-practice-line { margin-bottom: 65px; }
+  #about-page .ab-practice-line > div { gap: 8px; padding-top: 19px; padding-bottom: 22px; }
+}
+@media (max-width: 768px) {
+  #about-page .ab-section { padding-top: 48px; padding-bottom: 48px; }
+  #about-page .ab-approach { padding-bottom: 0; }
+  #about-page .ab-section-top { margin-bottom: 30px; gap: 20px; }
+  #about-page .ab-section-label { margin-bottom: 12px; }
+  #about-page .ab-section-intro > p { margin-top: 13px; }
+  #about-page .ab-number span { margin-top: 6px; }
+  #about-page .ab-vision-columns { gap: 25px; }
+  #about-page .ab-vision-statement { padding-top: 20px; }
+  #about-page .ab-vision-statement p { margin-bottom: 20px; }
+  #about-page .ab-vision-explain { padding-top: 18px; }
+  #about-page .ab-vision-explain p { margin-bottom: 13px; }
+  #about-page .ab-vision-signature { margin-top: 20px; }
+  #about-page .ab-orbit { margin-top: 0; gap: 10px; }
+  #about-page .ab-orb-glyph { margin-top: 10px; }
+  #about-page .ab-orb h3 { margin: 5px 0 10px; }
+  #about-page .ab-orbit-connector { height: 34px; }
+  #about-page .ab-ses { padding-top: 25px; padding-bottom: 25px; }
+  #about-page .ab-theme-top { margin-bottom: 13px; }
+  #about-page .ab-theme-card p { margin-bottom: 15px; }
+  #about-page .ab-process { margin-bottom: 32px; }
+  #about-page .ab-process-cell strong { margin-top: 20px; }
+  #about-page .ab-practice-line { margin-bottom: 42px; }
+}
