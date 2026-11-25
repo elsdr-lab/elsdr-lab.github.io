@@ -67,3 +67,34 @@
  .st-v2-resource-description{font-size:12px}
  .st-v2-resource-copy h3{font-size:17px}
 }
+
+/* Study: tighten headings, section transitions and learning/resource entries. */
+.st-v2-page .st-inner{padding-bottom:80px}
+.st-v2-section{padding:65px 0 72px}
+.st-v2-section .st-lead{margin-bottom:20px}
+.st-v2-intro{margin-bottom:24px;line-height:1.8}
+.st-v2-learning-grid{gap:14px}
+.st-v2-learning-card{padding:25px 27px 27px;min-height:260px}
+.st-v2-learning-card h3{margin:15px 0 12px;font-size:clamp(23px,2.35vw,31px)}
+.st-v2-learning-card>p{margin-bottom:17px;line-height:1.75}
+.st-v2-learning-card .st-v2-activity{padding-top:13px}
+.st-v2-learning-card .st-v2-activity>span{margin-bottom:6px}
+.st-v2-notice{margin-top:20px}
+.st-v2-resource-top{padding:15px 0 12px}
+.st-v2-search-row{padding-bottom:14px}
+.st-v2-resource-row{padding:19px 12px 21px;gap:18px}
+.st-v2-resource-kind{margin-bottom:7px}
+.st-v2-resource-copy h3{margin-bottom:7px}
+.st-v2-resource-description{line-height:1.7}
+.st-v2-official{margin-top:26px}
+@media(max-width:640px){
+ .st-v2-page .st-inner{padding-bottom:55px}
+ .st-v2-section{padding:43px 0 50px}
+ .st-v2-section .st-lead{margin-bottom:16px}
+ .st-v2-intro{margin-bottom:18px}
+ .st-v2-learning-grid{gap:11px}
+ .st-v2-learning-card{padding:21px 21px 23px}
+ .st-v2-learning-card h3{font-size:24px;margin:13px 0 10px}
+ .st-v2-learning-card>p{margin-bottom:14px}
+ .st-v2-resource-row{padding:17px 3px}
+}
