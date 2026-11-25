@@ -100,7 +100,7 @@
       item.type===state.type&&
       (state.status==="all" || (state.status==="published"?published(item):item.status==="draft"))&&
       (state.theme==="all"||item.theme===state.theme)&&
-      (!state.query||view.searchString(item).includes(lc(state.query).normalize("NFKC")))
+      view.matchesQuery(item,state.query)
     ).sort((a,b)=>Number(b.year||0)-Number(a.year||0)||txt(a.title).localeCompare(txt(b.title)));
   }
   function tab(type){
@@ -150,7 +150,7 @@
       '<button type="button" class="rc-primary-action" data-action="new" '+(!canEdit()?'disabled':'')+
       '><span aria-hidden="true">＋</span> 새 '+singular[state.type]+' 등록</button></header>'+
       '<div class="rc-filters"><label class="rc-search" for="rc-search"><span>검색</span>'+
-      '<span class="rc-search-line"><input id="rc-search" type="search" autocomplete="off" placeholder="한글·영문 제목, 연구자, 키워드" value="'+e(state.query)+'"><button type="button" data-action="search">조회</button></span></label>'+
+      '<span class="rc-search-line"><input id="rc-search" type="search" autocomplete="off" placeholder="예: 생태계 AND (도시 OR 연안)" value="'+e(state.query)+'"><button type="button" data-action="search">조회</button></span></label>'+
       '<label class="rc-select-filter"><span>등록 상태</span><select id="rc-status">'+
       [['all',"전체"],["published","공개"],["draft","임시저장"]].map(([v,l])=>'<option value="'+v+'" '+(state.status===v?'selected':'')+'>'+l+'</option>').join("")+'</select></label>'+
       '<label class="rc-select-filter"><span>연구영역</span><select id="rc-theme"><option value="all">전체 연구영역</option>'+
