@@ -39,6 +39,7 @@
       const fields='<dl class="ra-data-fields">'+
         field("Research Period / 연구기간",record.period)+
         field("Funding Agency / 지원기관",record.funder)+
+        (record.researchers?field("Researchers / 참여 연구자",record.researchers):"")+
         field("Participation / 참여 역할",record.role)+
         field("Research Theme / 연구영역",themeLabel(record))+
       '</dl>';
