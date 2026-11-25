@@ -23,7 +23,7 @@ function extLink(url,label){
  const href=validUrl(url);
  return href?'<a href="'+E(href)+'" target="_blank" rel="noopener noreferrer">'+E(label)+' <span aria-hidden="true">↗</span></a>':"";
 }
-const state={eventType:"all",eventYear:"all",eventQuery:"",activityType:"all",activityQuery:"",placeId:null,region:"all"};
+const state={eventType:"all",eventYear:"all",eventQuery:"",activityType:"all",activityQuery:"",placeId:null,region:"all",eventPage:1,eventPageSize:10,activityPage:1,activityPageSize:10};
 let map=null,ready=false,failed=false,markers={};
 const area=$('[data-life-view="activities"]');
 const points=new Map();
@@ -97,19 +97,38 @@ function initNews(){
  $$("[data-lf-news-category]").forEach(button=>button.addEventListener("click",()=>{newsFilter=button.dataset.lfNewsCategory;renderNews()}));
  renderNews();
 }
+function renderPager(type,total){
+ const isEvent=type==="event",pageKey=isEvent?"eventPage":"activityPage",sizeKey=isEvent?"eventPageSize":"activityPageSize";
+ const totalPages=Math.max(1,Math.ceil(total/state[sizeKey])),page=Math.min(state[pageKey],totalPages);
+ const pager=$("#lf-v2-"+type+"-pagination");if(!pager)return;
+ pager.replaceChildren();
+ const prev=document.createElement("button");prev.type="button";prev.textContent="‹";prev.disabled=page<=1;prev.setAttribute("aria-label","이전 페이지");
+ prev.addEventListener("click",()=>{state[pageKey]=page-1;isEvent?renderEvents():renderActivities();});
+ pager.append(prev);
+ for(let i=1;i<=totalPages;i++){
+  const btn=document.createElement("button");btn.type="button";btn.textContent=String(i);btn.className=i===page?"is-current":"";btn.setAttribute("aria-label",i+"페이지");
+  if(i===page)btn.setAttribute("aria-current","page");
+  btn.addEventListener("click",()=>{state[pageKey]=i;isEvent?renderEvents():renderActivities();});pager.append(btn);
+ }
+ const next=document.createElement("button");next.type="button";next.textContent="›";next.disabled=page>=totalPages;next.setAttribute("aria-label","다음 페이지");
+ next.addEventListener("click",()=>{state[pageKey]=page+1;isEvent?renderEvents():renderActivities();});pager.append(next);
+}
 function renderActivities(){
  const data=filteredActivities();
+ const pageCount=Math.max(1,Math.ceil(data.length/state.activityPageSize));
+ state.activityPage=Math.min(state.activityPage,pageCount);
+ const visible=data.slice((state.activityPage-1)*state.activityPageSize,state.activityPage*state.activityPageSize);
  const wrap=$("#lf-v2-activity-grid");
- wrap.innerHTML=data.map(a=>
-   '<a class="lf-v2-activity-card" href="#/life/activities/'+encodeURIComponent(a.id)+'">'+
-    '<span class="lf-v2-list-year">'+E(a.year||String(a.date||"").slice(0,4)||"—")+'</span>'+
-    '<span class="lf-v2-list-kind" data-map-kind="'+E(mapKindForActivity(a))+'">'+E(categories[a.category]||"Activity")+'</span>'+
-    '<strong class="lf-v2-list-title">'+E(a.title)+'</strong>'+
-    '<span class="lf-v2-list-place">'+E(formattedPlaces(a)||"—")+'</span>'+
-    '<span class="lf-v2-list-arrow" aria-hidden="true">↗</span>'+
-   '</a>'
+ wrap.innerHTML=visible.map((a,i)=>
+  '<a class="lf-v2-activity-card lf-v2-activity-row" href="#/life/activities/'+encodeURIComponent(a.id)+'">'+
+  '<span class="lf-v2-row-index">'+String((state.activityPage-1)*state.activityPageSize+i+1).padStart(2,"0")+'</span>'+
+  '<span class="lf-v2-row-year">'+E(a.year||String(a.date||"").slice(0,4)||"—")+'</span>'+
+  '<strong class="lf-v2-row-title">'+E(a.title)+'</strong>'+
+  '<span class="lf-v2-row-meta">'+E(categories[a.category]||"Activity")+(formattedPlaces(a)?" · "+E(formattedPlaces(a)):"")+'</span>'+
+  '<span class="lf-v2-row-arrow" aria-hidden="true">↗</span></a>'
  ).join("");
  $("#lf-v2-activity-counter").textContent=data.length+" activities";
+ renderPager("activity",data.length);
  $("#lf-v2-activity-empty").hidden=data.length>0;
  const clear=$("#lf-v2-clear-location");
  clear.hidden=!state.placeId;
@@ -209,10 +228,11 @@ function initEventFilters(){
   const opt=document.createElement("option");opt.value=String(y);opt.textContent=String(y);year.append(opt);
  });
  $$("[data-seminar-filter]").forEach(btn=>{
-  btn.addEventListener("click",()=>{state.eventType=btn.dataset.seminarFilter;renderEvents();});
+  btn.addEventListener("click",()=>{state.eventType=btn.dataset.seminarFilter;state.eventPage=1;renderEvents();});
  });
- year.addEventListener("change",()=>{state.eventYear=year.value;renderEvents();});
- $("#lf-seminar-search").addEventListener("input",e=>{state.eventQuery=e.target.value.trim().toLocaleLowerCase();renderEvents();});
+ year.addEventListener("change",()=>{state.eventYear=year.value;state.eventPage=1;renderEvents();});
+ $("#lf-seminar-search").addEventListener("input",e=>{state.eventQuery=e.target.value.trim().toLocaleLowerCase();state.eventPage=1;renderEvents();});
+ $("#lf-v2-event-page-size").addEventListener("change",e=>{state.eventPageSize=Number(e.target.value)||10;state.eventPage=1;renderEvents();});
  renderEvents();
 }
 function renderEvents(){
@@ -221,10 +241,13 @@ function renderEvents(){
   (state.eventYear==="all"||String(e.year)===state.eventYear)&&
   (!state.eventQuery||[e.title,e.speaker,e.organizer,e.location,e.summary,e.date,e.year].join(" ").toLocaleLowerCase().includes(state.eventQuery))
  ).sort(eventSort);
+ const pages=Math.max(1,Math.ceil(filtered.length/state.eventPageSize));
+ state.eventPage=Math.min(state.eventPage,pages);
+ const visible=filtered.slice((state.eventPage-1)*state.eventPageSize,state.eventPage*state.eventPageSize);
  const list=$(".lf-seminar-list");
- if(list)list.innerHTML=filtered.map((e,i)=>
+ if(list)list.innerHTML=visible.map((e,i)=>
   '<a class="lf-seminar" href="#/life/events/'+encodeURIComponent(e.id)+'">'+
-  '<span>'+String(i+1).padStart(2,"0")+'</span><span>'+E(e.year||"—")+'</span>'+
+  '<span>'+String((state.eventPage-1)*state.eventPageSize+i+1).padStart(2,"0")+'</span><span>'+E(e.year||"—")+'</span>'+
   '<div><small>'+E(eventCategoryLabels[e.category]||"Event")+' · '+E(e.date||e.year||"")+'</small>'+
   '<h3>'+E(e.title)+'</h3>'+
   (e.speaker||e.organizer?'<p class="lf-seminar-person">'+E(e.speaker||e.organizer)+'</p>':"")+'</div>'+
@@ -241,6 +264,7 @@ function renderEvents(){
   btn.replaceChildren(document.createTextNode("# "+label),badge);
  });
  $("#lf-seminar-count").textContent=filtered.length+" event records";
+ renderPager("event",filtered.length);
  $("#lf-seminar-empty").hidden=filtered.length>0;
 }
 function popupForPlace(p){
@@ -257,7 +281,7 @@ function popupForPlace(p){
 }
 function locationSelection(id,{fly=true}={}){
  if(id&&!points.has(id))return;
- state.placeId=id||null;state.activityType="all";state.activityQuery="";
+ state.placeId=id||null;state.activityType="all";state.activityQuery="";state.activityPage=1;
  $("#lf-v2-activity-search").value="";renderActivities();
  const p=id?points.get(id):null;
  $("#lf-v2-active-place").textContent=p?p.name+" · "+p.activityIds.length+" linked records":"All locations";
@@ -385,8 +409,8 @@ async function initializeMap(){
 }
 function initActivityFilters(){
  $("#lf-v2-spotlight-close").addEventListener("click",()=>locationSelection(null));
- $$("[data-lf-v2-activity-kind]").forEach(btn=>btn.addEventListener("click",()=>{state.activityType=btn.dataset.lfV2ActivityKind;state.placeId=null;renderActivities();}));
- $("#lf-v2-activity-search").addEventListener("input",e=>{state.activityQuery=e.target.value.toLocaleLowerCase().trim();renderActivities();});
+ $$("[data-lf-v2-activity-kind]").forEach(btn=>btn.addEventListener("click",()=>{state.activityType=btn.dataset.lfV2ActivityKind;state.placeId=null;state.activityPage=1;renderActivities();}));
+ $("#lf-v2-activity-search").addEventListener("input",e=>{state.activityQuery=e.target.value.toLocaleLowerCase().trim();state.activityPage=1;renderActivities();});
  $("#lf-v2-clear-location").addEventListener("click",()=>locationSelection(null));
  $("#lf-v2-places-reset").addEventListener("click",()=>{state.region="all";locationSelection(null);placeButtons();});
  $$("[data-lf-v2-region]").forEach(btn=>btn.addEventListener("click",()=>{
@@ -394,6 +418,7 @@ function initActivityFilters(){
    if(state.placeId&&points.get(state.placeId)?.group!==state.region&&state.region!=="all")locationSelection(null);
    placeButtons();resetMap();
  }));
+ $("#lf-v2-activity-page-size").addEventListener("change",e=>{state.activityPageSize=Number(e.target.value)||10;state.activityPage=1;renderActivities();});
  placeButtons();renderActivities();
 }
 function renderRoute(){
