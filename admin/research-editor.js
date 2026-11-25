@@ -10,7 +10,7 @@
     ["coastal","Coastal Landscape and Living Systems"],
     ["regional","Regional Landscape Strategy"]
   ];
-  const themeShort={climate:"Climate",ecosystem:"Ecosystem",coastal:"Coastal",regional:"Regional"};
+  const themeNames=Object.fromEntries(themes);
   const names={project:"Projects",publication:"Publications"};
   const singular={project:"프로젝트",publication:"논문"};
   const sections={
@@ -20,6 +20,7 @@
         ["year","연도","number",true],
         ["theme","연구영역","theme",true],
         ["period","연구기간","text",false,false,"예: 2025.03–2026.02"],
+        ["researchers","참여 연구자","text",false,true,"연구자 이름을 한글·영문으로 입력하면 검색에 포함됩니다."],
         ["funder","지원기관","text"],
         ["role","참여 역할","text",false,false,"예: 책임 / 공동"]
       ]},
@@ -55,7 +56,7 @@
       ]}
     ]
   };
-  const state={type:"project",view:"list",id:null,query:"",status:"all",theme:"all"};
+  const state={type:"project",view:"list",id:null,query:"",status:"all",theme:"all",demo:false,demoPage:1,demoSize:15};
   let ctx=null;
   const e=value=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
   const txt=value=>String(value??"").trim();
@@ -64,12 +65,12 @@
   const canEdit=()=>!!ctx?.editable;
   const selected=()=>ctx?.data.find(item=>item.id===state.id);
   const stateName=item=>item.status==="archived"?"보관":published(item)?"공개":"임시저장";
-  function reset(){state.type="project";state.view="list";state.id=null;state.query="";state.status="all";state.theme="all";}
+  function reset(){state.type="project";state.view="list";state.id=null;state.query="";state.status="all";state.theme="all";state.demo=false;state.demoPage=1;state.demoSize=15;}
   function create(type){
     const common={id:type+"-"+crypto.randomUUID().slice(0,12),type,status:"draft",year:new Date().getFullYear(),theme:"",
       title:"",summary:"",keywords:[],url:"",detailNote:""};
     return type==="project"?
-      {...common,period:"",funder:"",role:"",detailUrl:""}:
+      {...common,period:"",researchers:"",funder:"",role:"",detailUrl:""}:
       {...common,authors:"",journal:"",publicationType:"",abstract:"",doi:"",fullTextUrl:""};
   }
   function validate(data){
@@ -99,7 +100,7 @@
       item.type===state.type&&
       (state.status==="all" || (state.status==="published"?published(item):item.status==="draft"))&&
       (state.theme==="all"||item.theme===state.theme)&&
-      (!state.query||view.searchString(item).includes(lc(state.query)))
+      (!state.query||view.searchString(item).includes(lc(state.query).normalize("NFKC")))
     ).sort((a,b)=>Number(b.year||0)-Number(a.year||0)||txt(a.title).localeCompare(txt(b.title)));
   }
   function tab(type){
@@ -116,10 +117,26 @@
     return '<article class="rc-record">'+
       '<div class="rc-record-year">'+e(item.year||"—")+'</div>'+
       '<div class="rc-record-main"><strong>'+e(item.title||"제목 미입력")+'</strong><small>'+
-        e(themeShort[item.theme]||"연구영역 미지정")+' <i aria-hidden="true">·</i> '+e(support)+'</small></div>'+
+        e(themeNames[item.theme]||"연구영역 미지정")+' <i aria-hidden="true">·</i> '+e(support)+'</small></div>'+
       '<span class="rc-state '+klass+'">'+status+'</span>'+
       '<button type="button" class="rc-row-edit" data-action="edit" data-id="'+e(item.id)+'">'+
         (canEdit()?"수정":"보기")+' <span aria-hidden="true">↗</span></button></article>';
+  }
+  function demoPreview(){
+    if(!state.demo)return "";
+    // Local preview only: duplicate known records with conspicuous demo labels.
+    // These items are never appended to ctx.data or written to GitHub.
+    const originals=ctx.data.filter(item=>published(item)&&item.type===state.type&&item.title);
+    if(!originals.length)return '<div class="rc-demo"><p>미리보기에 사용할 공개 자료가 없습니다.</p></div>';
+    const items=Array.from({length:24},(_,i)=>({...originals[i%originals.length],id:"demo-"+i,
+      title:"[화면 테스트 "+(i+1)+"] "+originals[i%originals.length].title}));
+    const pages=Math.ceil(items.length/state.demoSize);
+    state.demoPage=Math.min(Math.max(1,state.demoPage),pages);
+    const start=(state.demoPage-1)*state.demoSize;
+    return '<section class="rc-demo" aria-label="페이지 구성 테스트"><div class="rc-demo-header"><div><strong>목록 화면 테스트 · 가상 24건</strong><p>현재 공개 자료를 반복한 디자인 확인용 자료입니다. 홈페이지에는 게시되지 않습니다.</p></div>'+
+      '<label>페이지당 <select id="rc-demo-size"><option value="15"'+(state.demoSize===15?' selected':'')+'>15건</option><option value="20"'+(state.demoSize===20?' selected':'')+'>20건</option></select></label></div>'+
+      '<div class="rc-demo-list">'+items.slice(start,start+state.demoSize).map(item=>'<div><span>'+e(item.year)+'</span><strong>'+e(item.title)+'</strong><small>'+e(item.type==='project'?'Project':'Publication')+'</small></div>').join('')+'</div>'+
+      '<nav class="rc-demo-pages" aria-label="테스트 페이지 이동">'+Array.from({length:pages},(_,i)=>'<button type="button" data-action="demo-page" data-page="'+(i+1)+'"'+(state.demoPage===i+1?' aria-current="page"':'')+'>'+(i+1)+'</button>').join('')+'</nav></section>';
   }
   function listView(){
     const current=ctx.data.filter(item=>item.type===state.type);
@@ -133,11 +150,12 @@
       '<button type="button" class="rc-primary-action" data-action="new" '+(!canEdit()?'disabled':'')+
       '><span aria-hidden="true">＋</span> 새 '+singular[state.type]+' 등록</button></header>'+
       '<div class="rc-filters"><label class="rc-search" for="rc-search"><span>검색</span>'+
-      '<input id="rc-search" type="search" autocomplete="off" placeholder="제목, 연구자, 키워드 검색" value="'+e(state.query)+'"></label>'+
+      '<span class="rc-search-line"><input id="rc-search" type="search" autocomplete="off" placeholder="한글·영문 제목, 연구자, 키워드" value="'+e(state.query)+'"><button type="button" data-action="search">조회</button></span></label>'+
       '<label class="rc-select-filter"><span>등록 상태</span><select id="rc-status">'+
       [['all',"전체"],["published","공개"],["draft","임시저장"]].map(([v,l])=>'<option value="'+v+'" '+(state.status===v?'selected':'')+'>'+l+'</option>').join("")+'</select></label>'+
       '<label class="rc-select-filter"><span>연구영역</span><select id="rc-theme"><option value="all">전체 연구영역</option>'+
-      themes.map(([v,l])=>'<option value="'+v+'" '+(state.theme===v?'selected':'')+'>'+e(themeShort[v])+'</option>').join("")+'</select></label></div>'+
+      themes.map(([v,l])=>'<option value="'+v+'" '+(state.theme===v?'selected':'')+'>'+e(l)+'</option>').join("")+'</select></label></div>'+
+      '<div class="rc-demo-toggle"><button type="button" data-action="demo">'+(state.demo?'화면 테스트 닫기':'15건·20건 페이지 구성 미리보기')+'</button></div>'+demoPreview()+
       '<div class="rc-list-caption"><span>연구성과 목록</span><span>'+shown.length+'개 표시</span></div>'+
       '<div class="rc-list">'+(shown.length?shown.map(row).join(""):
       '<div class="rc-empty"><strong>해당하는 연구성과가 없습니다.</strong><p>검색 조건을 바꾸거나 새 항목을 등록해 주세요.</p></div>')+
@@ -213,6 +231,9 @@
       if(action==="tab"){
         state.type=btn.dataset.type;state.view="list";state.id=null;state.query="";state.status="all";state.theme="all";render(ctx);return;
       }
+      if(action==="search"){state.query=target.querySelector('#rc-search')?.value||'';renderListOnly();return;}
+      if(action==="demo"){state.demo=!state.demo;state.demoPage=1;render(ctx);return;}
+      if(action==="demo-page"){state.demoPage=Number(btn.dataset.page)||1;render(ctx);return;}
       if(action==="new"){
         if(!canEdit())return;
         const record=create(state.type);ctx.data.push(record);state.id=record.id;state.view="edit";ctx.changed();render(ctx);return;
@@ -256,9 +277,12 @@
       const node=event.target;
       if(node.id==="rc-status"){state.status=node.value;render(ctx);return;}
       if(node.id==="rc-theme"){state.theme=node.value;render(ctx);return;}
+      if(node.id==="rc-demo-size"){state.demoSize=Number(node.value)===20?20:15;state.demoPage=1;render(ctx);return;}
       if(node.hasAttribute("data-record-field")&&canEdit()){
         const record=selected();if(!record)return;
-        record[node.getAttribute("data-record-field")]=node.value;ctx.changed();refreshPreview();
+        const key=node.getAttribute("data-record-field");
+        record[key]=key==="keywords"?node.value.split(/[,，]/).map(v=>v.trim()).filter(Boolean):key==="year"?Number(node.value):node.value;
+        ctx.changed();refreshPreview();
       }
     };
   }
