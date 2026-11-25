@@ -257,15 +257,11 @@ function popupForPlace(p){
 function locationSelection(id,{fly=true}={}){
  if(id&&!points.has(id))return;
  state.placeId=id||null;state.activityType="all";state.activityQuery="";
- $("#lf-v2-activity-search").value="";
- renderActivities();
- const point=id?points.get(id):null;
- $("#lf-v2-active-place").textContent=point?point.name+" · "+point.activityIds.length+" linked records":"All locations";
- if(map&&point&&markers[id]&&fly){
-   map.flyTo([point.lat,point.lon],point.group==="korea"?10:9,{duration:.6});
-   markers[id].openPopup();
- }
- if(!id)resetMap();}
+ $("#lf-v2-activity-search").value="";renderActivities();
+ const p=id?points.get(id):null;
+ $("#lf-v2-active-place").textContent=p?p.name+" · "+p.activityIds.length+" linked records":"All locations";
+ if(map){map.select(id,fly);map.updateVisible();}
+}
 function placeButtons(){
  const visible=locationList.filter(p=>state.region==="all"||p.group===state.region);
  $("#lf-v2-place-count").textContent=visible.length+" PLACES";
@@ -296,55 +292,62 @@ function placeButtons(){
    const selected=btn.dataset.lfV2Region===state.region;
    btn.classList.toggle("is-selected",selected);btn.setAttribute("aria-pressed",String(selected));
  });
- if(map){
-   for(const p of locationList){
-     const marker=markers[p.id];
-     if(!marker)continue;
-     const show=state.region==="all"||p.group===state.region;
-     if(show&&!map.hasLayer(marker))marker.addTo(map);
-     if(!show&&map.hasLayer(marker))map.removeLayer(marker);
-   }
- }
+ if(map)map.updateVisible();
 }
-function resetMap(){
- if(!map)return;
- map.closePopup();
- const selected=locationList.filter(p=>state.region==="all"||p.group===state.region);
- if(!selected.length){map.setView([18,7],1);return;}
- if(state.region==="all"){map.setView([18,7],1,{animate:true});return;}
- const bounds=window.L.latLngBounds(selected.map(p=>[p.lat,p.lon]));
- map.flyToBounds(bounds,{padding:[50,50],maxZoom:state.region==="korea"?9:5,duration:.65});
-}
+function resetMap(){if(map)map.reset();}
 function mapFallback(){
  if(ready||failed)return;
  failed=true;
- const node=$("#lf-v2-map");
- node.innerHTML='<div class="lf-v2-map-unavailable">대화형 지도를 불러오지 못했습니다.<br>지도 아래 장소 목록에서 연결된 활동을 확인할 수 있습니다.</div>';
+ $("#lf-v2-map").innerHTML='<div class="lf-v2-map-unavailable">지구본을 불러오지 못했습니다. 아래 장소 목록에서 활동을 확인할 수 있습니다.</div>';
 }
-function initializeMap(){
- if(ready||failed)return;
- const panel=$('[data-life-view="activities"]');
- if(panel.hidden)return;
- const mapNode=$("#lf-v2-map");
- if(!window.L){
-   if(document.readyState==="complete")mapFallback();
-   return;
- }
- ready=true;mapNode.innerHTML="";
- map=window.L.map(mapNode,{scrollWheelZoom:false,worldCopyJump:true}).setView([18,7],1);
- window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-   minZoom:1,maxZoom:17,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
- }).addTo(map);
- for(const p of locationList){
-   const marker=window.L.circleMarker([p.lat,p.lon],{radius:11,color:"#ffffff",weight:2.5,fillColor:mapKinds[mapKindForPlace(p)].color,fillOpacity:.94}).addTo(map);
-   marker.bindPopup(popupForPlace(p));
-   marker.bindTooltip(p.name,{direction:"top",offset:[0,-12],opacity:1,className:"lf-v2-globe-tooltip"});
-   marker.on("mouseover",()=>marker.openTooltip());
-   marker.on("click",()=>locationSelection(p.id,{fly:false}));
-   markers[p.id]=marker;
- }
- placeButtons();resetMap();
- requestAnimationFrame(()=>map.invalidateSize());
+async function initializeMap(){
+ if(ready||failed||$('[data-life-view="activities"]').hidden)return;
+ if(!window.d3||!window.topojson){if(document.readyState==="complete")mapFallback();return;}
+ ready=true;
+ const node=$("#lf-v2-map");node.replaceChildren();
+ try{
+  const response=await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
+  if(!response.ok)throw Error("Geography unavailable");
+  const world=await response.json(),d3=window.d3,land=window.topojson.feature(world,world.objects.land);
+  const svg=d3.select(node).append("svg").attr("viewBox","0 0 640 640").attr("role","img").attr("aria-label","드래그하여 회전하는 지구본. 색상 점을 선택하면 활동 정보를 볼 수 있습니다.");
+  const projection=d3.geoOrthographic().scale(289).translate([320,320]).clipAngle(90).precision(.3),path=d3.geoPath(projection);
+  const ocean=svg.append("path").datum({type:"Sphere"}).attr("class","lf-globe-ocean");
+  const grid=svg.append("path").datum(d3.geoGraticule10()).attr("class","lf-globe-grid");
+  const ground=svg.append("path").datum(land).attr("class","lf-globe-land");
+  const popup=document.createElement("div");popup.className="lf-globe-detail";popup.hidden=true;node.append(popup);
+  const dots=svg.append("g").attr("class","lf-globe-points").selectAll("g").data(locationList).join("g").attr("class","lf-globe-point").attr("tabindex",0).attr("role","button").attr("aria-label",p=>p.name+" 활동 보기");
+  dots.append("circle").attr("class","lf-globe-halo").attr("r",15);
+  dots.append("circle").attr("class","lf-globe-core").attr("r",7).attr("fill",p=>mapKinds[mapKindForPlace(p)].color);
+  dots.append("title").text(p=>p.name);
+  let holdUntil=0,last=0,dragMoved=false;
+  function draw(){
+   ocean.attr("d",path);grid.attr("d",path);ground.attr("d",path);
+   dots.each(function(p){
+    const show=d3.geoDistance([p.lon,p.lat],[-projection.rotate()[0],-projection.rotate()[1]])<Math.PI/2-.02&&(state.region==="all"||p.group===state.region);
+    const dot=d3.select(this);dot.style("display",show?"":"none");
+    if(show){const xy=projection([p.lon,p.lat]);dot.attr("transform","translate("+xy[0]+","+xy[1]+")");}
+    dot.classed("is-selected",p.id===state.placeId);
+   });
+  }
+  function select(id,fly=true){
+   if(!id){popup.hidden=true;holdUntil=Date.now()+1200;draw();return;}
+   const p=points.get(id);if(!p)return;
+   holdUntil=Date.now()+5500;
+   if(fly)projection.rotate([-p.lon,-p.lat,0]);
+   popup.replaceChildren(popupForPlace(p));popup.hidden=false;draw();
+  }
+  dots.on("click",(ev,p)=>{ev.stopPropagation();if(!dragMoved)locationSelection(p.id,{fly:true});});
+  dots.on("keydown",(ev,p)=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();locationSelection(p.id,{fly:true});}});
+  svg.call(d3.drag().on("start",()=>{dragMoved=false;holdUntil=Date.now()+4500;}).on("drag",event=>{
+   if(Math.abs(event.dx)+Math.abs(event.dy)>1)dragMoved=true;
+   const r=projection.rotate();projection.rotate([r[0]+event.dx*.32,Math.max(-80,Math.min(80,r[1]-event.dy*.32)),0]);draw();holdUntil=Date.now()+4000;
+  }).on("end",()=>{setTimeout(()=>{dragMoved=false;},80);}));
+  projection.rotate([-25,-13,0]);draw();
+  function tick(t){if(!node.isConnected)return;if(last&&Date.now()>holdUntil){const r=projection.rotate();projection.rotate([r[0]+Math.min(32,t-last)*.006,r[1],0]);draw();}last=t;requestAnimationFrame(tick);}
+  requestAnimationFrame(tick);
+  map={invalidateSize:draw,select,reset(){popup.hidden=true;holdUntil=Date.now()+1400;projection.rotate(state.region==="korea"?[-127,-37,0]:state.region==="overseas"?[-15,-27,0]:[-25,-13,0]);draw();},updateVisible:draw};
+  placeButtons();
+ }catch(err){ready=false;mapFallback();}
 }
 function initActivityFilters(){
  $$("[data-lf-v2-activity-kind]").forEach(btn=>btn.addEventListener("click",()=>{state.activityType=btn.dataset.lfV2ActivityKind;state.placeId=null;renderActivities();}));
