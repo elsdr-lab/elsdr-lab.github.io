@@ -398,3 +398,14 @@
 /* Activities archive is a single full-width vertical list, never a card grid. */
 .lf-v2-page .lf-v2-activity-list{display:block!important;grid-template-columns:none!important;columns:1!important;column-count:1!important;width:100%;border-top:1px solid #cbd8cb}
 .lf-v2-page .lf-v2-activity-list>.lf-v2-activity-row{display:grid!important;width:100%!important;max-width:none!important;margin:0!important;break-inside:avoid;box-sizing:border-box;border-left:0;border-right:0;border-top:0;border-bottom:1px solid #cbd8cb;border-radius:0;background:transparent}
+
+/* Selected place: enlarge and crop globe to the left, like the reference layout. */
+@media(min-width:951px){
+ .lf-v2-map-layout.is-detail-open .lf-v2-map-wrap{justify-content:flex-start;overflow:visible;min-height:665px;padding:20px 0 62px}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map{width:min(810px,145%);max-width:none;height:auto;aspect-ratio:1;transform:translateX(-18%);transition:width .48s ease,transform .48s ease}
+ .lf-v2-map-layout.is-detail-open .lf-v2-spotlight{position:relative;z-index:4}
+}
+@media(max-width:950px){
+ .lf-v2-map-layout.is-detail-open .lf-v2-map-wrap{justify-content:center;overflow:hidden}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map{transform:none;width:min(400px,82vw);height:auto;aspect-ratio:1}
+}
