@@ -11,7 +11,7 @@
   if(!archiveView)return;
   const {archiveRow,searchString}=archiveView;
   const state={type:"all",theme:"all",year:"all",query:"",page:1,pageSize:15};
-  const typeBtns=$$("[data-research-kind]"),themeBtns=$$("[data-research-theme]");
+  const typeBtns=$("[data-research-kind]"),themeInput=$("#research-theme");
   const yearInput=$("#research-year"),searchInput=$("#research-search");
   const list=$("#research-list"),counter=$("#research-counter");
   const pagination=$("#research-pagination"),pageSizeInput=$("#research-page-size"),empty=$("#research-empty");
@@ -76,11 +76,7 @@
       btn.classList.toggle("is-selected",selected);
       btn.setAttribute("aria-pressed",String(selected));
     });
-    themeBtns.forEach(btn=>{
-      const selected=btn.dataset.researchTheme===state.theme;
-      btn.classList.toggle("is-selected",selected);
-      btn.setAttribute("aria-pressed",String(selected));
-    });
+    themeInput.value=state.theme;
   }
   function newFilter(){state.page=1;update();}
   function urlType(){
@@ -103,9 +99,9 @@
     }
     newFilter();
   }));
-  themeBtns.forEach(btn=>btn.addEventListener("click",()=>{state.theme=btn.dataset.researchTheme;newFilter();}));
+  themeInput.addEventListener("change",()=>{state.theme=themeInput.value;newFilter();});
   yearInput.addEventListener("change",()=>{state.year=yearInput.value;newFilter();});
-  searchInput.addEventListener("input",()=>{state.query=searchInput.value.trim().toLocaleLowerCase();newFilter();});
+  searchInput.addEventListener("input",()=>{state.query=searchInput.value.trim().normalize("NFKC").toLocaleLowerCase();newFilter();});
   pageSizeInput.addEventListener("change",()=>{state.pageSize=Number(pageSizeInput.value)===20?20:15;state.page=1;update();});
   window.addEventListener("hashchange",syncRoute);
   syncRoute();
