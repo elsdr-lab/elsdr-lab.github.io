@@ -402,7 +402,7 @@
 /* Selected place: enlarge and crop globe to the left, like the reference layout. */
 @media(min-width:951px){
  .lf-v2-map-layout.is-detail-open .lf-v2-map-wrap{justify-content:flex-start;overflow:visible;min-height:665px;padding:20px 0 62px}
- .lf-v2-map-layout.is-detail-open .lf-v2-map{width:min(810px,145%);max-width:none;height:auto;aspect-ratio:1;transform:translateX(-18%);transition:width .48s ease,transform .48s ease}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map{width:min(1080px,190%);max-width:none;height:auto;aspect-ratio:1;transform:translateX(-28%);transition:width .48s ease,transform .48s ease}
  .lf-v2-map-layout.is-detail-open .lf-v2-spotlight{position:relative;z-index:4}
 }
 @media(max-width:950px){
