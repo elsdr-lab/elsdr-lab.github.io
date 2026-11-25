@@ -247,6 +247,33 @@
  #research-archive-v2 .ra-page-button{min-width:32px;padding:6px}
 }
 
+/* Explicit search action alongside instant keyword filtering. */
+#research-archive-v2 .ra-filter-row-tools{grid-template-columns:160px 150px 74px minmax(180px,1fr) 70px auto;column-gap:12px}
+#research-archive-v2 .ra-search-submit{height:41px;padding:0 17px;border:1px solid #536d5e;background:#536d5e;color:#fff;font:600 14px/1.4 "IBM Plex Sans","Pretendard",sans-serif;cursor:pointer}
+#research-archive-v2 .ra-search-submit:hover{background:#345440}
+@media(max-width:1100px){
+ #research-archive-v2 .ra-filter-row-tools{grid-template-columns:145px 140px 65px minmax(145px,1fr) 64px}
+ #research-archive-v2 .ra-filter-compact .ra-count{grid-column:4/-1;justify-self:end}
+}
+@media(max-width:760px){
+ #research-archive-v2 .ra-filter-row-tools{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr) auto}
+ #research-archive-v2 .ra-filter-row-tools > label[for="research-year"]{grid-column:1;grid-row:1}
+ #research-archive-v2 .ra-filter-row-tools > #research-year{grid-column:1;grid-row:2}
+ #research-archive-v2 .ra-filter-label-search{grid-column:2/-1;grid-row:1}
+ #research-archive-v2 .ra-filter-row-tools > .ra-search-box{grid-column:2;grid-row:2}
+ #research-archive-v2 .ra-search-submit{grid-column:3;grid-row:2;padding:0 12px}
+ #research-archive-v2 .ra-filter-compact .ra-count{grid-column:1/-1;grid-row:3}
+}
+@media(max-width:390px){
+ #research-archive-v2 .ra-filter-row-tools{grid-template-columns:minmax(0,1fr) auto}
+ #research-archive-v2 .ra-filter-row-tools > label[for="research-year"]{grid-column:1/-1;grid-row:1}
+ #research-archive-v2 .ra-filter-row-tools > #research-year{grid-column:1/-1;grid-row:2}
+ #research-archive-v2 .ra-filter-label-search{grid-column:1/-1;grid-row:3}
+ #research-archive-v2 .ra-filter-row-tools > .ra-search-box{grid-column:1;grid-row:4}
+ #research-archive-v2 .ra-search-submit{grid-column:2;grid-row:4}
+ #research-archive-v2 .ra-filter-compact .ra-count{grid-column:1/-1;grid-row:5}
+}
+
 /* Official ABOUT research theme names: readable single-select filter. */
 #research-archive-v2 .ra-theme-select{
  appearance:none;-webkit-appearance:none;
