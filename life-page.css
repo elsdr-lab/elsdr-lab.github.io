@@ -194,3 +194,35 @@
  .lf-v2-place-list{max-height:290px}
  .lf-v2-place-entry .lf-v2-place-button{padding:11px 7px 4px}
 }
+
+/* Map-first: spacious map above legend and location selections. */
+.lf-v2-map-layout{display:flex;flex-direction:column;min-height:0}
+.lf-v2-map-wrap{order:0;min-height:590px}
+.lf-v2-map{height:590px}
+.lf-v2-map-type-legend{order:1;display:flex;align-items:center;flex-wrap:wrap;gap:12px 25px;padding:17px 23px;background:#f5f8f3;border-bottom:1px solid #c6d5c8}
+.lf-v2-map-type-legend>span{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:650;color:#455e4e}
+.lf-v2-map-dot{display:inline-block;flex:none;width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #c2d0c3}
+.lf-v2-map-dot[data-map-kind="fieldwork"]{background:#267d68}
+.lf-v2-map-dot[data-map-kind="conference"]{background:#7555ae}
+.lf-v2-map-dot[data-map-kind="workshop"]{background:#d57d38}
+.lf-v2-map-dot[data-map-kind="other"]{background:#66818b}
+.lf-v2-map-sidebar{order:2;border-right:0;border-bottom:0;padding:23px 24px 18px}
+.lf-v2-map-switch{margin:12px 0 17px}
+.lf-v2-place-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;overflow:visible;max-height:none;min-height:0}
+.lf-v2-place-entry{border:1px solid #c9d8c9;background:#f5f8f3;min-width:0}
+.lf-v2-place-entry .lf-v2-place-button{padding:13px 13px 5px}
+.lf-v2-place-linked{padding:4px 13px 12px}
+.lf-v2-place-type[data-map-kind="fieldwork"]{border-color:#92bcb0;color:#267d68}
+.lf-v2-place-type[data-map-kind="conference"]{border-color:#b8a5d6;color:#7555ae}
+.lf-v2-place-type[data-map-kind="workshop"]{border-color:#dfb692;color:#a85e25}
+.lf-v2-place-type[data-map-kind="other"]{border-color:#b1c0c4;color:#58757e}
+.lf-v2-showall-places{margin-top:16px;padding:12px 0 0}
+@media(max-width:900px){.lf-v2-place-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:690px){
+ .lf-v2-map,.lf-v2-map-wrap{height:440px;min-height:440px}
+ .lf-v2-map-sidebar{padding:17px 14px}
+ .lf-v2-map-type-legend{padding:13px 14px;gap:10px 17px}
+ .lf-v2-map-type-legend>span{font-size:11px}
+ .lf-v2-place-list{grid-template-columns:1fr;max-height:none;min-height:0}
+ .lf-v2-map-legend{left:8px;right:8px;bottom:8px}
+}
