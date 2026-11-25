@@ -101,12 +101,13 @@ function renderActivities(){
  const data=filteredActivities();
  const wrap=$("#lf-v2-activity-grid");
  wrap.innerHTML=data.map(a=>
-   '<a class="lf-v2-activity-card" href="#/life/activities/'+encodeURIComponent(a.id)+'">'+photoMarkup(a)+
-     '<div class="lf-v2-card-copy"><span class="lf-v2-card-meta">'+E(a.date||a.year||"")+' / '+E(categories[a.category]||"Activity")+'</span>'+
-     '<h4>'+E(a.title)+'</h4>'+
-     (formattedPlaces(a)?'<p>'+E(formattedPlaces(a))+'</p>':"")+
-     (String(a.summary||"").trim()?'<p class="lf-v2-card-summary">'+E(a.summary)+'</p>':"")+
-     '<span class="lf-v2-card-link">View activity <b aria-hidden="true">↗</b></span></div></a>'
+   '<a class="lf-v2-activity-card" href="#/life/activities/'+encodeURIComponent(a.id)+'">'+
+    '<span class="lf-v2-list-year">'+E(a.year||String(a.date||"").slice(0,4)||"—")+'</span>'+
+    '<span class="lf-v2-list-kind" data-map-kind="'+E(mapKindForActivity(a))+'">'+E(categories[a.category]||"Activity")+'</span>'+
+    '<strong class="lf-v2-list-title">'+E(a.title)+'</strong>'+
+    '<span class="lf-v2-list-place">'+E(formattedPlaces(a)||"—")+'</span>'+
+    '<span class="lf-v2-list-arrow" aria-hidden="true">↗</span>'+
+   '</a>'
  ).join("");
  $("#lf-v2-activity-counter").textContent=data.length+" activities";
  $("#lf-v2-activity-empty").hidden=data.length>0;
