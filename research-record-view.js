@@ -105,5 +105,64 @@
         return String(value??"");
       }).join(" ").normalize("NFKC").toLocaleLowerCase();
   }
-  window.ELSDRResearchView={archiveRow,details,themeLabel,searchString,themeNames,themeShort};
+  // Boolean search: NOT > AND > OR; adjacent terms are treated as AND.
+  // Quoted phrases and parentheses are supported for both Korean and English.
+  function compileQuery(query){
+    const source=String(query||"").normalize("NFKC").trim();
+    if(!source)return ()=>true;
+    const tokens=[];
+    const regex=/"(?:[^"\\]|\\.)*"|\(|\)|[^\s()"]+/g;
+    let match;
+    while((match=regex.exec(source))){
+      const raw=match[0],upper=raw.toUpperCase();
+      if(raw==="("||raw===")")tokens.push({kind:raw});
+      else if(["AND","OR","NOT"].includes(upper))tokens.push({kind:upper});
+      else tokens.push({kind:"TERM",value:(raw.startsWith('"')&&raw.endsWith('"')?raw.slice(1,-1):raw).replace(/\\\\(["\\\\])/g,"$1").toLocaleLowerCase()});
+    }
+    let pos=0;
+    function primary(){
+      const token=tokens[pos++];
+      if(!token)throw Error("missing term");
+      if(token.kind==="TERM")return text=>text.includes(token.value);
+      if(token.kind==="("){
+        const fn=orExpr();
+        if(tokens[pos]?.kind!==")")throw Error("missing closing parenthesis");
+        pos++;return fn;
+      }
+      throw Error("unexpected operator");
+    }
+    function notExpr(){
+      if(tokens[pos]?.kind==="NOT"){pos++;const fn=notExpr();return text=>!fn(text);}
+      return primary();
+    }
+    function andExpr(){
+      let left=notExpr();
+      while(pos<tokens.length&&tokens[pos].kind!==")"&&tokens[pos].kind!=="OR"){
+        if(tokens[pos].kind==="AND")pos++;
+        const right=notExpr(),previous=left;
+        left=text=>previous(text)&&right(text);
+      }
+      return left;
+    }
+    function orExpr(){
+      let left=andExpr();
+      while(tokens[pos]?.kind==="OR"){
+        pos++;const right=andExpr(),previous=left;
+        left=text=>previous(text)||right(text);
+      }
+      return left;
+    }
+    try{
+      const result=orExpr();
+      if(pos!==tokens.length)throw Error("extra token");
+      return result;
+    }catch{
+      // While an operator or quote is unfinished, keep a tolerant text lookup.
+      return text=>text.includes(source.toLocaleLowerCase());
+    }
+  }
+  function matchesQuery(record,query){
+    return compileQuery(query)(searchString(record));
+  }
+  window.ELSDRResearchView={archiveRow,details,themeLabel,searchString,matchesQuery,compileQuery,themeNames,themeShort};
 })();
