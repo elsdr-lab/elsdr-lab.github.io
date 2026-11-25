@@ -153,13 +153,58 @@ function renderCareer(){
   return careerCollection(category,label);
  }).join("")||empty("등록 자료 없음");
 }
-function writingList(records,title){
+const writingState={columns:{page:1,size:10},essays:{page:1,size:10}};
+function writingList(records,title,key){
  if(!records?.length)return empty(title+" 등록 예정","제목 · 매체명 · 발행일 · 원문 링크를 입력할 수 있습니다.");
- return '<div class="pp-v2-writings-list">'+[...records].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).map(item=>
-    '<div class="pp-v2-writing-row"><div class="pp-v2-writing-meta"><time>'+E(item.date||"")+'</time><span class="pp-v2-writing-medium">'+E(item.publication||item.medium||"")+'</span></div>'+
-    '<div class="pp-v2-writing-title"><h4>'+E(item.title)+'</h4></div>'+
-    (item.url?outerLink(item.url,"View article"):'<span class="pp-v2-writing-source-pending">원문 링크 확인 중</span>')+'</div>').join("")+'</div>';
+ const state=writingState[key],items=[...records].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+ const totalPages=Math.max(1,Math.ceil(items.length/state.size));
+ state.page=Math.min(state.page,totalPages);
+ const start=(state.page-1)*state.size;
+ const entries=items.slice(start,start+state.size);
+ const rows=entries.map(item=>{
+  const publication=item.publication||item.medium||"";
+  const title=E(item.title||"제목 확인 중");
+  const combined=title+(publication?' <span class="pp-v2-writing-publication">('+E(publication)+')</span>':"");
+  const safe=validUrl(item.url);
+  return '<article class="pp-v2-writing-row"><div class="pp-v2-writing-title"><h4>'+
+   (safe?'<a href="'+E(safe)+'" target="_blank" rel="noopener noreferrer" aria-label="'+E((item.title||"제목 확인 중")+(publication?" ("+publication+")":"")+", 원문 보기")+'">'+combined+' <span class="pp-v2-writing-outbound" aria-hidden="true">↗</span></a>':combined)+
+   '</h4><div class="pp-v2-writing-subline"><time>'+E(item.date||"발행일 미확인")+'</time>'+
+   (!safe?'<span class="pp-v2-writing-source-pending">원문 링크 확인 중</span>':"")+
+   '</div></div></article>';
+ }).join("");
+ const pageNumbers=Array.from({length:totalPages},(_,i)=>i+1).filter(n=>n===1||n===totalPages||Math.abs(n-state.page)<=2);
+ const buttons=[];
+ if(totalPages>1){
+  buttons.push('<button type="button" data-writing-page="'+(state.page-1)+'" '+(state.page===1?'disabled':'')+' aria-label="이전 페이지">이전</button>');
+  let last=0;
+  for(const n of pageNumbers){
+   if(last&&n-last>1)buttons.push('<span class="pp-v2-writing-ellipsis" aria-hidden="true">…</span>');
+   buttons.push('<button type="button" data-writing-page="'+n+'"'+(n===state.page?' aria-current="page" class="is-current"':'')+' aria-label="'+n+'페이지">'+n+'</button>');
+   last=n;
+  }
+  buttons.push('<button type="button" data-writing-page="'+(state.page+1)+'" '+(state.page===totalPages?'disabled':'')+' aria-label="다음 페이지">다음</button>');
+ }
+ return '<div class="pp-v2-writing-toolbar"><span>총 '+items.length+'건 · '+(start+1)+'–'+(start+entries.length)+'건 표시</span>'+
+  '<label>페이지당 <select data-writing-size="'+E(key)+'" aria-label="'+E(title)+' 페이지당 표시 건수">'+
+  '<option value="10"'+(state.size===10?' selected':'')+'>10건</option><option value="15"'+(state.size===15?' selected':'')+'>15건</option></select></label></div>'+
+  '<div class="pp-v2-writings-list">'+rows+'</div>'+
+  (buttons.length?'<nav class="pp-v2-writing-pagination" aria-label="'+E(title)+' 페이지 이동">'+buttons.join("")+'</nav>':"");
 }
+function handleWritingControls(event,key){
+ const root=event.currentTarget;
+ const size=event.target.closest("[data-writing-size]");
+ if(size){writingState[key].size=Number(size.value)===15?15:10;writingState[key].page=1;renderWritings();return;}
+ const button=event.target.closest("[data-writing-page]");
+ if(!button||button.disabled)return;
+ writingState[key].page=Number(button.dataset.writingPage)||1;
+ renderWritings();
+ root.querySelector(".pp-v2-writing-toolbar")?.scrollIntoView({block:"start",behavior:"instant"});
+}
+["columns","essays"].forEach(key=>{
+ const root=$("#pp-v2-"+key);
+ root.addEventListener("change",event=>handleWritingControls(event,key));
+ root.addEventListener("click",event=>handleWritingControls(event,key));
+});
 function renderWritings(){
  const books=(data.books||[]).slice().sort((a,b)=>Number(b.year||0)-Number(a.year||0));
  $("#pp-v2-books").innerHTML=books.length?books.map(item=>
@@ -170,8 +215,8 @@ function renderWritings(){
    '<p class="lang-ko">'+E(item.summary||"")+'</p><p class="lang-en">'+E(item.summaryEn||item.summary||"")+'</p>'+outerLink(item.url,"Book details")+'</div></article>').join("") :
    '<article class="pp-v2-book pp-v2-book-template"><div class="pp-v2-book-cover"><span>BOOK COVER</span></div>'+
    '<div><h4>Books 등록 예정</h4><p>도서 제목 · 출판사 · 발행연도</p><p>단독 저서, 공동 저서, 번역서를 등록할 수 있습니다.</p></div></article>';
- $("#pp-v2-columns").innerHTML=writingList(data.columns,"Newspaper Columns");
- $("#pp-v2-essays").innerHTML=writingList(data.essays,"Essays & Other Writings");
+ $("#pp-v2-columns").innerHTML=writingList(data.columns,"Newspaper Columns","columns");
+ $("#pp-v2-essays").innerHTML=writingList(data.essays,"Essays & Other Writings","essays");
 }
 function normalizeName(name){
  const s=clean(name).replace(/[^a-z,\s]/g,"").trim();
