@@ -57,7 +57,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="palette.css?v=4.1">
 <link rel="stylesheet" href="menu-structure.css?v=4.1">
 <link rel="stylesheet" href="contact-page.css?v=4.1">
-<link rel="stylesheet" href="life-page.css?v=20261125-single-row-archive">
+<link rel="stylesheet" href="life-page.css?v=20261125-paginated-list">
 <link rel="stylesheet" href="study-page.css?v=20261125-compact">
 <link rel="stylesheet" href="people-page.css?v=20261125-people-density">
 <link rel="stylesheet" href="research-archive.css?v=20261125-search-button">
@@ -636,6 +636,12 @@ body.home-view .footer{display:none}
 <div class="lf-seminar-count"><span id="lf-seminar-count">행사 목록</span><span>2012—2026 · ELSDR EVENT ARCHIVE</span></div>
 <div class="lf-seminar-header"><span>YEAR</span><span>EVENT / ACTIVITY</span><span>ARCHIVE ↗</span></div>
 <div class="lf-seminar-list" aria-live="polite"></div>
+<div class="lf-v2-page-controls">
+ <label for="lf-v2-event-page-size">한 페이지에
+  <select id="lf-v2-event-page-size" aria-label="페이지당 표시 건수"><option value="10">10건</option><option value="15">15건</option></select>
+ </label>
+ <nav id="lf-v2-event-pagination" class="lf-v2-pagination" aria-label="이벤트 페이지 이동"></nav>
+</div>
 <p id="lf-seminar-empty" class="lf-seminar-empty" hidden>선택한 조건에 맞는 행사가 없습니다.</p>
 <p class="lf-sourcenote">기존 연구실의 학술대회·세미나·특강 기록을 모았습니다. 행사별 원문 상세주소가 확인되지 않은 경우 기존 행사 목록으로 안내하며, 확인되지 않은 발표자·장소·일정은 표기하지 않습니다.</p></div>
 <div id="lf-event-stories" hidden><article class="lf-event-article" id="lf-event-detail-dynamic" aria-live="polite"></article></div>
@@ -691,6 +697,12 @@ body.home-view .footer{display:none}
     </div>
     <div class="lf-v2-activity-status" aria-live="polite"><span id="lf-v2-activity-counter">0 activities</span><button id="lf-v2-clear-location" type="button" hidden>장소 필터 해제 ✕</button></div>
     <div class="lf-v2-activity-grid" id="lf-v2-activity-grid"></div>
+<div class="lf-v2-page-controls">
+ <label for="lf-v2-activity-page-size">한 페이지에
+  <select id="lf-v2-activity-page-size" aria-label="페이지당 표시 건수"><option value="10">10건</option><option value="15">15건</option></select>
+ </label>
+ <nav id="lf-v2-activity-pagination" class="lf-v2-pagination" aria-label="활동 페이지 이동"></nav>
+</div>
     <div class="lf-v2-empty" id="lf-v2-activity-empty" hidden>조건에 맞는 활동이 없습니다. 유형·장소·검색어를 변경해 주세요.</div>
     <p class="lf-v2-map-caution">기존 연구실 Field trip·Gallery의 공개 기록을 통합했습니다. 활동별 원본 사진은 해당 활동 상세 페이지에서 확인할 수 있습니다. 날짜·장소를 확인할 수 없는 경우에는 임의로 기입하지 않았습니다.</p>
   </section>
