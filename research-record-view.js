@@ -78,13 +78,31 @@
         '<span class="ra-chevron" aria-hidden="true"></span>'+
       '</summary><div class="ra-expanded">'+details(record)+'</div></details>';
   }
+  // Index both language variants and participant fields without requiring a single schema.
+  // Unentered keywords stay empty: no inferred metadata is added to the archive.
+  const themeKorean={
+    climate:"기후적응 회복탄력성",
+    ecosystem:"생태계서비스 자연기반해법",
+    coastal:"연안경관 해안 생태계",
+    regional:"지역경관 전략"
+  };
   function searchString(record){
-    return [
-      record.title,record.summary,record.authors,record.journal,record.funder,
+    const values=[
+      record.title,record.titleKo,record.titleEn,record.summary,record.summaryKo,record.summaryEn,
+      record.abstract,record.abstractKo,record.abstractEn,
+      record.authors,record.author,record.researchers,record.researcher,
+      record.participants,record.investigators,record.principalInvestigator,
+      record.pi,record.coResearchers,record.journal,record.funder,
       record.period,record.role,record.doi,record.year,record.publicationType,
-      record.type,themeLabel(record),themeShort[record.theme],record.detailNote,
-      ...(Array.isArray(record.keywords)?record.keywords:[record.keywords])
-    ].map(v=>String(v??"")).join(" ").toLocaleLowerCase();
+      record.type,themeLabel(record),themeShort[record.theme],themeKorean[record.theme],
+      record.detailNote,record.keywords,record.keywordsKo,record.keywordsEn,
+      record.keyword,record.tags
+    ];
+    return values.flatMap(value=>Array.isArray(value)?value:[value])
+      .map(value=>{
+        if(value&&typeof value==="object")return [value.name,value.nameKo,value.nameEn,value.keyword,value.label].filter(Boolean).join(" ");
+        return String(value??"");
+      }).join(" ").normalize("NFKC").toLocaleLowerCase();
   }
   window.ELSDRResearchView={archiveRow,details,themeLabel,searchString,themeNames,themeShort};
 })();
