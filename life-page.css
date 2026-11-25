@@ -259,3 +259,24 @@
  .lf-v2-map{width:min(380px,89vw);height:min(380px,89vw)}
  .lf-v2-map-legend{left:12px;right:12px;bottom:14px}
 }
+
+/* True orthographic globe: visible hemisphere, rotation, draggable activity points. */
+.lf-v2-map{position:relative;isolation:isolate;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;touch-action:none}
+.lf-v2-map::after{display:none!important}
+.lf-v2-map svg{display:block;width:100%;height:100%;overflow:visible;cursor:grab;touch-action:none;filter:drop-shadow(0 23px 22px rgba(83,98,88,.14))}
+.lf-v2-map svg:active{cursor:grabbing}
+.lf-globe-ocean{fill:#e1e6e3;stroke:#cdd5cf;stroke-width:1.6}
+.lf-globe-grid{fill:none;stroke:#c3cdc7;stroke-width:.45;stroke-opacity:.45;pointer-events:none}
+.lf-globe-land{fill:#c5ceca;fill-opacity:.85;stroke:#b4beb9;stroke-width:.6;stroke-linejoin:round;pointer-events:none}
+.lf-globe-point{cursor:pointer;outline:none}
+.lf-globe-halo{fill:#e4ec86;fill-opacity:.25;stroke:#eef5b2;stroke-width:1;transition:r .15s}
+.lf-globe-core{stroke:white;stroke-width:2.5;filter:drop-shadow(0 0 5px rgba(203,215,95,.9))}
+.lf-globe-point:hover .lf-globe-halo,.lf-globe-point.is-selected .lf-globe-halo{fill-opacity:.55;stroke-width:2}
+.lf-globe-point:focus-visible .lf-globe-core{stroke:#203e36;stroke-width:4}
+.lf-globe-detail{position:absolute;z-index:3;left:50%;bottom:-29px;transform:translateX(-50%);width:min(360px,92%);max-height:180px;overflow:auto;border:1px solid #d5dfd6;border-radius:18px;background:rgba(252,253,250,.96);padding:13px 17px;box-shadow:0 12px 32px rgba(76,94,81,.15)}
+.lf-globe-detail[hidden]{display:none}
+.lf-globe-detail .lf-v2-map-popup strong{font-size:13px;margin-bottom:3px}
+.lf-globe-detail .lf-v2-map-popup p{margin-bottom:5px}
+.lf-globe-detail .lf-v2-map-popup a{display:block;font-size:11px;line-height:1.55;margin-top:5px;color:#3f6352}
+.lf-v2-map-legend{bottom:8px}
+@media(max-width:690px){.lf-v2-map-wrap{padding-bottom:75px}.lf-globe-detail{bottom:-38px}}
