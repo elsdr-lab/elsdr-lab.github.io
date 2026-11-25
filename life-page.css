@@ -334,3 +334,30 @@
 .lf-v2-spotlight-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 .lf-v2-spotlight-entries{gap:14px}
 @media(max-width:950px){.lf-v2-spotlight{max-height:none}}
+
+/* Compact, text-first Activity Archive. Photographs remain in globe and detail views. */
+.lf-v2-page .lf-v2-activity-grid{display:block;border-top:1px solid #bdcdbf}
+.lf-v2-page .lf-v2-activity-card{display:grid;grid-template-columns:68px 145px minmax(0,1fr) minmax(110px,220px) 24px;align-items:center;gap:14px;width:100%;min-height:74px;padding:16px 13px;border:0;border-bottom:1px solid #d0dcd0;border-radius:0;background:transparent;box-shadow:none;color:#2e4938;transform:none}
+.lf-v2-page .lf-v2-activity-card:hover{background:#e9f0e8;box-shadow:none;transform:none}
+.lf-v2-list-year{font-size:12px;color:#7a907d;font-weight:700;font-variant-numeric:tabular-nums}
+.lf-v2-list-kind{font-size:11px;font-weight:650;color:#66818b}
+.lf-v2-list-kind[data-map-kind="fieldwork"]{color:#267d68}
+.lf-v2-list-kind[data-map-kind="workshop"]{color:#b96c2e}
+.lf-v2-list-kind[data-map-kind="conference"]{color:#7555ae}
+.lf-v2-list-title{font-size:15px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.lf-v2-list-place{font-size:12px;color:#7b8f7f;line-height:1.5;text-align:right}
+.lf-v2-list-arrow{font-size:17px;color:#6f947b;text-align:right}
+@media(max-width:800px){
+ .lf-v2-page .lf-v2-activity-card{grid-template-columns:54px 110px minmax(0,1fr) 18px;gap:9px;min-height:68px;padding:13px 8px}
+ .lf-v2-list-place{grid-column:3;text-align:left;font-size:11px}
+ .lf-v2-list-arrow{grid-column:4;grid-row:1/3}
+ .lf-v2-list-title{font-size:14px}
+}
+@media(max-width:500px){
+ .lf-v2-page .lf-v2-activity-card{grid-template-columns:44px minmax(0,1fr) 18px;gap:5px 10px}
+ .lf-v2-list-kind{grid-column:2;grid-row:1}
+ .lf-v2-list-title{grid-column:2;grid-row:2}
+ .lf-v2-list-place{grid-column:2;grid-row:3}
+ .lf-v2-list-year{grid-column:1;grid-row:1/3;align-self:start;padding-top:2px}
+ .lf-v2-list-arrow{grid-column:3;grid-row:1/4}
+}
