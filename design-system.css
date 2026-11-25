@@ -162,3 +162,12 @@ body,body .page,body .page :is(h1,h2,h3,p,.serif),body .home-headline,body .home
   #about-page .ab-identity .ab-orbit-connector { height: 38px; }
   #about-page .ab-identity .ab-ses { max-width: 1120px; }
 }
+
+/* Shared content width: match News archive across every inner menu page.
+   Home remains intentionally full-bleed. Mobile's existing side gutters remain. */
+.page[data-page="about"] .wrap,
+.page[data-page="research"] .wrap,
+.page[data-page="people"] .wrap,
+.page[data-page="study"] .wrap,
+.page[data-page="life"] .wrap,
+.page[data-page="contact"] .wrap{max-width:1240px}
