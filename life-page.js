@@ -37,6 +37,10 @@ for(const activity of activities){
  }
 }
 const locationList=[...points.values()];
+const mapKinds={fieldwork:{label:"Field Trip",color:"#267d68"},conference:{label:"Conference",color:"#7555ae"},workshop:{label:"Workshop",color:"#d57d38"},other:{label:"Other Activities",color:"#66818b"}};
+function mapKindForActivity(a){if(a.category==="fieldwork")return"fieldwork";if(a.category==="workshop")return"workshop";const e=events.find(e=>e.id===a.eventId);return a.category==="conference"||e?.category==="conference"?"conference":"other";}
+function mapKindForPlace(p){const kinds=new Set(p.activityIds.map(id=>activities.find(a=>a.id===id)).filter(Boolean).map(mapKindForActivity));return kinds.size===1?[...kinds][0]:"other";}
+
 function formattedPlaces(activity){
  return (activity.places||[]).map(p=>p.name).join(" · ");
 }
@@ -246,11 +250,11 @@ function popupForPlace(p){
    const activity=activities.find(a=>a.id===id);
    if(!activity)return;
    const link=document.createElement("a");link.href="#/life/activities/"+encodeURIComponent(id);
-   link.textContent=(categories[activity.category]||"Activity")+" · "+activity.title;wrap.append(link);
+   link.textContent=mapKinds[mapKindForActivity(activity)].label+" · "+activity.title;wrap.append(link);
  });
  return wrap;
 }
-function locationSelection(id,{scroll=false,fly=true}={}){
+function locationSelection(id,{fly=true}={}){
  if(id&&!points.has(id))return;
  state.placeId=id||null;state.activityType="all";state.activityQuery="";
  $("#lf-v2-activity-search").value="";
@@ -261,9 +265,7 @@ function locationSelection(id,{scroll=false,fly=true}={}){
    map.flyTo([point.lat,point.lon],point.group==="korea"?10:9,{duration:.6});
    markers[id].openPopup();
  }
- if(!id)resetMap();
- if(scroll)requestAnimationFrame(()=>$("#lf-v2-activity-archive").scrollIntoView({behavior:"smooth",block:"start"}));
-}
+ if(!id)resetMap();}
 function placeButtons(){
  const visible=locationList.filter(p=>state.region==="all"||p.group===state.region);
  $("#lf-v2-place-count").textContent=visible.length+" PLACES";
@@ -273,17 +275,17 @@ function placeButtons(){
    button.type="button";button.className="lf-v2-place-button";button.dataset.lfV2Place=p.id;button.setAttribute("aria-pressed",String(state.placeId===p.id));
    const title=document.createElement("strong");title.textContent=p.name;
    const linked=p.activityIds.map(id=>activities.find(a=>a.id===id)).filter(Boolean);
-   const kinds=[...new Set(linked.map(a=>categories[a.category]||"Activity"))];
+   const kinds=[...new Set(linked.map(a=>mapKinds[mapKindForActivity(a)].label))];
    const subtitle=document.createElement("small");subtitle.textContent=p.region+" · "+linked.length+" activities";
    const kindLine=document.createElement("span");kindLine.className="lf-v2-place-kinds";kindLine.textContent=kinds.join(" / ");
    button.append(title,subtitle,kindLine);
-   button.addEventListener("click",()=>locationSelection(p.id,{scroll:true,fly:true}));
+   button.addEventListener("click",()=>locationSelection(p.id,{fly:true}));
    const entry=document.createElement("div");entry.className="lf-v2-place-entry";
    const linkedList=document.createElement("div");linkedList.className="lf-v2-place-linked";
    linked.slice(0,3).forEach(activity=>{
      const anchor=document.createElement("a");
      anchor.href="#/life/activities/"+encodeURIComponent(activity.id);
-     const label=document.createElement("span");label.className="lf-v2-place-type";label.textContent=categories[activity.category]||"Activity";
+     const label=document.createElement("span");label.className="lf-v2-place-type";label.textContent=mapKinds[mapKindForActivity(activity)].label;label.dataset.mapKind=mapKindForActivity(activity);
      const activityName=document.createElement("strong");activityName.textContent=activity.title;
      anchor.append(label,activityName);linkedList.append(anchor);
    });
@@ -317,7 +319,7 @@ function mapFallback(){
  if(ready||failed)return;
  failed=true;
  const node=$("#lf-v2-map");
- node.innerHTML='<div class="lf-v2-map-unavailable">대화형 지도를 불러오지 못했습니다.<br>왼쪽 장소 목록에서 연결된 활동을 확인할 수 있습니다.</div>';
+ node.innerHTML='<div class="lf-v2-map-unavailable">대화형 지도를 불러오지 못했습니다.<br>지도 아래 장소 목록에서 연결된 활동을 확인할 수 있습니다.</div>';
 }
 function initializeMap(){
  if(ready||failed)return;
@@ -334,9 +336,9 @@ function initializeMap(){
    minZoom:2,maxZoom:17,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
  }).addTo(map);
  for(const p of locationList){
-   const marker=window.L.circleMarker([p.lat,p.lon],{radius:10,color:"#ffffff",weight:2,fillColor:"#4d98b8",fillOpacity:.94}).addTo(map);
+   const marker=window.L.circleMarker([p.lat,p.lon],{radius:11,color:"#ffffff",weight:2.5,fillColor:mapKinds[mapKindForPlace(p)].color,fillOpacity:.94}).addTo(map);
    marker.bindPopup(popupForPlace(p));
-   marker.on("click",()=>locationSelection(p.id,{scroll:false,fly:false}));
+   marker.on("click",()=>locationSelection(p.id,{fly:false}));
    markers[p.id]=marker;
  }
  placeButtons();resetMap();
