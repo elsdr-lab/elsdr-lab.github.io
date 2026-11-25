@@ -367,7 +367,7 @@ body.home-view .footer{display:none}
         </select>
         <label class="ra-filter-label ra-filter-label-search" for="research-search">SEARCH</label>
         <div class="ra-search-box">
-          <input id="research-search" class="ra-search-input" type="search" autocomplete="off" placeholder="Search title, researcher, or keywords…" aria-label="제목, 연구자, 키워드 검색">
+          <input id="research-search" class="ra-search-input" type="search" autocomplete="off" placeholder="예: 기후 AND 회복탄력성" aria-label="제목, 연구자, 키워드 검색">
           <svg class="ra-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
         </div>
         <button type="button" class="ra-search-submit" id="research-search-submit">조회</button>
@@ -375,7 +375,7 @@ body.home-view .footer{display:none}
       </div>
     </div>
     <div class="ra-list-controls" aria-label="목록 표시 설정">
-      <span class="ra-list-hint">제목을 선택하면 상세 내용을 확인할 수 있습니다.</span>
+      <span class="ra-list-hint">제목 선택 시 상세 보기 · 검색: AND / OR / NOT, 괄호, “정확한 구문” 지원</span>
       <label for="research-page-size">페이지당 표시</label>
       <select id="research-page-size" class="ra-page-size" aria-label="페이지당 자료 수">
         <option value="15" selected>15건</option>
@@ -1066,8 +1066,8 @@ body.home-view .footer{display:none}
 <script src="people-records.js?v=20261111-alumni-links32"></script>
 <script src="people-page.js?v=20261125-writings-pages"></script>
 <script src="research-records.js"></script>
-<script src="research-record-view.js?v=20261125-researcher"></script>
-<script src="research-archive.js?v=20261125-search-button"></script>
+<script src="research-record-view.js?v=20261125-boolean"></script>
+<script src="research-archive.js?v=20261125-boolean"></script>
 <script src="home-records.js"></script>
 <script src="home-content.js"></script>
 <script src="typography.js"></script>
