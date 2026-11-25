@@ -9,7 +9,7 @@
   const $$=(selector)=>Array.from(root.querySelectorAll(selector));
   const archiveView=window.ELSDRResearchView;
   if(!archiveView)return;
-  const {archiveRow,searchString}=archiveView;
+  const {archiveRow,compileQuery,searchString}=archiveView;
   const state={type:"all",theme:"all",year:"all",query:"",page:1,pageSize:15};
   const typeBtns=$("[data-research-kind]"),themeInput=$("#research-theme");
   const yearInput=$("#research-year"),searchInput=$("#research-search"),searchButton=$("#research-search-submit");
@@ -23,11 +23,12 @@
     yearInput.append(option);
   }
   function filter(){
+    const matches=compileQuery(state.query);
     return records.filter(record=>
       (state.type==="all"||record.type===state.type)&&
       (state.theme==="all"||record.theme===state.theme)&&
       (state.year==="all"||String(record.year)===state.year)&&
-      (!state.query||searchString(record).includes(state.query))
+      matches(searchString(record))
     ).sort((a,b)=>Number(b.year)-Number(a.year));
   }
   function update(){
