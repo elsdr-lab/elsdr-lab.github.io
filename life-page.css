@@ -280,3 +280,8 @@
 .lf-globe-detail .lf-v2-map-popup a{display:block;font-size:11px;line-height:1.55;margin-top:5px;color:#3f6352}
 .lf-v2-map-legend{bottom:8px}
 @media(max-width:690px){.lf-v2-map-wrap{padding-bottom:75px}.lf-globe-detail{bottom:-38px}}
+
+/* Remove rectangular frame around the rotating globe. */
+.lf-v2-page .lf-v2-map-layout{border:0;background:transparent}
+.lf-v2-page .lf-v2-map-wrap{background:transparent}
+.lf-v2-page .lf-v2-map-type-legend{background:transparent;border-bottom:0}
