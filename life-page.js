@@ -274,7 +274,22 @@ function locationSelection(id,{fly=true}={}){
    const kind=document.createElement("span");kind.className="lf-v2-spotlight-kind";kind.dataset.mapKind=mapKindForActivity(a);kind.textContent=mapKinds[mapKindForActivity(a)].label;
    const name=document.createElement("strong");name.textContent=a.title;
    const more=document.createElement("small");more.textContent=(a.year||"")+" · View activity ↗";
-   link.append(kind,name,more);list.append(link);
+   link.append(kind,name,more);
+   const shots=[...new Set([a.photo,...(Array.isArray(a.photos)?a.photos:[])])].filter(src=>!!validUrl(src));
+   if(shots.length){
+    const gallery=document.createElement("div");gallery.className="lf-v2-spotlight-gallery";
+    const first=document.createElement("img");first.src=validUrl(shots[0]);first.alt=a.title+" 활동 사진";first.loading="lazy";first.className="lf-v2-spotlight-cover";
+    gallery.append(first);
+    const strip=document.createElement("div");strip.className="lf-v2-spotlight-thumbs";strip.setAttribute("aria-label",a.title+" 사진 미리보기");
+    shots.forEach((src,i)=>{
+     const thumb=document.createElement("button");thumb.type="button";thumb.className="lf-v2-spotlight-thumb";thumb.setAttribute("aria-label","사진 "+(i+1)+" 보기");
+     const img=document.createElement("img");img.src=validUrl(src);img.alt="";img.loading="lazy";thumb.append(img);
+     thumb.addEventListener("click",ev=>{ev.preventDefault();ev.stopPropagation();first.src=validUrl(src);strip.querySelectorAll("button").forEach(el=>el.classList.remove("is-current"));thumb.classList.add("is-current");});
+     if(i===0)thumb.classList.add("is-current");strip.append(thumb);
+    });
+    gallery.append(strip);
+    const wrapper=document.createElement("div");wrapper.className="lf-v2-spotlight-record";wrapper.append(link,gallery);list.append(wrapper);
+   }else list.append(link);
   });
   content.append(eyebrow,title,meta,list);
  }
