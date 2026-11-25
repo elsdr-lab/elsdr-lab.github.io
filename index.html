@@ -57,7 +57,7 @@ body.home-view .footer{display:none}
 <link rel="stylesheet" href="palette.css?v=4.1">
 <link rel="stylesheet" href="menu-structure.css?v=4.1">
 <link rel="stylesheet" href="contact-page.css?v=4.1">
-<link rel="stylesheet" href="life-page.css?v=20261125-globe-no-frame">
+<link rel="stylesheet" href="life-page.css?v=20261125-spotlight">
 <link rel="stylesheet" href="study-page.css?v=20261125-compact">
 <link rel="stylesheet" href="people-page.css?v=20261125-people-density">
 <link rel="stylesheet" href="research-archive.css?v=20261125-search-button">
@@ -664,6 +664,10 @@ body.home-view .footer{display:none}
         </div>
         <div class="lf-v2-map-legend"><span>ELSDR / PLACES &amp; EXPERIENCES</span><span id="lf-v2-active-place">Select a location</span></div>
       </div>
+      <aside id="lf-v2-spotlight" class="lf-v2-spotlight" aria-label="선택한 장소의 활동 정보" hidden>
+        <div class="lf-v2-spotlight-top"><span>ELSDR / FIELD NOTES</span><button type="button" id="lf-v2-spotlight-close" aria-label="장소 상세 닫기">✕</button></div>
+        <div id="lf-v2-spotlight-content"></div>
+      </aside>
       <div class="lf-v2-map-type-legend" aria-label="지도 활동 유형별 핀 색상">
         <span><i class="lf-v2-map-dot" data-map-kind="fieldwork" aria-hidden="true"></i>Field Trip</span>
         <span><i class="lf-v2-map-dot" data-map-kind="conference" aria-hidden="true"></i>Conference</span>
@@ -1067,7 +1071,7 @@ body.home-view .footer{display:none}
 <script src="contact-records.js"></script>
 <script src="contact-page.js"></script>
 <script src="life-records.js?v=20261111-activities-photos170-map"></script>
-<script src="life-page.js?v=20261125-rotating-globe"></script>
+<script src="life-page.js?v=20261125-spotlight"></script>
 <script src="study-resources.js"></script>
 <script src="study-page.js"></script>
 <script src="people-records.js?v=20261111-alumni-links32"></script>
