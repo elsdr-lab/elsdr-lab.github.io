@@ -376,3 +376,21 @@
  .lf-v2-page .lf-v2-list-place{font-size:10px}
  .lf-v2-page .lf-v2-list-title{font-size:13px}
 }
+
+/* Events-style single-line Activities rows and shared 10/15-page navigation. */
+.lf-v2-page .lf-v2-activity-row{display:grid;grid-template-columns:42px 74px minmax(0,1fr) minmax(110px,260px) 22px;gap:18px;align-items:center;min-height:66px;padding:17px 12px;border-bottom:1px solid #cbd8cb;background:transparent;text-decoration:none;white-space:nowrap}
+.lf-v2-page .lf-v2-activity-row>*{grid-column:auto!important;grid-row:auto!important;min-width:0;white-space:nowrap}
+.lf-v2-row-index{font-size:11px;letter-spacing:1px;color:#78907e}
+.lf-v2-row-year{font-size:13px;color:#617d6a;font-weight:600}
+.lf-v2-page .lf-v2-activity-row .lf-v2-row-title{font-size:16px;line-height:1.4;font-weight:600;overflow:hidden;text-overflow:ellipsis}
+.lf-v2-row-meta{font-size:12px;color:#718674;text-align:right;overflow:hidden;text-overflow:ellipsis}
+.lf-v2-row-arrow{font-size:18px;color:#517d5d;text-align:right}
+.lf-v2-page-controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin:25px 0 34px}
+.lf-v2-page-controls label{display:flex;align-items:center;gap:9px;font-size:12px;color:#66816d}
+.lf-v2-page-controls select{font:600 12px "IBM Plex Sans","Pretendard",sans-serif;border:1px solid #c1d2c2;padding:8px 25px 8px 10px;background:#f7faf5;color:#42634b;cursor:pointer}
+.lf-v2-pagination{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.lf-v2-pagination button{display:grid;place-items:center;width:33px;height:33px;border:1px solid #ccd8cc;background:transparent;color:#567260;font-size:12px;cursor:pointer}
+.lf-v2-pagination button.is-current{background:#536d5e;color:white;border-color:#536d5e}
+.lf-v2-pagination button:disabled{opacity:.3;cursor:default}
+@media(max-width:800px){.lf-v2-page .lf-v2-activity-row{grid-template-columns:26px 48px minmax(0,1fr) minmax(75px,130px) 16px;gap:9px;padding:14px 5px;min-height:55px}.lf-v2-page .lf-v2-activity-row .lf-v2-row-title{font-size:14px}.lf-v2-row-meta{font-size:11px}}
+@media(max-width:500px){.lf-v2-page .lf-v2-activity-row{grid-template-columns:22px 42px minmax(0,1fr) 14px;gap:7px}.lf-v2-row-meta{display:none}.lf-v2-page-controls{align-items:flex-start;gap:12px}.lf-v2-pagination button{width:30px;height:30px}}
