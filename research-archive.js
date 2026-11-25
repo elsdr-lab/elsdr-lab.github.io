@@ -12,7 +12,7 @@
   const {archiveRow,searchString}=archiveView;
   const state={type:"all",theme:"all",year:"all",query:"",page:1,pageSize:15};
   const typeBtns=$("[data-research-kind]"),themeInput=$("#research-theme");
-  const yearInput=$("#research-year"),searchInput=$("#research-search");
+  const yearInput=$("#research-year"),searchInput=$("#research-search"),searchButton=$("#research-search-submit");
   const list=$("#research-list"),counter=$("#research-counter");
   const pagination=$("#research-pagination"),pageSizeInput=$("#research-page-size"),empty=$("#research-empty");
 
@@ -102,6 +102,8 @@
   themeInput.addEventListener("change",()=>{state.theme=themeInput.value;newFilter();});
   yearInput.addEventListener("change",()=>{state.year=yearInput.value;newFilter();});
   searchInput.addEventListener("input",()=>{state.query=searchInput.value.trim().normalize("NFKC").toLocaleLowerCase();newFilter();});
+  searchButton.addEventListener("click",()=>{state.query=searchInput.value.trim().normalize("NFKC").toLocaleLowerCase();newFilter();searchInput.focus();});
+  searchInput.addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();searchButton.click();}});
   pageSizeInput.addEventListener("change",()=>{state.pageSize=Number(pageSizeInput.value)===20?20:15;state.page=1;update();});
   window.addEventListener("hashchange",syncRoute);
   syncRoute();
