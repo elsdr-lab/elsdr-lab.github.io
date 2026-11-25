@@ -361,3 +361,18 @@
  .lf-v2-list-year{grid-column:1;grid-row:1/3;align-self:start;padding-top:2px}
  .lf-v2-list-arrow{grid-column:3;grid-row:1/4}
 }
+
+/* Every Activity Archive record stays on exactly one horizontal line. */
+.lf-v2-page .lf-v2-activity-card{display:grid;grid-template-columns:58px 128px minmax(0,1fr) minmax(90px,180px) 20px;align-items:center;gap:12px;min-height:54px;padding:11px 9px;white-space:nowrap}
+.lf-v2-page .lf-v2-activity-card>*{min-width:0;grid-column:auto;grid-row:auto}
+.lf-v2-page .lf-v2-activity-card .lf-v2-list-title,.lf-v2-page .lf-v2-activity-card .lf-v2-list-place{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lf-v2-page .lf-v2-activity-card .lf-v2-list-place{text-align:right}
+@media(max-width:800px){
+ .lf-v2-page .lf-v2-activity-card{grid-template-columns:48px 110px minmax(0,1fr) 85px 16px;gap:8px;min-height:50px;padding:10px 5px}
+}
+@media(max-width:500px){
+ .lf-v2-page .lf-v2-activity-card{grid-template-columns:42px 80px minmax(0,1fr) 65px 14px;gap:5px;min-height:47px;padding:9px 3px}
+ .lf-v2-page .lf-v2-list-kind{font-size:10px;overflow:hidden;text-overflow:ellipsis}
+ .lf-v2-page .lf-v2-list-place{font-size:10px}
+ .lf-v2-page .lf-v2-list-title{font-size:13px}
+}
