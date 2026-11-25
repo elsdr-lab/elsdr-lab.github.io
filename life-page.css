@@ -237,3 +237,25 @@
  .lf-page.lf-v2-page .lf-tabs{margin-bottom:24px}
  .lf-page.lf-v2-page .lf-v2-activities{padding-top:6px}
 }
+
+/* Soft interactive globe-like cartography: circular muted map and floating place labels. */
+.lf-v2-map-layout{background:#f3f4f1;border-color:#d8dfd7}
+.lf-v2-map-wrap{display:flex;align-items:center;justify-content:center;min-height:690px;padding:30px 24px 63px;background:radial-gradient(ellipse at 50% 38%,#fafbf9 0%,#f1f3ef 70%,#e9eeea 100%);overflow:hidden}
+.lf-v2-map{flex:none;width:min(610px,82vw);height:min(610px,82vw);border-radius:50%;overflow:hidden;background:#d7dad7;box-shadow:inset 0 0 45px rgba(70,86,78,.12),0 24px 55px rgba(74,89,80,.10);border:1px solid rgba(140,150,145,.22)}
+.lf-v2-map::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;z-index:450;background:radial-gradient(circle at 38% 34%,rgba(255,255,255,.22) 0%,transparent 47%,rgba(90,104,98,.13) 100%)}
+.lf-v2-map .leaflet-tile-pane{filter:grayscale(1) saturate(0) contrast(.75) brightness(1.13);opacity:.76}
+.lf-v2-map .leaflet-control-attribution{background:rgba(255,255,255,.55);font-size:8px}
+.lf-v2-map .leaflet-control-zoom{border:0;box-shadow:0 3px 15px #596b5b22}
+.lf-v2-map .leaflet-control-zoom a{background:rgba(255,255,255,.9);color:#60766d}
+.lf-v2-map .leaflet-interactive{filter:drop-shadow(0 0 5px rgba(232,236,170,.8));transition:fill-opacity .2s,stroke-width .2s}
+.lf-v2-map .leaflet-interactive:hover{stroke-width:4}
+.lf-v2-globe-tooltip{border:0;border-radius:15px;background:rgba(255,255,255,.94);box-shadow:0 5px 20px #5c70652b;padding:5px 12px;color:#57675f;font:600 11px/1.5 "IBM Plex Sans","Pretendard",sans-serif}
+.lf-v2-globe-tooltip::before{border-top-color:rgba(255,255,255,.94)!important}
+.lf-v2-map-legend{bottom:18px;left:25px;right:25px;justify-content:center}
+.lf-v2-map-legend span:first-child{display:none}
+.lf-v2-map-legend span{border-radius:25px;letter-spacing:.3px;box-shadow:0 3px 12px #63756518}
+@media(max-width:690px){
+ .lf-v2-map-wrap{min-height:440px;height:auto;padding:25px 8px 60px}
+ .lf-v2-map{width:min(380px,89vw);height:min(380px,89vw)}
+ .lf-v2-map-legend{left:12px;right:12px;bottom:14px}
+}
