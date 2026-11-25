@@ -394,3 +394,7 @@
 .lf-v2-pagination button:disabled{opacity:.3;cursor:default}
 @media(max-width:800px){.lf-v2-page .lf-v2-activity-row{grid-template-columns:26px 48px minmax(0,1fr) minmax(75px,130px) 16px;gap:9px;padding:14px 5px;min-height:55px}.lf-v2-page .lf-v2-activity-row .lf-v2-row-title{font-size:14px}.lf-v2-row-meta{font-size:11px}}
 @media(max-width:500px){.lf-v2-page .lf-v2-activity-row{grid-template-columns:22px 42px minmax(0,1fr) 14px;gap:7px}.lf-v2-row-meta{display:none}.lf-v2-page-controls{align-items:flex-start;gap:12px}.lf-v2-pagination button{width:30px;height:30px}}
+
+/* Activities archive is a single full-width vertical list, never a card grid. */
+.lf-v2-page .lf-v2-activity-list{display:block!important;grid-template-columns:none!important;columns:1!important;column-count:1!important;width:100%;border-top:1px solid #cbd8cb}
+.lf-v2-page .lf-v2-activity-list>.lf-v2-activity-row{display:grid!important;width:100%!important;max-width:none!important;margin:0!important;break-inside:avoid;box-sizing:border-box;border-left:0;border-right:0;border-top:0;border-bottom:1px solid #cbd8cb;border-radius:0;background:transparent}
