@@ -101,6 +101,7 @@ function renderActivities(){
      '<div class="lf-v2-card-copy"><span class="lf-v2-card-meta">'+E(a.date||a.year||"")+' / '+E(categories[a.category]||"Activity")+'</span>'+
      '<h4>'+E(a.title)+'</h4>'+
      (formattedPlaces(a)?'<p>'+E(formattedPlaces(a))+'</p>':"")+
+     (String(a.summary||"").trim()?'<p class="lf-v2-card-summary">'+E(a.summary)+'</p>':"")+
      '<span class="lf-v2-card-link">View activity <b aria-hidden="true">↗</b></span></div></a>'
  ).join("");
  $("#lf-v2-activity-counter").textContent=data.length+" activities";
@@ -144,7 +145,7 @@ function activityDetail(id){
  container.innerHTML='<header class="lf-v2-activity-detail-head">'+
   '<span>ELSDR / ACTIVITY RECORD / '+E(categories[target.category]||"Activity")+'</span>'+
   '<h2>'+E(target.title)+'</h2>'+
-  (String(target.summary||"").trim()?'<p>'+E(target.summary)+'</p>':"")+
+  (String(target.summary||"").trim()?'<p>'+E(target.summary)+'</p>':'<p class="lf-v2-detail-pending">활동 내용은 확인 후 추가 예정입니다.</p>')+
   '</header><dl class="lf-v2-activity-facts">'+facts+'</dl>'+
   photoGallery+
   (connected?'<div class="lf-v2-activity-links">'+connected+'</div>':"");
@@ -245,7 +246,7 @@ function popupForPlace(p){
    const activity=activities.find(a=>a.id===id);
    if(!activity)return;
    const link=document.createElement("a");link.href="#/life/activities/"+encodeURIComponent(id);
-   link.textContent=activity.title+" ↗";wrap.append(link);
+   link.textContent=(categories[activity.category]||"Activity")+" · "+activity.title;wrap.append(link);
  });
  return wrap;
 }
@@ -271,10 +272,23 @@ function placeButtons(){
    const button=document.createElement("button");
    button.type="button";button.className="lf-v2-place-button";button.dataset.lfV2Place=p.id;button.setAttribute("aria-pressed",String(state.placeId===p.id));
    const title=document.createElement("strong");title.textContent=p.name;
-   const subtitle=document.createElement("small");subtitle.textContent=p.region+" · "+p.activityIds.length+" activities";
-   button.append(title,subtitle);
+   const linked=p.activityIds.map(id=>activities.find(a=>a.id===id)).filter(Boolean);
+   const kinds=[...new Set(linked.map(a=>categories[a.category]||"Activity"))];
+   const subtitle=document.createElement("small");subtitle.textContent=p.region+" · "+linked.length+" activities";
+   const kindLine=document.createElement("span");kindLine.className="lf-v2-place-kinds";kindLine.textContent=kinds.join(" / ");
+   button.append(title,subtitle,kindLine);
    button.addEventListener("click",()=>locationSelection(p.id,{scroll:true,fly:true}));
-   el.append(button);
+   const entry=document.createElement("div");entry.className="lf-v2-place-entry";
+   const linkedList=document.createElement("div");linkedList.className="lf-v2-place-linked";
+   linked.slice(0,3).forEach(activity=>{
+     const anchor=document.createElement("a");
+     anchor.href="#/life/activities/"+encodeURIComponent(activity.id);
+     const label=document.createElement("span");label.className="lf-v2-place-type";label.textContent=categories[activity.category]||"Activity";
+     const activityName=document.createElement("strong");activityName.textContent=activity.title;
+     anchor.append(label,activityName);linkedList.append(anchor);
+   });
+   if(linked.length>3){const more=document.createElement("small");more.textContent="외 "+(linked.length-3)+"건";linkedList.append(more);}
+   entry.append(button,linkedList);el.append(entry);
  });
  $$("[data-lf-v2-region]").forEach(btn=>{
    const selected=btn.dataset.lfV2Region===state.region;
