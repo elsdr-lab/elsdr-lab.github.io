@@ -246,3 +246,19 @@
  #research-archive-v2 .ra-pagination{gap:3px}
  #research-archive-v2 .ra-page-button{min-width:32px;padding:6px}
 }
+
+/* Official ABOUT research theme names: readable single-select filter. */
+#research-archive-v2 .ra-theme-select{
+ appearance:none;-webkit-appearance:none;
+ display:block;width:min(100%,485px);min-height:43px;
+ border:1px solid #bdcdbf;border-radius:2px;background-color:#fff;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23536d5e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+ background-repeat:no-repeat;background-position:right 13px center;
+ padding:10px 43px 10px 15px;
+ color:#345440;font:600 14px/1.45 "IBM Plex Sans","Pretendard",sans-serif;
+ cursor:pointer;white-space:normal;
+}
+#research-archive-v2 .ra-theme-select:focus-visible{outline:2px solid #536d5e;outline-offset:2px}
+@media(max-width:760px){
+ #research-archive-v2 .ra-theme-select{width:100%;max-width:none;min-height:46px;font-size:14px}
+}
