@@ -260,6 +260,24 @@ function locationSelection(id,{fly=true}={}){
  $("#lf-v2-activity-search").value="";renderActivities();
  const p=id?points.get(id):null;
  $("#lf-v2-active-place").textContent=p?p.name+" · "+p.activityIds.length+" linked records":"All locations";
+ const layout=$(".lf-v2-map-layout"),panel=$("#lf-v2-spotlight"),content=$("#lf-v2-spotlight-content");
+ layout.classList.toggle("is-detail-open",!!p);panel.hidden=!p;
+ if(p){
+  content.replaceChildren();
+  const eyebrow=document.createElement("div");eyebrow.className="lf-v2-spotlight-eyebrow";eyebrow.textContent="SELECTED LOCATION / "+p.region;
+  const title=document.createElement("h4");title.textContent=p.name;
+  const meta=document.createElement("p");meta.className="lf-v2-spotlight-meta";meta.textContent=(p.approximate?"지역 중심 좌표 · ":"")+p.activityIds.length+" connected activities";
+  const list=document.createElement("div");list.className="lf-v2-spotlight-entries";
+  p.activityIds.forEach(id=>{
+   const a=activities.find(item=>item.id===id);if(!a)return;
+   const link=document.createElement("a");link.className="lf-v2-spotlight-entry";link.href="#/life/activities/"+encodeURIComponent(a.id);
+   const kind=document.createElement("span");kind.className="lf-v2-spotlight-kind";kind.dataset.mapKind=mapKindForActivity(a);kind.textContent=mapKinds[mapKindForActivity(a)].label;
+   const name=document.createElement("strong");name.textContent=a.title;
+   const more=document.createElement("small");more.textContent=(a.year||"")+" · View activity ↗";
+   link.append(kind,name,more);list.append(link);
+  });
+  content.append(eyebrow,title,meta,list);
+ }
  if(map){map.select(id,fly);map.updateVisible();}
 }
 function placeButtons(){
@@ -314,7 +332,7 @@ async function initializeMap(){
   const ocean=svg.append("path").datum({type:"Sphere"}).attr("class","lf-globe-ocean");
   const grid=svg.append("path").datum(d3.geoGraticule10()).attr("class","lf-globe-grid");
   const ground=svg.append("path").datum(land).attr("class","lf-globe-land");
-  const popup=document.createElement("div");popup.className="lf-globe-detail";popup.hidden=true;node.append(popup);
+
   const dots=svg.append("g").attr("class","lf-globe-points").selectAll("g").data(locationList).join("g").attr("class","lf-globe-point").attr("tabindex",0).attr("role","button").attr("aria-label",p=>p.name+" 활동 보기");
   dots.append("circle").attr("class","lf-globe-halo").attr("r",15);
   dots.append("circle").attr("class","lf-globe-core").attr("r",7).attr("fill",p=>mapKinds[mapKindForPlace(p)].color);
@@ -330,11 +348,11 @@ async function initializeMap(){
    });
   }
   function select(id,fly=true){
-   if(!id){popup.hidden=true;holdUntil=Date.now()+1200;draw();return;}
+   if(!id){holdUntil=Date.now()+1200;draw();return;}
    const p=points.get(id);if(!p)return;
    holdUntil=Date.now()+5500;
    if(fly)projection.rotate([-p.lon,-p.lat,0]);
-   popup.replaceChildren(popupForPlace(p));popup.hidden=false;draw();
+   draw();
   }
   dots.on("click",(ev,p)=>{ev.stopPropagation();if(!dragMoved)locationSelection(p.id,{fly:true});});
   dots.on("keydown",(ev,p)=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();locationSelection(p.id,{fly:true});}});
@@ -345,11 +363,12 @@ async function initializeMap(){
   projection.rotate([-25,-13,0]);draw();
   function tick(t){if(!node.isConnected)return;if(last&&Date.now()>holdUntil){const r=projection.rotate();projection.rotate([r[0]+Math.min(32,t-last)*.006,r[1],0]);draw();}last=t;requestAnimationFrame(tick);}
   requestAnimationFrame(tick);
-  map={invalidateSize:draw,select,reset(){popup.hidden=true;holdUntil=Date.now()+1400;projection.rotate(state.region==="korea"?[-127,-37,0]:state.region==="overseas"?[-15,-27,0]:[-25,-13,0]);draw();},updateVisible:draw};
+  map={invalidateSize:draw,select,reset(){holdUntil=Date.now()+1400;projection.rotate(state.region==="korea"?[-127,-37,0]:state.region==="overseas"?[-15,-27,0]:[-25,-13,0]);draw();},updateVisible:draw};
   placeButtons();
  }catch(err){ready=false;mapFallback();}
 }
 function initActivityFilters(){
+ $("#lf-v2-spotlight-close").addEventListener("click",()=>locationSelection(null));
  $$("[data-lf-v2-activity-kind]").forEach(btn=>btn.addEventListener("click",()=>{state.activityType=btn.dataset.lfV2ActivityKind;state.placeId=null;renderActivities();}));
  $("#lf-v2-activity-search").addEventListener("input",e=>{state.activityQuery=e.target.value.toLocaleLowerCase().trim();renderActivities();});
  $("#lf-v2-clear-location").addEventListener("click",()=>locationSelection(null));
