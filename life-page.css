@@ -285,3 +285,39 @@
 .lf-v2-page .lf-v2-map-layout{border:0;background:transparent}
 .lf-v2-page .lf-v2-map-wrap{background:transparent}
 .lf-v2-page .lf-v2-map-type-legend{background:transparent;border-bottom:0}
+
+/* Place spotlight: globe moves left and a clean activity panel opens on the right. */
+.lf-v2-page .lf-v2-map-sidebar{display:none!important}
+.lf-v2-page .lf-v2-map-layout{display:flex;flex-direction:column;align-items:stretch;gap:0;border:0;background:transparent}
+.lf-v2-page .lf-v2-map-wrap{order:0;width:100%;min-height:650px;padding:18px 20px 66px;transition:padding .4s ease,min-height .4s ease}
+.lf-v2-page .lf-v2-spotlight{order:1;min-width:0;background:#f8faf7;border:1px solid #d8e2d8;border-radius:16px;padding:30px 32px;box-shadow:0 14px 40px rgba(48,75,53,.055);animation:lf-v2-spotlight-in .35s ease both}
+.lf-v2-page .lf-v2-map-type-legend{order:2;justify-content:center}
+.lf-v2-map-layout.is-detail-open{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(315px,.9fr);column-gap:28px;align-items:center}
+.lf-v2-map-layout.is-detail-open .lf-v2-map-wrap{grid-column:1;grid-row:1;min-width:0;min-height:570px;padding:20px 0 62px}
+.lf-v2-map-layout.is-detail-open .lf-v2-map{width:min(510px,100%);height:auto;aspect-ratio:1}
+.lf-v2-map-layout.is-detail-open .lf-v2-spotlight{grid-column:2;grid-row:1}
+.lf-v2-map-layout.is-detail-open .lf-v2-map-type-legend{grid-column:1/-1;grid-row:2}
+.lf-v2-spotlight-top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #dae4dc;padding-bottom:19px}
+.lf-v2-spotlight-top>span{font-size:10px;font-weight:700;letter-spacing:1.4px;color:#6e8975}
+.lf-v2-spotlight-top button{border:1px solid #d9e2d9;background:white;border-radius:50%;width:31px;height:31px;cursor:pointer;color:#456451}
+.lf-v2-spotlight-eyebrow{margin-top:31px;font-size:10px;font-weight:700;color:#7d9784;letter-spacing:1.2px}
+.lf-v2-spotlight h4{font:500 clamp(29px,3.1vw,47px)/1.15 "IBM Plex Sans","Pretendard",sans-serif;color:#2e4737;letter-spacing:-1.4px;margin:11px 0 10px}
+.lf-v2-spotlight-meta{font-size:12px;color:#789080;margin:0 0 25px}
+.lf-v2-spotlight-entries{display:flex;flex-direction:column;border-top:1px solid #d6e0d7}
+.lf-v2-spotlight-entry{display:grid;grid-template-columns:100px minmax(0,1fr);gap:6px 15px;align-items:start;text-decoration:none;color:#2f4d3c;padding:19px 2px;border-bottom:1px solid #d6e0d7}
+.lf-v2-spotlight-entry:hover{background:#edf4ec}
+.lf-v2-spotlight-kind{color:#267d68;font-size:10px;font-weight:700;white-space:nowrap}
+.lf-v2-spotlight-kind[data-map-kind="conference"]{color:#7555ae}
+.lf-v2-spotlight-kind[data-map-kind="workshop"]{color:#b96c2e}
+.lf-v2-spotlight-kind[data-map-kind="other"]{color:#66818b}
+.lf-v2-spotlight-entry strong{font-size:14px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.lf-v2-spotlight-entry small{grid-column:2;color:#819483;font-size:11px}
+@keyframes lf-v2-spotlight-in{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:950px){
+ .lf-v2-map-layout.is-detail-open{grid-template-columns:minmax(0,1fr);gap:0}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map-wrap{grid-column:1;grid-row:1;min-height:400px;padding:15px 0 45px}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map{width:min(400px,82vw)}
+ .lf-v2-map-layout.is-detail-open .lf-v2-spotlight{grid-column:1;grid-row:2;margin:0 10px}
+ .lf-v2-map-layout.is-detail-open .lf-v2-map-type-legend{grid-column:1;grid-row:3}
+}
+@media(max-width:690px){.lf-v2-page .lf-v2-map-wrap{min-height:440px}.lf-v2-page .lf-v2-spotlight{padding:22px 20px}.lf-v2-spotlight-entry{grid-template-columns:80px minmax(0,1fr);gap:5px 9px}}
