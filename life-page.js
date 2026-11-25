@@ -310,8 +310,8 @@ function resetMap(){
  if(!map)return;
  map.closePopup();
  const selected=locationList.filter(p=>state.region==="all"||p.group===state.region);
- if(!selected.length){map.setView([35,22],2);return;}
- if(state.region==="all"){map.setView([34,17],2,{animate:true});return;}
+ if(!selected.length){map.setView([18,7],1);return;}
+ if(state.region==="all"){map.setView([18,7],1,{animate:true});return;}
  const bounds=window.L.latLngBounds(selected.map(p=>[p.lat,p.lon]));
  map.flyToBounds(bounds,{padding:[50,50],maxZoom:state.region==="korea"?9:5,duration:.65});
 }
@@ -331,13 +331,15 @@ function initializeMap(){
    return;
  }
  ready=true;mapNode.innerHTML="";
- map=window.L.map(mapNode,{scrollWheelZoom:false,worldCopyJump:true}).setView([34,17],2);
+ map=window.L.map(mapNode,{scrollWheelZoom:false,worldCopyJump:true}).setView([18,7],1);
  window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-   minZoom:2,maxZoom:17,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
+   minZoom:1,maxZoom:17,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
  }).addTo(map);
  for(const p of locationList){
    const marker=window.L.circleMarker([p.lat,p.lon],{radius:11,color:"#ffffff",weight:2.5,fillColor:mapKinds[mapKindForPlace(p)].color,fillOpacity:.94}).addTo(map);
    marker.bindPopup(popupForPlace(p));
+   marker.bindTooltip(p.name,{direction:"top",offset:[0,-12],opacity:1,className:"lf-v2-globe-tooltip"});
+   marker.on("mouseover",()=>marker.openTooltip());
    marker.on("click",()=>locationSelection(p.id,{fly:false}));
    markers[p.id]=marker;
  }
