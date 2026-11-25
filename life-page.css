@@ -226,3 +226,14 @@
  .lf-v2-place-list{grid-template-columns:1fr;max-height:none;min-height:0}
  .lf-v2-map-legend{left:8px;right:8px;bottom:8px}
 }
+
+/* Compact spacing between Life heading, navigation, and section title; type sizes unchanged. */
+.lf-page.lf-v2-page .lf-header-flex{margin-bottom:28px}
+.lf-page.lf-v2-page .lf-header-flex h1{margin-bottom:0}
+.lf-page.lf-v2-page .lf-tabs{margin-bottom:28px}
+.lf-page.lf-v2-page .lf-v2-activities{padding-top:8px}
+@media(max-width:690px){
+ .lf-page.lf-v2-page .lf-header-flex{margin-bottom:22px}
+ .lf-page.lf-v2-page .lf-tabs{margin-bottom:24px}
+ .lf-page.lf-v2-page .lf-v2-activities{padding-top:6px}
+}
